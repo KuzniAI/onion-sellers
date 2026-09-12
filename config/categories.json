@@ -1,6 +1,7 @@
 {
   "topN": 2,
-  "notes": "Weights operate on min-max normalized metrics (0-1) across the candidate set actually available for a category. costEfficiency = 1 / blendedPrice1m, where blendedPrice1m assumes a 3:1 output:input token ratio (typical agentic coding workload) -- a documented simplification since Copilot (plan + credits) and OpenCode Go (flat $10/mo with per-model monthly caps) aren't priced the same way; per-token blended price is the common denominator we have. speed = performance.median_output_tokens_per_second from Artificial Analysis.",
+  "topNPerProvider": 2,
+  "notes": "Weights operate on min-max normalized metrics (0-1) across the candidate set actually available for a category. costEfficiency = 1 / blendedPrice1m, where blendedPrice1m assumes a 3:1 output:input token ratio (typical agentic coding workload) -- a documented simplification since Copilot (plan + credits) and OpenCode Go (flat $10/mo with per-model monthly caps) aren't priced the same way; per-token blended price is the common denominator we have. speed = performance.median_output_tokens_per_second from Artificial Analysis. topN is the overall (cross-provider) shortlist size; topNPerProvider is the shortlist size within each individual provider.",
   "categories": {
     "agenticCoding": {
       "description": "Left running for hours in a loop to solve a problem autonomously with minimal supervision (e.g. an OpenSpec/plan executor, a long-running coding agent).",

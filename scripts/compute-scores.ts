@@ -178,12 +178,12 @@ async function main() {
     });
   }
 
-  const categories: Record<string, ScoredCandidate[]> = {};
+  const categories: Record<string, { overall: ScoredCandidate[]; byProvider: Record<Provider, ScoredCandidate[]> }> = {};
 
   for (const [categoryName, categoryConfig] of Object.entries(config.categories) as [string, { weights: CategoryWeights }][]) {
     const weights = categoryConfig.weights;
     if (enriched.length === 0) {
-      categories[categoryName] = [];
+      categories[categoryName] = { overall: [], byProvider: { copilot: [], "opencode-go": [] } };
       continue;
     }
 
@@ -227,7 +227,16 @@ async function main() {
     });
 
     scored.sort((a, b) => b.score - a.score);
-    categories[categoryName] = scored.slice(0, config.topN);
+
+    const byProvider: Record<Provider, ScoredCandidate[]> = {
+      copilot: scored.filter((s) => s.provider === "copilot").slice(0, config.topNPerProvider),
+      "opencode-go": scored.filter((s) => s.provider === "opencode-go").slice(0, config.topNPerProvider),
+    };
+
+    categories[categoryName] = {
+      overall: scored.slice(0, config.topN),
+      byProvider,
+    };
   }
 
   const outFile = path.join("data", "recommendations.json");
@@ -238,6 +247,7 @@ async function main() {
       {
         generatedAt: new Date().toISOString(),
         topN: config.topN,
+        topNPerProvider: config.topNPerProvider,
         candidatesConsidered: enriched.length,
         categories,
       },
