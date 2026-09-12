@@ -1,11 +1,10 @@
 {
-  "generatedAt": "2026-09-12T19:18:17.796Z",
-  "topN": 2,
+  "generatedAt": "2026-09-12T19:20:53.872Z",
   "topNPerProvider": 2,
   "candidatesConsidered": 39,
   "categories": {
     "agenticCoding": {
-      "overall": [
+      "copilot": [
         {
           "provider": "copilot",
           "model": "Claude Opus 5",
@@ -21,6 +20,22 @@
           "priceBlendedPer1M": 20
         },
         {
+          "provider": "copilot",
+          "model": "GPT-6 Astra",
+          "aaSlug": "gpt-6-astra",
+          "score": 0.754,
+          "breakdown": {
+            "agenticIndex": 51.5,
+            "codingIndex": 76.9,
+            "intelligenceIndex": 52.8,
+            "speed": 56,
+            "costEfficiency": 0.025
+          },
+          "priceBlendedPer1M": 40
+        }
+      ],
+      "opencode-go": [
+        {
           "provider": "opencode-go",
           "model": "GLM-5.3-Flash",
           "aaSlug": "glm-5-3-flash",
@@ -33,73 +48,25 @@
             "costEfficiency": 2.424
           },
           "priceBlendedPer1M": 0.413
+        },
+        {
+          "provider": "opencode-go",
+          "model": "GLM-5.3",
+          "aaSlug": "glm-5-3",
+          "score": 0.755,
+          "breakdown": {
+            "agenticIndex": 53.4,
+            "codingIndex": 74.8,
+            "intelligenceIndex": 44.9,
+            "speed": 66.07,
+            "costEfficiency": 0.274
+          },
+          "priceBlendedPer1M": 3.65
         }
-      ],
-      "byProvider": {
-        "copilot": [
-          {
-            "provider": "copilot",
-            "model": "Claude Opus 5",
-            "aaSlug": "claude-opus-5",
-            "score": 0.8,
-            "breakdown": {
-              "agenticIndex": 56.2,
-              "codingIndex": 78,
-              "intelligenceIndex": 50.7,
-              "speed": 50.41,
-              "costEfficiency": 0.05
-            },
-            "priceBlendedPer1M": 20
-          },
-          {
-            "provider": "copilot",
-            "model": "GPT-6 Astra",
-            "aaSlug": "gpt-6-astra",
-            "score": 0.754,
-            "breakdown": {
-              "agenticIndex": 51.5,
-              "codingIndex": 76.9,
-              "intelligenceIndex": 52.8,
-              "speed": 56,
-              "costEfficiency": 0.025
-            },
-            "priceBlendedPer1M": 40
-          }
-        ],
-        "opencode-go": [
-          {
-            "provider": "opencode-go",
-            "model": "GLM-5.3-Flash",
-            "aaSlug": "glm-5-3-flash",
-            "score": 0.781,
-            "breakdown": {
-              "agenticIndex": 51.2,
-              "codingIndex": 71.5,
-              "intelligenceIndex": 41.9,
-              "speed": 103.49,
-              "costEfficiency": 2.424
-            },
-            "priceBlendedPer1M": 0.413
-          },
-          {
-            "provider": "opencode-go",
-            "model": "GLM-5.3",
-            "aaSlug": "glm-5-3",
-            "score": 0.755,
-            "breakdown": {
-              "agenticIndex": 53.4,
-              "codingIndex": 74.8,
-              "intelligenceIndex": 44.9,
-              "speed": 66.07,
-              "costEfficiency": 0.274
-            },
-            "priceBlendedPer1M": 3.65
-          }
-        ]
-      }
+      ]
     },
     "codeReview": {
-      "overall": [
+      "copilot": [
         {
           "provider": "copilot",
           "model": "GPT-6 Astra",
@@ -129,71 +96,39 @@
           "priceBlendedPer1M": 20
         }
       ],
-      "byProvider": {
-        "copilot": [
-          {
-            "provider": "copilot",
-            "model": "GPT-6 Astra",
-            "aaSlug": "gpt-6-astra",
-            "score": 0.842,
-            "breakdown": {
-              "agenticIndex": 51.5,
-              "codingIndex": 76.9,
-              "intelligenceIndex": 52.8,
-              "speed": 56,
-              "costEfficiency": 0.025
-            },
-            "priceBlendedPer1M": 40
+      "opencode-go": [
+        {
+          "provider": "opencode-go",
+          "model": "GLM-5.3-Flash",
+          "aaSlug": "glm-5-3-flash",
+          "score": 0.752,
+          "breakdown": {
+            "agenticIndex": 51.2,
+            "codingIndex": 71.5,
+            "intelligenceIndex": 41.9,
+            "speed": 103.49,
+            "costEfficiency": 2.424
           },
-          {
-            "provider": "copilot",
-            "model": "Claude Opus 5",
-            "aaSlug": "claude-opus-5",
-            "score": 0.829,
-            "breakdown": {
-              "agenticIndex": 56.2,
-              "codingIndex": 78,
-              "intelligenceIndex": 50.7,
-              "speed": 50.41,
-              "costEfficiency": 0.05
-            },
-            "priceBlendedPer1M": 20
-          }
-        ],
-        "opencode-go": [
-          {
-            "provider": "opencode-go",
-            "model": "GLM-5.3-Flash",
-            "aaSlug": "glm-5-3-flash",
-            "score": 0.752,
-            "breakdown": {
-              "agenticIndex": 51.2,
-              "codingIndex": 71.5,
-              "intelligenceIndex": 41.9,
-              "speed": 103.49,
-              "costEfficiency": 2.424
-            },
-            "priceBlendedPer1M": 0.413
+          "priceBlendedPer1M": 0.413
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Grok 4.6",
+          "aaSlug": "grok-4-6",
+          "score": 0.752,
+          "breakdown": {
+            "agenticIndex": 53.4,
+            "codingIndex": 76.8,
+            "intelligenceIndex": 44.4,
+            "speed": 53.59,
+            "costEfficiency": 0.2
           },
-          {
-            "provider": "opencode-go",
-            "model": "Grok 4.6",
-            "aaSlug": "grok-4-6",
-            "score": 0.752,
-            "breakdown": {
-              "agenticIndex": 53.4,
-              "codingIndex": 76.8,
-              "intelligenceIndex": 44.4,
-              "speed": 53.59,
-              "costEfficiency": 0.2
-            },
-            "priceBlendedPer1M": 5
-          }
-        ]
-      }
+          "priceBlendedPer1M": 5
+        }
+      ]
     },
     "softwareFactory": {
-      "overall": [
+      "copilot": [
         {
           "provider": "copilot",
           "model": "Gemini 3.7 Flash",
@@ -209,6 +144,22 @@
           "priceBlendedPer1M": 3
         },
         {
+          "provider": "copilot",
+          "model": "Gemini 3.8 Flash",
+          "aaSlug": "gemini-3-8-flash",
+          "score": 0.703,
+          "breakdown": {
+            "agenticIndex": 41.1,
+            "codingIndex": 76.3,
+            "intelligenceIndex": 41.2,
+            "speed": 261.3,
+            "costEfficiency": 0.333
+          },
+          "priceBlendedPer1M": 3
+        }
+      ],
+      "opencode-go": [
+        {
           "provider": "opencode-go",
           "model": "DeepSeek V4 Flash",
           "aaSlug": "deepseek-v4-flash",
@@ -221,70 +172,22 @@
             "costEfficiency": 2.051
           },
           "priceBlendedPer1M": 0.487
+        },
+        {
+          "provider": "opencode-go",
+          "model": "DeepSeek V4 Flash Vision Exp",
+          "aaSlug": "deepseek-v4-flash-vision",
+          "score": 0.691,
+          "breakdown": {
+            "agenticIndex": 48.1,
+            "codingIndex": 65,
+            "intelligenceIndex": 35,
+            "speed": 217.08,
+            "costEfficiency": 2.051
+          },
+          "priceBlendedPer1M": 0.487
         }
-      ],
-      "byProvider": {
-        "copilot": [
-          {
-            "provider": "copilot",
-            "model": "Gemini 3.7 Flash",
-            "aaSlug": "gemini-3-7-flash",
-            "score": 0.715,
-            "breakdown": {
-              "agenticIndex": 36.4,
-              "codingIndex": 76.1,
-              "intelligenceIndex": 39.4,
-              "speed": 287.8,
-              "costEfficiency": 0.333
-            },
-            "priceBlendedPer1M": 3
-          },
-          {
-            "provider": "copilot",
-            "model": "Gemini 3.8 Flash",
-            "aaSlug": "gemini-3-8-flash",
-            "score": 0.703,
-            "breakdown": {
-              "agenticIndex": 41.1,
-              "codingIndex": 76.3,
-              "intelligenceIndex": 41.2,
-              "speed": 261.3,
-              "costEfficiency": 0.333
-            },
-            "priceBlendedPer1M": 3
-          }
-        ],
-        "opencode-go": [
-          {
-            "provider": "opencode-go",
-            "model": "DeepSeek V4 Flash",
-            "aaSlug": "deepseek-v4-flash",
-            "score": 0.707,
-            "breakdown": {
-              "agenticIndex": 41.7,
-              "codingIndex": 69.1,
-              "intelligenceIndex": 34.5,
-              "speed": 210.09,
-              "costEfficiency": 2.051
-            },
-            "priceBlendedPer1M": 0.487
-          },
-          {
-            "provider": "opencode-go",
-            "model": "DeepSeek V4 Flash Vision Exp",
-            "aaSlug": "deepseek-v4-flash-vision",
-            "score": 0.691,
-            "breakdown": {
-              "agenticIndex": 48.1,
-              "codingIndex": 65,
-              "intelligenceIndex": 35,
-              "speed": 217.08,
-              "costEfficiency": 2.051
-            },
-            "priceBlendedPer1M": 0.487
-          }
-        ]
-      }
+      ]
     }
   }
 }
