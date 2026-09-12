@@ -13,5 +13,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KuzniAI/onion-sellers.git"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2"
   }
 }
