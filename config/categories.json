@@ -1,0 +1,36 @@
+{
+  "topN": 2,
+  "notes": "Weights operate on min-max normalized metrics (0-1) across the candidate set actually available for a category. costEfficiency = 1 / blendedPrice1m, where blendedPrice1m assumes a 3:1 output:input token ratio (typical agentic coding workload) -- a documented simplification since Copilot (plan + credits) and OpenCode Go (flat $10/mo with per-model monthly caps) aren't priced the same way; per-token blended price is the common denominator we have. speed = performance.median_output_tokens_per_second from Artificial Analysis.",
+  "categories": {
+    "agenticCoding": {
+      "description": "Left running for hours in a loop to solve a problem autonomously with minimal supervision (e.g. an OpenSpec/plan executor, a long-running coding agent).",
+      "weights": {
+        "agenticIndex": 0.5,
+        "codingIndex": 0.2,
+        "intelligenceIndex": 0.1,
+        "costEfficiency": 0.1,
+        "speed": 0.1
+      }
+    },
+    "codeReview": {
+      "description": "Reviewing code written by a different model, reasoning about correctness/design in context rather than driving tools itself.",
+      "weights": {
+        "codingIndex": 0.4,
+        "intelligenceIndex": 0.4,
+        "agenticIndex": 0.05,
+        "costEfficiency": 0.1,
+        "speed": 0.05
+      }
+    },
+    "softwareFactory": {
+      "description": "Executing well-scoped, already-planned coding tasks (e.g. from an OpenSpec change or a larger model's plan) -- throughput and cost matter more than raw intelligence.",
+      "weights": {
+        "codingIndex": 0.45,
+        "costEfficiency": 0.25,
+        "speed": 0.2,
+        "agenticIndex": 0.05,
+        "intelligenceIndex": 0.05
+      }
+    }
+  }
+}
