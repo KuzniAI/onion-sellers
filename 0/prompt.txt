@@ -1,0 +1,40 @@
+I want to create benchmark of what models should I use when using subscriptions like OpenCode or GitHub Copilot.
+
+1. For each subscription provider I need to download models table with pricing. Right now I'm not sure what data should I use so download both pages from @README.md and establish which values except for prices do you need. Maybe all? We will automate this step later. Right now save results locally
+2. I have https://artificialanalysis.ai/ API Key, so we can use it's API do get their benchmark results and save it locally.
+3. Establish formula how to evaluates models for certain category and compute a score per provider per model. In the end generate a 2 recommendations for provider for each category (make 2 configurable). It can be a json file in the same directory.
+
+
+This is exploration phase - we download manually download data, calculate scores and generate recommendations. We will think about automating and presentation later.
+
+Categories: You have to choose which results on artificialanalysis contribute to it. We may need to save it in some json files. Right now I need 3 categories:
+
+1. Agentic coding - model that can be left for hours to work in a loop to solve some problem autonomously 
+2. Code review - it needs to be able to review code written by different model in some context
+3. Software factory - it can execute coding tasks that are well scoped and described e.g using OpenSpec changes or plans from larger models.
+
+---
+
+it's done
+
+---
+
+commit this
+
+---
+
+I need a blacklist for models because both choices are wrong:
+
+* muse models are so cheap because of data retention policies. I need them blacklisted
+* fable is blocked on most GH orgs I have seen because of the prices
+
+
+Add blacklist and rerun calculations
+
+---
+
+I need 2 recommendations per provider and 2 total. I need to choose for each of them
+
+---
+
+Just 2 per provider. Do not select best overall
