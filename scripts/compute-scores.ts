@@ -41,6 +41,11 @@ interface CategoryWeights {
   speed?: number;
 }
 
+interface BlacklistEntry {
+  match: string;
+  reason: string;
+}
+
 interface ScoredCandidate {
   provider: Provider;
   model: string;
@@ -111,7 +116,18 @@ function normalize(value: number, min: number, max: number): number {
 
 async function main() {
   const config = JSON.parse(await readFile(path.join("config", "categories.json"), "utf8"));
-  const candidates = await loadCandidates();
+  const blacklist: BlacklistEntry[] = JSON.parse(await readFile(path.join("config", "blacklist.json"), "utf8"));
+  const allCandidates = await loadCandidates();
+
+  const candidates = allCandidates.filter((c) => {
+    const hit = blacklist.find((b) => c.model.toLowerCase().includes(b.match.toLowerCase()));
+    if (hit) {
+      console.warn(`Blacklisted ${c.provider}/${c.model}: ${hit.reason}`);
+      return false;
+    }
+    return true;
+  });
+
   const mapping: MappingEntry[] = JSON.parse(await readFile(path.join("data", "model-mapping.json"), "utf8"));
   const aaData = JSON.parse(await readFile(path.join("data", "artificial-analysis", "language-models.json"), "utf8"));
   const aaBySlug = new Map<string, AaModel>((aaData.models as AaModel[]).map((m) => [m.slug, m]));

@@ -1,0 +1,10 @@
+[
+  {
+    "match": "Muse Spark",
+    "reason": "Heavily discounted only because the 'Contributor' pricing requires letting Meta train on your prompts/completions -- not a fair quality/cost comparison against the other models."
+  },
+  {
+    "match": "Fable",
+    "reason": "Blocked by policy on most GitHub orgs due to its pricing tier, so it isn't actually usable even if it scores well."
+  }
+]
