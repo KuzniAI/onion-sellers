@@ -1,0 +1,14 @@
+# node
+node_modules/
+
+## Claude Code ##
+.claude/settings.local.json
+CLAUDE.local.md
+
+## VS Code ##
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace

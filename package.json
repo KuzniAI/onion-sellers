@@ -1,0 +1,17 @@
+{
+  "name": "onion-sellers",
+  "description": "Choose a best onion seller for you.",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.ts"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KuzniAI/onion-sellers.git"
+  }
+}
