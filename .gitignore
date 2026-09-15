@@ -10,6 +10,8 @@ CLAUDE.local.md
 
 ## Data ##
 data/
+data-branch/
+_site/
 
 ## VS Code ##
 .vscode/*

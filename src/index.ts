@@ -2,7 +2,6 @@
 // data, update config/model-mapping.json, then score models. See README for how the
 // mapping is maintained.
 
-import { existsSync } from "node:fs";
 import { fetchArtificialAnalysisData } from "./artificial-analysis/fetch.ts";
 import { copilotSource } from "./copilot/source.ts";
 import { updateModelMapping } from "./mapping/update-mapping.ts";
@@ -11,8 +10,10 @@ import { refreshPricingSource } from "./pricing/refresh.ts";
 import { computeScores } from "./scoring/compute-scores.ts";
 
 try {
-  if (!existsSync(".env")) {
-    console.error("Missing .env. Copy .env.example to .env and fill in AA_API_KEY before running.");
+  if (!process.env.AA_API_KEY) {
+    console.error(
+      "Missing AA_API_KEY. Locally, copy .env.example to .env and fill it in; in CI, set the AA_API_KEY repository secret.",
+    );
     process.exit(1);
   }
 
