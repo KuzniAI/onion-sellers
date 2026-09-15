@@ -1,5 +1,5 @@
-// One-off fetch of Artificial Analysis language model benchmark data.
-// Run with: node --env-file=.env scripts/fetch-artificial-analysis.ts
+// Fetches Artificial Analysis language model benchmark data. Requires AA_API_KEY
+// in the environment (see .env.example).
 
 import { writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
@@ -7,13 +7,7 @@ import path from "node:path";
 const API_BASE = "https://artificialanalysis.ai/api/v2";
 const OUT_FILE = path.join("data", "artificial-analysis", "language-models.json");
 
-const apiKey = process.env.AA_API_KEY;
-if (!apiKey) {
-  console.error("Missing AA_API_KEY. Copy .env.example to .env and fill in your key, then run with `node --env-file=.env scripts/fetch-artificial-analysis.ts`.");
-  process.exit(1);
-}
-
-async function fetchAllPages(endpointPath: string): Promise<{ tier: string; intelligenceIndexVersion: number; rows: unknown[] }> {
+async function fetchAllPages(endpointPath: string, apiKey: string): Promise<{ tier: string; intelligenceIndexVersion: number; rows: unknown[] }> {
   const rows: unknown[] = [];
   let page = 1;
   let tier = "";
@@ -21,7 +15,7 @@ async function fetchAllPages(endpointPath: string): Promise<{ tier: string; inte
 
   while (true) {
     const url = `${API_BASE}${endpointPath}?page=${page}`;
-    const res = await fetch(url, { headers: { "x-api-key": apiKey as string } });
+    const res = await fetch(url, { headers: { "x-api-key": apiKey } });
 
     if (!res.ok) {
       const body = await res.text();
@@ -40,17 +34,22 @@ async function fetchAllPages(endpointPath: string): Promise<{ tier: string; inte
   return { tier, intelligenceIndexVersion, rows };
 }
 
-async function main() {
+export async function fetchArtificialAnalysisData(): Promise<void> {
+  const apiKey = process.env.AA_API_KEY;
+  if (!apiKey) {
+    throw new Error("Missing AA_API_KEY. Copy .env.example to .env and fill in your key.");
+  }
+
   let result: { tier: string; intelligenceIndexVersion: number; rows: unknown[] };
   let servedBy = "/language/models";
 
   try {
-    result = await fetchAllPages("/language/models");
+    result = await fetchAllPages("/language/models", apiKey);
   } catch (err) {
     if ((err as { status?: number }).status === 403) {
       console.log("Key tier does not cover /language/models (Pro+), falling back to /language/models/free ...");
       servedBy = "/language/models/free";
-      result = await fetchAllPages("/language/models/free");
+      result = await fetchAllPages("/language/models/free", apiKey);
     } else {
       throw err;
     }
@@ -75,8 +74,3 @@ async function main() {
 
   console.log(`Wrote ${result.rows.length} models (tier: ${result.tier}) to ${OUT_FILE}`);
 }
-
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});

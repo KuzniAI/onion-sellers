@@ -1,5 +1,5 @@
-// One-off scoring pass: combines local provider pricing + Artificial Analysis benchmark
-// data into per-category recommendations. Run with: node scripts/compute-scores.ts
+// Combines local provider pricing + Artificial Analysis benchmark data into
+// per-category recommendations.
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
@@ -114,7 +114,7 @@ function normalize(value: number, min: number, max: number): number {
   return (value - min) / (max - min);
 }
 
-async function main() {
+export async function computeScores(): Promise<void> {
   const config = JSON.parse(await readFile(path.join("config", "categories.json"), "utf8"));
   const blacklist: BlacklistEntry[] = JSON.parse(await readFile(path.join("config", "blacklist.json"), "utf8"));
   const allCandidates = await loadCandidates();
@@ -252,8 +252,3 @@ async function main() {
 
   console.log(`Wrote recommendations for ${Object.keys(categories).length} categories (${enriched.length} scored candidates) to ${outFile}`);
 }
-
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
