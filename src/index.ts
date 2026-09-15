@@ -8,7 +8,7 @@ import { openCodeGoSource } from "./opencode-go/source.ts";
 import { refreshPricingSource } from "./pricing/refresh.ts";
 import { computeScores } from "./scoring/compute-scores.ts";
 
-async function main() {
+try {
   if (!existsSync(".env")) {
     console.error("Missing .env. Copy .env.example to .env and fill in AA_API_KEY before running.");
     process.exit(1);
@@ -29,12 +29,10 @@ async function main() {
   if (!copilotOk || !openCodeGoOk) {
     console.error("\nDone with parser failures; some pricing data is stale (see errors above).");
     process.exitCode = 1;
-    return;
+  } else {
+    console.log("\nDone. See data/recommendations.json.");
   }
-  console.log("\nDone. See data/recommendations.json.");
-}
-
-main().catch((err) => {
+} catch (err) {
   console.error(err);
   process.exit(1);
-});
+}
