@@ -1,0 +1,63 @@
+{
+  "cli_version": "0.10.6",
+  "checkpoint_id": "01M2K55PSHR5ZWNVRD0DGZF124",
+  "session_id": "2afc1a9e-9d7e-46ed-a9df-c8d381c7f897",
+  "strategy": "manual-commit",
+  "created_at": "2026-09-15T18:27:24.1977735Z",
+  "branch": "resilient-pricing-parsers",
+  "checkpoints_count": 1,
+  "save_step_count": 1,
+  "files_touched": [
+    "src/copilot/downloader.ts",
+    "src/copilot/source.ts",
+    "src/index.ts",
+    "src/opencode-go/downloader.ts",
+    "src/opencode-go/source.ts",
+    "src/pricing/downloader.ts",
+    "src/pricing/refresh.ts",
+    "src/pricing/repair-parser.ts",
+    "src/pricing/source.ts"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-5",
+  "turn_id": "9c1090b781d5",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 420,
+    "cache_creation_tokens": 53426,
+    "cache_read_tokens": 1134857,
+    "output_tokens": 10909,
+    "api_call_count": 15
+  },
+  "session_metrics": {
+    "turn_count": 1
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-09-15T18:27:24.1739914Z",
+    "agent_lines": 141,
+    "agent_removed": 79,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 141,
+    "total_lines_changed": 220,
+    "agent_percentage": 100,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 145,
+      "agent_lines_removed": 83
+    }
+  ]
+}

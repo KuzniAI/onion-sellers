@@ -1,0 +1,6 @@
+I expect that parsing any of the sources will fail at some point because a page layout changed etc. Let's address that.
+
+1. Downloaders should look the same for both sources, but parsers are custom - You can unify them and inject parsers.
+2. try-catch around parser so you can fail with an error. -> console.error for now.
+3. Abort process on network errors.
+4. Catch clause will run Pi agent via SDK and rewrite the parser based on downaloded HTML. Do not implement it, but prepare for it. Right now - console.error
