@@ -18,11 +18,11 @@
   },
   "devDependencies": {
     "@earendil-works/pi-coding-agent": "^0.85.1",
-    "@types/node": "^22.20.2",
+    "@types/node": "^24.13.4",
     "oxfmt": "^0.68.0",
     "oxlint": "^1.83.0"
   },
   "engines": {
-    "node": ">=22.19.0"
+    "node": ">=24.20.0"
   }
 }
