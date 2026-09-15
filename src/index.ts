@@ -1,9 +1,11 @@
 // Runs the benchmark pipeline: refresh provider pricing, fetch Artificial Analysis
-// data, then score models. data/model-mapping.json is still maintained by hand -- see README.
+// data, update config/model-mapping.json, then score models. See README for how the
+// mapping is maintained.
 
 import { existsSync } from "node:fs";
 import { fetchArtificialAnalysisData } from "./artificial-analysis/fetch.ts";
 import { copilotSource } from "./copilot/source.ts";
+import { updateModelMapping } from "./mapping/update-mapping.ts";
 import { openCodeGoSource } from "./opencode-go/source.ts";
 import { refreshPricingSource } from "./pricing/refresh.ts";
 import { computeScores } from "./scoring/compute-scores.ts";
@@ -14,16 +16,19 @@ try {
     process.exit(1);
   }
 
-  console.log("== Step 1/4: refreshing GitHub Copilot pricing ==");
+  console.log("== Step 1/5: refreshing GitHub Copilot pricing ==");
   const copilotOk = await refreshPricingSource(copilotSource);
 
-  console.log("\n== Step 2/4: refreshing OpenCode Go pricing ==");
+  console.log("\n== Step 2/5: refreshing OpenCode Go pricing ==");
   const openCodeGoOk = await refreshPricingSource(openCodeGoSource);
 
-  console.log("\n== Step 3/4: fetching Artificial Analysis benchmark data ==");
+  console.log("\n== Step 3/5: fetching Artificial Analysis benchmark data ==");
   await fetchArtificialAnalysisData();
 
-  console.log("\n== Step 4/4: scoring models per category ==");
+  console.log("\n== Step 4/5: updating model mapping ==");
+  await updateModelMapping();
+
+  console.log("\n== Step 5/5: scoring models per category ==");
   await computeScores();
 
   if (!copilotOk || !openCodeGoOk) {
