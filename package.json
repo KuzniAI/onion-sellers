@@ -11,7 +11,8 @@
   "scripts": {
     "start": "node --env-file-if-exists=.env src/index.ts",
     "lint": "oxlint",
-    "format": "oxfmt src"
+    "format": "oxfmt src",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "cheerio": "^1.2.0"
@@ -20,7 +21,8 @@
     "@earendil-works/pi-coding-agent": "^0.85.1",
     "@types/node": "^24.13.4",
     "oxfmt": "^0.68.0",
-    "oxlint": "^1.83.0"
+    "oxlint": "^1.83.0",
+    "typescript": "^7.0.2"
   },
   "engines": {
     "node": ">=24.20.0"
