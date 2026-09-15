@@ -1,0 +1,1 @@
+Install TypeSccript and add type checking for /src There is a problem to fix there
