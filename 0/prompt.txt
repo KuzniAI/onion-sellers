@@ -3,3 +3,7 @@ Do we still need async main in node.js in 2026?
 ---
 
 just remove it then
+
+---
+
+commit this
