@@ -1,0 +1,25 @@
+Do we still need async main in node.js in 2026?
+
+---
+
+just remove it then
+
+---
+
+commit this
+
+---
+
+yes, run git fsck
+
+---
+
+yes, run it
+
+---
+
+yes, go ahead
+
+---
+
+push it and create PR

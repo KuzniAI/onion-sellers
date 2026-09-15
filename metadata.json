@@ -2,9 +2,13 @@
   "cli_version": "0.10.6",
   "checkpoint_id": "01M2K5KFDEZ3MF3GF4NQTN4G0N",
   "strategy": "manual-commit",
-  "checkpoints_count": 1,
+  "checkpoints_count": 6,
   "files_touched": [
-    ".gitignore"
+    ".gitignore",
+    "data/artificial-analysis/language-models.json",
+    "data/copilot/models-pricing.json",
+    "data/opencode-go/models-pricing.json",
+    "data/recommendations.json"
   ],
   "sessions": [
     {
@@ -13,6 +17,13 @@
       "compact_transcript": "/0/transcript.jsonl",
       "content_hash": "/0/content_hash.txt",
       "prompt": "/0/prompt.txt"
+    },
+    {
+      "metadata": "/1/metadata.json",
+      "transcript": "/1/full.jsonl",
+      "compact_transcript": "/1/transcript.jsonl",
+      "content_hash": "/1/content_hash.txt",
+      "prompt": "/1/prompt.txt"
     }
   ],
   "token_usage": {
