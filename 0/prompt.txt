@@ -1,0 +1,1 @@
+Make sure that when a process fails because of mismatch in parser or network issues - workflow should fail with an error and existing page is not changed
