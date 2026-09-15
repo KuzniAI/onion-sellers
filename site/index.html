@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Onion Sellers</title>
+    <meta
+      name="description"
+      content="Daily model recommendations for GitHub Copilot and OpenCode Go, per task."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧅</text></svg>"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f6f3;
+        --surface: #ffffff;
+        --text: #1d1d1f;
+        --muted: #6b6b70;
+        --border: #e3e1dc;
+        --accent: #7a3fb0;
+        --accent-soft: #f1e9f8;
+        --warn: #8a5000;
+        --warn-soft: #fff1d6;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+          --bg: #141416;
+          --surface: #1d1d21;
+          --text: #ececf0;
+          --muted: #9a9aa3;
+          --border: #2e2e34;
+          --accent: #c79bf0;
+          --accent-soft: #2c2236;
+          --warn: #f0b95a;
+          --warn-soft: #3a2c12;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font:
+          15px/1.5 system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+      }
+      header,
+      main,
+      footer {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      header {
+        padding-top: 32px;
+      }
+      h1 {
+        font-size: 1.6rem;
+        margin: 0 0 4px;
+      }
+      .lede {
+        color: var(--muted);
+        margin: 0 0 12px;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 20px;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      a {
+        color: inherit;
+      }
+      .badge {
+        display: inline-block;
+        margin-left: 4px;
+        padding: 0 6px;
+        border-radius: 4px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        background: var(--warn-soft);
+        color: var(--warn);
+      }
+      .category {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+      h2 {
+        font-size: 1.2rem;
+        margin: 0 0 4px;
+      }
+      .desc {
+        color: var(--muted);
+        margin: 0 0 10px;
+      }
+      .weights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        list-style: none;
+        margin: 0 0 16px;
+        padding: 0;
+      }
+      .weights li {
+        font-size: 0.78rem;
+        background: var(--accent-soft);
+        color: var(--accent);
+        border-radius: 999px;
+        padding: 2px 10px;
+      }
+      .providers {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+        gap: 20px;
+      }
+      h3 {
+        font-size: 0.95rem;
+        margin: 0 0 8px;
+      }
+      .table-wrap {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+        font-variant-numeric: tabular-nums;
+      }
+      th,
+      td {
+        padding: 6px 8px;
+        text-align: right;
+        border-bottom: 1px solid var(--border);
+        white-space: nowrap;
+      }
+      th:nth-child(-n + 2),
+      td:nth-child(-n + 2) {
+        text-align: left;
+      }
+      th {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--muted);
+      }
+      td.model {
+        font-weight: 600;
+        white-space: normal;
+        min-width: 9rem;
+      }
+      @media (max-width: 600px) {
+        .category {
+          padding: 16px 12px;
+        }
+      }
+      td.score {
+        font-weight: 600;
+        color: var(--accent);
+      }
+      .empty,
+      .error {
+        color: var(--muted);
+        font-style: italic;
+      }
+      footer {
+        color: var(--muted);
+        font-size: 0.8rem;
+        padding-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Onion Sellers</h1>
+      <p class="lede">
+        Which models to use on GitHub Copilot and OpenCode Go, per kind of task. Recomputed daily
+        from provider pricing and Artificial Analysis benchmarks.
+      </p>
+      <div class="meta" id="meta"></div>
+    </header>
+
+    <main id="app"><p class="empty">Loading…</p></main>
+
+    <footer>
+      <p>
+        Score is a weighted sum of min-max normalized metrics across all scored models. Blended
+        price assumes 3 output tokens per input token. Pricing:
+        <a href="https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing"
+          >GitHub Copilot docs</a
+        >, <a href="https://opencode.ai/docs/go/">OpenCode Go docs</a>. Benchmarks:
+        <a href="https://artificialanalysis.ai/">Artificial Analysis</a>. Source:
+        <a href="https://github.com/KuzniAI/onion-sellers">KuzniAI/onion-sellers</a>.
+      </p>
+    </footer>
+
+    <script>
+      const PROVIDERS = [
+        { id: "copilot", name: "GitHub Copilot" },
+        { id: "opencode-go", name: "OpenCode Go" },
+      ];
+      const WEIGHT_LABELS = {
+        agenticIndex: "Agentic",
+        codingIndex: "Coding",
+        intelligenceIndex: "Intelligence",
+        costEfficiency: "Cost efficiency",
+        speed: "Speed",
+      };
+      const STALE_MS = 36 * 60 * 60 * 1000;
+
+      const ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+      const esc = (value) => String(value).replace(/[&<>"']/g, (c) => ESCAPES[c]);
+      const num = (value, digits = 1) =>
+        value == null ? "–" : value.toLocaleString(undefined, { maximumFractionDigits: digits });
+      const fmtDate = (iso) =>
+        new Date(iso).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+      const titleCase = (key) => {
+        const words = key.replace(/([A-Z])/g, " $1").toLowerCase();
+        return words[0].toUpperCase() + words.slice(1);
+      };
+
+      async function getJson(url) {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`${res.status} on ${url}`);
+        return res.json();
+      }
+
+      function renderMeta(recs, pricing) {
+        const generatedAt = new Date(recs.generatedAt);
+        const items = [
+          `Updated <time datetime="${esc(recs.generatedAt)}">${esc(fmtDate(recs.generatedAt))}</time>`,
+          `${num(recs.candidatesConsidered, 0)} models scored`,
+        ];
+        PROVIDERS.forEach((provider, i) => {
+          const source = pricing[i];
+          if (!source) {
+            items.push(`${provider.name} pricing: unavailable`);
+            return;
+          }
+          const stale = generatedAt - new Date(source.fetchedAt) > STALE_MS;
+          items.push(
+            `<a href="${esc(source.sourceUrl)}">${provider.name} pricing</a>: ${esc(fmtDate(source.fetchedAt))}` +
+              (stale ? '<span class="badge">stale</span>' : ""),
+          );
+        });
+        document.getElementById("meta").innerHTML = items.map((i) => `<span>${i}</span>`).join("");
+      }
+
+      function renderTable(rows) {
+        if (!rows?.length) return '<p class="empty">No scored models.</p>';
+        const body = rows
+          .map(
+            (r, i) => `<tr>
+              <td>${i + 1}</td>
+              <td class="model">${esc(r.model)}</td>
+              <td class="score">${num(r.score, 3)}</td>
+              <td>${num(r.breakdown.agenticIndex)}</td>
+              <td>${num(r.breakdown.codingIndex)}</td>
+              <td>${num(r.breakdown.intelligenceIndex)}</td>
+              <td>${num(r.breakdown.speed, 0)}</td>
+              <td>$${num(r.priceBlendedPer1M, 3)}</td>
+            </tr>`,
+          )
+          .join("");
+        return `<div class="table-wrap"><table>
+          <thead><tr>
+            <th>#</th><th>Model</th><th>Score</th><th>Agentic</th><th>Coding</th>
+            <th>Intel.</th><th>Tok/s</th><th>$/1M</th>
+          </tr></thead>
+          <tbody>${body}</tbody>
+        </table></div>`;
+      }
+
+      function renderCategory(name, byProvider, config) {
+        const weights = Object.entries(config?.weights ?? {})
+          .filter(([, w]) => w > 0)
+          .sort((a, b) => b[1] - a[1])
+          .map(([k, w]) => `<li>${esc(WEIGHT_LABELS[k] ?? k)} ${Math.round(w * 100)}%</li>`)
+          .join("");
+        const providers = PROVIDERS.map(
+          (p) => `<div><h3>${p.name}</h3>${renderTable(byProvider[p.id])}</div>`,
+        ).join("");
+        return `<section class="category">
+          <h2>${esc(titleCase(name))}</h2>
+          ${config?.description ? `<p class="desc">${esc(config.description)}</p>` : ""}
+          <ul class="weights">${weights}</ul>
+          <div class="providers">${providers}</div>
+        </section>`;
+      }
+
+      async function main() {
+        const app = document.getElementById("app");
+        try {
+          const [recs, config, ...pricing] = await Promise.all([
+            getJson("data/recommendations.json"),
+            getJson("categories.json").catch(() => ({ categories: {} })),
+            ...PROVIDERS.map((p) => getJson(`data/${p.id}/models-pricing.json`).catch(() => null)),
+          ]);
+          renderMeta(recs, pricing);
+          app.innerHTML = Object.entries(recs.categories)
+            .map(([name, byProvider]) => renderCategory(name, byProvider, config.categories[name]))
+            .join("");
+        } catch (err) {
+          app.innerHTML = `<p class="error">Could not load recommendations (${esc(err.message)}).</p>`;
+        }
+      }
+
+      main();
+    </script>
+  </body>
+</html>

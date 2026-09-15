@@ -1,0 +1,134 @@
+# Runs the pipeline once a day, stores the output on the orphan `data` branch
+# (latest/ + history/YYYY-MM-DD/), and publishes site/index.html to GitHub Pages.
+
+name: Daily pipeline
+
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: daily-pipeline
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  pipeline:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      exit-code: ${{ steps.run.outputs.exit-code }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Configure git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Check out data branch
+        run: |
+          if git ls-remote --exit-code --heads origin data >/dev/null; then
+            git fetch origin data
+            git worktree add -B data data-branch origin/data
+          else
+            git worktree add --orphan -b data data-branch
+          fi
+
+      # Lets refresh.ts keep the previous pricing file when a parser fails.
+      - name: Seed previous pricing data
+        run: |
+          mkdir -p data
+          for src in copilot opencode-go; do
+            if [ -d "data-branch/latest/$src" ]; then cp -r "data-branch/latest/$src" data/; fi
+          done
+
+      # Exit code 1 with recommendations written means some pricing is stale: publish anyway
+      # and fail the run at the end. No recommendations means the pipeline aborted.
+      - name: Run pipeline
+        id: run
+        env:
+          AA_API_KEY: ${{ secrets.AA_API_KEY }}
+        run: |
+          set +e
+          npm start
+          code=$?
+          echo "exit-code=$code" >> "$GITHUB_OUTPUT"
+          if [ ! -f data/recommendations.json ]; then exit "$code"; fi
+
+      - name: Commit model mapping
+        run: |
+          if git diff --quiet -- config/model-mapping.json; then
+            echo "No mapping changes."
+            exit 0
+          fi
+          git add config/model-mapping.json
+          git commit -m "Update model mapping"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Commit data snapshot
+        run: |
+          day=$(date -u +%F)
+          for dest in latest "history/$day"; do
+            mkdir -p "data-branch/$dest"
+            cp data/recommendations.json "data-branch/$dest/"
+            for src in copilot opencode-go; do
+              mkdir -p "data-branch/$dest/$src"
+              cp "data/$src/models-pricing.json" "data-branch/$dest/$src/"
+            done
+          done
+          cd data-branch
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git commit -m "Data for $day"
+          git push origin HEAD:data
+
+      - name: Build site
+        run: |
+          mkdir -p _site
+          cp site/index.html config/categories.json _site/
+          cp -r data-branch/latest _site/data
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: pipeline
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  stale-pricing:
+    needs: [pipeline, deploy]
+    if: needs.pipeline.outputs.exit-code != '0'
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "::error::Pipeline finished with parser failures; published pricing is stale. See the pipeline job log."
+          exit 1
