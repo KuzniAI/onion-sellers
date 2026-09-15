@@ -1,0 +1,1 @@
+Move scripts into src and run it as a part of an app.

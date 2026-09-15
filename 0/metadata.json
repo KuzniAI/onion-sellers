@@ -1,0 +1,60 @@
+{
+  "cli_version": "0.10.6",
+  "checkpoint_id": "01M2K44RCY7PXEG2MHTAKE8D98",
+  "session_id": "857b4a2e-9f19-4c3d-8c3a-cf7f9b705e52",
+  "strategy": "manual-commit",
+  "created_at": "2026-09-15T18:09:24.4291137Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "save_step_count": 1,
+  "files_touched": [
+    "package.json",
+    "scripts/compute-scores.ts",
+    "scripts/fetch-artificial-analysis.ts",
+    "src/artificial-analysis/fetch.ts",
+    "src/index.ts",
+    "src/scoring/compute-scores.ts"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5",
+  "turn_id": "481c520123ed",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 52,
+    "cache_creation_tokens": 59229,
+    "cache_read_tokens": 2367766,
+    "output_tokens": 14143,
+    "api_call_count": 26
+  },
+  "session_metrics": {
+    "turn_count": 1
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-09-15T18:09:24.4041136Z",
+    "agent_lines": 335,
+    "agent_removed": 359,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 335,
+    "total_lines_changed": 694,
+    "agent_percentage": 100,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 339,
+      "agent_lines_removed": 363
+    }
+  ]
+}
