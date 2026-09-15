@@ -3,41 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Onion Sellers</title>
+    <title>Agentic Onion Sellers</title>
     <meta
       name="description"
-      content="Daily model recommendations for GitHub Copilot and OpenCode Go, per task."
+      content="Daily model recommendations for GitHub Copilot and OpenCode Go, per task — served bistro-style."
     />
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧅</text></svg>"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Libre+Franklin:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         color-scheme: light;
-        --bg: #f7f6f3;
-        --surface: #ffffff;
-        --text: #1d1d1f;
-        --muted: #6b6b70;
-        --border: #e3e1dc;
-        --accent: #7a3fb0;
-        --accent-soft: #f1e9f8;
+        --bg: #f4ead9;
+        --surface: #fffaf1;
+        --text: #3a1f14;
+        --muted: #7a5c46;
+        --border: #d9b98a;
+        --accent: #8c1f28;
+        --accent-soft: #f6dfd0;
         --warn: #8a5000;
-        --warn-soft: #fff1d6;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          color-scheme: dark;
-          --bg: #141416;
-          --surface: #1d1d21;
-          --text: #ececf0;
-          --muted: #9a9aa3;
-          --border: #2e2e34;
-          --accent: #c79bf0;
-          --accent-soft: #2c2236;
-          --warn: #f0b95a;
-          --warn-soft: #3a2c12;
-        }
+        --warn-soft: #ffe4b8;
       }
       * {
         box-sizing: border-box;
@@ -46,30 +36,37 @@
         margin: 0;
         background: var(--bg);
         color: var(--text);
-        font:
-          15px/1.5 system-ui,
-          -apple-system,
-          "Segoe UI",
-          sans-serif;
+        font: 15px/1.5 "Libre Franklin", system-ui, sans-serif;
       }
       header,
       main,
       footer {
         max-width: 1100px;
-        margin: 0 auto;
+        margin: 24px auto;
         padding-left: 16px;
         padding-right: 16px;
       }
       header {
-        padding-top: 32px;
+        padding-top: 20px;
+        background: var(--surface);
+        border: 3px solid var(--accent);
+        border-radius: 6px;
+        padding: 24px 24px 20px;
+        box-shadow: 6px 6px 0 rgba(58, 31, 20, 0.15);
       }
       h1 {
-        font-size: 1.6rem;
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
         margin: 0 0 4px;
+        color: var(--accent);
+      }
+      h1::before {
+        content: "🧅 ";
       }
       .lede {
         color: var(--muted);
         margin: 0 0 12px;
+        font-style: italic;
       }
       .meta {
         display: flex;
@@ -79,7 +76,7 @@
         color: var(--muted);
       }
       a {
-        color: inherit;
+        color: var(--accent);
       }
       .badge {
         display: inline-block;
@@ -94,13 +91,20 @@
       .category {
         background: var(--surface);
         border: 1px solid var(--border);
-        border-radius: 10px;
+        border-top: 6px solid var(--accent);
+        border-radius: 4px;
         padding: 20px;
         margin: 20px 0;
+        box-shadow: 4px 4px 0 rgba(58, 31, 20, 0.08);
       }
       h2 {
-        font-size: 1.2rem;
+        font-family: "Playfair Display", serif;
+        font-size: 1.35rem;
         margin: 0 0 4px;
+        color: var(--text);
+      }
+      h2::before {
+        content: "🥖 ";
       }
       .desc {
         color: var(--muted);
@@ -120,6 +124,7 @@
         color: var(--accent);
         border-radius: 999px;
         padding: 2px 10px;
+        border: 1px solid var(--border);
       }
       .providers {
         display: grid;
@@ -129,6 +134,9 @@
       h3 {
         font-size: 0.95rem;
         margin: 0 0 8px;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
       }
       .table-wrap {
         overflow-x: auto;
@@ -143,7 +151,7 @@
       td {
         padding: 6px 8px;
         text-align: right;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px dashed var(--border);
         white-space: nowrap;
       }
       th:nth-child(-n + 2),
@@ -154,6 +162,7 @@
         font-size: 0.75rem;
         font-weight: 600;
         color: var(--muted);
+        border-bottom: 2px solid var(--accent);
       }
       td.model {
         font-weight: 600;
@@ -166,7 +175,7 @@
         }
       }
       td.score {
-        font-weight: 600;
+        font-weight: 700;
         color: var(--accent);
       }
       .empty,
@@ -178,20 +187,22 @@
         color: var(--muted);
         font-size: 0.8rem;
         padding-bottom: 40px;
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Onion Sellers</h1>
+      <h1>Agentic Onion Sellers</h1>
       <p class="lede">
-        Which models to use on GitHub Copilot and OpenCode Go, per kind of task. Recomputed daily
-        from provider pricing and Artificial Analysis benchmarks.
+        "Ze finest recommendations, smuggled past ze checkpoint in a string of onions." Which models
+        to use on GitHub Copilot and OpenCode Go, per kind of task — recomputed daily from provider
+        pricing and Artificial Analysis benchmarks.
       </p>
       <div class="meta" id="meta"></div>
     </header>
 
-    <main id="app"><p class="empty">Loading…</p></main>
+    <main id="app"><p class="empty">Setting ze tables…</p></main>
 
     <footer>
       <p>
@@ -201,7 +212,8 @@
           >GitHub Copilot docs</a
         >, <a href="https://opencode.ai/docs/go/">OpenCode Go docs</a>. Benchmarks:
         <a href="https://artificialanalysis.ai/">Artificial Analysis</a>. Source:
-        <a href="https://github.com/KuzniAI/onion-sellers">KuzniAI/onion-sellers</a>.
+        <a href="https://github.com/KuzniAI/onion-sellers">KuzniAI/onion-sellers</a>. Inspired by
+        René's onion-selling disguise in 'Allo 'Allo!.
       </p>
     </footer>
 
