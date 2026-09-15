@@ -1,0 +1,9 @@
+Let's think about next step: I want to run this app once per day, possibly in GitHub Action and I want it to be able to store results somewhere (inside a repo?) and display it somehow (Github pages?)
+
+---
+
+commit and open a PR
+
+---
+
+Secret is ready, pages configured. I cannot change Workflow permissions
