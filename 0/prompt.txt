@@ -1,0 +1,17 @@
+I want to make result page standout a bit, so copy @site/index.html and create 5 varaiations on a theme French Onion Seller from Allo Allo https://alloallo.fandom.com/wiki/The_Confusion_of_the_Generals. You do not have to maintain dark mode
+
+---
+
+Only theme-cafe-rene gets the vibe right. typography is spot one. I need different background though. Drop remaining themes an iterate on this one
+
+---
+
+background is still too noisy. Pick a solid color instaed
+
+---
+
+Will do. Replace existing one. The only thing is to replace Café René's Onion Ledger with Agentic Onion Sellers (unless you have a better proposal)
+
+---
+
+commit this and push
