@@ -1,0 +1,563 @@
+{
+  "sourceUrl": "https://opencode.ai/docs/zen/",
+  "fetchedAt": "2026-09-15T20:13:53.630Z",
+  "notes": "Auto-generated from the OpenCode Zen docs page. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
+  "models": [
+    {
+      "model": "Big Pickle",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "MiMo-V2.5 Free",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Ling 3.0 Flash Fin Free",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Nemotron 3 Ultra Free",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Nemotron 3.5 Lightning Free",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Muse Spark 1.3 Contributor Free",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "MiniMax M3",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.06,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "MiniMax M2.7",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.06,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "MiniMax M2.5",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.06,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GLM 5.3 Flash",
+      "priceInput": 0.15,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GLM 5.3",
+      "priceInput": 1.4,
+      "priceOutput": 4.4,
+      "priceCachedRead": 0.26,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GLM 5.2",
+      "priceInput": 1.4,
+      "priceOutput": 4.4,
+      "priceCachedRead": 0.26,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GLM 5.1",
+      "priceInput": 1.4,
+      "priceOutput": 4.4,
+      "priceCachedRead": 0.26,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GLM 5",
+      "priceInput": 1,
+      "priceOutput": 3.2,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Kimi K2.7 Code",
+      "priceInput": 0.95,
+      "priceOutput": 4,
+      "priceCachedRead": 0.19,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Kimi K3",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": 0.3,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Kimi K2.6",
+      "priceInput": 0.95,
+      "priceOutput": 4,
+      "priceCachedRead": 0.16,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Kimi K2.5",
+      "priceInput": 0.6,
+      "priceOutput": 3,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Qwen3.7 Max",
+      "priceInput": 2.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 3.125
+    },
+    {
+      "model": "Qwen3.7 Plus",
+      "priceInput": 0.4,
+      "priceOutput": 1.6,
+      "priceCachedRead": 0.04,
+      "priceCachedWrite": 0.5
+    },
+    {
+      "model": "Qwen3.6 Plus",
+      "priceInput": 0.5,
+      "priceOutput": 3,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 0.625
+    },
+    {
+      "model": "Qwen3.5 Plus",
+      "priceInput": 0.2,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": 0.25
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "priceInput": 1.74,
+      "priceOutput": 3.48,
+      "priceCachedRead": 0.145,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "priceInput": 0.14,
+      "priceOutput": 0.28,
+      "priceCachedRead": 0.028,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "DeepSeek V4 Flash Vision Exp",
+      "priceInput": 0.14,
+      "priceOutput": 0.28,
+      "priceCachedRead": 0.028,
+      "priceCachedWrite": null,
+      "notes": "Images are converted into tokens based on their dimensions and billed as input tokens alongside text tokens. Learn more."
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "priceInput": 10,
+      "priceOutput": 50,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": 12.5
+    },
+    {
+      "model": "Claude Fable 5",
+      "priceInput": 10,
+      "priceOutput": 50,
+      "priceCachedRead": 1,
+      "priceCachedWrite": 12.5
+    },
+    {
+      "model": "Claude Opus 5",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25
+    },
+    {
+      "model": "Claude Opus 4.8",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25
+    },
+    {
+      "model": "Claude Opus 4.7",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25
+    },
+    {
+      "model": "Claude Opus 4.6",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25
+    },
+    {
+      "model": "Claude Opus 4.5",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25
+    },
+    {
+      "model": "Claude Sonnet 5",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "model": "Claude Sonnet 4.6",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": 0.3,
+      "priceCachedWrite": 3.75
+    },
+    {
+      "model": "Claude Sonnet 4.5 (≤ 200K tokens)",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": 0.3,
+      "priceCachedWrite": 3.75
+    },
+    {
+      "model": "Claude Sonnet 4.5 (> 200K tokens)",
+      "priceInput": 6,
+      "priceOutput": 22.5,
+      "priceCachedRead": 0.6,
+      "priceCachedWrite": 7.5
+    },
+    {
+      "model": "Claude Haiku 4.5",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 1.25
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "priceInput": 1.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Gemini 3.7 Flash",
+      "priceInput": 1.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Gemini 3.6 Flash",
+      "priceInput": 1.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Gemini 3.5 Flash",
+      "priceInput": 1.5,
+      "priceOutput": 9,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Gemini 3.5 Flash Lite",
+      "priceInput": 0.3,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Gemini 3.1 Pro (≤ 200K tokens)",
+      "priceInput": 2,
+      "priceOutput": 12,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Gemini 3.1 Pro (> 200K tokens)",
+      "priceInput": 4,
+      "priceOutput": 18,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Gemini 3 Flash",
+      "priceInput": 0.5,
+      "priceOutput": 3,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Grok 4.6 (≤ 200K tokens)",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Grok 4.6 (> 200K tokens)",
+      "priceInput": 4,
+      "priceOutput": 12,
+      "priceCachedRead": 1,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Grok 4.5 (≤ 200K tokens)",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.3,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Grok 4.5 (> 200K tokens)",
+      "priceInput": 4,
+      "priceOutput": 12,
+      "priceCachedRead": 0.6,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Grok Build 0.1",
+      "priceInput": 1,
+      "priceOutput": 2,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "priceInput": 1.25,
+      "priceOutput": 4.25,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Muse Spark 1.2",
+      "priceInput": 1.25,
+      "priceOutput": 4.25,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 6 Astra (≤ 272K tokens)",
+      "priceInput": 10,
+      "priceOutput": 50,
+      "priceCachedRead": 1,
+      "priceCachedWrite": 12.5
+    },
+    {
+      "model": "GPT 6 Astra (> 272K tokens)",
+      "priceInput": 20,
+      "priceOutput": 75,
+      "priceCachedRead": 2,
+      "priceCachedWrite": 25
+    },
+    {
+      "model": "GPT 5.6 Sol (≤ 272K tokens)",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 2.5,
+      "notes": "Prices shown include a 50% discount through September 18, 2026."
+    },
+    {
+      "model": "GPT 5.6 Sol (> 272K tokens)",
+      "priceInput": 4,
+      "priceOutput": 15,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": 5,
+      "notes": "Prices shown include a 50% discount through September 18, 2026."
+    },
+    {
+      "model": "GPT 5.6 Terra (≤ 272K tokens)",
+      "priceInput": 2,
+      "priceOutput": 12,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "model": "GPT 5.6 Terra (> 272K tokens)",
+      "priceInput": 4,
+      "priceOutput": 18,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": 5
+    },
+    {
+      "model": "GPT 5.6 Luna (≤ 272K tokens)",
+      "priceInput": 0.2,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": 0.25
+    },
+    {
+      "model": "GPT 5.6 Luna (> 272K tokens)",
+      "priceInput": 0.4,
+      "priceOutput": 1.8,
+      "priceCachedRead": 0.04,
+      "priceCachedWrite": 0.5
+    },
+    {
+      "model": "GPT 5.5 (≤ 272K tokens)",
+      "priceInput": 5,
+      "priceOutput": 30,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.5 (> 272K tokens)",
+      "priceInput": 10,
+      "priceOutput": 45,
+      "priceCachedRead": 1,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.5 Pro",
+      "priceInput": 30,
+      "priceOutput": 180,
+      "priceCachedRead": 30,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.4 (≤ 272K tokens)",
+      "priceInput": 2.5,
+      "priceOutput": 15,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.4 (> 272K tokens)",
+      "priceInput": 5,
+      "priceOutput": 22.5,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.4 Pro",
+      "priceInput": 30,
+      "priceOutput": 180,
+      "priceCachedRead": 30,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.4 Mini",
+      "priceInput": 0.75,
+      "priceOutput": 4.5,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.4 Nano",
+      "priceInput": 0.2,
+      "priceOutput": 1.25,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.3 Codex Spark",
+      "priceInput": 1.75,
+      "priceOutput": 14,
+      "priceCachedRead": 0.175,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.3 Codex",
+      "priceInput": 1.75,
+      "priceOutput": 14,
+      "priceCachedRead": 0.175,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.2",
+      "priceInput": 1.75,
+      "priceOutput": 14,
+      "priceCachedRead": 0.175,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.2 Codex",
+      "priceInput": 1.75,
+      "priceOutput": 14,
+      "priceCachedRead": 0.175,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.1",
+      "priceInput": 1.07,
+      "priceOutput": 8.5,
+      "priceCachedRead": 0.107,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.1 Codex",
+      "priceInput": 1.07,
+      "priceOutput": 8.5,
+      "priceCachedRead": 0.107,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.1 Codex Max",
+      "priceInput": 1.25,
+      "priceOutput": 10,
+      "priceCachedRead": 0.125,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5.1 Codex Mini",
+      "priceInput": 0.25,
+      "priceOutput": 2,
+      "priceCachedRead": 0.025,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5",
+      "priceInput": 1.07,
+      "priceOutput": 8.5,
+      "priceCachedRead": 0.107,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5 Codex",
+      "priceInput": 1.07,
+      "priceOutput": 8.5,
+      "priceCachedRead": 0.107,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 5 Nano",
+      "priceInput": 0.05,
+      "priceOutput": 0.4,
+      "priceCachedRead": 0.005,
+      "priceCachedWrite": null
+    }
+  ]
+}

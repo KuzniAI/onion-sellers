@@ -1,0 +1,139 @@
+{
+  "sourceUrl": "https://docs.cline.bot/getting-started/clinepass",
+  "fetchedAt": "2026-09-15T20:13:53.922Z",
+  "notes": "Auto-generated from the ClinePass docs page. ClinePass is a flat monthly subscription; prices are the page's reference API rates (USD per 1M tokens) that usage is counted against, not separate charges. Reference a model in Cline by its modelId (e.g. \"cline-pass/glm-5.3\").",
+  "models": [
+    {
+      "model": "GLM-5.3",
+      "modelId": "cline-pass/glm-5.3",
+      "priceInput": 1.4,
+      "priceOutput": 4.4,
+      "priceCachedRead": 0.26,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GLM-5.2",
+      "modelId": "cline-pass/glm-5.2",
+      "priceInput": 1.4,
+      "priceOutput": 4.4,
+      "priceCachedRead": 0.26,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Kimi K3",
+      "modelId": "cline-pass/kimi-k3",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": 0.3,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Kimi K2.7 Code",
+      "modelId": "cline-pass/kimi-k2.7-code",
+      "priceInput": 0.95,
+      "priceOutput": 4,
+      "priceCachedRead": 0.19,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Kimi K2.6",
+      "modelId": "cline-pass/kimi-k2.6",
+      "priceInput": 0.95,
+      "priceOutput": 4,
+      "priceCachedRead": 0.16,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "DeepSeek V4 Pro (Peak)",
+      "modelId": "cline-pass/deepseek-v4-pro",
+      "priceInput": 1.32,
+      "priceOutput": 3.96,
+      "priceCachedRead": 0.044,
+      "priceCachedWrite": null,
+      "notes": "DeepSeek API pricing"
+    },
+    {
+      "model": "DeepSeek V4 Pro (Off-peak)",
+      "modelId": "cline-pass/deepseek-v4-pro",
+      "priceInput": 0.66,
+      "priceOutput": 1.98,
+      "priceCachedRead": 0.022,
+      "priceCachedWrite": null,
+      "notes": "DeepSeek API pricing"
+    },
+    {
+      "model": "DeepSeek V4 Flash (Peak)",
+      "modelId": "cline-pass/deepseek-v4-flash",
+      "priceInput": 0.44,
+      "priceOutput": 1.32,
+      "priceCachedRead": 0.014,
+      "priceCachedWrite": null,
+      "notes": "DeepSeek API pricing"
+    },
+    {
+      "model": "DeepSeek V4 Flash (Off-peak)",
+      "modelId": "cline-pass/deepseek-v4-flash",
+      "priceInput": 0.22,
+      "priceOutput": 0.66,
+      "priceCachedRead": 0.007,
+      "priceCachedWrite": null,
+      "notes": "DeepSeek API pricing"
+    },
+    {
+      "model": "MiMo-V2.5",
+      "modelId": "cline-pass/mimo-v2.5",
+      "priceInput": 0.14,
+      "priceOutput": 0.28,
+      "priceCachedRead": 0.0028,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "MiMo-V2.5-Pro",
+      "modelId": "cline-pass/mimo-v2.5-pro",
+      "priceInput": 1.74,
+      "priceOutput": 3.48,
+      "priceCachedRead": 0.0145,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "MiniMax M3",
+      "modelId": "cline-pass/minimax-m3",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.06,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Qwen3.8 Max",
+      "modelId": "cline-pass/qwen3.8-max",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "model": "Qwen3.7 Max",
+      "modelId": "cline-pass/qwen3.7-max",
+      "priceInput": 2.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 3.125
+    },
+    {
+      "model": "Qwen3.7 Plus (≤ 256K tokens)",
+      "modelId": "cline-pass/qwen3.7-plus",
+      "priceInput": 0.4,
+      "priceOutput": 1.6,
+      "priceCachedRead": 0.04,
+      "priceCachedWrite": 0.5
+    },
+    {
+      "model": "Qwen3.7 Plus (> 256K tokens)",
+      "modelId": "cline-pass/qwen3.7-plus",
+      "priceInput": 1.2,
+      "priceOutput": 4.8,
+      "priceCachedRead": 0.12,
+      "priceCachedWrite": 1.5
+    }
+  ]
+}
