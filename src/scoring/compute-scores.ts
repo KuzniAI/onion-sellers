@@ -151,7 +151,7 @@ export async function computeScores(): Promise<void> {
   });
 
   const mapping: MappingEntry[] = JSON.parse(
-    await readFile(path.join("data", "model-mapping.json"), "utf8"),
+    await readFile(path.join("config", "model-mapping.json"), "utf8"),
   );
   const aaData = JSON.parse(
     await readFile(path.join("data", "artificial-analysis", "language-models.json"), "utf8"),

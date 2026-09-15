@@ -1,5 +1,5 @@
 // Runs the benchmark pipeline: refresh provider pricing, fetch Artificial Analysis
-// data, then score models. data/model-mapping.json is still maintained by hand -- see README.
+// data, then score models. config/model-mapping.json is still maintained by hand -- see README.
 
 import { existsSync } from "node:fs";
 import { fetchArtificialAnalysisData } from "./artificial-analysis/fetch.ts";
