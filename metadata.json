@@ -3,7 +3,7 @@
   "checkpoint_id": "01M2K67P9M7XGK3EQR8EMFQBQG",
   "strategy": "manual-commit",
   "branch": "auto-update-model-mapping",
-  "checkpoints_count": 1,
+  "checkpoints_count": 2,
   "files_touched": [
     "README.md",
     "config/model-mapping.json",
@@ -18,13 +18,20 @@
       "compact_transcript": "/0/transcript.jsonl",
       "content_hash": "/0/content_hash.txt",
       "prompt": "/0/prompt.txt"
+    },
+    {
+      "metadata": "/1/metadata.json",
+      "transcript": "/1/full.jsonl",
+      "compact_transcript": "/1/transcript.jsonl",
+      "content_hash": "/1/content_hash.txt",
+      "prompt": "/1/prompt.txt"
     }
   ],
   "token_usage": {
-    "input_tokens": 452,
-    "cache_creation_tokens": 64752,
-    "cache_read_tokens": 1353202,
-    "output_tokens": 17728,
-    "api_call_count": 16
+    "input_tokens": 496,
+    "cache_creation_tokens": 100115,
+    "cache_read_tokens": 3088202,
+    "output_tokens": 21437,
+    "api_call_count": 38
   }
 }
