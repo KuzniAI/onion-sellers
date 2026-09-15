@@ -21,8 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    outputs:
-      exit-code: ${{ steps.run.outputs.exit-code }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -49,7 +47,8 @@ jobs:
             git worktree add --orphan -b data data-branch
           fi
 
-      # Lets refresh.ts keep the previous pricing file when a parser fails.
+      # Lets refresh.ts keep the previous pricing file when a parser fails, so the run
+      # can still complete and log a full diagnosis instead of crashing on a missing file.
       - name: Seed previous pricing data
         run: |
           mkdir -p data
@@ -57,18 +56,13 @@ jobs:
             if [ -d "data-branch/latest/$src" ]; then cp -r "data-branch/latest/$src" data/; fi
           done
 
-      # Exit code 1 with recommendations written means some pricing is stale: publish anyway
-      # and fail the run at the end. No recommendations means the pipeline aborted.
+      # A nonzero exit (parser mismatch or network failure) fails this step immediately,
+      # so the commit/build/deploy steps below are skipped and the published page is
+      # left unchanged.
       - name: Run pipeline
-        id: run
         env:
           AA_API_KEY: ${{ secrets.AA_API_KEY }}
-        run: |
-          set +e
-          npm start
-          code=$?
-          echo "exit-code=$code" >> "$GITHUB_OUTPUT"
-          if [ ! -f data/recommendations.json ]; then exit "$code"; fi
+        run: npm start
 
       - name: Commit model mapping
         run: |
@@ -123,12 +117,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-
-  stale-pricing:
-    needs: [pipeline, deploy]
-    if: needs.pipeline.outputs.exit-code != '0'
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          echo "::error::Pipeline finished with parser failures; published pricing is stale. See the pipeline job log."
-          exit 1

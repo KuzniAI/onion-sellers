@@ -20,7 +20,7 @@ Choose a best onion seller for you.
 - Mapping changes to `config/model-mapping.json` are committed straight to `main`.
 - Results go to the orphan `data` branch: `latest/` holds the current `recommendations.json` and provider pricing, `history/YYYY-MM-DD/` keeps one snapshot per day. Raw Artificial Analysis data is not stored or published.
 - `site/index.html` is published with the latest data to https://kuzniai.github.io/onion-sellers/.
-- If a pricing parser fails, the previous day's pricing is reused, the site shows a "stale" badge, and the run is marked failed.
+- If a pricing parser fails or a source download errors, the run fails before anything is committed or published, so the site keeps showing the last successful run untouched.
 
 One-time setup:
 
