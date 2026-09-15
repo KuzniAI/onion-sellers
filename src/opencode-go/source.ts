@@ -16,5 +16,15 @@ export const openCodeGoSource: PricingSource<OpenCodeGoModelRow> = {
     "same model share one modelId and appear as separate rows, matching the source page. " +
     "Live model list: https://opencode.ai/zen/go/v1/models (id/owner metadata only, no pricing).",
   parserPath: fileURLToPath(new URL("./parser.ts", import.meta.url)),
+  parseExport: "parseOpenCodeGoPricingHtml",
+  rowContract:
+    "One row per row of the pricing table (Model / Input / Output / Cached Read / Cached Write / Monthly limit), " +
+    "keeping variant suffixes like (Peak) or (≤ 256K tokens) in model. priceInput, priceOutput, monthlyLimitUsd: " +
+    'USD numbers (for a promotional limit use the current value, with the base value in notes); priceCachedRead, priceCachedWrite: number or null for "-". ' +
+    "Join by model name (falling back to the name without its variant suffix) to the requests table " +
+    "(requestsPer5h, requestsPerWeek, requestsPerMonth as integers), the endpoints table (modelId, endpoint, " +
+    "aiSdkPackage) and the privacy table (modelTraining text, dataRetentionDays integer); use null when a table " +
+    "has no row. notes: optional text for promotions and footnotes.",
+  priceFields: { input: "priceInput", output: "priceOutput" },
   parse: parseOpenCodeGoPricingHtml,
 };

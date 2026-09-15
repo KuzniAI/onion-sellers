@@ -4,8 +4,8 @@ import { downloadHtml } from "./downloader.ts";
 import { repairParser } from "./repair-parser.ts";
 import type { PricingSource } from "./source.ts";
 
-// Returns false when parsing failed (existing data file is left untouched).
-// Network errors are not caught and abort the pipeline.
+// Returns false when parsing failed and could not be repaired (existing data file is left
+// untouched). Network errors are not caught and abort the pipeline.
 export async function refreshPricingSource<Row>(source: PricingSource<Row>): Promise<boolean> {
   const html = await downloadHtml(source.sourceUrl);
 
@@ -13,8 +13,9 @@ export async function refreshPricingSource<Row>(source: PricingSource<Row>): Pro
   try {
     models = source.parse(html);
   } catch (error) {
-    await repairParser({ source, html, error });
-    return false;
+    const repaired = await repairParser({ source, html, error });
+    if (!repaired) return false;
+    models = repaired;
   }
 
   await mkdir(path.dirname(source.outFile), { recursive: true });

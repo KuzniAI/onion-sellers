@@ -92,5 +92,187 @@
   { "provider": "opencode-go", "providerModel": "Hy3", "aaSlug": "hy3" },
   { "provider": "opencode-go", "providerModel": "Grok 4.6", "aaSlug": "grok-4-6" },
   { "provider": "opencode-go", "providerModel": "GPT 5.6 Luna", "aaSlug": "gpt-5-6-luna" },
-  { "provider": "opencode-go", "providerModel": "MiniMax M2.5", "aaSlug": "minimax-m2-5" }
+  { "provider": "opencode-go", "providerModel": "MiniMax M2.5", "aaSlug": "minimax-m2-5" },
+
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Big Pickle",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "MiMo-V2.5 Free",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Ling 3.0 Flash Fin Free",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Nemotron 3 Ultra Free",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Nemotron 3.5 Lightning Free",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Muse Spark 1.3 Contributor Free",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  { "provider": "opencode-zen", "providerModel": "MiniMax M3", "aaSlug": "minimax-m3" },
+  { "provider": "opencode-zen", "providerModel": "MiniMax M2.7", "aaSlug": "minimax-m2-7" },
+  { "provider": "opencode-zen", "providerModel": "MiniMax M2.5", "aaSlug": "minimax-m2-5" },
+  { "provider": "opencode-zen", "providerModel": "GLM 5.3 Flash", "aaSlug": "glm-5-3-flash" },
+  { "provider": "opencode-zen", "providerModel": "GLM 5.3", "aaSlug": "glm-5-3" },
+  { "provider": "opencode-zen", "providerModel": "GLM 5.2", "aaSlug": "glm-5-2" },
+  { "provider": "opencode-zen", "providerModel": "GLM 5.1", "aaSlug": "glm-5-1" },
+  { "provider": "opencode-zen", "providerModel": "GLM 5", "aaSlug": "glm-5" },
+  { "provider": "opencode-zen", "providerModel": "Kimi K2.7 Code", "aaSlug": "kimi-k2-7-code" },
+  { "provider": "opencode-zen", "providerModel": "Kimi K3", "aaSlug": "kimi-k3" },
+  { "provider": "opencode-zen", "providerModel": "Kimi K2.6", "aaSlug": "kimi-k2-6" },
+  { "provider": "opencode-zen", "providerModel": "Kimi K2.5", "aaSlug": "kimi-k2-5" },
+  { "provider": "opencode-zen", "providerModel": "Qwen3.7 Max", "aaSlug": "qwen3-7-max" },
+  { "provider": "opencode-zen", "providerModel": "Qwen3.7 Plus", "aaSlug": "qwen3-7-plus" },
+  { "provider": "opencode-zen", "providerModel": "Qwen3.6 Plus", "aaSlug": "qwen3-6-plus" },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Qwen3.5 Plus",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "DeepSeek V4 Pro",
+    "aaSlug": "deepseek-v4-pro-0424"
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "DeepSeek V4 Flash",
+    "aaSlug": "deepseek-v4-flash-0420"
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "DeepSeek V4 Flash Vision Exp",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  { "provider": "opencode-zen", "providerModel": "Claude Fable 5.1", "aaSlug": "claude-fable-5-1" },
+  { "provider": "opencode-zen", "providerModel": "Claude Fable 5", "aaSlug": "claude-fable-5" },
+  { "provider": "opencode-zen", "providerModel": "Claude Opus 5", "aaSlug": "claude-opus-5" },
+  { "provider": "opencode-zen", "providerModel": "Claude Opus 4.8", "aaSlug": "claude-opus-4-8" },
+  { "provider": "opencode-zen", "providerModel": "Claude Opus 4.7", "aaSlug": "claude-opus-4-7" },
+  { "provider": "opencode-zen", "providerModel": "Claude Opus 4.6", "aaSlug": "claude-opus-4-6" },
+  { "provider": "opencode-zen", "providerModel": "Claude Opus 4.5", "aaSlug": "claude-opus-4-5" },
+  { "provider": "opencode-zen", "providerModel": "Claude Sonnet 5", "aaSlug": "claude-sonnet-5" },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Claude Sonnet 4.6",
+    "aaSlug": "claude-sonnet-4-6"
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Claude Sonnet 4.5",
+    "aaSlug": "claude-4-5-sonnet"
+  },
+  { "provider": "opencode-zen", "providerModel": "Claude Haiku 4.5", "aaSlug": "claude-4-5-haiku" },
+  { "provider": "opencode-zen", "providerModel": "Gemini 3.8 Flash", "aaSlug": "gemini-3-8-flash" },
+  { "provider": "opencode-zen", "providerModel": "Gemini 3.7 Flash", "aaSlug": "gemini-3-7-flash" },
+  { "provider": "opencode-zen", "providerModel": "Gemini 3.6 Flash", "aaSlug": "gemini-3-6-flash" },
+  { "provider": "opencode-zen", "providerModel": "Gemini 3.5 Flash", "aaSlug": "gemini-3-5-flash" },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Gemini 3.5 Flash Lite",
+    "aaSlug": "gemini-3-5-flash-lite"
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Gemini 3.1 Pro",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Gemini 3 Flash",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  { "provider": "opencode-zen", "providerModel": "Grok 4.6", "aaSlug": "grok-4-6" },
+  { "provider": "opencode-zen", "providerModel": "Grok 4.5", "aaSlug": "grok-4-5" },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "Grok Build 0.1",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  { "provider": "opencode-zen", "providerModel": "Muse Spark 1.3", "aaSlug": "muse-spark-1-3" },
+  { "provider": "opencode-zen", "providerModel": "Muse Spark 1.2", "aaSlug": "muse-spark-1-2" },
+  { "provider": "opencode-zen", "providerModel": "GPT 6 Astra", "aaSlug": "gpt-6-astra" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.6 Sol", "aaSlug": "gpt-5-6-sol" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.6 Terra", "aaSlug": "gpt-5-6-terra" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.6 Luna", "aaSlug": "gpt-5-6-luna" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.5", "aaSlug": "gpt-5-5" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.5 Pro", "aaSlug": "gpt-5-5-pro" },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "GPT 5.4",
+    "aaSlug": null,
+    "note": "Auto: several Artificial Analysis variants match this name; set aaSlug by hand."
+  },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.4 Pro", "aaSlug": "gpt-5-4-pro" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.4 Mini", "aaSlug": "gpt-5-4-mini" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.4 Nano", "aaSlug": "gpt-5-4-nano" },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "GPT 5.3 Codex Spark",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.3 Codex", "aaSlug": "gpt-5-3-codex" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.2", "aaSlug": "gpt-5-2" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.2 Codex", "aaSlug": "gpt-5-2-codex" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.1", "aaSlug": "gpt-5-1" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5.1 Codex", "aaSlug": "gpt-5-1-codex" },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "GPT 5.1 Codex Max",
+    "aaSlug": null,
+    "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists."
+  },
+  {
+    "provider": "opencode-zen",
+    "providerModel": "GPT 5.1 Codex Mini",
+    "aaSlug": "gpt-5-1-codex-mini"
+  },
+  { "provider": "opencode-zen", "providerModel": "GPT 5", "aaSlug": "gpt-5" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5 Codex", "aaSlug": "gpt-5-codex" },
+  { "provider": "opencode-zen", "providerModel": "GPT 5 Nano", "aaSlug": "gpt-5-nano" },
+
+  { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
+  { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
+  { "provider": "clinepass", "providerModel": "Kimi K3", "aaSlug": "kimi-k3" },
+  { "provider": "clinepass", "providerModel": "Kimi K2.7 Code", "aaSlug": "kimi-k2-7-code" },
+  { "provider": "clinepass", "providerModel": "Kimi K2.6", "aaSlug": "kimi-k2-6" },
+  { "provider": "clinepass", "providerModel": "DeepSeek V4 Pro", "aaSlug": "deepseek-v4-pro-0424" },
+  {
+    "provider": "clinepass",
+    "providerModel": "DeepSeek V4 Flash",
+    "aaSlug": "deepseek-v4-flash-0420"
+  },
+  { "provider": "clinepass", "providerModel": "MiMo-V2.5", "aaSlug": "mimo-v2-5-0424" },
+  { "provider": "clinepass", "providerModel": "MiMo-V2.5-Pro", "aaSlug": "mimo-v2-5-pro" },
+  { "provider": "clinepass", "providerModel": "MiniMax M3", "aaSlug": "minimax-m3" },
+  { "provider": "clinepass", "providerModel": "Qwen3.8 Max", "aaSlug": "qwen3-8-max" },
+  { "provider": "clinepass", "providerModel": "Qwen3.7 Max", "aaSlug": "qwen3-7-max" },
+  { "provider": "clinepass", "providerModel": "Qwen3.7 Plus", "aaSlug": "qwen3-7-plus" }
 ]
