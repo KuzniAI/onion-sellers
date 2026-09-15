@@ -33,7 +33,10 @@ export function parseCopilotPricingHtml(html: string): CopilotModelRow[] {
     const creator = CREATOR_NAMES[slug];
     if (!creator) return;
 
-    const headers = $(table).find("thead th").toArray().map((th) => cellText($(th)));
+    const headers = $(table)
+      .find("thead th")
+      .toArray()
+      .map((th) => cellText($(th)));
     const col = (name: string) => headers.indexOf(name);
 
     $(table)
@@ -58,7 +61,9 @@ export function parseCopilotPricingHtml(html: string): CopilotModelRow[] {
   });
 
   if (rows.length === 0) {
-    throw new Error("parseCopilotPricingHtml: no model rows found -- page structure may have changed");
+    throw new Error(
+      "parseCopilotPricingHtml: no model rows found -- page structure may have changed",
+    );
   }
   return rows;
 }

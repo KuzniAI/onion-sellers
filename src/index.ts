@@ -7,7 +7,10 @@ import path from "node:path";
 import { fetchArtificialAnalysisData } from "./artificial-analysis/fetch.ts";
 import { fetchCopilotPricingHtml, SOURCE_URL as COPILOT_SOURCE_URL } from "./copilot/downloader.ts";
 import { parseCopilotPricingHtml } from "./copilot/parser.ts";
-import { fetchOpenCodeGoPricingHtml, SOURCE_URL as OPENCODE_GO_SOURCE_URL } from "./opencode-go/downloader.ts";
+import {
+  fetchOpenCodeGoPricingHtml,
+  SOURCE_URL as OPENCODE_GO_SOURCE_URL,
+} from "./opencode-go/downloader.ts";
 import { parseOpenCodeGoPricingHtml } from "./opencode-go/parser.ts";
 import { computeScores } from "./scoring/compute-scores.ts";
 

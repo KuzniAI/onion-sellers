@@ -1,23 +1,27 @@
 {
   "name": "onion-sellers",
-  "description": "Choose a best onion seller for you.",
   "version": "1.0.0",
-  "type": "module",
   "private": true,
-  "scripts": {
-    "start": "node --env-file-if-exists=.env src/index.ts"
-  },
-  "engines": {
-    "node": ">=22.18.0"
-  },
+  "description": "Choose a best onion seller for you.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KuzniAI/onion-sellers.git"
   },
-  "devDependencies": {
-    "@types/node": "^22.20.2"
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/index.ts",
+    "lint": "oxlint",
+    "format": "oxfmt"
   },
   "dependencies": {
     "cheerio": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "oxfmt": "^0.68.0",
+    "oxlint": "^1.83.0"
+  },
+  "engines": {
+    "node": ">=22.18.0"
   }
 }

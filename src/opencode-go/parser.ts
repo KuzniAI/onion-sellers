@@ -22,13 +22,32 @@ export function parseOpenCodeGoPricingHtml(html: string): OpenCodeGoModelRow[] {
   const $ = cheerio.load(html);
   const tables = $("table").toArray();
 
-  const pricingTable = findTableByHeaders($, tables, ["Model", "Input", "Output", "Cached Read", "Cached Write", "Monthly limit"]);
-  const requestsTable = findTableByHeaders($, tables, ["Model", "requests per 5 hour", "requests per week", "requests per month"]);
-  const endpointsTable = findTableByHeaders($, tables, ["Model", "Model ID", "Endpoint", "AI SDK Package"]);
+  const pricingTable = findTableByHeaders($, tables, [
+    "Model",
+    "Input",
+    "Output",
+    "Cached Read",
+    "Cached Write",
+    "Monthly limit",
+  ]);
+  const requestsTable = findTableByHeaders($, tables, [
+    "Model",
+    "requests per 5 hour",
+    "requests per week",
+    "requests per month",
+  ]);
+  const endpointsTable = findTableByHeaders($, tables, [
+    "Model",
+    "Model ID",
+    "Endpoint",
+    "AI SDK Package",
+  ]);
   const privacyTable = findTableByHeaders($, tables, ["Model", "Model training", "Data retention"]);
 
   if (!pricingTable) {
-    throw new Error("parseOpenCodeGoPricingHtml: pricing table not found -- page structure may have changed");
+    throw new Error(
+      "parseOpenCodeGoPricingHtml: pricing table not found -- page structure may have changed",
+    );
   }
 
   const requestsByModel = rowsByModel($, requestsTable);
@@ -48,7 +67,9 @@ export function parseOpenCodeGoPricingHtml(html: string): OpenCodeGoModelRow[] {
     const req = requestsByModel.get(model) ?? requestsByModel.get(base);
     const ep = endpointsByModel.get(model) ?? endpointsByModel.get(base);
     const priv = privacyByModel.get(model) ?? privacyByModel.get(base);
-    const missing = [!req && "requests", !ep && "endpoints", !priv && "privacy"].filter((x): x is string => Boolean(x));
+    const missing = [!req && "requests", !ep && "endpoints", !priv && "privacy"].filter(
+      (x): x is string => Boolean(x),
+    );
     if (missing.length > 0) {
       console.warn(`opencode-go: "${model}" has no matching row in: ${missing.join(", ")}`);
     }
@@ -75,7 +96,9 @@ export function parseOpenCodeGoPricingHtml(html: string): OpenCodeGoModelRow[] {
   }
 
   if (rows.length === 0) {
-    throw new Error("parseOpenCodeGoPricingHtml: no model rows found -- page structure may have changed");
+    throw new Error(
+      "parseOpenCodeGoPricingHtml: no model rows found -- page structure may have changed",
+    );
   }
   return rows;
 }
@@ -89,7 +112,10 @@ function stripVariantSuffix(model: string): string {
 
 function findTableByHeaders($: cheerio.CheerioAPI, tables: any[], expected: string[]) {
   return tables.find((table) => {
-    const headers = $(table).find("thead th").toArray().map((th) => cellText($(th)));
+    const headers = $(table)
+      .find("thead th")
+      .toArray()
+      .map((th) => cellText($(th)));
     return expected.every((name) => headers.includes(name));
   });
 }
@@ -99,7 +125,10 @@ function rowsByModel($: cheerio.CheerioAPI, table: any): Map<string, string[]> {
   const map = new Map<string, string[]>();
   if (!table) return map;
   for (const tr of $(table).find("tbody tr").toArray()) {
-    const cells = $(tr).find("td").toArray().map((td) => cellText($(td)));
+    const cells = $(tr)
+      .find("td")
+      .toArray()
+      .map((td) => cellText($(td)));
     map.set(cells[0], cells);
   }
   return map;
@@ -113,7 +142,10 @@ function parseMonthlyLimit($: cheerio.CheerioAPI, cell: any): { limit: number; n
     const small = $cell.find("small");
     const base = del.length > 0 ? parsePrice(cellText(del)) : null;
     const promo = small.length > 0 ? cellText(small) : null;
-    const note = base !== null ? `Promotional monthly limit (base $${base}): ${promo ?? ""}`.trim() : (promo ?? undefined);
+    const note =
+      base !== null
+        ? `Promotional monthly limit (base $${base}): ${promo ?? ""}`.trim()
+        : (promo ?? undefined);
     return { limit: parsePrice(cellText(strong))!, note };
   }
   return { limit: parsePrice(cellText($cell))! };

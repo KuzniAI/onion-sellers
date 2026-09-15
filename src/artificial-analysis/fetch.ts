@@ -7,7 +7,10 @@ import path from "node:path";
 const API_BASE = "https://artificialanalysis.ai/api/v2";
 const OUT_FILE = path.join("data", "artificial-analysis", "language-models.json");
 
-async function fetchAllPages(endpointPath: string, apiKey: string): Promise<{ tier: string; intelligenceIndexVersion: number; rows: unknown[] }> {
+async function fetchAllPages(
+  endpointPath: string,
+  apiKey: string,
+): Promise<{ tier: string; intelligenceIndexVersion: number; rows: unknown[] }> {
   const rows: unknown[] = [];
   let page = 1;
   let tier = "";
@@ -19,7 +22,9 @@ async function fetchAllPages(endpointPath: string, apiKey: string): Promise<{ ti
 
     if (!res.ok) {
       const body = await res.text();
-      throw Object.assign(new Error(`${res.status} ${res.statusText} on ${url}: ${body}`), { status: res.status });
+      throw Object.assign(new Error(`${res.status} ${res.statusText} on ${url}: ${body}`), {
+        status: res.status,
+      });
     }
 
     const json = await res.json();
@@ -47,7 +52,9 @@ export async function fetchArtificialAnalysisData(): Promise<void> {
     result = await fetchAllPages("/language/models", apiKey);
   } catch (err) {
     if ((err as { status?: number }).status === 403) {
-      console.log("Key tier does not cover /language/models (Pro+), falling back to /language/models/free ...");
+      console.log(
+        "Key tier does not cover /language/models (Pro+), falling back to /language/models/free ...",
+      );
       servedBy = "/language/models/free";
       result = await fetchAllPages("/language/models/free", apiKey);
     } else {

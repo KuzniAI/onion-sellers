@@ -72,12 +72,18 @@ function baseModelName(model: string): string {
   return stripped;
 }
 
-function dedupeCheapest(rows: { model: string; priceInput: number; priceOutput: number }[]): { model: string; priceInput: number; priceOutput: number }[] {
+function dedupeCheapest(
+  rows: { model: string; priceInput: number; priceOutput: number }[],
+): { model: string; priceInput: number; priceOutput: number }[] {
   const byBase = new Map<string, { model: string; priceInput: number; priceOutput: number }>();
   for (const row of rows) {
     const base = baseModelName(row.model);
     const existing = byBase.get(base);
-    if (!existing || blendedPrice(row.priceInput, row.priceOutput) < blendedPrice(existing.priceInput, existing.priceOutput)) {
+    if (
+      !existing ||
+      blendedPrice(row.priceInput, row.priceOutput) <
+        blendedPrice(existing.priceInput, existing.priceOutput)
+    ) {
       byBase.set(base, { model: base, priceInput: row.priceInput, priceOutput: row.priceOutput });
     }
   }
@@ -85,8 +91,12 @@ function dedupeCheapest(rows: { model: string; priceInput: number; priceOutput: 
 }
 
 async function loadCandidates(): Promise<Candidate[]> {
-  const copilotRaw = JSON.parse(await readFile(path.join("data", "copilot", "models-pricing.json"), "utf8"));
-  const opencodeRaw = JSON.parse(await readFile(path.join("data", "opencode-go", "models-pricing.json"), "utf8"));
+  const copilotRaw = JSON.parse(
+    await readFile(path.join("data", "copilot", "models-pricing.json"), "utf8"),
+  );
+  const opencodeRaw = JSON.parse(
+    await readFile(path.join("data", "opencode-go", "models-pricing.json"), "utf8"),
+  );
 
   const copilotRows = dedupeCheapest(
     copilotRaw.models.map((m: { model: string; price1mInput: number; price1mOutput: number }) => ({
@@ -104,8 +114,18 @@ async function loadCandidates(): Promise<Candidate[]> {
   );
 
   return [
-    ...copilotRows.map((r) => ({ provider: "copilot" as const, model: r.model, priceInput: r.priceInput, priceOutput: r.priceOutput })),
-    ...opencodeRows.map((r) => ({ provider: "opencode-go" as const, model: r.model, priceInput: r.priceInput, priceOutput: r.priceOutput })),
+    ...copilotRows.map((r) => ({
+      provider: "copilot" as const,
+      model: r.model,
+      priceInput: r.priceInput,
+      priceOutput: r.priceOutput,
+    })),
+    ...opencodeRows.map((r) => ({
+      provider: "opencode-go" as const,
+      model: r.model,
+      priceInput: r.priceInput,
+      priceOutput: r.priceOutput,
+    })),
   ];
 }
 
@@ -116,7 +136,9 @@ function normalize(value: number, min: number, max: number): number {
 
 export async function computeScores(): Promise<void> {
   const config = JSON.parse(await readFile(path.join("config", "categories.json"), "utf8"));
-  const blacklist: BlacklistEntry[] = JSON.parse(await readFile(path.join("config", "blacklist.json"), "utf8"));
+  const blacklist: BlacklistEntry[] = JSON.parse(
+    await readFile(path.join("config", "blacklist.json"), "utf8"),
+  );
   const allCandidates = await loadCandidates();
 
   const candidates = allCandidates.filter((c) => {
@@ -128,8 +150,12 @@ export async function computeScores(): Promise<void> {
     return true;
   });
 
-  const mapping: MappingEntry[] = JSON.parse(await readFile(path.join("data", "model-mapping.json"), "utf8"));
-  const aaData = JSON.parse(await readFile(path.join("data", "artificial-analysis", "language-models.json"), "utf8"));
+  const mapping: MappingEntry[] = JSON.parse(
+    await readFile(path.join("data", "model-mapping.json"), "utf8"),
+  );
+  const aaData = JSON.parse(
+    await readFile(path.join("data", "artificial-analysis", "language-models.json"), "utf8"),
+  );
   const aaBySlug = new Map<string, AaModel>((aaData.models as AaModel[]).map((m) => [m.slug, m]));
 
   const enriched: {
@@ -144,17 +170,27 @@ export async function computeScores(): Promise<void> {
   }[] = [];
 
   for (const candidate of candidates) {
-    const map = mapping.find((m) => m.provider === candidate.provider && m.providerModel === candidate.model);
+    const map = mapping.find(
+      (m) => m.provider === candidate.provider && m.providerModel === candidate.model,
+    );
     if (!map || !map.aaSlug) {
-      console.warn(`Skipping ${candidate.provider}/${candidate.model}: no Artificial Analysis mapping.`);
+      console.warn(
+        `Skipping ${candidate.provider}/${candidate.model}: no Artificial Analysis mapping.`,
+      );
       continue;
     }
     const aa = aaBySlug.get(map.aaSlug);
     if (!aa) {
-      console.warn(`Skipping ${candidate.provider}/${candidate.model}: aaSlug "${map.aaSlug}" not found in fetched data.`);
+      console.warn(
+        `Skipping ${candidate.provider}/${candidate.model}: aaSlug "${map.aaSlug}" not found in fetched data.`,
+      );
       continue;
     }
-    const { artificial_analysis_agentic_index, artificial_analysis_coding_index, artificial_analysis_intelligence_index } = aa.evaluations;
+    const {
+      artificial_analysis_agentic_index,
+      artificial_analysis_coding_index,
+      artificial_analysis_intelligence_index,
+    } = aa.evaluations;
     const speed = aa.performance?.median_output_tokens_per_second;
     if (
       artificial_analysis_agentic_index == null ||
@@ -162,7 +198,9 @@ export async function computeScores(): Promise<void> {
       artificial_analysis_intelligence_index == null ||
       speed == null
     ) {
-      console.warn(`Skipping ${candidate.provider}/${candidate.model}: incomplete benchmark data for "${map.aaSlug}".`);
+      console.warn(
+        `Skipping ${candidate.provider}/${candidate.model}: incomplete benchmark data for "${map.aaSlug}".`,
+      );
       continue;
     }
 
@@ -180,7 +218,10 @@ export async function computeScores(): Promise<void> {
 
   const categories: Record<string, Record<Provider, ScoredCandidate[]>> = {};
 
-  for (const [categoryName, categoryConfig] of Object.entries(config.categories) as [string, { weights: CategoryWeights }][]) {
+  for (const [categoryName, categoryConfig] of Object.entries(config.categories) as [
+    string,
+    { weights: CategoryWeights },
+  ][]) {
     const weights = categoryConfig.weights;
     if (enriched.length === 0) {
       categories[categoryName] = { copilot: [], "opencode-go": [] };
@@ -189,9 +230,18 @@ export async function computeScores(): Promise<void> {
 
     const costEfficiencies = enriched.map((e) => 1 / e.blendedPrice1m);
     const ranges = {
-      agenticIndex: [Math.min(...enriched.map((e) => e.agenticIndex)), Math.max(...enriched.map((e) => e.agenticIndex))],
-      codingIndex: [Math.min(...enriched.map((e) => e.codingIndex)), Math.max(...enriched.map((e) => e.codingIndex))],
-      intelligenceIndex: [Math.min(...enriched.map((e) => e.intelligenceIndex)), Math.max(...enriched.map((e) => e.intelligenceIndex))],
+      agenticIndex: [
+        Math.min(...enriched.map((e) => e.agenticIndex)),
+        Math.max(...enriched.map((e) => e.agenticIndex)),
+      ],
+      codingIndex: [
+        Math.min(...enriched.map((e) => e.codingIndex)),
+        Math.max(...enriched.map((e) => e.codingIndex)),
+      ],
+      intelligenceIndex: [
+        Math.min(...enriched.map((e) => e.intelligenceIndex)),
+        Math.max(...enriched.map((e) => e.intelligenceIndex)),
+      ],
       speed: [Math.min(...enriched.map((e) => e.speed)), Math.max(...enriched.map((e) => e.speed))],
       costEfficiency: [Math.min(...costEfficiencies), Math.max(...costEfficiencies)],
     };
@@ -199,9 +249,17 @@ export async function computeScores(): Promise<void> {
     const scored: ScoredCandidate[] = enriched.map((e, i) => {
       const normAgentic = normalize(e.agenticIndex, ranges.agenticIndex[0], ranges.agenticIndex[1]);
       const normCoding = normalize(e.codingIndex, ranges.codingIndex[0], ranges.codingIndex[1]);
-      const normIntelligence = normalize(e.intelligenceIndex, ranges.intelligenceIndex[0], ranges.intelligenceIndex[1]);
+      const normIntelligence = normalize(
+        e.intelligenceIndex,
+        ranges.intelligenceIndex[0],
+        ranges.intelligenceIndex[1],
+      );
       const normSpeed = normalize(e.speed, ranges.speed[0], ranges.speed[1]);
-      const normCost = normalize(costEfficiencies[i], ranges.costEfficiency[0], ranges.costEfficiency[1]);
+      const normCost = normalize(
+        costEfficiencies[i],
+        ranges.costEfficiency[0],
+        ranges.costEfficiency[1],
+      );
 
       const score =
         (weights.agenticIndex ?? 0) * normAgentic +
@@ -230,7 +288,9 @@ export async function computeScores(): Promise<void> {
 
     categories[categoryName] = {
       copilot: scored.filter((s) => s.provider === "copilot").slice(0, config.topNPerProvider),
-      "opencode-go": scored.filter((s) => s.provider === "opencode-go").slice(0, config.topNPerProvider),
+      "opencode-go": scored
+        .filter((s) => s.provider === "opencode-go")
+        .slice(0, config.topNPerProvider),
     };
   }
 
@@ -250,5 +310,7 @@ export async function computeScores(): Promise<void> {
     ),
   );
 
-  console.log(`Wrote recommendations for ${Object.keys(categories).length} categories (${enriched.length} scored candidates) to ${outFile}`);
+  console.log(
+    `Wrote recommendations for ${Object.keys(categories).length} categories (${enriched.length} scored candidates) to ${outFile}`,
+  );
 }
