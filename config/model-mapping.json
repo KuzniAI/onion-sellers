@@ -13,7 +13,7 @@
   { "provider": "copilot", "providerModel": "Claude Sonnet 4", "aaSlug": "claude-4-sonnet" },
   { "provider": "copilot", "providerModel": "Claude Sonnet 4.6", "aaSlug": "claude-sonnet-4-6" },
   { "provider": "copilot", "providerModel": "Claude Opus 4.7", "aaSlug": "claude-opus-4-7" },
-  { "provider": "copilot", "providerModel": "Claude Opus 4.8", "aaSlug": null, "note": "Not separately tracked by Artificial Analysis (only 4.6, 4.7, and 5 are present)." },
+  { "provider": "copilot", "providerModel": "Claude Opus 4.8", "aaSlug": "claude-opus-4-8" },
   { "provider": "copilot", "providerModel": "Claude Opus 5", "aaSlug": "claude-opus-5" },
   { "provider": "copilot", "providerModel": "Claude Sonnet 5", "aaSlug": "claude-sonnet-5" },
   { "provider": "copilot", "providerModel": "Claude Fable 5", "aaSlug": "claude-fable-5" },
@@ -54,5 +54,6 @@
   { "provider": "opencode-go", "providerModel": "Hy4 preview", "aaSlug": null, "note": "Not tracked by Artificial Analysis (only Hy3 / Hy3-preview are present)." },
   { "provider": "opencode-go", "providerModel": "Hy3", "aaSlug": "hy3" },
   { "provider": "opencode-go", "providerModel": "Grok 4.6", "aaSlug": "grok-4-6" },
-  { "provider": "opencode-go", "providerModel": "GPT 5.6 Luna", "aaSlug": "gpt-5-6-luna" }
+  { "provider": "opencode-go", "providerModel": "GPT 5.6 Luna", "aaSlug": "gpt-5-6-luna" },
+  { "provider": "opencode-go", "providerModel": "MiniMax M2.5", "aaSlug": "minimax-m2-5" }
 ]

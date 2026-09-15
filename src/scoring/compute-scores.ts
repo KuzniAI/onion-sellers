@@ -4,7 +4,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 
-type Provider = "copilot" | "opencode-go";
+export type Provider = "copilot" | "opencode-go";
 
 interface Candidate {
   provider: Provider;
@@ -13,13 +13,14 @@ interface Candidate {
   priceOutput: number;
 }
 
-interface MappingEntry {
+export interface MappingEntry {
   provider: Provider;
   providerModel: string;
   aaSlug: string | null;
+  note?: string;
 }
 
-interface AaModel {
+export interface AaModel {
   id: string;
   name: string;
   slug: string;
@@ -64,7 +65,7 @@ function blendedPrice(priceInput: number, priceOutput: number): number {
 
 // Strips variant qualifiers like " (<= 256K tokens)", " (Off-Peak)", " (Peak)" so
 // tiered/peak pricing rows collapse to one representative candidate per base model.
-function baseModelName(model: string): string {
+export function baseModelName(model: string): string {
   let stripped = model;
   while (/\s*\([^)]*\)\s*$/.test(stripped)) {
     stripped = stripped.replace(/\s*\([^)]*\)\s*$/, "").trim();
@@ -90,7 +91,7 @@ function dedupeCheapest(
   return [...byBase.values()];
 }
 
-async function loadCandidates(): Promise<Candidate[]> {
+export async function loadCandidates(): Promise<Candidate[]> {
   const copilotRaw = JSON.parse(
     await readFile(path.join("data", "copilot", "models-pricing.json"), "utf8"),
   );
