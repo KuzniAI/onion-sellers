@@ -1,0 +1,16 @@
+I have this error at the end of run
+
+Blacklisted copilot/Claude Fable 5: Blocked by policy on most GitHub orgs due to its pricing tier, so it isn't actually usable even if it scores well.
+Blacklisted copilot/Claude Fable 5.1: Blocked by policy on most GitHub orgs due to its pricing tier, so it isn't actually usable even if it scores well.
+Blacklisted opencode-go/Muse Spark 1.3 Contributor: Heavily discounted only because the 'Contributor' pricing requires letting Meta train on your prompts/completions -- not a fair quality/cost comparison against the other models.
+Blacklisted opencode-go/Muse Spark 1.2 Contributor: Heavily discounted only because the 'Contributor' pricing requires letting Meta train on your prompts/completions -- not a fair quality/cost comparison against the other models.
+[Error: ENOENT: no such file or directory, open 'C:\Code\onion-sellers\data\model-mapping.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Code\\onion-sellers\\data\\model-mapping.json'
+}
+
+---
+
+Yes, move it out of data/ so it stays tracked
