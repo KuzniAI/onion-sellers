@@ -26,7 +26,8 @@ One-time setup:
 
 1. Add the `AA_API_KEY` repository secret (Settings → Secrets and variables → Actions).
 2. Settings → Pages → Source: **GitHub Actions**.
-3. Settings → Actions → General → Workflow permissions: **Read and write**.
-4. Run the workflow once by hand.
+3. Run the workflow once by hand.
+
+The workflow declares its own `contents: write` and `pages: write` permissions, so the repository's default workflow permissions can stay read-only. Pushing mapping changes requires `main` to accept pushes from `github-actions[bot]`.
 
 GitHub disables scheduled workflows in public repositories after 60 days without activity; re-enable it in the Actions tab if that happens.
