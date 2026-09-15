@@ -1,0 +1,5 @@
+Install oxlint and ofxformat for this project. Use default settings. Create AGENTS.md where you describe a loop of editing, linting and formatting code. Make sure it states that this code is run directly from node with TS support
+
+---
+
+create defailt oxfmt config

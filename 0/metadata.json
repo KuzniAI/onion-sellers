@@ -1,0 +1,110 @@
+{
+  "cli_version": "0.10.6",
+  "checkpoint_id": "01M2K4EX93B6EX3T88YG2KB4KQ",
+  "session_id": "22fce9da-4d94-41a3-9183-4a6847ae8ad0",
+  "strategy": "manual-commit",
+  "created_at": "2026-09-15T18:14:57.1306066Z",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "save_step_count": 2,
+  "files_touched": [
+    ".oxfmtrc.json",
+    "AGENTS.md",
+    "data/artificial-analysis/language-models.json",
+    "data/copilot/models-pricing.json",
+    "data/model-mapping.json",
+    "data/opencode-go/models-pricing.json",
+    "data/recommendations.json",
+    "package-lock.json",
+    "package.json",
+    "src/artificial-analysis/fetch.ts",
+    "src/copilot/downloader.ts",
+    "src/copilot/parser.ts",
+    "src/index.ts",
+    "src/opencode-go/downloader.ts",
+    "src/opencode-go/parser.ts",
+    "src/scoring/compute-scores.ts",
+    "tsconfig.json"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5",
+  "turn_id": "235b2de7b121",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 36,
+    "cache_creation_tokens": 54161,
+    "cache_read_tokens": 1480618,
+    "output_tokens": 4473,
+    "api_call_count": 18
+  },
+  "session_metrics": {
+    "turn_count": 2
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-09-15T18:14:57.1082979Z",
+    "agent_lines": 781,
+    "agent_removed": 1,
+    "human_added": 156,
+    "human_modified": 64,
+    "human_removed": 0,
+    "total_committed": 1001,
+    "total_lines_changed": 1002,
+    "agent_percentage": 78.0439121756487,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 220,
+      "user_lines_removed": 64,
+      "agent_lines_added": 843,
+      "agent_lines_removed": 3,
+      "user_added_per_file": {
+        "data/artificial-analysis/language-models.json": 1,
+        "data/copilot/models-pricing.json": 1,
+        "data/model-mapping.json": 51,
+        "data/opencode-go/models-pricing.json": 1,
+        "data/recommendations.json": 1,
+        "package.json": 10,
+        "src/artificial-analysis/fetch.ts": 10,
+        "src/copilot/downloader.ts": 5,
+        "src/copilot/parser.ts": 7,
+        "src/index.ts": 4,
+        "src/opencode-go/downloader.ts": 3,
+        "src/opencode-go/parser.ts": 41,
+        "src/scoring/compute-scores.ts": 84,
+        "tsconfig.json": 1
+      },
+      "user_removed_per_file": {
+        "data/artificial-analysis/language-models.json": 1,
+        "data/copilot/models-pricing.json": 1,
+        "data/model-mapping.json": 9,
+        "data/opencode-go/models-pricing.json": 1,
+        "data/recommendations.json": 1,
+        "package.json": 10,
+        "src/artificial-analysis/fetch.ts": 3,
+        "src/copilot/downloader.ts": 2,
+        "src/copilot/parser.ts": 2,
+        "src/index.ts": 1,
+        "src/opencode-go/downloader.ts": 1,
+        "src/opencode-go/parser.ts": 9,
+        "src/scoring/compute-scores.ts": 22,
+        "tsconfig.json": 1
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1065,
+      "agent_lines_removed": 65
+    }
+  ]
+}
