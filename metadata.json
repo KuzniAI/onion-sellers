@@ -1,0 +1,44 @@
+{
+  "cli_version": "0.10.6",
+  "checkpoint_id": "01M2KB47AEQX2YVPTAGVAFZMCE",
+  "strategy": "manual-commit",
+  "branch": "pi-parser-repair",
+  "checkpoints_count": 5,
+  "files_touched": [
+    ".env.example",
+    ".github/workflows/daily.yml",
+    "README.md",
+    "config/model-mapping.json",
+    "package-lock.json",
+    "package.json",
+    "site/index.html",
+    "src/clinepass/parser.ts",
+    "src/clinepass/source.ts",
+    "src/copilot/source.ts",
+    "src/index.ts",
+    "src/opencode-go/source.ts",
+    "src/opencode-zen/parser.ts",
+    "src/opencode-zen/source.ts",
+    "src/pricing/refresh.ts",
+    "src/pricing/repair-parser.ts",
+    "src/pricing/source.ts",
+    "src/pricing/sources.ts",
+    "src/scoring/compute-scores.ts"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 946,
+    "cache_creation_tokens": 154807,
+    "cache_read_tokens": 4728935,
+    "output_tokens": 59757,
+    "api_call_count": 36
+  }
+}

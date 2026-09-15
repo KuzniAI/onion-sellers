@@ -1,0 +1,29 @@
+I have added 2 new sites to compare in @README.md but this time bring Pi SDK to build parsers for html. Do not write it yourself. Wire the same process of rewriting parsers in catch when existing parser fails. I do not expect a workflow run to execute it so you need a feature flag that this is local run only.
+
+---
+
+show me the Pi run result when it finishes
+
+---
+
+<task-notification>
+<task-id>bkwwvzyvt</task-id>
+<tool-use-id>toolu_011oxdELxiKZVsjL39UxV2Jh</tool-use-id>
+<output-file>C:\Users\damia\AppData\Local\Temp\claude\C--Code-onion-sellers\b008f870-31fd-4147-84dd-7609de361349\tasks\bkwwvzyvt.output</output-file>
+<status>completed</status>
+<summary>Background command "Run pipeline with Pi parser generation enabled" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+yes, fix the nesting and have Pi fix ClinePass
+
+---
+
+<task-notification>
+<task-id>bx5phcpsa</task-id>
+<tool-use-id>toolu_01NZPH8Np9Ejwbe9rWZhD19q</tool-use-id>
+<output-file>C:\Users\damia\AppData\Local\Temp\claude\C--Code-onion-sellers\b008f870-31fd-4147-84dd-7609de361349\tasks\bx5phcpsa.output</output-file>
+<status>completed</status>
+<summary>Background command "Run Pi agent to fix ClinePass price handling" completed (exit code 0)</summary>
+</task-notification>
