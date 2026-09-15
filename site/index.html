@@ -6,7 +6,7 @@
     <title>Agentic Onion Sellers</title>
     <meta
       name="description"
-      content="Daily model recommendations for GitHub Copilot and OpenCode Go, per task — served bistro-style."
+      content="Daily model recommendations for GitHub Copilot, OpenCode Go, OpenCode Zen and ClinePass, per task — served bistro-style."
     />
     <link
       rel="icon"
@@ -36,7 +36,10 @@
         margin: 0;
         background: var(--bg);
         color: var(--text);
-        font: 15px/1.5 "Libre Franklin", system-ui, sans-serif;
+        font:
+          15px/1.5 "Libre Franklin",
+          system-ui,
+          sans-serif;
       }
       header,
       main,
@@ -196,8 +199,8 @@
       <h1>Agentic Onion Sellers</h1>
       <p class="lede">
         "Ze finest recommendations, smuggled past ze checkpoint in a string of onions." Which models
-        to use on GitHub Copilot and OpenCode Go, per kind of task — recomputed daily from provider
-        pricing and Artificial Analysis benchmarks.
+        to use on GitHub Copilot, OpenCode Go, OpenCode Zen and ClinePass, per kind of task —
+        recomputed daily from provider pricing and Artificial Analysis benchmarks.
       </p>
       <div class="meta" id="meta"></div>
     </header>
@@ -210,7 +213,9 @@
         price assumes 3 output tokens per input token. Pricing:
         <a href="https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing"
           >GitHub Copilot docs</a
-        >, <a href="https://opencode.ai/docs/go/">OpenCode Go docs</a>. Benchmarks:
+        >, <a href="https://opencode.ai/docs/go/">OpenCode Go docs</a>,
+        <a href="https://opencode.ai/docs/zen/">OpenCode Zen docs</a>,
+        <a href="https://docs.cline.bot/getting-started/clinepass">ClinePass docs</a>. Benchmarks:
         <a href="https://artificialanalysis.ai/">Artificial Analysis</a>. Source:
         <a href="https://github.com/KuzniAI/onion-sellers">KuzniAI/onion-sellers</a>. Inspired by
         René's onion-selling disguise in 'Allo 'Allo!.
@@ -221,6 +226,8 @@
       const PROVIDERS = [
         { id: "copilot", name: "GitHub Copilot" },
         { id: "opencode-go", name: "OpenCode Go" },
+        { id: "opencode-zen", name: "OpenCode Zen" },
+        { id: "clinepass", name: "ClinePass" },
       ];
       const WEIGHT_LABELS = {
         agenticIndex: "Agentic",

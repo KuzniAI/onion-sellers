@@ -52,13 +52,14 @@ jobs:
       - name: Seed previous pricing data
         run: |
           mkdir -p data
-          for src in copilot opencode-go; do
+          for src in copilot opencode-go opencode-zen clinepass; do
             if [ -d "data-branch/latest/$src" ]; then cp -r "data-branch/latest/$src" data/; fi
           done
 
       # A nonzero exit (parser mismatch or network failure) fails this step immediately,
       # so the commit/build/deploy steps below are skipped and the published page is
-      # left unchanged.
+      # left unchanged. Pi parser repair is local-only and refuses to run in Actions
+      # (CI/GITHUB_ACTIONS are set), so a broken parser here is fixed locally and committed.
       - name: Run pipeline
         env:
           AA_API_KEY: ${{ secrets.AA_API_KEY }}
@@ -81,7 +82,7 @@ jobs:
           for dest in latest "history/$day"; do
             mkdir -p "data-branch/$dest"
             cp data/recommendations.json "data-branch/$dest/"
-            for src in copilot opencode-go; do
+            for src in copilot opencode-go opencode-zen clinepass; do
               mkdir -p "data-branch/$dest/$src"
               cp "data/$src/models-pricing.json" "data-branch/$dest/$src/"
             done

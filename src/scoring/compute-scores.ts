@@ -3,8 +3,10 @@
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
+import { pricingSources } from "../pricing/sources.ts";
 
-export type Provider = "copilot" | "opencode-go";
+// A PricingSource id, e.g. "copilot".
+export type Provider = string;
 
 interface Candidate {
   provider: Provider;
@@ -92,42 +94,31 @@ function dedupeCheapest(
 }
 
 export async function loadCandidates(): Promise<Candidate[]> {
-  const copilotRaw = JSON.parse(
-    await readFile(path.join("data", "copilot", "models-pricing.json"), "utf8"),
-  );
-  const opencodeRaw = JSON.parse(
-    await readFile(path.join("data", "opencode-go", "models-pricing.json"), "utf8"),
-  );
+  const candidates: Candidate[] = [];
+  for (const source of pricingSources) {
+    let raw: { models: Record<string, unknown>[] };
+    try {
+      raw = JSON.parse(await readFile(source.outFile, "utf8"));
+    } catch (err) {
+      // A provider whose parser has never succeeded has no data yet; score the others.
+      if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
+      console.warn(
+        `No ${source.displayName} pricing data at ${source.outFile}; skipping provider.`,
+      );
+      continue;
+    }
 
-  const copilotRows = dedupeCheapest(
-    copilotRaw.models.map((m: { model: string; price1mInput: number; price1mOutput: number }) => ({
-      model: m.model,
-      priceInput: m.price1mInput,
-      priceOutput: m.price1mOutput,
-    })),
-  );
-  const opencodeRows = dedupeCheapest(
-    opencodeRaw.models.map((m: { model: string; priceInput: number; priceOutput: number }) => ({
-      model: m.model,
-      priceInput: m.priceInput,
-      priceOutput: m.priceOutput,
-    })),
-  );
-
-  return [
-    ...copilotRows.map((r) => ({
-      provider: "copilot" as const,
-      model: r.model,
-      priceInput: r.priceInput,
-      priceOutput: r.priceOutput,
-    })),
-    ...opencodeRows.map((r) => ({
-      provider: "opencode-go" as const,
-      model: r.model,
-      priceInput: r.priceInput,
-      priceOutput: r.priceOutput,
-    })),
-  ];
+    const { input, output } = source.priceFields;
+    const rows = dedupeCheapest(
+      raw.models.map((m) => ({
+        model: m.model as string,
+        priceInput: m[input] as number,
+        priceOutput: m[output] as number,
+      })),
+    );
+    candidates.push(...rows.map((r) => ({ provider: source.id, ...r })));
+  }
+  return candidates;
 }
 
 function normalize(value: number, min: number, max: number): number {
@@ -171,6 +162,13 @@ export async function computeScores(): Promise<void> {
   }[] = [];
 
   for (const candidate of candidates) {
+    const blendedPrice1m = blendedPrice(candidate.priceInput, candidate.priceOutput);
+    if (blendedPrice1m <= 0) {
+      // Cost efficiency is 1 / price, so free models would be infinitely efficient.
+      console.warn(`Skipping ${candidate.provider}/${candidate.model}: free model, not scored.`);
+      continue;
+    }
+
     const map = mapping.find(
       (m) => m.provider === candidate.provider && m.providerModel === candidate.model,
     );
@@ -213,7 +211,7 @@ export async function computeScores(): Promise<void> {
       codingIndex: artificial_analysis_coding_index,
       intelligenceIndex: artificial_analysis_intelligence_index,
       speed,
-      blendedPrice1m: blendedPrice(candidate.priceInput, candidate.priceOutput),
+      blendedPrice1m,
     });
   }
 
@@ -225,7 +223,7 @@ export async function computeScores(): Promise<void> {
   ][]) {
     const weights = categoryConfig.weights;
     if (enriched.length === 0) {
-      categories[categoryName] = { copilot: [], "opencode-go": [] };
+      categories[categoryName] = Object.fromEntries(pricingSources.map((s) => [s.id, []]));
       continue;
     }
 
@@ -287,12 +285,12 @@ export async function computeScores(): Promise<void> {
 
     scored.sort((a, b) => b.score - a.score);
 
-    categories[categoryName] = {
-      copilot: scored.filter((s) => s.provider === "copilot").slice(0, config.topNPerProvider),
-      "opencode-go": scored
-        .filter((s) => s.provider === "opencode-go")
-        .slice(0, config.topNPerProvider),
-    };
+    categories[categoryName] = Object.fromEntries(
+      pricingSources.map((source) => [
+        source.id,
+        scored.filter((s) => s.provider === source.id).slice(0, config.topNPerProvider),
+      ]),
+    );
   }
 
   const outFile = path.join("data", "recommendations.json");
