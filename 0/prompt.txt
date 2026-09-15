@@ -1,0 +1,1 @@
+@config/model-mapping.json has been generated during first run. We need too be able to update it somehow. It is fine if some run will change this file by adding or updating models

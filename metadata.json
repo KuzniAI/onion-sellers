@@ -1,0 +1,30 @@
+{
+  "cli_version": "0.10.6",
+  "checkpoint_id": "01M2K67P9M7XGK3EQR8EMFQBQG",
+  "strategy": "manual-commit",
+  "branch": "auto-update-model-mapping",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "README.md",
+    "config/model-mapping.json",
+    "src/index.ts",
+    "src/mapping/update-mapping.ts",
+    "src/scoring/compute-scores.ts"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 452,
+    "cache_creation_tokens": 64752,
+    "cache_read_tokens": 1353202,
+    "output_tokens": 17728,
+    "api_call_count": 16
+  }
+}
