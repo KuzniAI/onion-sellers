@@ -1,0 +1,1 @@
+Ad data directory to gitignore. We do not need to keep results in repo

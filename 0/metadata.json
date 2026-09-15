@@ -1,0 +1,81 @@
+{
+  "cli_version": "0.10.6",
+  "checkpoint_id": "01M2K5K4CAMHAAJRV35NPRXPPB",
+  "session_id": "224a358e-10f1-429c-aeee-21a9cadfe35f",
+  "strategy": "manual-commit",
+  "created_at": "2026-09-15T18:34:43.9824639Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "save_step_count": 1,
+  "files_touched": [
+    ".gitignore",
+    "data/artificial-analysis/language-models.json",
+    "data/copilot/models-pricing.json",
+    "data/model-mapping.json",
+    "data/opencode-go/models-pricing.json",
+    "data/recommendations.json"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5",
+  "turn_id": "9f8062152aff",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 14,
+    "cache_creation_tokens": 24627,
+    "cache_read_tokens": 492399,
+    "output_tokens": 838,
+    "api_call_count": 7
+  },
+  "session_metrics": {
+    "turn_count": 1
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-09-15T18:34:43.9635038Z",
+    "agent_lines": 0,
+    "agent_removed": 20247,
+    "human_added": 20247,
+    "human_modified": 24,
+    "human_removed": 0,
+    "total_committed": 20247,
+    "total_lines_changed": 40518,
+    "agent_percentage": 49.97038353324449,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 16,
+      "user_lines_removed": 16,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "data/artificial-analysis/language-models.json": 1,
+        "data/copilot/models-pricing.json": 1,
+        "data/opencode-go/models-pricing.json": 1,
+        "data/recommendations.json": 1,
+        "src/opencode-go/downloader.ts": 12
+      },
+      "user_removed_per_file": {
+        "data/artificial-analysis/language-models.json": 1,
+        "data/copilot/models-pricing.json": 1,
+        "data/opencode-go/models-pricing.json": 1,
+        "data/recommendations.json": 1,
+        "src/opencode-go/downloader.ts": 12
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 20251,
+      "user_lines_removed": 0,
+      "agent_lines_added": 20,
+      "agent_lines_removed": 20268,
+      "user_added_per_file": {
+        "data/artificial-analysis/language-models.json": 18914,
+        "data/copilot/models-pricing.json": 451,
+        "data/model-mapping.json": 100,
+        "data/opencode-go/models-pricing.json": 593,
+        "data/recommendations.json": 193
+      }
+    }
+  ]
+}
