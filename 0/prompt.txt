@@ -1,0 +1,19 @@
+I'm getting this error even locally?
+
+Error: 429 Too Many Requests on https://artificialanalysis.ai/api/v2/language/models?page=1: {"error":"Rate limit exceeded"}
+    at fetchAllPages (file:///home/damia/code/onion-sellers/src/artificial-analysis/fetch.ts:35:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async fetchArtificialAnalysisData (file:///home/damia/code/onion-sellers/src/artificial-analysis/fetch.ts:63:16)
+    at async file:///home/damia/code/onion-sellers/src/index.ts:31:3 {
+  status: 429
+}
+
+I did not used this key that much. Should I bring new one? How limited free usage is?
+
+---
+
+I have not done 100 requests in previous 24h :(
+
+---
+
+Yes, go ahead and make both changes
