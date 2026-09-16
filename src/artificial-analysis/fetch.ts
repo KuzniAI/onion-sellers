@@ -7,10 +7,14 @@ import path from "node:path";
 const API_BASE = "https://artificialanalysis.ai/api/v2";
 const OUT_FILE = path.join("data", "artificial-analysis", "language-models.json");
 
-async function readCached(): Promise<{ fetchedAt: string; modelCount: number } | null> {
+async function readCached(): Promise<{
+  fetchedAt: string;
+  modelCount: number;
+  servedBy: string;
+} | null> {
   try {
     const raw = JSON.parse(await readFile(OUT_FILE, "utf8"));
-    return { fetchedAt: raw.fetchedAt, modelCount: raw.modelCount };
+    return { fetchedAt: raw.fetchedAt, modelCount: raw.modelCount, servedBy: raw.servedBy };
   } catch (err) {
     if ((err as NodeJS.ErrnoException).code === "ENOENT") return null;
     throw err;
@@ -58,11 +62,18 @@ export async function fetchArtificialAnalysisData(): Promise<void> {
   let result: { tier: string; intelligenceIndexVersion: number; rows: unknown[] };
   let servedBy = "/language/models";
 
+  // A previous run already learned this key can't reach the Pro+ endpoint, so go
+  // straight to the free one instead of spending a request on a guaranteed 403.
+  const cachedTier = await readCached();
+  if (cachedTier?.servedBy === "/language/models/free") {
+    servedBy = "/language/models/free";
+  }
+
   try {
     try {
-      result = await fetchAllPages("/language/models", apiKey);
+      result = await fetchAllPages(servedBy, apiKey);
     } catch (err) {
-      if ((err as { status?: number }).status === 403) {
+      if (servedBy === "/language/models" && (err as { status?: number }).status === 403) {
         console.log(
           "Key tier does not cover /language/models (Pro+), falling back to /language/models/free ...",
         );
@@ -76,10 +87,9 @@ export async function fetchArtificialAnalysisData(): Promise<void> {
     // Rate limited: keep whatever data is already on disk (seeded from the previous run)
     // rather than failing the whole pipeline. Only bail out if there's nothing to fall back to.
     if ((err as { status?: number }).status === 429) {
-      const cached = await readCached();
-      if (cached) {
+      if (cachedTier) {
         console.warn(
-          `Rate limited by Artificial Analysis; keeping cached data from ${cached.fetchedAt} (${cached.modelCount} models).`,
+          `Rate limited by Artificial Analysis; keeping cached data from ${cachedTier.fetchedAt} (${cachedTier.modelCount} models).`,
         );
         return;
       }
@@ -93,6 +103,7 @@ export async function fetchArtificialAnalysisData(): Promise<void> {
     JSON.stringify(
       {
         sourceUrl: `${API_BASE}${servedBy}`,
+        servedBy,
         fetchedAt: new Date().toISOString(),
         tier: result.tier,
         intelligenceIndexVersion: result.intelligenceIndexVersion,
