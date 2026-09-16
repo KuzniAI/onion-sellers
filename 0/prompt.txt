@@ -1,0 +1,16 @@
+I'm hitting rate limittter all the time from Github action 
+
+
+```
+== Step 5/7: fetching Artificial Analysis benchmark data ==
+Error: 429 Too Many Requests on https://artificialanalysis.ai/api/v2/language/models?page=1: {"error":"Rate limit exceeded"}
+    at fetchAllPages (file:///home/runner/work/onion-sellers/onion-sellers/src/artificial-analysis/fetch.ts:25:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async fetchArtificialAnalysisData (file:///home/runner/work/onion-sellers/onion-sellers/src/artificial-analysis/fetch.ts:52:14)
+    at async file:///home/runner/work/onion-sellers/onion-sellers/src/index.ts:31:3 {
+  status: 429
+}
+```
+
+
+Can we make this process not fail when this happens, and use older version (display the date on UI)
