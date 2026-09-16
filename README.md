@@ -36,9 +36,9 @@ OpenCode Zen and ClinePass start with stub parsers that throw. Run `npm start` l
 `.github/workflows/daily.yml` runs the pipeline every day at 05:17 UTC (or on demand from the Actions tab):
 
 - Mapping changes to `config/model-mapping.json` are committed straight to `main`.
-- Results go to the orphan `data` branch: `latest/` holds the current `recommendations.json` and provider pricing, `history/YYYY-MM-DD/` keeps one snapshot per day. Raw Artificial Analysis data is not stored or published.
-- `site/index.html` is published with the latest data to https://kuzniai.github.io/onion-sellers/.
-- If a pricing parser fails or a source download errors, the run fails before anything is committed or published, so the site keeps showing the last successful run untouched. Parser repair never runs in the workflow; fix parsers locally (see above).
+- Results go to the orphan `data` branch: `latest/` holds the current `recommendations.json`, provider pricing, and the raw Artificial Analysis data; `history/YYYY-MM-DD/` keeps one snapshot per day.
+- `site/index.html` is published with the latest data to https://kuzniai.github.io/onion-sellers/, including the Artificial Analysis data's fetch date so a rate-limited run is visible.
+- If a pricing parser fails or a source download errors, the run fails before anything is committed or published, so the site keeps showing the last successful run untouched. Parser repair never runs in the workflow; fix parsers locally (see above). A 429 from Artificial Analysis is not fatal: the pipeline keeps the previous day's benchmark data and continues.
 
 One-time setup:
 

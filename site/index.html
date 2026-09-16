@@ -255,12 +255,21 @@
         return res.json();
       }
 
-      function renderMeta(recs, pricing) {
+      function renderMeta(recs, aaData, pricing) {
         const generatedAt = new Date(recs.generatedAt);
         const items = [
           `Updated <time datetime="${esc(recs.generatedAt)}">${esc(fmtDate(recs.generatedAt))}</time>`,
           `${num(recs.candidatesConsidered, 0)} models scored`,
         ];
+        if (aaData?.fetchedAt) {
+          const stale = generatedAt - new Date(aaData.fetchedAt) > STALE_MS;
+          items.push(
+            `<a href="${esc(aaData.sourceUrl)}">Artificial Analysis data</a>: ${esc(fmtDate(aaData.fetchedAt))}` +
+              (stale ? '<span class="badge">stale</span>' : ""),
+          );
+        } else {
+          items.push("Artificial Analysis data: unavailable");
+        }
         PROVIDERS.forEach((provider, i) => {
           const source = pricing[i];
           if (!source) {
@@ -321,12 +330,13 @@
       async function main() {
         const app = document.getElementById("app");
         try {
-          const [recs, config, ...pricing] = await Promise.all([
+          const [recs, config, aaData, ...pricing] = await Promise.all([
             getJson("data/recommendations.json"),
             getJson("categories.json").catch(() => ({ categories: {} })),
+            getJson("data/artificial-analysis/language-models.json").catch(() => null),
             ...PROVIDERS.map((p) => getJson(`data/${p.id}/models-pricing.json`).catch(() => null)),
           ]);
-          renderMeta(recs, pricing);
+          renderMeta(recs, aaData, pricing);
           app.innerHTML = Object.entries(recs.categories)
             .map(([name, byProvider]) => renderCategory(name, byProvider, config.categories[name]))
             .join("");

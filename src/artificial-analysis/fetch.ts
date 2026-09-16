@@ -1,11 +1,21 @@
 // Fetches Artificial Analysis language model benchmark data. Requires AA_API_KEY
 // in the environment (see .env.example).
 
-import { writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 
 const API_BASE = "https://artificialanalysis.ai/api/v2";
 const OUT_FILE = path.join("data", "artificial-analysis", "language-models.json");
+
+async function readCached(): Promise<{ fetchedAt: string; modelCount: number } | null> {
+  try {
+    const raw = JSON.parse(await readFile(OUT_FILE, "utf8"));
+    return { fetchedAt: raw.fetchedAt, modelCount: raw.modelCount };
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return null;
+    throw err;
+  }
+}
 
 async function fetchAllPages(
   endpointPath: string,
@@ -49,17 +59,32 @@ export async function fetchArtificialAnalysisData(): Promise<void> {
   let servedBy = "/language/models";
 
   try {
-    result = await fetchAllPages("/language/models", apiKey);
-  } catch (err) {
-    if ((err as { status?: number }).status === 403) {
-      console.log(
-        "Key tier does not cover /language/models (Pro+), falling back to /language/models/free ...",
-      );
-      servedBy = "/language/models/free";
-      result = await fetchAllPages("/language/models/free", apiKey);
-    } else {
-      throw err;
+    try {
+      result = await fetchAllPages("/language/models", apiKey);
+    } catch (err) {
+      if ((err as { status?: number }).status === 403) {
+        console.log(
+          "Key tier does not cover /language/models (Pro+), falling back to /language/models/free ...",
+        );
+        servedBy = "/language/models/free";
+        result = await fetchAllPages("/language/models/free", apiKey);
+      } else {
+        throw err;
+      }
     }
+  } catch (err) {
+    // Rate limited: keep whatever data is already on disk (seeded from the previous run)
+    // rather than failing the whole pipeline. Only bail out if there's nothing to fall back to.
+    if ((err as { status?: number }).status === 429) {
+      const cached = await readCached();
+      if (cached) {
+        console.warn(
+          `Rate limited by Artificial Analysis; keeping cached data from ${cached.fetchedAt} (${cached.modelCount} models).`,
+        );
+        return;
+      }
+    }
+    throw err;
   }
 
   await mkdir(path.dirname(OUT_FILE), { recursive: true });

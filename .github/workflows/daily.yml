@@ -52,14 +52,18 @@ jobs:
             git worktree add --orphan -b data data-branch
           fi
 
-      # Lets refresh.ts keep the previous pricing file when a parser fails, so the run
-      # can still complete and log a full diagnosis instead of crashing on a missing file.
+      # Lets refresh.ts keep the previous pricing file when a parser fails, and fetch.ts
+      # keep the previous Artificial Analysis data when rate limited, so the run can
+      # still complete instead of crashing on a missing file.
       - name: Seed previous pricing data
         run: |
           mkdir -p data
             for src in $PROVIDERS; do
             if [ -d "data-branch/latest/$src" ]; then cp -r "data-branch/latest/$src" data/; fi
           done
+          if [ -d "data-branch/latest/artificial-analysis" ]; then
+            cp -r "data-branch/latest/artificial-analysis" data/
+          fi
 
       # A nonzero exit (parser mismatch or network failure) fails this step immediately,
       # so the commit/build/deploy steps below are skipped and the published page is
@@ -91,6 +95,8 @@ jobs:
               mkdir -p "data-branch/$dest/$src"
               cp "data/$src/models-pricing.json" "data-branch/$dest/$src/"
             done
+            mkdir -p "data-branch/$dest/artificial-analysis"
+            cp data/artificial-analysis/language-models.json "data-branch/$dest/artificial-analysis/"
           done
           cd data-branch
           git add -A
