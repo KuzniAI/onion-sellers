@@ -128,6 +128,10 @@
   { "provider": "opencode-zen", "providerModel": "GPT 5 Codex", "aaSlug": "gpt-5-codex" },
   { "provider": "opencode-zen", "providerModel": "GPT 5 Nano", "aaSlug": "gpt-5-nano" },
   { "provider": "opencode-zen", "providerModel": "Union Alpha Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-zen", "providerModel": "Jev 1.13 Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-zen", "providerModel": "Jev 1.13", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-zen", "providerModel": "Qwen3.8 Flash", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-zen", "providerModel": "DeepSeek V4.1 Flash", "aaSlug": "deepseek-v4-1-flash" },
 
   { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
   { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
