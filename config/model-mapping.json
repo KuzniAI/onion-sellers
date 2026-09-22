@@ -27,6 +27,7 @@
   { "provider": "copilot", "providerModel": "Grok 4.6", "aaSlug": "grok-4-6" },
   { "provider": "copilot", "providerModel": "Kimi K2.7 Code", "aaSlug": "kimi-k2-7-code" },
   { "provider": "copilot", "providerModel": "Kimi K3", "aaSlug": "kimi-k3" },
+  { "provider": "copilot", "providerModel": "Grok 4.7", "aaSlug": "grok-4-7" },
 
   { "provider": "opencode-go", "providerModel": "GLM-5.3-Flash", "aaSlug": "glm-5-3-flash" },
   { "provider": "opencode-go", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
@@ -57,6 +58,11 @@
   { "provider": "opencode-go", "providerModel": "GPT 5.6 Luna", "aaSlug": "gpt-5-6-luna" },
   { "provider": "opencode-go", "providerModel": "MiniMax M2.5", "aaSlug": "minimax-m2-5" },
   { "provider": "opencode-go", "providerModel": "Union Alpha Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-go", "providerModel": "MiMo-V2.6-Flash", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-go", "providerModel": "MiMo-V2.6-Pro", "aaSlug": "mimo-v2-6-pro" },
+  { "provider": "opencode-go", "providerModel": "MiMo-V2.5", "aaSlug": "mimo-v2-5-0424" },
+  { "provider": "opencode-go", "providerModel": "MiMo-V2.5-Pro", "aaSlug": "mimo-v2-5-pro" },
+  { "provider": "opencode-go", "providerModel": "Grok 4.7", "aaSlug": "grok-4-7" },
 
   { "provider": "opencode-zen", "providerModel": "Big Pickle", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "MiMo-V2.5 Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
@@ -132,6 +138,8 @@
   { "provider": "opencode-zen", "providerModel": "Jev 1.13", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "Qwen3.8 Flash", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "DeepSeek V4.1 Flash", "aaSlug": "deepseek-v4-1-flash" },
+  { "provider": "opencode-zen", "providerModel": "MiMo-V2.6-Flash Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-zen", "providerModel": "Grok 4.7", "aaSlug": "grok-4-7" },
 
   { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
   { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
