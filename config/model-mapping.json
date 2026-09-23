@@ -28,6 +28,9 @@
   { "provider": "copilot", "providerModel": "Kimi K2.7 Code", "aaSlug": "kimi-k2-7-code" },
   { "provider": "copilot", "providerModel": "Kimi K3", "aaSlug": "kimi-k3" },
   { "provider": "copilot", "providerModel": "Grok 4.7", "aaSlug": "grok-4-7" },
+  { "provider": "copilot", "providerModel": "GPT-6 Luna", "aaSlug": "gpt-6-luna" },
+  { "provider": "copilot", "providerModel": "GPT-6 Sol", "aaSlug": "gpt-6-sol" },
+  { "provider": "copilot", "providerModel": "Claude Opus 5.5", "aaSlug": "claude-opus-5-5" },
 
   { "provider": "opencode-go", "providerModel": "GLM-5.3-Flash", "aaSlug": "glm-5-3-flash" },
   { "provider": "opencode-go", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
@@ -140,6 +143,9 @@
   { "provider": "opencode-zen", "providerModel": "DeepSeek V4.1 Flash", "aaSlug": "deepseek-v4-1-flash" },
   { "provider": "opencode-zen", "providerModel": "MiMo-V2.6-Flash Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "Grok 4.7", "aaSlug": "grok-4-7" },
+  { "provider": "opencode-zen", "providerModel": "Claude Opus 5.5", "aaSlug": "claude-opus-5-5" },
+  { "provider": "opencode-zen", "providerModel": "GPT 6 Sol", "aaSlug": "gpt-6-sol" },
+  { "provider": "opencode-zen", "providerModel": "GPT 6 Luna", "aaSlug": "gpt-6-luna" },
 
   { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
   { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
