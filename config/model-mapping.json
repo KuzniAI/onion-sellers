@@ -162,5 +162,8 @@
   { "provider": "clinepass", "providerModel": "MiniMax M3", "aaSlug": "minimax-m3" },
   { "provider": "clinepass", "providerModel": "Qwen3.8 Max", "aaSlug": "qwen3-8-max" },
   { "provider": "clinepass", "providerModel": "Qwen3.7 Max", "aaSlug": "qwen3-7-max" },
-  { "provider": "clinepass", "providerModel": "Qwen3.7 Plus", "aaSlug": "qwen3-7-plus" }
+  { "provider": "clinepass", "providerModel": "Qwen3.7 Plus", "aaSlug": "qwen3-7-plus" },
+  { "provider": "clinepass", "providerModel": "GLM-5.3 Flash", "aaSlug": "glm-5-3-flash" },
+  { "provider": "clinepass", "providerModel": "DeepSeek V4.1 Flash", "aaSlug": "deepseek-v4-1-flash" },
+  { "provider": "clinepass", "providerModel": "Muse Spark 1.3 Contributor", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." }
 ]
