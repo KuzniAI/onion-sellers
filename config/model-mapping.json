@@ -61,13 +61,14 @@
   { "provider": "opencode-go", "providerModel": "GPT 5.6 Luna", "aaSlug": "gpt-5-6-luna" },
   { "provider": "opencode-go", "providerModel": "MiniMax M2.5", "aaSlug": "minimax-m2-5" },
   { "provider": "opencode-go", "providerModel": "Union Alpha Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
-  { "provider": "opencode-go", "providerModel": "MiMo-V2.6-Flash", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-go", "providerModel": "MiMo-V2.6-Flash", "aaSlug": "mimo-v2-6-flash" },
   { "provider": "opencode-go", "providerModel": "MiMo-V2.6-Pro", "aaSlug": "mimo-v2-6-pro" },
   { "provider": "opencode-go", "providerModel": "MiMo-V2.5", "aaSlug": "mimo-v2-5-0424" },
   { "provider": "opencode-go", "providerModel": "MiMo-V2.5-Pro", "aaSlug": "mimo-v2-5-pro" },
   { "provider": "opencode-go", "providerModel": "Grok 4.7", "aaSlug": "grok-4-7" },
   { "provider": "opencode-go", "providerModel": "Space Bunny Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-go", "providerModel": "GPT 6 Luna", "aaSlug": "gpt-6-luna" },
+  { "provider": "opencode-go", "providerModel": "LongCat 2.5 Preview Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
 
   { "provider": "opencode-zen", "providerModel": "Big Pickle", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "MiMo-V2.5 Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
@@ -150,6 +151,7 @@
   { "provider": "opencode-zen", "providerModel": "GPT 6 Luna", "aaSlug": "gpt-6-luna" },
   { "provider": "opencode-zen", "providerModel": "Space Bunny Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "Qwen3.8 Max", "aaSlug": "qwen3-8-max" },
+  { "provider": "opencode-zen", "providerModel": "LongCat 2.5 Preview Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
 
   { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
   { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
