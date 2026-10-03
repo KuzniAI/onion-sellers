@@ -155,6 +155,8 @@
   { "provider": "opencode-zen", "providerModel": "Qwen3.8 Max", "aaSlug": "qwen3-8-max" },
   { "provider": "opencode-zen", "providerModel": "LongCat 2.5 Preview Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "GPT 6.1 Sol", "aaSlug": "gpt-6-1-sol" },
+  { "provider": "opencode-zen", "providerModel": "Fledge Alpha Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-zen", "providerModel": "Ling 3.1 Flash Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
 
   { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
   { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
