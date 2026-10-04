@@ -1,0 +1,7 @@
+I'm thinking about a new category for scoring - LLM Wiki management. Does it make sense and can existing scoring be adapted to it?
+
+LLM Wiki as described in this paper https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f Agent responsibility is outlined there
+
+---
+
+yes, make both changes

@@ -1,0 +1,27 @@
+{
+  "cli_version": "0.11.3",
+  "checkpoint_id": "01M4472SADASKXHJ3H4C1KX4KX",
+  "strategy": "manual-commit",
+  "branch": "llm-wiki-category",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "config/categories.json",
+    "src/scoring/compute-scores.ts"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 30,
+    "cache_creation_tokens": 32208,
+    "cache_read_tokens": 702862,
+    "output_tokens": 9423,
+    "api_call_count": 15
+  }
+}
