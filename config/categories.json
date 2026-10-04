@@ -1,6 +1,6 @@
 {
   "topNPerProvider": 2,
-  "notes": "Weights operate on min-max normalized metrics (0-1) across the candidate set actually available for a category. costEfficiency = 1 / blendedPrice1m, where blendedPrice1m assumes a 3:1 output:input token ratio (typical agentic coding workload) -- a documented simplification since Copilot (plan + credits) and OpenCode Go (flat $10/mo with per-model monthly caps) aren't priced the same way; per-token blended price is the common denominator we have. speed = performance.median_output_tokens_per_second from Artificial Analysis. topNPerProvider is the shortlist size within each individual provider -- there is no cross-provider ranking, since the choice is which provider's own lineup to use, not a mixed list.",
+  "notes": "Weights operate on min-max normalized metrics (0-1) across the candidate set actually available for a category. costEfficiency = 1 / blendedPrice1m, where blendedPrice1m assumes a 3:1 output:input token ratio (typical agentic coding workload) unless the category sets outputToInputRatio -- a documented simplification since Copilot (plan + credits) and OpenCode Go (flat $10/mo with per-model monthly caps) aren't priced the same way; per-token blended price is the common denominator we have. speed = performance.median_output_tokens_per_second from Artificial Analysis. topNPerProvider is the shortlist size within each individual provider -- there is no cross-provider ranking, since the choice is which provider's own lineup to use, not a mixed list.",
   "categories": {
     "agenticCoding": {
       "description": "Left running for hours in a loop to solve a problem autonomously with minimal supervision (e.g. an OpenSpec/plan executor, a long-running coding agent).",
@@ -30,6 +30,17 @@
         "speed": 0.2,
         "agenticIndex": 0.05,
         "intelligenceIndex": 0.05
+      }
+    },
+    "llmWiki": {
+      "description": "Maintaining an LLM-curated markdown knowledge base (Karpathy's LLM Wiki pattern): ingesting sources into many cross-linked pages, answering from the wiki with citations, and periodically linting it for contradictions, stale claims and orphan pages. Read-heavy and run repeatedly; faithfulness and synthesis matter more than coding skill.",
+      "outputToInputRatio": 0.2,
+      "notes": "outputToInputRatio 0.2 (1 output token per 5 input tokens): each operation reads a source plus many existing pages and writes comparatively small edits. intelligenceIndex stands in for the signals that matter most here -- long-context reasoning, hallucination rate and instruction following -- which the free Artificial Analysis endpoint does not expose as separate scores. Context window size is not scored because no data source provides it.",
+      "weights": {
+        "intelligenceIndex": 0.4,
+        "agenticIndex": 0.3,
+        "costEfficiency": 0.2,
+        "speed": 0.1
       }
     }
   }

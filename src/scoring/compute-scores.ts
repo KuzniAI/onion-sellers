@@ -58,11 +58,17 @@ interface ScoredCandidate {
   priceBlendedPer1M: number;
 }
 
-const OUTPUT_OUTPUT_TO_INPUT_RATIO = 3; // assume 3 output tokens per 1 input token (typical agentic workload)
+// Default output tokens per 1 input token (typical agentic coding workload). A category can
+// override it with outputToInputRatio in config/categories.json.
+const DEFAULT_OUTPUT_TO_INPUT_RATIO = 3;
 
-function blendedPrice(priceInput: number, priceOutput: number): number {
-  const totalParts = 1 + OUTPUT_OUTPUT_TO_INPUT_RATIO;
-  return (priceInput * 1 + priceOutput * OUTPUT_OUTPUT_TO_INPUT_RATIO) / totalParts;
+function blendedPrice(
+  priceInput: number,
+  priceOutput: number,
+  outputToInputRatio: number = DEFAULT_OUTPUT_TO_INPUT_RATIO,
+): number {
+  const totalParts = 1 + outputToInputRatio;
+  return (priceInput * 1 + priceOutput * outputToInputRatio) / totalParts;
 }
 
 // Strips variant qualifiers like " (<= 256K tokens)", " (Off-Peak)", " (Peak)" so
@@ -158,7 +164,8 @@ export async function computeScores(): Promise<void> {
     codingIndex: number;
     intelligenceIndex: number;
     speed: number;
-    blendedPrice1m: number;
+    priceInput: number;
+    priceOutput: number;
   }[] = [];
 
   for (const candidate of candidates) {
@@ -211,7 +218,8 @@ export async function computeScores(): Promise<void> {
       codingIndex: artificial_analysis_coding_index,
       intelligenceIndex: artificial_analysis_intelligence_index,
       speed,
-      blendedPrice1m,
+      priceInput: candidate.priceInput,
+      priceOutput: candidate.priceOutput,
     });
   }
 
@@ -219,15 +227,17 @@ export async function computeScores(): Promise<void> {
 
   for (const [categoryName, categoryConfig] of Object.entries(config.categories) as [
     string,
-    { weights: CategoryWeights },
+    { weights: CategoryWeights; outputToInputRatio?: number },
   ][]) {
     const weights = categoryConfig.weights;
+    const ratio = categoryConfig.outputToInputRatio ?? DEFAULT_OUTPUT_TO_INPUT_RATIO;
     if (enriched.length === 0) {
       categories[categoryName] = Object.fromEntries(pricingSources.map((s) => [s.id, []]));
       continue;
     }
 
-    const costEfficiencies = enriched.map((e) => 1 / e.blendedPrice1m);
+    const blendedPrices = enriched.map((e) => blendedPrice(e.priceInput, e.priceOutput, ratio));
+    const costEfficiencies = blendedPrices.map((p) => 1 / p);
     const ranges = {
       agenticIndex: [
         Math.min(...enriched.map((e) => e.agenticIndex)),
@@ -279,7 +289,7 @@ export async function computeScores(): Promise<void> {
           speed: e.speed,
           costEfficiency: Math.round(costEfficiencies[i] * 1000) / 1000,
         },
-        priceBlendedPer1M: Math.round(e.blendedPrice1m * 1000) / 1000,
+        priceBlendedPer1M: Math.round(blendedPrices[i] * 1000) / 1000,
       };
     });
 
