@@ -71,6 +71,7 @@
   { "provider": "opencode-go", "providerModel": "Space Bunny Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-go", "providerModel": "GPT 6 Luna", "aaSlug": "gpt-6-luna" },
   { "provider": "opencode-go", "providerModel": "LongCat 2.5 Preview Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-go", "providerModel": "Space Bunny", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
 
   { "provider": "opencode-zen", "providerModel": "Big Pickle", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "MiMo-V2.5 Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
