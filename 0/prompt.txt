@@ -1,0 +1,1 @@
+Something is not right with the daily pipeline https://github.com/KuzniAI/onion-sellers/actions/runs/37774192706/job/113300842216#step:8:1
