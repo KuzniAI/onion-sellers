@@ -51,7 +51,11 @@ export function parseOpenCodeZenPricingHtml(html: string): OpenCodeZenModelRow[]
       );
     }
 
-    const model = cellText($(cells[0]));
+    // Promotional rows look like "Mistral Large 4 (50% off)"; strip the suffix so
+    // the model name stays stable for mapping and keep the discount as a note.
+    const rawModel = cellText($(cells[0]));
+    const discount = rawModel.match(/\s*\((\d+(?:\.\d+)?% off)\)\s*$/i);
+    const model = discount ? rawModel.slice(0, discount.index).trim() : rawModel;
     if (!model) continue;
 
     const priceInput = parseRequiredPrice(cellText($(cells[1])), model, "Input");
@@ -59,7 +63,9 @@ export function parseOpenCodeZenPricingHtml(html: string): OpenCodeZenModelRow[]
 
     // Footnote paragraphs key models by base name ("GPT 5.6 Sol"), while the table
     // splits context-threshold variants ("GPT 5.6 Sol (≤ 272K tokens)").
-    const notes = footnotes.get(model) ?? footnotes.get(stripVariantSuffix(model));
+    const footnote = footnotes.get(model) ?? footnotes.get(stripVariantSuffix(model));
+    const discountNote = discount ? `Promotional pricing (${discount[1]}).` : undefined;
+    const notes = [discountNote, footnote].filter(Boolean).join(" ");
 
     rows.push({
       model,
@@ -112,8 +118,10 @@ function stripVariantSuffix(model: string): string {
   return model.replace(/\s*\([^)]*\)\s*$/, "").trim();
 }
 
+// Drops footnote markers and struck-through prices, so a discounted cell like
+// "<del>$1.36</del> $0.68" reads as the current price "$0.68".
 function cellText($cell: cheerio.Cheerio<any>): string {
   const clone = $cell.clone();
-  clone.find("sup").remove();
+  clone.find("sup, del, s").remove();
   return clone.text().trim().replace(/\s+/g, " ");
 }
