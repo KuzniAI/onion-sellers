@@ -54,9 +54,21 @@ interface ScoredCandidate {
   model: string;
   aaSlug: string;
   score: number;
-  breakdown: Record<string, number>;
+  breakdown: Record<string, number | null>;
+  // Benchmark metrics Artificial Analysis hasn't published for this model; each
+  // contributes 0 to the score.
+  missingMetrics?: BenchmarkMetric[];
   priceBlendedPer1M: number;
 }
+
+type BenchmarkMetric = "agenticIndex" | "codingIndex" | "intelligenceIndex" | "speed";
+
+const BENCHMARK_METRICS: BenchmarkMetric[] = [
+  "agenticIndex",
+  "codingIndex",
+  "intelligenceIndex",
+  "speed",
+];
 
 // Default output tokens per 1 input token (typical agentic coding workload). A category can
 // override it with outputToInputRatio in config/categories.json.
@@ -132,6 +144,13 @@ function normalize(value: number, min: number, max: number): number {
   return (value - min) / (max - min);
 }
 
+// Min-max range over the candidates that have the metric, so a missing value
+// doesn't drag the range down and distort everyone else's normalized score.
+function range(values: (number | null)[]): [number, number] {
+  const present = values.filter((v): v is number => v != null);
+  return present.length === 0 ? [0, 0] : [Math.min(...present), Math.max(...present)];
+}
+
 export async function computeScores(): Promise<void> {
   const config = JSON.parse(await readFile(path.join("config", "categories.json"), "utf8"));
   const blacklist: BlacklistEntry[] = JSON.parse(
@@ -160,10 +179,10 @@ export async function computeScores(): Promise<void> {
     provider: Provider;
     model: string;
     aaSlug: string;
-    agenticIndex: number;
-    codingIndex: number;
-    intelligenceIndex: number;
-    speed: number;
+    agenticIndex: number | null;
+    codingIndex: number | null;
+    intelligenceIndex: number | null;
+    speed: number | null;
     priceInput: number;
     priceOutput: number;
   }[] = [];
@@ -192,32 +211,32 @@ export async function computeScores(): Promise<void> {
       );
       continue;
     }
-    const {
-      artificial_analysis_agentic_index,
-      artificial_analysis_coding_index,
-      artificial_analysis_intelligence_index,
-    } = aa.evaluations;
-    const speed = aa.performance?.median_output_tokens_per_second;
-    if (
-      artificial_analysis_agentic_index == null ||
-      artificial_analysis_coding_index == null ||
-      artificial_analysis_intelligence_index == null ||
-      speed == null
-    ) {
+    const metrics = {
+      agenticIndex: aa.evaluations.artificial_analysis_agentic_index ?? null,
+      codingIndex: aa.evaluations.artificial_analysis_coding_index ?? null,
+      intelligenceIndex: aa.evaluations.artificial_analysis_intelligence_index ?? null,
+      speed: aa.performance?.median_output_tokens_per_second ?? null,
+    };
+    const missing = BENCHMARK_METRICS.filter((m) => metrics[m] == null);
+    // With no benchmarks at all the score would be cost alone, which says nothing
+    // about quality. Partially benchmarked models are scored with 0 for each gap.
+    if (missing.length === BENCHMARK_METRICS.length) {
       console.warn(
-        `Skipping ${candidate.provider}/${candidate.model}: incomplete benchmark data for "${map.aaSlug}".`,
+        `Skipping ${candidate.provider}/${candidate.model}: no benchmark data for "${map.aaSlug}".`,
       );
       continue;
+    }
+    if (missing.length > 0) {
+      console.warn(
+        `Partial benchmark data for ${candidate.provider}/${candidate.model} ("${map.aaSlug}"): ${missing.join(", ")} scored as 0.`,
+      );
     }
 
     enriched.push({
       provider: candidate.provider,
       model: candidate.model,
       aaSlug: map.aaSlug,
-      agenticIndex: artificial_analysis_agentic_index,
-      codingIndex: artificial_analysis_coding_index,
-      intelligenceIndex: artificial_analysis_intelligence_index,
-      speed,
+      ...metrics,
       priceInput: candidate.priceInput,
       priceOutput: candidate.priceOutput,
     });
@@ -239,31 +258,23 @@ export async function computeScores(): Promise<void> {
     const blendedPrices = enriched.map((e) => blendedPrice(e.priceInput, e.priceOutput, ratio));
     const costEfficiencies = blendedPrices.map((p) => 1 / p);
     const ranges = {
-      agenticIndex: [
-        Math.min(...enriched.map((e) => e.agenticIndex)),
-        Math.max(...enriched.map((e) => e.agenticIndex)),
-      ],
-      codingIndex: [
-        Math.min(...enriched.map((e) => e.codingIndex)),
-        Math.max(...enriched.map((e) => e.codingIndex)),
-      ],
-      intelligenceIndex: [
-        Math.min(...enriched.map((e) => e.intelligenceIndex)),
-        Math.max(...enriched.map((e) => e.intelligenceIndex)),
-      ],
-      speed: [Math.min(...enriched.map((e) => e.speed)), Math.max(...enriched.map((e) => e.speed))],
-      costEfficiency: [Math.min(...costEfficiencies), Math.max(...costEfficiencies)],
+      agenticIndex: range(enriched.map((e) => e.agenticIndex)),
+      codingIndex: range(enriched.map((e) => e.codingIndex)),
+      intelligenceIndex: range(enriched.map((e) => e.intelligenceIndex)),
+      speed: range(enriched.map((e) => e.speed)),
+      costEfficiency: range(costEfficiencies),
+    };
+    // A missing metric contributes 0, the same as the worst candidate that has it.
+    const norm = (e: (typeof enriched)[number], metric: BenchmarkMetric): number => {
+      const value = e[metric];
+      return value == null ? 0 : normalize(value, ranges[metric][0], ranges[metric][1]);
     };
 
     const scored: ScoredCandidate[] = enriched.map((e, i) => {
-      const normAgentic = normalize(e.agenticIndex, ranges.agenticIndex[0], ranges.agenticIndex[1]);
-      const normCoding = normalize(e.codingIndex, ranges.codingIndex[0], ranges.codingIndex[1]);
-      const normIntelligence = normalize(
-        e.intelligenceIndex,
-        ranges.intelligenceIndex[0],
-        ranges.intelligenceIndex[1],
-      );
-      const normSpeed = normalize(e.speed, ranges.speed[0], ranges.speed[1]);
+      const normAgentic = norm(e, "agenticIndex");
+      const normCoding = norm(e, "codingIndex");
+      const normIntelligence = norm(e, "intelligenceIndex");
+      const normSpeed = norm(e, "speed");
       const normCost = normalize(
         costEfficiencies[i],
         ranges.costEfficiency[0],
@@ -277,6 +288,7 @@ export async function computeScores(): Promise<void> {
         (weights.costEfficiency ?? 0) * normCost +
         (weights.speed ?? 0) * normSpeed;
 
+      const missingMetrics = BENCHMARK_METRICS.filter((m) => e[m] == null);
       return {
         provider: e.provider,
         model: e.model,
@@ -289,6 +301,7 @@ export async function computeScores(): Promise<void> {
           speed: e.speed,
           costEfficiency: Math.round(costEfficiencies[i] * 1000) / 1000,
         },
+        ...(missingMetrics.length > 0 ? { missingMetrics } : {}),
         priceBlendedPer1M: Math.round(blendedPrices[i] * 1000) / 1000,
       };
     });
