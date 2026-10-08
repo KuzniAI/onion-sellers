@@ -1,0 +1,5 @@
+look into the incomplete benchmark data skips
+
+---
+
+let's do partial scoring - zero values when missing? it would be fair when my use case is coding
