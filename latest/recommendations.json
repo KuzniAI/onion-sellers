@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-08T17:18:03.256Z",
+  "generatedAt": "2026-10-08T17:36:44.047Z",
   "topNPerProvider": 2,
-  "candidatesConsidered": 75,
+  "candidatesConsidered": 122,
   "categories": {
     "agenticCoding": {
       "copilot": [
@@ -9,7 +9,7 @@
           "provider": "copilot",
           "model": "Claude Opus 5",
           "aaSlug": "claude-opus-5",
-          "score": 0.802,
+          "score": 0.792,
           "breakdown": {
             "agenticIndex": 56.5,
             "codingIndex": 78,
@@ -23,7 +23,7 @@
           "provider": "copilot",
           "model": "Grok 4.6",
           "aaSlug": "grok-4-6",
-          "score": 0.751,
+          "score": 0.744,
           "breakdown": {
             "agenticIndex": 53,
             "codingIndex": 76.8,
@@ -39,7 +39,7 @@
           "provider": "opencode-go",
           "model": "Qwen3.8 Max",
           "aaSlug": "qwen3-8-max",
-          "score": 0.775,
+          "score": 0.768,
           "breakdown": {
             "agenticIndex": 56,
             "codingIndex": 76.2,
@@ -53,7 +53,7 @@
           "provider": "opencode-go",
           "model": "GLM-5.3-Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.758,
+          "score": 0.753,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
@@ -69,7 +69,7 @@
           "provider": "opencode-zen",
           "model": "Claude Opus 5",
           "aaSlug": "claude-opus-5",
-          "score": 0.802,
+          "score": 0.792,
           "breakdown": {
             "agenticIndex": 56.5,
             "codingIndex": 78,
@@ -83,7 +83,7 @@
           "provider": "opencode-zen",
           "model": "Qwen3.8 Max",
           "aaSlug": "qwen3-8-max",
-          "score": 0.775,
+          "score": 0.768,
           "breakdown": {
             "agenticIndex": 56,
             "codingIndex": 76.2,
@@ -99,7 +99,7 @@
           "provider": "clinepass",
           "model": "Qwen3.8 Max",
           "aaSlug": "qwen3-8-max",
-          "score": 0.775,
+          "score": 0.768,
           "breakdown": {
             "agenticIndex": 56,
             "codingIndex": 76.2,
@@ -113,7 +113,7 @@
           "provider": "clinepass",
           "model": "GLM-5.3 Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.758,
+          "score": 0.753,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
@@ -131,7 +131,7 @@
           "provider": "copilot",
           "model": "GPT-6 Astra",
           "aaSlug": "gpt-6-astra",
-          "score": 0.84,
+          "score": 0.796,
           "breakdown": {
             "agenticIndex": 51,
             "codingIndex": 76.9,
@@ -145,7 +145,7 @@
           "provider": "copilot",
           "model": "Claude Opus 5",
           "aaSlug": "claude-opus-5",
-          "score": 0.833,
+          "score": 0.793,
           "breakdown": {
             "agenticIndex": 56.5,
             "codingIndex": 78,
@@ -161,7 +161,7 @@
           "provider": "opencode-go",
           "model": "Qwen3.8 Max",
           "aaSlug": "qwen3-8-max",
-          "score": 0.762,
+          "score": 0.734,
           "breakdown": {
             "agenticIndex": 56,
             "codingIndex": 76.2,
@@ -175,7 +175,7 @@
           "provider": "opencode-go",
           "model": "Grok 4.6",
           "aaSlug": "grok-4-6",
-          "score": 0.754,
+          "score": 0.728,
           "breakdown": {
             "agenticIndex": 53,
             "codingIndex": 76.8,
@@ -191,7 +191,7 @@
           "provider": "opencode-zen",
           "model": "GPT 6 Astra",
           "aaSlug": "gpt-6-astra",
-          "score": 0.84,
+          "score": 0.796,
           "breakdown": {
             "agenticIndex": 51,
             "codingIndex": 76.9,
@@ -205,7 +205,7 @@
           "provider": "opencode-zen",
           "model": "Claude Opus 5",
           "aaSlug": "claude-opus-5",
-          "score": 0.833,
+          "score": 0.793,
           "breakdown": {
             "agenticIndex": 56.5,
             "codingIndex": 78,
@@ -221,7 +221,7 @@
           "provider": "clinepass",
           "model": "Qwen3.8 Max",
           "aaSlug": "qwen3-8-max",
-          "score": 0.762,
+          "score": 0.734,
           "breakdown": {
             "agenticIndex": 56,
             "codingIndex": 76.2,
@@ -235,7 +235,7 @@
           "provider": "clinepass",
           "model": "GLM-5.3",
           "aaSlug": "glm-5-3",
-          "score": 0.752,
+          "score": 0.726,
           "breakdown": {
             "agenticIndex": 53.1,
             "codingIndex": 74.8,
@@ -253,7 +253,7 @@
           "provider": "copilot",
           "model": "Gemini 3.7 Flash",
           "aaSlug": "gemini-3-7-flash",
-          "score": 0.672,
+          "score": 0.67,
           "breakdown": {
             "agenticIndex": 35.2,
             "codingIndex": 76.1,
@@ -267,7 +267,7 @@
           "provider": "copilot",
           "model": "GPT-5.6 Luna",
           "aaSlug": "gpt-5-6-luna",
-          "score": 0.582,
+          "score": 0.581,
           "breakdown": {
             "agenticIndex": 42.1,
             "codingIndex": 71.4,
@@ -313,7 +313,7 @@
           "provider": "opencode-zen",
           "model": "Gemini 3.7 Flash",
           "aaSlug": "gemini-3-7-flash",
-          "score": 0.661,
+          "score": 0.66,
           "breakdown": {
             "agenticIndex": 35.2,
             "codingIndex": 76.1,
@@ -327,7 +327,7 @@
           "provider": "opencode-zen",
           "model": "GLM 5.3 Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.643,
+          "score": 0.641,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
@@ -343,7 +343,7 @@
           "provider": "clinepass",
           "model": "GLM-5.3 Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.643,
+          "score": 0.641,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
@@ -357,7 +357,7 @@
           "provider": "clinepass",
           "model": "MiMo-V2.5",
           "aaSlug": "mimo-v2-5-0424",
-          "score": 0.584,
+          "score": 0.586,
           "breakdown": {
             "agenticIndex": 15.8,
             "codingIndex": 56.8,
@@ -375,7 +375,7 @@
           "provider": "copilot",
           "model": "Claude Opus 5",
           "aaSlug": "claude-opus-5",
-          "score": 0.687,
+          "score": 0.647,
           "breakdown": {
             "agenticIndex": 56.5,
             "codingIndex": 78,
@@ -389,7 +389,7 @@
           "provider": "copilot",
           "model": "GPT-6 Astra",
           "aaSlug": "gpt-6-astra",
-          "score": 0.671,
+          "score": 0.627,
           "breakdown": {
             "agenticIndex": 51,
             "codingIndex": 76.9,
@@ -405,7 +405,7 @@
           "provider": "opencode-go",
           "model": "GLM-5.3-Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.708,
+          "score": 0.634,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
@@ -417,39 +417,25 @@
         },
         {
           "provider": "opencode-go",
-          "model": "DeepSeek V4 Flash Vision Exp",
-          "aaSlug": "deepseek-v4-flash-vision",
-          "score": 0.65,
+          "model": "Qwen3.8 Max",
+          "aaSlug": "qwen3-8-max",
+          "score": 0.596,
           "breakdown": {
-            "agenticIndex": 47.5,
-            "codingIndex": 65,
-            "intelligenceIndex": 34.8,
-            "speed": 220.11,
-            "costEfficiency": 4.444
+            "agenticIndex": 56,
+            "codingIndex": 76.2,
+            "intelligenceIndex": 45.4,
+            "speed": 36.02,
+            "costEfficiency": 0.375
           },
-          "priceBlendedPer1M": 0.225
+          "priceBlendedPer1M": 2.667
         }
       ],
       "opencode-zen": [
         {
           "provider": "opencode-zen",
-          "model": "GLM 5.3 Flash",
-          "aaSlug": "glm-5-3-flash",
-          "score": 0.708,
-          "breakdown": {
-            "agenticIndex": 50.9,
-            "codingIndex": 71.5,
-            "intelligenceIndex": 41.8,
-            "speed": 51.41,
-            "costEfficiency": 4.8
-          },
-          "priceBlendedPer1M": 0.208
-        },
-        {
-          "provider": "opencode-zen",
           "model": "Claude Opus 5",
           "aaSlug": "claude-opus-5",
-          "score": 0.687,
+          "score": 0.647,
           "breakdown": {
             "agenticIndex": 56.5,
             "codingIndex": 78,
@@ -458,6 +444,20 @@
             "costEfficiency": 0.12
           },
           "priceBlendedPer1M": 8.333
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GLM 5.3 Flash",
+          "aaSlug": "glm-5-3-flash",
+          "score": 0.634,
+          "breakdown": {
+            "agenticIndex": 50.9,
+            "codingIndex": 71.5,
+            "intelligenceIndex": 41.8,
+            "speed": 51.41,
+            "costEfficiency": 4.8
+          },
+          "priceBlendedPer1M": 0.208
         }
       ],
       "clinepass": [
@@ -465,7 +465,7 @@
           "provider": "clinepass",
           "model": "GLM-5.3 Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.708,
+          "score": 0.634,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
@@ -479,7 +479,7 @@
           "provider": "clinepass",
           "model": "Qwen3.8 Max",
           "aaSlug": "qwen3-8-max",
-          "score": 0.628,
+          "score": 0.596,
           "breakdown": {
             "agenticIndex": 56,
             "codingIndex": 76.2,
