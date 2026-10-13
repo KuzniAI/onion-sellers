@@ -38,7 +38,7 @@ try {
 
   if (failedSources.length > 0) {
     console.error(
-      `\nDone with parser failures (${failedSources.join(", ")}); some pricing data is stale or missing (see errors above).`,
+      `\nDone with pricing refresh failures (${failedSources.join(", ")}); some pricing data is stale or missing (see errors above).`,
     );
     process.exitCode = 1;
   } else {

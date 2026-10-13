@@ -1,13 +1,20 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { downloadHtml } from "./downloader.ts";
+import { downloadHtml, NetworkError } from "./downloader.ts";
 import { repairParser } from "./repair-parser.ts";
 import type { PricingSource } from "./source.ts";
 
-// Returns false when parsing failed and could not be repaired (existing data file is left
-// untouched). Network errors are not caught and abort the pipeline.
+// Returns false when the download failed (after retries) or parsing failed and could not be
+// repaired; the existing data file is left untouched in both cases.
 export async function refreshPricingSource<Row>(source: PricingSource<Row>): Promise<boolean> {
-  const html = await downloadHtml(source.sourceUrl);
+  let html: string;
+  try {
+    html = await downloadHtml(source.sourceUrl);
+  } catch (error) {
+    if (!(error instanceof NetworkError)) throw error;
+    console.error(`Failed to download ${source.displayName} pricing: ${error.message}`);
+    return false;
+  }
 
   let models: Row[];
   try {
