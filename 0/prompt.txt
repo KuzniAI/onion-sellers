@@ -1,0 +1,19 @@
+Add try catch for this transient error if possible
+
+
+```
+
+<pasted_content id="68c8">
+== Step 2/7: refreshing OpenCode Go pricing ==
+NetworkError: 404 Not Found on https://opencode.ai/docs/go/: {"status":404,"message":"Cannot find any route matching [GET] https://opencode.ai/docs/go/"}
+    at downloadHtml (file:///home/runner/work/onion-sellers/onion-sellers/src/pricing/downloader.ts:25:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async refreshPricingSource (file:///home/runner/work/onion-sellers/onion-sellers/src/pricing/refresh.ts:10:16)
+    at async file:///home/runner/work/onion-sellers/onion-sellers/src/index.ts:27:11 {
+  url: 'https://opencode.ai/docs/go/',
+  status: 404,
+  [cause]: undefined
+}
+</pasted_content id="68c8">
+
+```
