@@ -34,6 +34,7 @@
   { "provider": "copilot", "providerModel": "Claude Sonnet 5.5", "aaSlug": "claude-sonnet-5-5" },
   { "provider": "copilot", "providerModel": "GPT-6.1 Sol", "aaSlug": "gpt-6-1-sol" },
   { "provider": "copilot", "providerModel": "Claude Haiku 5.5", "aaSlug": "claude-haiku-5-5" },
+  { "provider": "copilot", "providerModel": "Gemini 4 Argon", "aaSlug": "gemini-4-argon" },
 
   { "provider": "opencode-go", "providerModel": "GLM-5.3-Flash", "aaSlug": "glm-5-3-flash" },
   { "provider": "opencode-go", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
@@ -75,6 +76,8 @@
   { "provider": "opencode-go", "providerModel": "Space Bunny", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-go", "providerModel": "Step 5 Preview Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-go", "providerModel": "Claude Haiku 5.5", "aaSlug": "claude-haiku-5-5" },
+  { "provider": "opencode-go", "providerModel": "Cat Jam Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-go", "providerModel": "Gemini 4 Argon Contributor", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
 
   { "provider": "opencode-zen", "providerModel": "Big Pickle", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "MiMo-V2.5 Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
@@ -167,6 +170,7 @@
   { "provider": "opencode-zen", "providerModel": "Claude Sonnet 5.5", "aaSlug": "claude-sonnet-5-5" },
   { "provider": "opencode-zen", "providerModel": "Claude Haiku 5.5", "aaSlug": "claude-haiku-5-5" },
   { "provider": "opencode-zen", "providerModel": "Cat Jam Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-zen", "providerModel": "Gemini 4 Argon", "aaSlug": "gemini-4-argon" },
 
   { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
   { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
