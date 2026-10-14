@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/go/",
-  "fetchedAt": "2026-10-13T12:44:21.600Z",
+  "fetchedAt": "2026-10-14T10:15:30.141Z",
   "notes": "Auto-generated from the OpenCode Go docs page. OpenCode Go is a flat $10/mo subscription; monthlyLimitUsd is each model's per-month usage cap under that subscription, not a separate charge. Reference a model in config as \"opencode-go/<modelId>\". Peak/off-peak and context-threshold variants of the same model share one modelId and appear as separate rows, matching the source page. Live model list: https://opencode.ai/zen/go/v1/models (id/owner metadata only, no pricing).",
   "models": [
     {
@@ -147,6 +147,23 @@
       "aiSdkPackage": "@ai-sdk/openai-compatible",
       "modelTraining": "Not used",
       "dataRetentionDays": 0,
+      "notes": "limited time"
+    },
+    {
+      "model": "Cat Jam Free",
+      "modelId": "cat-jam-free",
+      "priceInput": null,
+      "priceOutput": null,
+      "priceCachedRead": null,
+      "priceCachedWrite": null,
+      "monthlyLimitUsd": null,
+      "requestsPer5h": null,
+      "requestsPerWeek": null,
+      "requestsPerMonth": null,
+      "endpoint": "https://opencode.ai/inference/go/v1/chat/completions",
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "modelTraining": "Not used",
+      "dataRetentionDays": 30,
       "notes": "limited time"
     },
     {
@@ -412,74 +429,6 @@
       "notes": "see page footnote *"
     },
     {
-      "model": "DeepSeek V4 Flash (Off-Peak)",
-      "modelId": "deepseek-v4-flash",
-      "priceInput": 0.15,
-      "priceOutput": 0.6,
-      "priceCachedRead": 0.003,
-      "priceCachedWrite": null,
-      "monthlyLimitUsd": 30,
-      "requestsPer5h": null,
-      "requestsPerWeek": null,
-      "requestsPerMonth": null,
-      "endpoint": "https://opencode.ai/inference/go/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "modelTraining": "Not used",
-      "dataRetentionDays": 0,
-      "notes": "see page footnote *"
-    },
-    {
-      "model": "DeepSeek V4 Flash (Peak)",
-      "modelId": "deepseek-v4-flash",
-      "priceInput": 0.3,
-      "priceOutput": 1.2,
-      "priceCachedRead": 0.006,
-      "priceCachedWrite": null,
-      "monthlyLimitUsd": 30,
-      "requestsPer5h": null,
-      "requestsPerWeek": null,
-      "requestsPerMonth": null,
-      "endpoint": "https://opencode.ai/inference/go/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "modelTraining": "Not used",
-      "dataRetentionDays": 0,
-      "notes": "see page footnote *"
-    },
-    {
-      "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
-      "modelId": "deepseek-v4-flash-vision-exp",
-      "priceInput": 0.15,
-      "priceOutput": 0.6,
-      "priceCachedRead": 0.003,
-      "priceCachedWrite": null,
-      "monthlyLimitUsd": 15,
-      "requestsPer5h": null,
-      "requestsPerWeek": null,
-      "requestsPerMonth": null,
-      "endpoint": "https://opencode.ai/inference/go/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "modelTraining": "Not used",
-      "dataRetentionDays": 0,
-      "notes": "see page footnote *"
-    },
-    {
-      "model": "DeepSeek V4 Flash Vision Exp (Peak)",
-      "modelId": "deepseek-v4-flash-vision-exp",
-      "priceInput": 0.3,
-      "priceOutput": 1.2,
-      "priceCachedRead": 0.006,
-      "priceCachedWrite": null,
-      "monthlyLimitUsd": 15,
-      "requestsPer5h": null,
-      "requestsPerWeek": null,
-      "requestsPerMonth": null,
-      "endpoint": "https://opencode.ai/inference/go/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "modelTraining": "Not used",
-      "dataRetentionDays": 0,
-      "notes": "see page footnote *"
-    },
-    {
       "model": "Hy4 preview",
       "modelId": "hy4-preview",
       "priceInput": 0.834,
@@ -686,6 +635,23 @@
       "aiSdkPackage": "@ai-sdk/anthropic",
       "modelTraining": "Not used",
       "dataRetentionDays": 30
+    },
+    {
+      "model": "Gemini 4 Argon Contributor",
+      "modelId": "gemini-4-argon-contributor",
+      "priceInput": 4,
+      "priceOutput": 20,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null,
+      "monthlyLimitUsd": 60,
+      "requestsPer5h": null,
+      "requestsPerWeek": null,
+      "requestsPerMonth": null,
+      "endpoint": "https://opencode.ai/inference/go/v1/models/gemini-4-argon-contributor",
+      "aiSdkPackage": "@ai-sdk/google",
+      "modelTraining": "Yes",
+      "dataRetentionDays": null,
+      "notes": "Promotional monthly limit (base $30): 2x · Limited time; Not ZDR"
     }
   ]
 }

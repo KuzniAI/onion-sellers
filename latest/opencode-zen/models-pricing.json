@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/zen/",
-  "fetchedAt": "2026-10-13T12:44:21.703Z",
+  "fetchedAt": "2026-10-14T10:15:30.278Z",
   "notes": "Auto-generated from the OpenCode Zen docs page. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
@@ -257,20 +257,6 @@
       "priceCachedWrite": null
     },
     {
-      "model": "DeepSeek V4 Flash",
-      "priceInput": 0.14,
-      "priceOutput": 0.28,
-      "priceCachedRead": 0.028,
-      "priceCachedWrite": null
-    },
-    {
-      "model": "DeepSeek V4 Flash Vision Exp",
-      "priceInput": 0.14,
-      "priceOutput": 0.28,
-      "priceCachedRead": 0.028,
-      "priceCachedWrite": null
-    },
-    {
       "model": "Claude Fable 5.1",
       "priceInput": 10,
       "priceOutput": 50,
@@ -381,6 +367,14 @@
       "priceOutput": 5,
       "priceCachedRead": 0.1,
       "priceCachedWrite": 1.25
+    },
+    {
+      "model": "Gemini 4 Argon",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null,
+      "notes": "Promotional pricing (50% off)."
     },
     {
       "model": "Gemini 3.8 Flash",
