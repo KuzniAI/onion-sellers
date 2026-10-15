@@ -171,6 +171,7 @@
   { "provider": "opencode-zen", "providerModel": "Claude Haiku 5.5", "aaSlug": "claude-haiku-5-5" },
   { "provider": "opencode-zen", "providerModel": "Cat Jam Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "Gemini 4 Argon", "aaSlug": "gemini-4-argon" },
+  { "provider": "opencode-zen", "providerModel": "DeepSeek V4.1 Flash Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
 
   { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
   { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
