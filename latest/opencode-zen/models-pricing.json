@@ -1,10 +1,17 @@
 {
   "sourceUrl": "https://opencode.ai/docs/zen/",
-  "fetchedAt": "2026-10-14T10:15:30.278Z",
+  "fetchedAt": "2026-10-15T09:57:44.569Z",
   "notes": "Auto-generated from the OpenCode Zen docs page. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
       "model": "Big Pickle",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "DeepSeek V4.1 Flash Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,
@@ -54,20 +61,6 @@
     },
     {
       "model": "MiMo-V2.5 Free",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCachedRead": 0,
-      "priceCachedWrite": null
-    },
-    {
-      "model": "Ling 3.1 Flash Free",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCachedRead": 0,
-      "priceCachedWrite": null
-    },
-    {
-      "model": "Ling 3.0 Flash Fin Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,

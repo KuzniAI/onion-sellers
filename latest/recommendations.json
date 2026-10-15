@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T10:15:31.116Z",
+  "generatedAt": "2026-10-15T09:57:48.142Z",
   "topNPerProvider": 2,
   "candidatesConsidered": 121,
   "categories": {
@@ -14,7 +14,7 @@
             "agenticIndex": 56.5,
             "codingIndex": 78,
             "intelligenceIndex": 50.8,
-            "speed": 56.47,
+            "speed": 54.68,
             "costEfficiency": 0.05
           },
           "priceBlendedPer1M": 20
@@ -23,12 +23,12 @@
           "provider": "copilot",
           "model": "Grok 4.6",
           "aaSlug": "grok-4-6",
-          "score": 0.741,
+          "score": 0.74,
           "breakdown": {
             "agenticIndex": 53,
             "codingIndex": 76.8,
             "intelligenceIndex": 44.3,
-            "speed": 56.46,
+            "speed": 49.95,
             "costEfficiency": 0.2
           },
           "priceBlendedPer1M": 5
@@ -44,7 +44,7 @@
             "agenticIndex": 56,
             "codingIndex": 76.2,
             "intelligenceIndex": 45.4,
-            "speed": 42.4,
+            "speed": 40.76,
             "costEfficiency": 0.2
           },
           "priceBlendedPer1M": 5
@@ -58,7 +58,7 @@
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
             "intelligenceIndex": 41.8,
-            "speed": 65.87,
+            "speed": 62.25,
             "costEfficiency": 2.424
           },
           "priceBlendedPer1M": 0.413
@@ -74,7 +74,7 @@
             "agenticIndex": 56.5,
             "codingIndex": 78,
             "intelligenceIndex": 50.8,
-            "speed": 56.47,
+            "speed": 54.68,
             "costEfficiency": 0.05
           },
           "priceBlendedPer1M": 20
@@ -88,7 +88,7 @@
             "agenticIndex": 56,
             "codingIndex": 76.2,
             "intelligenceIndex": 45.4,
-            "speed": 42.4,
+            "speed": 40.76,
             "costEfficiency": 0.2
           },
           "priceBlendedPer1M": 5
@@ -104,7 +104,7 @@
             "agenticIndex": 56,
             "codingIndex": 76.2,
             "intelligenceIndex": 45.4,
-            "speed": 42.4,
+            "speed": 40.76,
             "costEfficiency": 0.2
           },
           "priceBlendedPer1M": 5
@@ -118,7 +118,7 @@
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
             "intelligenceIndex": 41.8,
-            "speed": 65.87,
+            "speed": 62.25,
             "costEfficiency": 2.424
           },
           "priceBlendedPer1M": 0.413
@@ -131,12 +131,12 @@
           "provider": "copilot",
           "model": "GPT-6 Astra",
           "aaSlug": "gpt-6-astra",
-          "score": 0.796,
+          "score": 0.795,
           "breakdown": {
             "agenticIndex": 51,
             "codingIndex": 76.9,
             "intelligenceIndex": 52.7,
-            "speed": 57.09,
+            "speed": 44.25,
             "costEfficiency": 0.025
           },
           "priceBlendedPer1M": 40
@@ -150,7 +150,7 @@
             "agenticIndex": 56.5,
             "codingIndex": 78,
             "intelligenceIndex": 50.8,
-            "speed": 56.47,
+            "speed": 54.68,
             "costEfficiency": 0.05
           },
           "priceBlendedPer1M": 20
@@ -166,7 +166,7 @@
             "agenticIndex": 56,
             "codingIndex": 76.2,
             "intelligenceIndex": 45.4,
-            "speed": 42.4,
+            "speed": 40.76,
             "costEfficiency": 0.2
           },
           "priceBlendedPer1M": 5
@@ -175,12 +175,12 @@
           "provider": "opencode-go",
           "model": "Grok 4.6",
           "aaSlug": "grok-4-6",
-          "score": 0.727,
+          "score": 0.726,
           "breakdown": {
             "agenticIndex": 53,
             "codingIndex": 76.8,
             "intelligenceIndex": 44.3,
-            "speed": 56.46,
+            "speed": 49.95,
             "costEfficiency": 0.2
           },
           "priceBlendedPer1M": 5
@@ -191,12 +191,12 @@
           "provider": "opencode-zen",
           "model": "GPT 6 Astra",
           "aaSlug": "gpt-6-astra",
-          "score": 0.796,
+          "score": 0.795,
           "breakdown": {
             "agenticIndex": 51,
             "codingIndex": 76.9,
             "intelligenceIndex": 52.7,
-            "speed": 57.09,
+            "speed": 44.25,
             "costEfficiency": 0.025
           },
           "priceBlendedPer1M": 40
@@ -210,7 +210,7 @@
             "agenticIndex": 56.5,
             "codingIndex": 78,
             "intelligenceIndex": 50.8,
-            "speed": 56.47,
+            "speed": 54.68,
             "costEfficiency": 0.05
           },
           "priceBlendedPer1M": 20
@@ -226,7 +226,7 @@
             "agenticIndex": 56,
             "codingIndex": 76.2,
             "intelligenceIndex": 45.4,
-            "speed": 42.4,
+            "speed": 40.76,
             "costEfficiency": 0.2
           },
           "priceBlendedPer1M": 5
@@ -240,7 +240,7 @@
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
             "intelligenceIndex": 41.8,
-            "speed": 65.87,
+            "speed": 62.25,
             "costEfficiency": 2.424
           },
           "priceBlendedPer1M": 0.413
@@ -253,12 +253,12 @@
           "provider": "copilot",
           "model": "Gemini 3.7 Flash",
           "aaSlug": "gemini-3-7-flash",
-          "score": 0.658,
+          "score": 0.642,
           "breakdown": {
             "agenticIndex": 35.2,
             "codingIndex": 76.1,
             "intelligenceIndex": 39.1,
-            "speed": 317.89,
+            "speed": 292.43,
             "costEfficiency": 0.333
           },
           "priceBlendedPer1M": 3
@@ -267,12 +267,12 @@
           "provider": "copilot",
           "model": "Gemini 3.8 Flash",
           "aaSlug": "gemini-3-8-flash",
-          "score": 0.578,
+          "score": 0.575,
           "breakdown": {
             "agenticIndex": 40.2,
             "codingIndex": 76.3,
             "intelligenceIndex": 40.9,
-            "speed": 145.38,
+            "speed": 140.01,
             "costEfficiency": 0.333
           },
           "priceBlendedPer1M": 3
@@ -283,12 +283,12 @@
           "provider": "opencode-go",
           "model": "GLM-5.3-Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.643,
+          "score": 0.642,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
             "intelligenceIndex": 41.8,
-            "speed": 65.87,
+            "speed": 62.25,
             "costEfficiency": 2.424
           },
           "priceBlendedPer1M": 0.413
@@ -297,12 +297,12 @@
           "provider": "opencode-go",
           "model": "GPT 5.6 Luna",
           "aaSlug": "gpt-5-6-luna",
-          "score": 0.574,
+          "score": 0.569,
           "breakdown": {
             "agenticIndex": 42.1,
             "codingIndex": 71.4,
             "intelligenceIndex": 37.3,
-            "speed": 123.39,
+            "speed": 114.91,
             "costEfficiency": 1.053
           },
           "priceBlendedPer1M": 0.95
@@ -311,31 +311,31 @@
       "opencode-zen": [
         {
           "provider": "opencode-zen",
-          "model": "Gemini 3.7 Flash",
-          "aaSlug": "gemini-3-7-flash",
-          "score": 0.648,
-          "breakdown": {
-            "agenticIndex": 35.2,
-            "codingIndex": 76.1,
-            "intelligenceIndex": 39.1,
-            "speed": 317.89,
-            "costEfficiency": 0.167
-          },
-          "priceBlendedPer1M": 6
-        },
-        {
-          "provider": "opencode-zen",
           "model": "GLM 5.3 Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.643,
+          "score": 0.642,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
             "intelligenceIndex": 41.8,
-            "speed": 65.87,
+            "speed": 62.25,
             "costEfficiency": 2.424
           },
           "priceBlendedPer1M": 0.413
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "Gemini 3.7 Flash",
+          "aaSlug": "gemini-3-7-flash",
+          "score": 0.632,
+          "breakdown": {
+            "agenticIndex": 35.2,
+            "codingIndex": 76.1,
+            "intelligenceIndex": 39.1,
+            "speed": 292.43,
+            "costEfficiency": 0.167
+          },
+          "priceBlendedPer1M": 6
         }
       ],
       "clinepass": [
@@ -343,12 +343,12 @@
           "provider": "clinepass",
           "model": "GLM-5.3 Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.643,
+          "score": 0.642,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
             "intelligenceIndex": 41.8,
-            "speed": 65.87,
+            "speed": 62.25,
             "costEfficiency": 2.424
           },
           "priceBlendedPer1M": 0.413
@@ -357,12 +357,12 @@
           "provider": "clinepass",
           "model": "MiMo-V2.5",
           "aaSlug": "mimo-v2-5-0424",
-          "score": 0.57,
+          "score": 0.566,
           "breakdown": {
             "agenticIndex": 15.8,
             "codingIndex": 56.8,
-            "intelligenceIndex": 25.2,
-            "speed": 35.1,
+            "intelligenceIndex": 21.8,
+            "speed": 33.37,
             "costEfficiency": 4.082
           },
           "priceBlendedPer1M": 0.245
@@ -380,7 +380,7 @@
             "agenticIndex": 56.5,
             "codingIndex": 78,
             "intelligenceIndex": 50.8,
-            "speed": 56.47,
+            "speed": 54.68,
             "costEfficiency": 0.12
           },
           "priceBlendedPer1M": 8.333
@@ -389,12 +389,12 @@
           "provider": "copilot",
           "model": "GPT-6 Astra",
           "aaSlug": "gpt-6-astra",
-          "score": 0.628,
+          "score": 0.626,
           "breakdown": {
             "agenticIndex": 51,
             "codingIndex": 76.9,
             "intelligenceIndex": 52.7,
-            "speed": 57.09,
+            "speed": 44.25,
             "costEfficiency": 0.06
           },
           "priceBlendedPer1M": 16.667
@@ -405,12 +405,12 @@
           "provider": "opencode-go",
           "model": "GLM-5.3-Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.636,
+          "score": 0.635,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
             "intelligenceIndex": 41.8,
-            "speed": 65.87,
+            "speed": 62.25,
             "costEfficiency": 4.8
           },
           "priceBlendedPer1M": 0.208
@@ -424,7 +424,7 @@
             "agenticIndex": 56,
             "codingIndex": 76.2,
             "intelligenceIndex": 45.4,
-            "speed": 42.4,
+            "speed": 40.76,
             "costEfficiency": 0.375
           },
           "priceBlendedPer1M": 2.667
@@ -440,7 +440,7 @@
             "agenticIndex": 56.5,
             "codingIndex": 78,
             "intelligenceIndex": 50.8,
-            "speed": 56.47,
+            "speed": 54.68,
             "costEfficiency": 0.12
           },
           "priceBlendedPer1M": 8.333
@@ -449,12 +449,12 @@
           "provider": "opencode-zen",
           "model": "GLM 5.3 Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.636,
+          "score": 0.635,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
             "intelligenceIndex": 41.8,
-            "speed": 65.87,
+            "speed": 62.25,
             "costEfficiency": 4.8
           },
           "priceBlendedPer1M": 0.208
@@ -465,12 +465,12 @@
           "provider": "clinepass",
           "model": "GLM-5.3 Flash",
           "aaSlug": "glm-5-3-flash",
-          "score": 0.636,
+          "score": 0.635,
           "breakdown": {
             "agenticIndex": 50.9,
             "codingIndex": 71.5,
             "intelligenceIndex": 41.8,
-            "speed": 65.87,
+            "speed": 62.25,
             "costEfficiency": 4.8
           },
           "priceBlendedPer1M": 0.208
@@ -484,7 +484,7 @@
             "agenticIndex": 56,
             "codingIndex": 76.2,
             "intelligenceIndex": 45.4,
-            "speed": 42.4,
+            "speed": 40.76,
             "costEfficiency": 0.375
           },
           "priceBlendedPer1M": 2.667
