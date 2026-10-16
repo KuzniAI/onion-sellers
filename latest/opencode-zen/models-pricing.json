@@ -1,10 +1,17 @@
 {
   "sourceUrl": "https://opencode.ai/docs/zen/",
-  "fetchedAt": "2026-10-15T09:57:44.569Z",
+  "fetchedAt": "2026-10-16T09:52:27.390Z",
   "notes": "Auto-generated from the OpenCode Zen docs page. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
       "model": "Big Pickle",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GLM-5.3-Flash Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,
@@ -32,14 +39,14 @@
       "priceCachedWrite": null
     },
     {
-      "model": "LongCat 2.5 Preview Free",
+      "model": "LL Alpha Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,
       "priceCachedWrite": null
     },
     {
-      "model": "Step 5 Preview Free",
+      "model": "LongCat 2.5 Preview Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,
@@ -75,6 +82,13 @@
     },
     {
       "model": "Nemotron 3.5 Lightning Free",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Nemotron 3.5 Super VL Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,
