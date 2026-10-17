@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/zen/",
-  "fetchedAt": "2026-10-16T09:52:27.390Z",
+  "fetchedAt": "2026-10-17T09:24:03.836Z",
   "notes": "Auto-generated from the OpenCode Zen docs page. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
@@ -32,7 +32,7 @@
       "priceCachedWrite": null
     },
     {
-      "model": "Cat Jam Free",
+      "model": "Beam Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,

@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/go/",
-  "fetchedAt": "2026-10-16T09:52:27.297Z",
+  "fetchedAt": "2026-10-17T09:24:03.734Z",
   "notes": "Auto-generated from the OpenCode Go docs page. OpenCode Go is a flat $10/mo subscription; monthlyLimitUsd is each model's per-month usage cap under that subscription, not a separate charge. Reference a model in config as \"opencode-go/<modelId>\". Peak/off-peak and context-threshold variants of the same model share one modelId and appear as separate rows, matching the source page. Live model list: https://opencode.ai/zen/go/v1/models (id/owner metadata only, no pricing).",
   "models": [
     {
@@ -134,8 +134,8 @@
       "notes": "Promotional monthly limit (base $15): 4x · Limited time"
     },
     {
-      "model": "Cat Jam Free",
-      "modelId": "cat-jam-free",
+      "model": "Beam Free",
+      "modelId": "beam-free",
       "priceInput": null,
       "priceOutput": null,
       "priceCachedRead": null,
