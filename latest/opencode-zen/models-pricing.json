@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/zen/",
-  "fetchedAt": "2026-10-19T10:48:17.659Z",
+  "fetchedAt": "2026-10-20T10:06:20.047Z",
   "notes": "Auto-generated from the OpenCode Zen docs page. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
@@ -25,7 +25,7 @@
       "priceCachedWrite": null
     },
     {
-      "model": "Space Bunny Free",
+      "model": "MiniMax M3.1 Flash Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,

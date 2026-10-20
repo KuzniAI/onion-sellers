@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/go/",
-  "fetchedAt": "2026-10-19T10:48:17.533Z",
+  "fetchedAt": "2026-10-20T10:06:19.925Z",
   "notes": "Auto-generated from the OpenCode Go docs page. OpenCode Go is a flat $10/mo subscription; monthlyLimitUsd is each model's per-month usage cap under that subscription, not a separate charge. Reference a model in config as \"opencode-go/<modelId>\". Peak/off-peak and context-threshold variants of the same model share one modelId and appear as separate rows, matching the source page. Live model list: https://opencode.ai/zen/go/v1/models (id/owner metadata only, no pricing).",
   "models": [
     {
@@ -215,6 +215,23 @@
       "dataRetentionDays": 0
     },
     {
+      "model": "MiniMax M3.1 Flash Free",
+      "modelId": "minimax-m3.1-flash-free",
+      "priceInput": null,
+      "priceOutput": null,
+      "priceCachedRead": null,
+      "priceCachedWrite": null,
+      "monthlyLimitUsd": null,
+      "requestsPer5h": null,
+      "requestsPerWeek": null,
+      "requestsPerMonth": null,
+      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "modelTraining": "Not used",
+      "dataRetentionDays": 0,
+      "notes": "limited time"
+    },
+    {
       "model": "MiniMax M3",
       "modelId": "minimax-m3",
       "priceInput": 0.3,
@@ -420,22 +437,6 @@
       "priceCachedRead": 0.035,
       "priceCachedWrite": null,
       "monthlyLimitUsd": 60,
-      "requestsPer5h": null,
-      "requestsPerWeek": null,
-      "requestsPerMonth": null,
-      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "modelTraining": "Not used",
-      "dataRetentionDays": 0
-    },
-    {
-      "model": "Space Bunny",
-      "modelId": "space-bunny",
-      "priceInput": 0.15,
-      "priceOutput": 0.6,
-      "priceCachedRead": 0.03,
-      "priceCachedWrite": null,
-      "monthlyLimitUsd": 30,
       "requestsPer5h": null,
       "requestsPerWeek": null,
       "requestsPerMonth": null,
