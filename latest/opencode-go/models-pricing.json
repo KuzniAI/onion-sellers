@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/go/",
-  "fetchedAt": "2026-10-21T10:12:12.384Z",
+  "fetchedAt": "2026-10-22T10:13:39.704Z",
   "notes": "Auto-generated from the OpenCode Go docs page. OpenCode Go is a flat $10/mo subscription; monthlyLimitUsd is each model's per-month usage cap under that subscription, not a separate charge. Reference a model in config as \"opencode-go/<modelId>\". Peak/off-peak and context-threshold variants of the same model share one modelId and appear as separate rows, matching the source page. Live model list: https://opencode.ai/zen/go/v1/models (id/owner metadata only, no pricing).",
   "models": [
     {
@@ -123,15 +123,14 @@
       "priceOutput": 2.7,
       "priceCachedRead": 0.1,
       "priceCachedWrite": null,
-      "monthlyLimitUsd": 60,
+      "monthlyLimitUsd": 15,
       "requestsPer5h": null,
       "requestsPerWeek": null,
       "requestsPerMonth": null,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
       "aiSdkPackage": "@ai-sdk/openai-compatible",
       "modelTraining": "Not used",
-      "dataRetentionDays": 0,
-      "notes": "Promotional monthly limit (base $15): 4x · Limited time"
+      "dataRetentionDays": 0
     },
     {
       "model": "Beam Free",

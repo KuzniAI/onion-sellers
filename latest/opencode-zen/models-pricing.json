@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/zen/",
-  "fetchedAt": "2026-10-21T10:12:12.493Z",
+  "fetchedAt": "2026-10-22T10:13:39.814Z",
   "notes": "Auto-generated from the OpenCode Zen docs page. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
@@ -39,7 +39,7 @@
       "priceCachedWrite": null
     },
     {
-      "model": "LL Alpha Free",
+      "model": "Flint 40B Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,
