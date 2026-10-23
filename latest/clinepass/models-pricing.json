@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://docs.cline.bot/getting-started/clinepass",
-  "fetchedAt": "2026-10-22T10:13:40.480Z",
+  "fetchedAt": "2026-10-23T10:06:29.952Z",
   "notes": "Auto-generated from the ClinePass docs page. ClinePass is a flat monthly subscription; prices are the page's reference API rates (USD per 1M tokens) that usage is counted against, not separate charges. Reference a model in Cline by its modelId (e.g. \"cline-pass/glm-5.3\").",
   "models": [
     {
