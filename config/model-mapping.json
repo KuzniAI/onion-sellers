@@ -82,6 +82,7 @@
   { "provider": "opencode-go", "providerModel": "Beam Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-go", "providerModel": "MiniMax M3.1 Flash Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-go", "providerModel": "MiniMax M3.1 Flash", "aaSlug": "minimax-m3-1-flash" },
+  { "provider": "opencode-go", "providerModel": "Kimi K3.1 Pro", "aaSlug": "kimi-k3-1-pro" },
 
   { "provider": "opencode-zen", "providerModel": "Big Pickle", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "MiMo-V2.5 Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
