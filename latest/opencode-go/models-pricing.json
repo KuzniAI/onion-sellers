@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/go/",
-  "fetchedAt": "2026-10-23T10:06:29.530Z",
+  "fetchedAt": "2026-10-24T09:33:47.339Z",
   "notes": "Auto-generated from the OpenCode Go docs page. OpenCode Go is a flat $10/mo subscription; monthlyLimitUsd is each model's per-month usage cap under that subscription, not a separate charge. Reference a model in config as \"opencode-go/<modelId>\". Peak/off-peak and context-threshold variants of the same model share one modelId and appear as separate rows, matching the source page. Live model list: https://opencode.ai/zen/go/v1/models (id/owner metadata only, no pricing).",
   "models": [
     {
@@ -52,12 +52,28 @@
       "dataRetentionDays": 0
     },
     {
+      "model": "Kimi K3.1 Pro",
+      "modelId": "kimi-k3.1-pro",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 2,
+      "monthlyLimitUsd": 15,
+      "requestsPer5h": null,
+      "requestsPerWeek": null,
+      "requestsPerMonth": null,
+      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "modelTraining": "Not used",
+      "dataRetentionDays": 0
+    },
+    {
       "model": "Kimi K3",
       "modelId": "kimi-k3",
       "priceInput": 3,
       "priceOutput": 15,
       "priceCachedRead": 0.3,
-      "priceCachedWrite": null,
+      "priceCachedWrite": 3,
       "monthlyLimitUsd": 15,
       "requestsPer5h": null,
       "requestsPerWeek": null,

@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/zen/",
-  "fetchedAt": "2026-10-23T10:06:29.661Z",
+  "fetchedAt": "2026-10-24T09:33:47.463Z",
   "notes": "Auto-generated from the OpenCode Zen docs page. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
@@ -46,21 +46,7 @@
       "priceCachedWrite": null
     },
     {
-      "model": "Exo Free",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCachedRead": 0,
-      "priceCachedWrite": null
-    },
-    {
       "model": "MiMo-V2.6-Flash Free",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCachedRead": 0,
-      "priceCachedWrite": null
-    },
-    {
-      "model": "MiMo-V2.5 Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,
@@ -169,7 +155,7 @@
       "priceInput": 3,
       "priceOutput": 15,
       "priceCachedRead": 0.3,
-      "priceCachedWrite": null
+      "priceCachedWrite": 3
     },
     {
       "model": "Kimi K2.6",
@@ -206,20 +192,6 @@
       "priceOutput": 0.47,
       "priceCachedRead": 0.016,
       "priceCachedWrite": 0.2
-    },
-    {
-      "model": "Qwen3.7 Max",
-      "priceInput": 2.5,
-      "priceOutput": 7.5,
-      "priceCachedRead": 0.5,
-      "priceCachedWrite": 3.125
-    },
-    {
-      "model": "Qwen3.7 Plus",
-      "priceInput": 0.4,
-      "priceOutput": 1.6,
-      "priceCachedRead": 0.04,
-      "priceCachedWrite": 0.5
     },
     {
       "model": "Qwen3.6 Plus",
