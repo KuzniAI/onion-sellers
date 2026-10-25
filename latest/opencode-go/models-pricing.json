@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/go/",
-  "fetchedAt": "2026-10-24T09:33:47.339Z",
+  "fetchedAt": "2026-10-25T09:50:07.108Z",
   "notes": "Auto-generated from the OpenCode Go docs page. OpenCode Go is a flat $10/mo subscription; monthlyLimitUsd is each model's per-month usage cap under that subscription, not a separate charge. Reference a model in config as \"opencode-go/<modelId>\". Peak/off-peak and context-threshold variants of the same model share one modelId and appear as separate rows, matching the source page. Live model list: https://opencode.ai/zen/go/v1/models (id/owner metadata only, no pricing).",
   "models": [
     {
@@ -114,23 +114,6 @@
       "aiSdkPackage": "@ai-sdk/openai-compatible",
       "modelTraining": "Not used",
       "dataRetentionDays": 0
-    },
-    {
-      "model": "LongCat 2.5 Preview Free",
-      "modelId": "longcat-2.5-preview-free",
-      "priceInput": null,
-      "priceOutput": null,
-      "priceCachedRead": null,
-      "priceCachedWrite": null,
-      "monthlyLimitUsd": null,
-      "requestsPer5h": null,
-      "requestsPerWeek": null,
-      "requestsPerMonth": null,
-      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "modelTraining": "Not used",
-      "dataRetentionDays": 0,
-      "notes": "limited time"
     },
     {
       "model": "Step 5 Preview",
@@ -588,21 +571,20 @@
       "dataRetentionDays": 30
     },
     {
-      "model": "Gemini 4 Argon Contributor",
-      "modelId": "gemini-4-argon-contributor",
+      "model": "Gemini 4 Argon (50% off)",
+      "modelId": "gemini-4-argon",
       "priceInput": 4,
       "priceOutput": 20,
       "priceCachedRead": 0.2,
       "priceCachedWrite": null,
-      "monthlyLimitUsd": 60,
+      "monthlyLimitUsd": 30,
       "requestsPer5h": null,
       "requestsPerWeek": null,
       "requestsPerMonth": null,
-      "endpoint": "https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon-contributor",
+      "endpoint": "https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon",
       "aiSdkPackage": "@ai-sdk/google",
-      "modelTraining": "Yes",
-      "dataRetentionDays": null,
-      "notes": "Promotional monthly limit (base $30): 2x · Limited time; Not ZDR"
+      "modelTraining": "Not used",
+      "dataRetentionDays": 0
     }
   ]
 }
