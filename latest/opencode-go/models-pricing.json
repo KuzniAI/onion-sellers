@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/go/",
-  "fetchedAt": "2026-10-26T11:09:16.784Z",
+  "fetchedAt": "2026-10-27T10:37:20.627Z",
   "notes": "Auto-generated from the OpenCode Go docs page. OpenCode Go is a flat $10/mo subscription; monthlyLimitUsd is each model's per-month usage cap under that subscription, not a separate charge. Reference a model in config as \"opencode-go/<modelId>\". Peak/off-peak and context-threshold variants of the same model share one modelId and appear as separate rows, matching the source page. Live model list: https://opencode.ai/zen/go/v1/models (id/owner metadata only, no pricing).",
   "models": [
     {
@@ -147,6 +147,23 @@
       "modelTraining": "Not used",
       "dataRetentionDays": 30,
       "notes": "limited time"
+    },
+    {
+      "model": "Iceman Contributor Free",
+      "modelId": "iceman-contributor-free",
+      "priceInput": null,
+      "priceOutput": null,
+      "priceCachedRead": null,
+      "priceCachedWrite": null,
+      "monthlyLimitUsd": null,
+      "requestsPer5h": null,
+      "requestsPerWeek": null,
+      "requestsPerMonth": null,
+      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "modelTraining": "Yes",
+      "dataRetentionDays": null,
+      "notes": "limited time; Not ZDR"
     },
     {
       "model": "MiMo-V2.6-Flash",
