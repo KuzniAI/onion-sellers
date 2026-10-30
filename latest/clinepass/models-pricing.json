@@ -1,10 +1,66 @@
 {
   "sourceUrl": "https://docs.cline.bot/getting-started/clinepass",
-  "fetchedAt": "2026-10-29T11:32:37.704Z",
+  "fetchedAt": "2026-10-30T11:25:45.224Z",
   "notes": "Auto-generated from the ClinePass docs page. ClinePass is a flat monthly subscription; prices are the page's reference API rates (USD per 1M tokens) that usage is counted against, not separate charges. Reference a model in Cline by its modelId (e.g. \"cline-pass/glm-5.3\").",
   "models": [
     {
-      "model": "GLM-5.3",
+      "model": "DeepSeek V4.1 Flash 1017 (Off-peak)",
+      "modelId": "cline-pass/deepseek-v4.1-flash-1017",
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.003,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "DeepSeek V4.1 Flash 1017 (Peak)",
+      "modelId": "cline-pass/deepseek-v4.1-flash-1017",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.006,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "DeepSeek V4.1 Flash (Off-peak)",
+      "modelId": "cline-pass/deepseek-v4.1-flash",
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.003,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "DeepSeek V4.1 Flash (Peak)",
+      "modelId": "cline-pass/deepseek-v4.1-flash",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.006,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "DeepSeek V4 Pro (Off-peak)",
+      "modelId": "cline-pass/deepseek-v4-pro",
+      "priceInput": 0.66,
+      "priceOutput": 1.98,
+      "priceCachedRead": 0.022,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "DeepSeek V4 Pro (Peak)",
+      "modelId": "cline-pass/deepseek-v4-pro",
+      "priceInput": 1.32,
+      "priceOutput": 3.96,
+      "priceCachedRead": 0.044,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GLM 5.3 Flash",
+      "modelId": "cline-pass/glm-5.3-flash",
+      "priceInput": 0.15,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GLM 5.3",
       "modelId": "cline-pass/glm-5.3",
       "priceInput": 1.4,
       "priceOutput": 4.4,
@@ -12,11 +68,11 @@
       "priceCachedWrite": null
     },
     {
-      "model": "GLM-5.3 Flash",
-      "modelId": "cline-pass/glm-5.3-flash",
-      "priceInput": 0.15,
-      "priceOutput": 0.5,
-      "priceCachedRead": 0.03,
+      "model": "Kimi K3.1 Pro",
+      "modelId": "cline-pass/kimi-k3.1-pro",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.2,
       "priceCachedWrite": null
     },
     {
@@ -28,57 +84,6 @@
       "priceCachedWrite": null
     },
     {
-      "model": "DeepSeek V4 Pro (Peak)",
-      "modelId": "cline-pass/deepseek-v4-pro",
-      "priceInput": 1.32,
-      "priceOutput": 3.96,
-      "priceCachedRead": 0.044,
-      "priceCachedWrite": null,
-      "notes": "DeepSeek API pricing"
-    },
-    {
-      "model": "DeepSeek V4 Pro (Off-peak)",
-      "modelId": "cline-pass/deepseek-v4-pro",
-      "priceInput": 0.66,
-      "priceOutput": 1.98,
-      "priceCachedRead": 0.022,
-      "priceCachedWrite": null,
-      "notes": "DeepSeek API pricing"
-    },
-    {
-      "model": "DeepSeek V4.1 Flash",
-      "modelId": "cline-pass/deepseek-v4.1-flash",
-      "priceInput": 0.3,
-      "priceOutput": 1.2,
-      "priceCachedRead": 0.006,
-      "priceCachedWrite": null,
-      "notes": "DeepSeek API pricing"
-    },
-    {
-      "model": "MiMo-V2.5",
-      "modelId": "cline-pass/mimo-v2.5",
-      "priceInput": 0.14,
-      "priceOutput": 0.28,
-      "priceCachedRead": 0.0028,
-      "priceCachedWrite": null
-    },
-    {
-      "model": "MiMo-V2.5-Pro",
-      "modelId": "cline-pass/mimo-v2.5-pro",
-      "priceInput": 1.74,
-      "priceOutput": 3.48,
-      "priceCachedRead": 0.0145,
-      "priceCachedWrite": null
-    },
-    {
-      "model": "MiniMax M3",
-      "modelId": "cline-pass/minimax-m3",
-      "priceInput": 0.3,
-      "priceOutput": 1.2,
-      "priceCachedRead": 0.06,
-      "priceCachedWrite": null
-    },
-    {
       "model": "Muse Spark 1.3 Contributor",
       "modelId": "cline-pass/muse-spark-1.3-contributor",
       "priceInput": 0.1,
@@ -87,12 +92,44 @@
       "priceCachedWrite": null
     },
     {
-      "model": "Qwen3.8 Max",
-      "modelId": "cline-pass/qwen3.8-max",
-      "priceInput": 2,
-      "priceOutput": 6,
-      "priceCachedRead": 0.25,
-      "priceCachedWrite": 2.5
+      "model": "MiniMax M3.1 Flash",
+      "modelId": "cline-pass/minimax-m3.1-flash",
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.015,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "MiniMax M3 (≤ 512K tokens)",
+      "modelId": "cline-pass/minimax-m3",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.06,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "MiniMax M3 (> 512K tokens)",
+      "modelId": "cline-pass/minimax-m3",
+      "priceInput": 0.6,
+      "priceOutput": 2.4,
+      "priceCachedRead": 0.12,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "MiMo V2.6 Pro",
+      "modelId": "cline-pass/mimo-v2.6-pro",
+      "priceInput": 0.435,
+      "priceOutput": 0.87,
+      "priceCachedRead": 0.0036,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "MiMo V2.6 Flash",
+      "modelId": "cline-pass/mimo-v2.6-flash",
+      "priceInput": 0.14,
+      "priceOutput": 0.28,
+      "priceCachedRead": 0.0028,
+      "priceCachedWrite": null
     },
     {
       "model": "Qwen3.7 Max",
@@ -117,6 +154,14 @@
       "priceOutput": 4.8,
       "priceCachedRead": 0.12,
       "priceCachedWrite": 1.5
+    },
+    {
+      "model": "Qwen3.8 Max",
+      "modelId": "cline-pass/qwen3.8-max",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.17,
+      "priceCachedWrite": 2.5
     }
   ]
 }
