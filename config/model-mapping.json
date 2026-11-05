@@ -86,6 +86,7 @@
   { "provider": "opencode-go", "providerModel": "Kimi K3.1 Pro", "aaSlug": "kimi-k3-1-pro" },
   { "provider": "opencode-go", "providerModel": "Gemini 4 Argon", "aaSlug": "gemini-4-argon" },
   { "provider": "opencode-go", "providerModel": "Iceman Contributor Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-go", "providerModel": "Hy4", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
 
   { "provider": "opencode-zen", "providerModel": "Big Pickle", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "MiMo-V2.5 Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
@@ -188,6 +189,7 @@
   { "provider": "opencode-zen", "providerModel": "Muse Wonder 1.0", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "Flint 40B Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "Pulse Alpha Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-zen", "providerModel": "Crouton Alpha Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
 
   { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
   { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
