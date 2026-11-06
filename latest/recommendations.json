@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T13:14:11.638Z",
+  "generatedAt": "2026-11-06T12:58:38.639Z",
   "topNPerProvider": 2,
   "candidatesConsidered": 118,
   "categories": {
@@ -9,12 +9,12 @@
           "provider": "copilot",
           "model": "Claude Haiku 5.5",
           "aaSlug": "claude-haiku-5-5",
-          "score": 0.172,
+          "score": 0.171,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 36.5,
-            "speed": 232.05,
+            "speed": 231.58,
             "costEfficiency": 2.5
           },
           "missingMetrics": [
@@ -27,12 +27,12 @@
           "provider": "copilot",
           "model": "Claude Sonnet 5.5",
           "aaSlug": "claude-sonnet-5-5",
-          "score": 0.125,
+          "score": 0.123,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 54.5,
-            "speed": 139.27,
+            "speed": 133.73,
             "costEfficiency": 0.125
           },
           "missingMetrics": [
@@ -47,12 +47,12 @@
           "provider": "opencode-go",
           "model": "Claude Haiku 5.5",
           "aaSlug": "claude-haiku-5-5",
-          "score": 0.172,
+          "score": 0.171,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 36.5,
-            "speed": 232.05,
+            "speed": 231.58,
             "costEfficiency": 2.5
           },
           "missingMetrics": [
@@ -65,12 +65,12 @@
           "provider": "opencode-go",
           "model": "MiMo-V2.6-Flash",
           "aaSlug": "mimo-v2-6-flash",
-          "score": 0.133,
+          "score": 0.134,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 26.7,
-            "speed": 32.42,
+            "speed": 34.09,
             "costEfficiency": 4.082
           },
           "missingMetrics": [
@@ -85,12 +85,12 @@
           "provider": "opencode-zen",
           "model": "Claude Haiku 5.5",
           "aaSlug": "claude-haiku-5-5",
-          "score": 0.172,
+          "score": 0.171,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 36.5,
-            "speed": 232.05,
+            "speed": 231.58,
             "costEfficiency": 2.5
           },
           "missingMetrics": [
@@ -103,12 +103,12 @@
           "provider": "opencode-zen",
           "model": "Claude Sonnet 5.5",
           "aaSlug": "claude-sonnet-5-5",
-          "score": 0.125,
+          "score": 0.123,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 54.5,
-            "speed": 139.27,
+            "speed": 133.73,
             "costEfficiency": 0.125
           },
           "missingMetrics": [
@@ -123,12 +123,12 @@
           "provider": "clinepass",
           "model": "MiMo V2.6 Flash",
           "aaSlug": "mimo-v2-6-flash",
-          "score": 0.133,
+          "score": 0.134,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 26.7,
-            "speed": 32.42,
+            "speed": 34.09,
             "costEfficiency": 4.082
           },
           "missingMetrics": [
@@ -168,7 +168,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 59.1,
-            "speed": 94.62,
+            "speed": 94.22,
             "costEfficiency": 0.063
           },
           "missingMetrics": [
@@ -186,7 +186,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 56.9,
-            "speed": 47.02,
+            "speed": 46.12,
             "costEfficiency": 0.025
           },
           "missingMetrics": [
@@ -224,7 +224,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 36.5,
-            "speed": 232.05,
+            "speed": 231.58,
             "costEfficiency": 2.5
           },
           "missingMetrics": [
@@ -244,7 +244,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 59.1,
-            "speed": 94.62,
+            "speed": 94.22,
             "costEfficiency": 0.063
           },
           "missingMetrics": [
@@ -262,7 +262,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 56.9,
-            "speed": 47.02,
+            "speed": 46.12,
             "costEfficiency": 0.025
           },
           "missingMetrics": [
@@ -282,7 +282,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 46.5,
-            "speed": 27.53,
+            "speed": 26.81,
             "costEfficiency": 0.125
           },
           "missingMetrics": [
@@ -322,7 +322,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 36.5,
-            "speed": 232.05,
+            "speed": 231.58,
             "costEfficiency": 2.5
           },
           "missingMetrics": [
@@ -335,12 +335,12 @@
           "provider": "copilot",
           "model": "GPT-6 Luna",
           "aaSlug": "gpt-6-luna",
-          "score": 0.219,
+          "score": 0.222,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 27.9,
-            "speed": 113.82,
+            "speed": 118.91,
             "costEfficiency": 2.5
           },
           "missingMetrics": [
@@ -360,7 +360,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 36.5,
-            "speed": 232.05,
+            "speed": 231.58,
             "costEfficiency": 2.5
           },
           "missingMetrics": [
@@ -373,12 +373,12 @@
           "provider": "opencode-go",
           "model": "MiMo-V2.5",
           "aaSlug": "mimo-v2-5-0424",
-          "score": 0.274,
+          "score": 0.276,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": null,
-            "speed": 68.93,
+            "speed": 72.73,
             "costEfficiency": 4.082
           },
           "missingMetrics": [
@@ -399,7 +399,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 36.5,
-            "speed": 232.05,
+            "speed": 231.58,
             "costEfficiency": 2.5
           },
           "missingMetrics": [
@@ -412,12 +412,12 @@
           "provider": "opencode-zen",
           "model": "GPT 5 Nano",
           "aaSlug": "gpt-5-nano",
-          "score": 0.263,
+          "score": 0.262,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": null,
-            "speed": 145.66,
+            "speed": 144.45,
             "costEfficiency": 3.2
           },
           "missingMetrics": [
@@ -433,12 +433,12 @@
           "provider": "clinepass",
           "model": "MiMo V2.6 Flash",
           "aaSlug": "mimo-v2-6-flash",
-          "score": 0.269,
+          "score": 0.27,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 26.7,
-            "speed": 32.42,
+            "speed": 34.09,
             "costEfficiency": 4.082
           },
           "missingMetrics": [
@@ -456,7 +456,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": null,
-            "speed": 203.15,
+            "speed": 202.85,
             "costEfficiency": 2.051
           },
           "missingMetrics": [
@@ -479,7 +479,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 59.1,
-            "speed": 94.62,
+            "speed": 94.22,
             "costEfficiency": 0.15
           },
           "missingMetrics": [
@@ -490,21 +490,21 @@
         },
         {
           "provider": "copilot",
-          "model": "Claude Sonnet 5.5",
-          "aaSlug": "claude-sonnet-5-5",
-          "score": 0.398,
+          "model": "Claude Haiku 5.5",
+          "aaSlug": "claude-haiku-5-5",
+          "score": 0.397,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
-            "intelligenceIndex": 54.5,
-            "speed": 139.27,
-            "costEfficiency": 0.3
+            "intelligenceIndex": 36.5,
+            "speed": 231.58,
+            "costEfficiency": 6
           },
           "missingMetrics": [
             "agenticIndex",
             "codingIndex"
           ],
-          "priceBlendedPer1M": 3.333
+          "priceBlendedPer1M": 0.167
         }
       ],
       "opencode-go": [
@@ -517,7 +517,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 36.5,
-            "speed": 232.05,
+            "speed": 231.58,
             "costEfficiency": 6
           },
           "missingMetrics": [
@@ -530,7 +530,7 @@
           "provider": "opencode-go",
           "model": "Gemini 4 Argon",
           "aaSlug": "gemini-4-argon",
-          "score": 0.345,
+          "score": 0.346,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
@@ -555,7 +555,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 59.1,
-            "speed": 94.62,
+            "speed": 94.22,
             "costEfficiency": 0.15
           },
           "missingMetrics": [
@@ -568,12 +568,12 @@
           "provider": "opencode-zen",
           "model": "Claude Sonnet 5.5",
           "aaSlug": "claude-sonnet-5-5",
-          "score": 0.398,
+          "score": 0.397,
           "breakdown": {
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 54.5,
-            "speed": 139.27,
+            "speed": 133.73,
             "costEfficiency": 0.3
           },
           "missingMetrics": [
@@ -611,7 +611,7 @@
             "agenticIndex": null,
             "codingIndex": null,
             "intelligenceIndex": 46.5,
-            "speed": 27.53,
+            "speed": 26.81,
             "costEfficiency": 0.3
           },
           "missingMetrics": [
