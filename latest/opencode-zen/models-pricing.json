@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/zen/",
-  "fetchedAt": "2026-11-06T12:58:37.773Z",
+  "fetchedAt": "2026-11-07T11:44:55.567Z",
   "notes": "Auto-generated from the OpenCode Zen docs page. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
@@ -11,14 +11,21 @@
       "priceCachedWrite": null
     },
     {
-      "model": "Crouton Alpha Free",
+      "model": "Iceman Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,
       "priceCachedWrite": null
     },
     {
-      "model": "Pulse Alpha Free",
+      "model": "Inkling 2 Small Free",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Crouton Alpha Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,
