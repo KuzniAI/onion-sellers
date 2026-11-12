@@ -200,6 +200,8 @@
   { "provider": "opencode-zen", "providerModel": "Claude Fable 5.2", "aaSlug": "claude-fable-5-2" },
   { "provider": "opencode-zen", "providerModel": "Muse Ember 1.0", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "opencode-zen", "providerModel": "Gemini 4 Carbon", "aaSlug": "gemini-4-carbon" },
+  { "provider": "opencode-zen", "providerModel": "Gemini Decision 1", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-zen", "providerModel": "GPT 6 Luna Decision", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
 
   { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
   { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
