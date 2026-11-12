@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/zen/",
-  "fetchedAt": "2026-11-11T12:44:22.655Z",
+  "fetchedAt": "2026-11-12T13:47:51.124Z",
   "notes": "Auto-generated from the OpenCode Zen docs page. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
@@ -107,6 +107,27 @@
       "priceOutput": 0,
       "priceCachedRead": null,
       "priceCachedWrite": null
+    },
+    {
+      "model": "Gemini Decision 1",
+      "priceInput": 0.1,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "GPT 6 Luna Decision (≤ 272K tokens)",
+      "priceInput": 0.1,
+      "priceOutput": 0,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": 0.125
+    },
+    {
+      "model": "GPT 6 Luna Decision (> 272K tokens)",
+      "priceInput": 0.2,
+      "priceOutput": 0,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": 0.25
     },
     {
       "model": "MiniMax M3",
