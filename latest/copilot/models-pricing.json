@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing",
-  "fetchedAt": "2026-11-13T13:08:46.702Z",
+  "fetchedAt": "2026-11-14T12:13:33.278Z",
   "notes": "Auto-generated from the GitHub Copilot models-and-pricing docs page. All prices are per 1M tokens. Models with a \"Long context\" tier bill at a higher rate once input exceeds thresholdInputTokens; the same model may appear twice (Default and Long context rows) -- this is expected, not a duplicate.",
   "models": [
     {
@@ -422,6 +422,18 @@
       "price1mCachedInput": 0.1,
       "price1mCacheWrite": null,
       "price1mOutput": 10
+    },
+    {
+      "creator": "Google",
+      "model": "Gemini 4 Hydrogen",
+      "releaseStatus": "GA",
+      "category": "Versatile",
+      "tier": "Default",
+      "thresholdInputTokens": null,
+      "price1mInput": 1.5,
+      "price1mCachedInput": 0.075,
+      "price1mCacheWrite": null,
+      "price1mOutput": 7.5
     },
     {
       "creator": "Microsoft",
