@@ -38,6 +38,7 @@
   { "provider": "copilot", "providerModel": "GPT-6.1 Terra", "aaSlug": "gpt-6-1-terra" },
   { "provider": "copilot", "providerModel": "Claude Fable 5.2", "aaSlug": "claude-fable-5-2" },
   { "provider": "copilot", "providerModel": "Gemini 4 Carbon", "aaSlug": "gemini-4-carbon" },
+  { "provider": "copilot", "providerModel": "Gemini 4 Hydrogen", "aaSlug": "gemini-4-hydrogen" },
 
   { "provider": "opencode-go", "providerModel": "GLM-5.3-Flash", "aaSlug": "glm-5-3-flash" },
   { "provider": "opencode-go", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
