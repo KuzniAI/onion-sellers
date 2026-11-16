@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://openrouter.ai/api/v1/models",
-  "fetchedAt": "2026-11-16T20:02:53.822Z",
+  "fetchedAt": "2026-11-16T20:23:52.321Z",
   "notes": "Auto-generated from the OpenRouter /api/v1/models JSON endpoint. OpenRouter is pay-as-you-go; prices are converted from USD per token to USD per 1M tokens. Reference a model by its modelId (e.g. \"openrouter/<modelId>\"). Free models have 0 prices.",
   "models": [
     {
@@ -256,9 +256,9 @@
     {
       "modelId": "moonshotai/kimi-k3.1-pro:batch",
       "model": "MoonshotAI: Kimi K3.1 Pro (batch)",
-      "priceInput": 0.384,
-      "priceOutput": 5.758,
-      "priceCachedRead": 0.122,
+      "priceInput": 0.361,
+      "priceOutput": 5.407,
+      "priceCachedRead": 0.115,
       "priceCachedWrite": null
     },
     {
@@ -2158,9 +2158,9 @@
     {
       "modelId": "qwen/qwen3.5-9b",
       "model": "Qwen: Qwen3.5-9B",
-      "priceInput": 0.114,
-      "priceOutput": 0.168,
-      "priceCachedRead": 0.103,
+      "priceInput": 0.169,
+      "priceOutput": 0.249,
+      "priceCachedRead": 0.152,
       "priceCachedWrite": null
     },
     {

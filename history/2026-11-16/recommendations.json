@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-16T20:02:54.806Z",
+  "generatedAt": "2026-11-16T20:23:53.556Z",
   "topNPerProvider": 3,
-  "candidatesConsidered": 93,
-  "variantsConsidered": 216,
+  "candidatesConsidered": 137,
+  "variantsConsidered": 310,
   "intelligenceIndexVersion": 5,
   "categories": {
     "codingHeavy": {
@@ -274,20 +274,54 @@
       "openrouter": [
         {
           "provider": "openrouter",
-          "model": "Tencent: Hy4",
-          "effort": null,
-          "aaSlug": "tencent-hy4",
-          "score": 41.8,
+          "model": "Google: Gemini 4 Carbon",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-carbon-medium",
+          "score": 60.7,
           "breakdown": {
-            "quality": 41.3,
-            "costPerTask": 0.5155,
-            "responseTimeSeconds": 114.6,
-            "intelligenceIndex": 34.6,
-            "engineeringIndex": 41.1,
-            "financeAndAccountingIndex": 38,
-            "strategyAndOpsIndex": 48.7
+            "quality": 61.6,
+            "costPerTask": 2.3389,
+            "responseTimeSeconds": 29.9,
+            "intelligenceIndex": 58.3,
+            "engineeringIndex": 63.9,
+            "financeAndAccountingIndex": 59.6,
+            "strategyAndOpsIndex": 57.8
           },
-          "priceBlendedPer1M": 1.042
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "openrouter",
+          "model": "Anthropic: Claude Opus 5.5",
+          "effort": "Xhigh",
+          "aaSlug": "claude-opus-5-5-xhigh",
+          "score": 58.3,
+          "breakdown": {
+            "quality": 61,
+            "costPerTask": 3.0236,
+            "responseTimeSeconds": 77.3,
+            "intelligenceIndex": 57.4,
+            "engineeringIndex": 62.9,
+            "financeAndAccountingIndex": 55.7,
+            "strategyAndOpsIndex": 59
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.1 Sol",
+          "effort": "Xhigh",
+          "aaSlug": "gpt-6-1-sol-xhigh",
+          "score": 58.2,
+          "breakdown": {
+            "quality": 56.4,
+            "costPerTask": 0.382,
+            "responseTimeSeconds": 76.7,
+            "intelligenceIndex": 52.5,
+            "engineeringIndex": 57.5,
+            "financeAndAccountingIndex": 55.2,
+            "strategyAndOpsIndex": 57.2
+          },
+          "priceBlendedPer1M": 4
         }
       ]
     },
@@ -560,20 +594,54 @@
       "openrouter": [
         {
           "provider": "openrouter",
-          "model": "Tencent: Hy4",
-          "effort": null,
-          "aaSlug": "tencent-hy4",
-          "score": 46.1,
+          "model": "OpenAI: GPT-6.1 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-1-sol-medium",
+          "score": 68.6,
           "breakdown": {
-            "quality": 44.1,
-            "costPerTask": 0.5155,
-            "responseTimeSeconds": 114.6,
-            "intelligenceIndex": 34.6,
-            "engineeringIndex": 41.1,
-            "financeAndAccountingIndex": 38,
-            "strategyAndOpsIndex": 48.7
+            "quality": 52.6,
+            "costPerTask": 0.1797,
+            "responseTimeSeconds": 14.5,
+            "intelligenceIndex": 46.3,
+            "engineeringIndex": 52.1,
+            "financeAndAccountingIndex": 50.6,
+            "strategyAndOpsIndex": 53.3
           },
-          "priceBlendedPer1M": 1.042
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "openrouter",
+          "model": "Google: Gemini 4 Hydrogen",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-hydrogen-medium",
+          "score": 62.8,
+          "breakdown": {
+            "quality": 50.2,
+            "costPerTask": 0.399,
+            "responseTimeSeconds": 15,
+            "intelligenceIndex": 41.2,
+            "engineeringIndex": 49.1,
+            "financeAndAccountingIndex": 51.4,
+            "strategyAndOpsIndex": 51.8
+          },
+          "priceBlendedPer1M": 3
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.1 Terra",
+          "effort": "High",
+          "aaSlug": "gpt-6-1-terra-high",
+          "score": 62.1,
+          "breakdown": {
+            "quality": 46.8,
+            "costPerTask": 0.1296,
+            "responseTimeSeconds": 17.6,
+            "intelligenceIndex": 42.4,
+            "engineeringIndex": 46.4,
+            "financeAndAccountingIndex": 44.2,
+            "strategyAndOpsIndex": 47.4
+          },
+          "priceBlendedPer1M": 2
         }
       ]
     },
@@ -846,20 +914,54 @@
       "openrouter": [
         {
           "provider": "openrouter",
-          "model": "Tencent: Hy4",
-          "effort": null,
-          "aaSlug": "tencent-hy4",
-          "score": 39.6,
+          "model": "Google: Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 62,
           "breakdown": {
-            "quality": 39.2,
-            "costPerTask": 0.5155,
-            "responseTimeSeconds": 114.6,
-            "intelligenceIndex": 34.6,
-            "engineeringIndex": 41.1,
-            "financeAndAccountingIndex": 38,
-            "strategyAndOpsIndex": 48.7
+            "quality": 63.7,
+            "costPerTask": 2.7424,
+            "responseTimeSeconds": 80.7,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
           },
-          "priceBlendedPer1M": 1.042
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "openrouter",
+          "model": "Anthropic: Claude Opus 5.5",
+          "effort": "Max",
+          "aaSlug": "claude-opus-5-5",
+          "score": 59.8,
+          "breakdown": {
+            "quality": 63.4,
+            "costPerTask": 5.0182,
+            "responseTimeSeconds": 373.2,
+            "intelligenceIndex": 59.1,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 59.4,
+            "strategyAndOpsIndex": 61.4
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.1 Sol",
+          "effort": "Max",
+          "aaSlug": "gpt-6-1-sol",
+          "score": 57.9,
+          "breakdown": {
+            "quality": 58,
+            "costPerTask": 0.6361,
+            "responseTimeSeconds": 171.3,
+            "intelligenceIndex": 54.6,
+            "engineeringIndex": 59.4,
+            "financeAndAccountingIndex": 56.2,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 4
         }
       ]
     },
@@ -1132,20 +1234,54 @@
       "openrouter": [
         {
           "provider": "openrouter",
-          "model": "Tencent: Hy4",
-          "effort": null,
-          "aaSlug": "tencent-hy4",
-          "score": 41.9,
+          "model": "OpenAI: GPT-6.1 Sol",
+          "effort": "High",
+          "aaSlug": "gpt-6-1-sol-high",
+          "score": 59.9,
           "breakdown": {
-            "quality": 39,
-            "costPerTask": 0.5155,
-            "responseTimeSeconds": 114.6,
-            "intelligenceIndex": 34.6,
-            "engineeringIndex": 41.1,
-            "financeAndAccountingIndex": 38,
+            "quality": 52.3,
+            "costPerTask": 0.2955,
+            "responseTimeSeconds": 41.8,
+            "intelligenceIndex": 50.3,
+            "engineeringIndex": 55.4,
+            "financeAndAccountingIndex": 53.2,
+            "strategyAndOpsIndex": 55.4
+          },
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.1 Terra",
+          "effort": "Xhigh",
+          "aaSlug": "gpt-6-1-terra-xhigh",
+          "score": 55.4,
+          "breakdown": {
+            "quality": 46.7,
+            "costPerTask": 0.2004,
+            "responseTimeSeconds": 36.3,
+            "intelligenceIndex": 45.3,
+            "engineeringIndex": 49.4,
+            "financeAndAccountingIndex": 47.6,
             "strategyAndOpsIndex": 48.7
           },
-          "priceBlendedPer1M": 1.042
+          "priceBlendedPer1M": 2
+        },
+        {
+          "provider": "openrouter",
+          "model": "Google: Gemini 4 Hydrogen",
+          "effort": "High",
+          "aaSlug": "gemini-4-hydrogen-high",
+          "score": 55.3,
+          "breakdown": {
+            "quality": 53.3,
+            "costPerTask": 0.9366,
+            "responseTimeSeconds": 18.9,
+            "intelligenceIndex": 50.8,
+            "engineeringIndex": 57,
+            "financeAndAccountingIndex": 56.1,
+            "strategyAndOpsIndex": 55.4
+          },
+          "priceBlendedPer1M": 3
         }
       ]
     },
@@ -1418,20 +1554,54 @@
       "openrouter": [
         {
           "provider": "openrouter",
-          "model": "Tencent: Hy4",
-          "effort": null,
-          "aaSlug": "tencent-hy4",
-          "score": 42.7,
+          "model": "Google: Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 59,
           "breakdown": {
-            "quality": 41.2,
-            "costPerTask": 0.5155,
-            "responseTimeSeconds": 114.6,
-            "intelligenceIndex": 34.6,
-            "engineeringIndex": 41.1,
-            "financeAndAccountingIndex": 38,
-            "strategyAndOpsIndex": 48.7
+            "quality": 62.1,
+            "costPerTask": 2.7424,
+            "responseTimeSeconds": 80.7,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
           },
-          "priceBlendedPer1M": 1.042
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.1 Sol",
+          "effort": "Xhigh",
+          "aaSlug": "gpt-6-1-sol-xhigh",
+          "score": 58.4,
+          "breakdown": {
+            "quality": 55.8,
+            "costPerTask": 0.382,
+            "responseTimeSeconds": 76.7,
+            "intelligenceIndex": 52.5,
+            "engineeringIndex": 57.5,
+            "financeAndAccountingIndex": 55.2,
+            "strategyAndOpsIndex": 57.2
+          },
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "openrouter",
+          "model": "Google: Gemini 4 Hydrogen",
+          "effort": "High",
+          "aaSlug": "gemini-4-hydrogen-high",
+          "score": 56.9,
+          "breakdown": {
+            "quality": 55.9,
+            "costPerTask": 0.9366,
+            "responseTimeSeconds": 18.9,
+            "intelligenceIndex": 50.8,
+            "engineeringIndex": 57,
+            "financeAndAccountingIndex": 56.1,
+            "strategyAndOpsIndex": 55.4
+          },
+          "priceBlendedPer1M": 3
         }
       ]
     }
