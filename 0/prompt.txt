@@ -1,0 +1,9 @@
+split the pipelines so that page is deployed when it's changed: layout or data
+
+---
+
+Do one more pass of review on both workflows. Maybe update actions to current versions?
+
+---
+
+commit this on main
