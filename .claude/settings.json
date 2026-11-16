@@ -6,7 +6,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c 'if ! command -v entire >/dev/null 2>&1; then exit 0; fi; exec entire hooks claude-code post-task'"
+            "command": "sh -c 'if ! command -v entire >/dev/null 2>&1; then exit 0; fi; exec entire hooks claude-code post-task'",
+            "timeout": 120
           }
         ]
       },
@@ -26,7 +27,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c 'if ! command -v entire >/dev/null 2>&1; then exit 0; fi; exec entire hooks claude-code pre-task'"
+            "command": "sh -c 'if ! command -v entire >/dev/null 2>&1; then exit 0; fi; exec entire hooks claude-code pre-task'",
+            "timeout": 30
           }
         ]
       }
@@ -59,7 +61,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c 'if ! command -v entire >/dev/null 2>&1; then exit 0; fi; exec entire hooks claude-code stop'"
+            "command": "sh -c 'if ! command -v entire >/dev/null 2>&1; then exit 0; fi; exec entire hooks claude-code stop'",
+            "timeout": 120
           }
         ]
       }
@@ -70,7 +73,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c 'if ! command -v entire >/dev/null 2>&1; then exit 0; fi; exec entire hooks claude-code subagent-stop'"
+            "command": "sh -c 'if ! command -v entire >/dev/null 2>&1; then exit 0; fi; exec entire hooks claude-code subagent-stop'",
+            "timeout": 120
           }
         ]
       }
@@ -81,7 +85,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c 'if ! command -v entire >/dev/null 2>&1; then exit 0; fi; exec entire hooks claude-code user-prompt-submit'"
+            "command": "sh -c 'if ! command -v entire >/dev/null 2>&1; then exit 0; fi; exec entire hooks claude-code user-prompt-submit'",
+            "timeout": 30
           }
         ]
       }
