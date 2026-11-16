@@ -1,0 +1,9 @@
+Fix the UI of tables based on the screenshot:  top model name often overflows one row. Find a solution where 2 models will have the same table row heights when side by side
+
+---
+
+drop the chef's pick
+
+---
+
+commit this
