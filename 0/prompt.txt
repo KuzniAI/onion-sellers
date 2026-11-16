@@ -1,0 +1,5 @@
+Update the footer by removing the line "Menu updated Nov 16, 2026, 9:02 PM · 93 models scored · data as of:" Move the number of models to Artificial Analysis box
+
+---
+
+commit this
