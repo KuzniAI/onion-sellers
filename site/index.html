@@ -6,7 +6,7 @@
     <title>Agentic Onion Sellers</title>
     <meta
       name="description"
-      content="Daily model recommendations for GitHub Copilot, OpenCode Go, OpenCode Zen and ClinePass, per task — served bistro-style."
+      content="Daily model recommendations for OpenCode Go, OpenCode Zen, Cursor, GitHub Copilot, ClinePass and OpenRouter, per task — served bistro-style."
     />
     <link
       rel="icon"
@@ -303,18 +303,20 @@
 
     <script>
       const PROVIDERS = [
+        { id: "opencode-go", name: "OpenCode Go", docs: "https://opencode.ai/docs/go/" },
+        { id: "opencode-zen", name: "OpenCode Zen", docs: "https://opencode.ai/docs/zen/" },
+        { id: "cursor", name: "Cursor", docs: "https://cursor.com/docs/models-and-pricing" },
         {
           id: "copilot",
           name: "GitHub Copilot",
           docs: "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing",
         },
-        { id: "opencode-go", name: "OpenCode Go", docs: "https://opencode.ai/docs/go/" },
-        { id: "opencode-zen", name: "OpenCode Zen", docs: "https://opencode.ai/docs/zen/" },
         {
           id: "clinepass",
           name: "ClinePass",
           docs: "https://docs.cline.bot/getting-started/clinepass",
         },
+        { id: "openrouter", name: "OpenRouter", docs: "https://openrouter.ai/models" },
       ];
       // One dish per category; anything new falls back to ze baguette.
       const CATEGORY_EMOJI = {

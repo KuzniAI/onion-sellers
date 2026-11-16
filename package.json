@@ -15,7 +15,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "cheerio": "^1.2.0"
+    "cheerio": "^1.2.0",
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
     "@earendil-works/pi-coding-agent": "^1.5.2",

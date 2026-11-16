@@ -25,7 +25,7 @@ jobs:
     outputs:
       data_changed: ${{ steps.snapshot.outputs.data_changed }}
     env:
-      PROVIDERS: copilot opencode-go opencode-zen clinepass
+      PROVIDERS: opencode-go opencode-zen cursor copilot clinepass openrouter
     steps:
       - uses: actions/checkout@v7
         with:

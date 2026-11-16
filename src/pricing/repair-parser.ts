@@ -9,7 +9,7 @@ import type { PricingSource } from "./source.ts";
 
 export type ParserFailure<Row> = {
   source: PricingSource<Row>;
-  html: string;
+  text: string;
   error: unknown;
 };
 
@@ -51,7 +51,7 @@ function repairBlockedReason(): string | null {
 // (the existing data file is then left untouched).
 export async function repairParser<Row>({
   source,
-  html,
+  text,
   error,
 }: ParserFailure<Row>): Promise<Row[] | null> {
   console.error(
@@ -65,12 +65,13 @@ export async function repairParser<Row>({
     return null;
   }
 
-  const htmlPath = path.join(path.dirname(source.outFile), "source.html");
-  await mkdir(path.dirname(htmlPath), { recursive: true });
-  await writeFile(htmlPath, html);
+  const ext = { html: "html", json: "json", yaml: "yaml", markdown: "md" }[source.format];
+  const sourcePath = path.join(path.dirname(source.outFile), `source.${ext}`);
+  await mkdir(path.dirname(sourcePath), { recursive: true });
+  await writeFile(sourcePath, text);
 
   try {
-    return await runPiRepair(source, html, htmlPath, errorMessage(error));
+    return await runPiRepair(source, text, sourcePath, errorMessage(error));
   } catch (err) {
     console.error(`[${source.id}] Pi repair crashed: ${errorMessage(err)}`);
     return null;
@@ -79,8 +80,8 @@ export async function repairParser<Row>({
 
 async function runPiRepair<Row>(
   source: PricingSource<Row>,
-  html: string,
-  htmlPath: string,
+  text: string,
+  sourcePath: string,
   firstError: string,
 ): Promise<Row[] | null> {
   // Imported lazily so runs without the flag (including CI) never load the Pi SDK.
@@ -130,12 +131,12 @@ async function runPiRepair<Row>(
       );
       await session.prompt(
         attempt === 1
-          ? initialPrompt(source, htmlPath, lastError)
-          : retryPrompt(source, htmlPath, lastError),
+          ? initialPrompt(source, sourcePath, lastError)
+          : retryPrompt(source, sourcePath, lastError),
       );
 
       try {
-        const rows = await loadRepairedRows(source, html);
+        const rows = await loadRepairedRows(source, text);
         console.log(
           `\n[${source.id}] Pi repair succeeded (${rows.length} rows). Review and commit ${relative(source.parserPath)}.`,
         );
@@ -158,7 +159,7 @@ async function runPiRepair<Row>(
 }
 
 // Validates the rewritten parser in-process instead of trusting the agent's own check.
-async function loadRepairedRows<Row>(source: PricingSource<Row>, html: string): Promise<Row[]> {
+async function loadRepairedRows<Row>(source: PricingSource<Row>, text: string): Promise<Row[]> {
   // The query string bypasses Node's module cache, which still holds the parser loaded at startup.
   const mod = await import(`${pathToFileURL(source.parserPath).href}?repair=${Date.now()}`);
   const parse = mod[source.parseExport];
@@ -166,7 +167,7 @@ async function loadRepairedRows<Row>(source: PricingSource<Row>, html: string): 
     throw new Error(`${relative(source.parserPath)} does not export ${source.parseExport}()`);
   }
 
-  const rows: unknown = parse(html);
+  const rows: unknown = parse(text);
   if (!Array.isArray(rows) || rows.length === 0) {
     throw new Error(`${source.parseExport}() returned no rows`);
   }
@@ -184,18 +185,26 @@ async function loadRepairedRows<Row>(source: PricingSource<Row>, html: string): 
   return rows as Row[];
 }
 
-function initialPrompt<Row>(source: PricingSource<Row>, htmlPath: string, error: string): string {
+const formatAdvice: Record<PricingSource<unknown>["format"], string> = {
+  html: "Use cheerio (already installed): find tables by their header text, not by position.",
+  json: "Use JSON.parse and validate the shape explicitly (check each field's type before using it); look up fields by key, never by position.",
+  yaml: 'Use the `yaml` package (already installed): `import { parse } from "yaml"`. Prices are strings like "$1.75"; validate every field before converting.',
+  markdown:
+    "Parse the markdown pipe tables by hand (no markdown library): find each table by its header row text, split rows on unescaped `|`, strip markdown links and escapes like `\\$`.",
+};
+
+function initialPrompt<Row>(source: PricingSource<Row>, sourcePath: string, error: string): string {
   const parser = relative(source.parserPath);
-  const page = relative(htmlPath);
+  const page = relative(sourcePath);
   return [
     `The ${source.displayName} pricing parser fails with: ${error}`,
     "",
-    `Rewrite ${parser} so it parses ${page} (the page downloaded from ${source.sourceUrl}).`,
+    `Rewrite ${parser} so it parses ${page} (${source.format} downloaded from ${source.sourceUrl}). If the file is still a stub, write the parser from scratch.`,
     "",
     "Rules:",
-    `- Edit only ${parser}. Keep its exported row type and the exported function ${source.parseExport}(html: string).`,
+    `- Edit only ${parser}. Keep (or define) its exported row type and the exported function ${source.parseExport}(text: string): Row[].`,
     `- Rows must follow this contract: ${source.rowContract}`,
-    "- Use cheerio (already installed) and follow the style of src/opencode-go/parser.ts: find tables by their header text, not by position.",
+    `- ${formatAdvice[source.format]}`,
     "- Throw a descriptive Error when an expected table is missing or no rows are found; never return partial data.",
     "- The project runs TypeScript directly on Node with type stripping (see AGENTS.md): no enums, namespaces or parameter properties, and import local files with the .ts extension.",
     `- Verify against the saved page: node --input-type=module -e "import { readFileSync } from 'node:fs'; import { ${source.parseExport} } from './${parser}'; console.log(JSON.stringify(${source.parseExport}(readFileSync('${page}', 'utf8')), null, 2))"`,
@@ -206,9 +215,9 @@ function initialPrompt<Row>(source: PricingSource<Row>, htmlPath: string, error:
   ].join("\n");
 }
 
-function retryPrompt<Row>(source: PricingSource<Row>, htmlPath: string, error: string): string {
+function retryPrompt<Row>(source: PricingSource<Row>, sourcePath: string, error: string): string {
   return [
     `The pipeline re-imported ${relative(source.parserPath)} and ${source.parseExport}() still fails validation: ${error}`,
-    `Fix the parser, verify it again against ${relative(htmlPath)}, and re-run \`npm run lint\` and \`npm run format\`. Do not run \`npm start\`.`,
+    `Fix the parser, verify it again against ${relative(sourcePath)}, and re-run \`npm run lint\` and \`npm run format\`. Do not run \`npm start\`.`,
   ].join("\n");
 }

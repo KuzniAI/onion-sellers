@@ -16,10 +16,10 @@ const RETRYABLE_STATUSES = new Set([404, 408, 429, 500, 502, 503, 504]);
 const MAX_ATTEMPTS = 3;
 const RETRY_DELAY_MS = 2000;
 
-export async function downloadHtml(url: string): Promise<string> {
+export async function downloadText(url: string): Promise<string> {
   for (let attempt = 1; ; attempt++) {
     try {
-      return await downloadHtmlOnce(url);
+      return await downloadTextOnce(url);
     } catch (err) {
       const retryable =
         err instanceof NetworkError &&
@@ -31,7 +31,7 @@ export async function downloadHtml(url: string): Promise<string> {
   }
 }
 
-async function downloadHtmlOnce(url: string): Promise<string> {
+async function downloadTextOnce(url: string): Promise<string> {
   let res: Response;
   try {
     res = await fetch(url);

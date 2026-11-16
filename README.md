@@ -2,10 +2,14 @@
 
 Choose a best onion seller for you.
 
-1. GitHub Copilot https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing
-2. OpenCode Go https://opencode.ai/docs/go/
-3. OpenCode Zen https://opencode.ai/docs/zen/
-4. ClinePass https://docs.cline.bot/getting-started/clinepass
+Pricing comes from machine-readable sources, in this order:
+
+1. OpenCode Go https://opencode.ai/inference/go/v1/models (JSON)
+2. OpenCode Zen https://opencode.ai/zen/v1/models (JSON)
+3. Cursor https://cursor.com/docs/models-and-pricing.md (markdown)
+4. GitHub Copilot https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml (YAML)
+5. ClinePass https://docs.cline.bot/getting-started/clinepass.md (markdown)
+6. OpenRouter https://openrouter.ai/api/v1/models (JSON)
 
 ## Model mapping
 
@@ -19,7 +23,7 @@ Choose a best onion seller for you.
 
 Pricing parsers (`src/<provider>/parser.ts`) are written and repaired by a [Pi](https://github.com/badlogic/pi-mono) coding agent through the Pi SDK (`@earendil-works/pi-coding-agent`), not by hand. When a parser throws, `src/pricing/repair-parser.ts` hands the downloaded page to Pi:
 
-1. The page is saved to `data/<provider>/source.html`. Pi is told to rewrite only that provider's `parser.ts` against it, following the row contract in the provider's `source.ts`, and to run lint and format.
+1. The downloaded source is saved to `data/<provider>/source.<ext>` (`json`, `yaml`, `md` or `html`, per the source's `format`). Pi is told to rewrite only that provider's `parser.ts` against it, following the row contract in the provider's `source.ts`, and to run lint and format.
 2. The pipeline re-imports the rewritten parser and validates the rows itself: at least one row, and every row has a model name plus numeric input/output prices. If validation fails, the error goes back to Pi, for up to 3 attempts.
 3. On success the pricing file is written as usual. Review the parser change (`git diff src/`) and commit it.
 
@@ -29,7 +33,7 @@ Repair is off by default and never runs in CI:
 - `PI_REPAIR_PROVIDER` and `PI_REPAIR_MODEL` pick the Pi model (`opencode-go` / `glm-5.3-flash` in `.env.example`).
 - Credentials come from Pi, not this project: run `npx pi` and `/login`, or set the provider's API key env var (`OPENCODE_API_KEY` for `opencode-go`).
 
-OpenCode Zen and ClinePass start with stub parsers that throw. Run `npm start` locally once with `PARSER_REPAIR=1` to have Pi generate them. The daily workflow fails until those generated parsers are committed.
+The parsers for all six sources need to be (re)written after the source switch to JSON/YAML/markdown; Cursor and OpenRouter start as a stub that throws. Run `npm start` locally once with `PARSER_REPAIR=1` to have Pi dispatch one agent per provider and generate them. The daily workflow fails until those generated parsers are committed.
 
 ## Automation
 

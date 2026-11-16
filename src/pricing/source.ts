@@ -2,6 +2,8 @@ export type PricingSource<Row> = {
   id: string;
   displayName: string;
   sourceUrl: string;
+  // What sourceUrl returns, so a repair agent knows how to parse it.
+  format: "html" | "json" | "yaml" | "markdown";
   outFile: string;
   notes: string;
   // Absolute path of the parser module, so a repair agent knows which file to rewrite.
@@ -12,5 +14,5 @@ export type PricingSource<Row> = {
   rowContract: string;
   // Row fields holding USD per 1M input/output tokens, used for validation and scoring.
   priceFields: { input: string; output: string };
-  parse: (html: string) => Row[];
+  parse: (text: string) => Row[];
 };

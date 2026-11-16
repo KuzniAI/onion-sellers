@@ -1,15 +1,15 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { downloadHtml, NetworkError } from "./downloader.ts";
+import { downloadText, NetworkError } from "./downloader.ts";
 import { repairParser } from "./repair-parser.ts";
 import type { PricingSource } from "./source.ts";
 
 // Returns false when the download failed (after retries) or parsing failed and could not be
 // repaired; the existing data file is left untouched in both cases.
 export async function refreshPricingSource<Row>(source: PricingSource<Row>): Promise<boolean> {
-  let html: string;
+  let text: string;
   try {
-    html = await downloadHtml(source.sourceUrl);
+    text = await downloadText(source.sourceUrl);
   } catch (error) {
     if (!(error instanceof NetworkError)) throw error;
     console.error(`Failed to download ${source.displayName} pricing: ${error.message}`);
@@ -18,9 +18,9 @@ export async function refreshPricingSource<Row>(source: PricingSource<Row>): Pro
 
   let models: Row[];
   try {
-    models = source.parse(html);
+    models = source.parse(text);
   } catch (error) {
-    const repaired = await repairParser({ source, html, error });
+    const repaired = await repairParser({ source, text, error });
     if (!repaired) return false;
     models = repaired;
   }
