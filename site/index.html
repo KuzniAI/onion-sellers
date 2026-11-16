@@ -191,6 +191,7 @@
       }
       table {
         width: 100%;
+        min-width: 30rem;
         border-collapse: collapse;
         font-size: 0.85rem;
         font-variant-numeric: tabular-nums;
@@ -212,10 +213,18 @@
         color: var(--muted);
         border-bottom: 2px solid var(--accent);
       }
+      /* Model names stay on one line (ellipsis + tooltip) so every row has the
+         same height and side-by-side tables line up. width:100% + max-width:0
+         lets the column take whatever space the numeric columns leave. */
       td.model {
         font-weight: 600;
-        white-space: normal;
-        min-width: 9rem;
+        width: 100%;
+        max-width: 0;
+      }
+      td.model .name {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       @media (max-width: 600px) {
         .category {
@@ -231,15 +240,6 @@
       }
       tr.top td:first-child {
         box-shadow: inset 3px 0 0 var(--accent);
-      }
-      .pick {
-        margin-left: 6px;
-        font-family: "Playfair Display", serif;
-        font-size: 0.72rem;
-        font-style: italic;
-        font-weight: 600;
-        color: var(--accent);
-        white-space: nowrap;
       }
       .empty,
       .error {
@@ -381,15 +381,15 @@
         document.getElementById("sources").innerHTML = items.join("");
       }
 
+      const displayName = (r) => (r.effort ? `${r.model} (${r.effort})` : r.model);
+
       function renderTable(rows) {
         if (!rows?.length) return '<p class="empty">Ze cupboard is bare: no scored models.</p>';
         const body = rows
           .map(
             (r, i) => `<tr${i === 0 ? ' class="top"' : ""}>
               <td>${i + 1}</td>
-              <td class="model">${esc(r.model)}${r.effort ? ` (${esc(r.effort)})` : ""}${
-                i === 0 ? '<span class="pick">chef’s pick</span>' : ""
-              }</td>
+              <td class="model"><span class="name" title="${esc(displayName(r))}">${esc(displayName(r))}</span></td>
               <td class="score">${num(r.score)}</td>
               <td>${num(r.breakdown.quality)}</td>
               <td>$${num(r.breakdown.costPerTask, 3)}</td>
