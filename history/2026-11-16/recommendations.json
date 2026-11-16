@@ -1,623 +1,1437 @@
 {
-  "generatedAt": "2026-11-16T13:41:04.043Z",
-  "topNPerProvider": 2,
-  "candidatesConsidered": 121,
+  "generatedAt": "2026-11-16T20:02:54.806Z",
+  "topNPerProvider": 3,
+  "candidatesConsidered": 93,
+  "variantsConsidered": 216,
+  "intelligenceIndexVersion": 5,
   "categories": {
-    "agenticCoding": {
-      "copilot": [
-        {
-          "provider": "copilot",
-          "model": "Claude Haiku 5.5",
-          "aaSlug": "claude-haiku-5-5",
-          "score": 0.165,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 36.5,
-            "speed": 235.09,
-            "costEfficiency": 2.5
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.4
-        },
-        {
-          "provider": "copilot",
-          "model": "Gemini 4 Hydrogen",
-          "aaSlug": "gemini-4-hydrogen",
-          "score": 0.142,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 53.9,
-            "speed": 229.02,
-            "costEfficiency": 0.167
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 6
-        }
-      ],
+    "codingHeavy": {
       "opencode-go": [
         {
           "provider": "opencode-go",
-          "model": "Claude Haiku 5.5",
-          "aaSlug": "claude-haiku-5-5",
-          "score": 0.165,
+          "model": "Gemini 4 Argon",
+          "effort": "High",
+          "aaSlug": "gemini-4-argon",
+          "score": 52.6,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 36.5,
-            "speed": 235.09,
-            "costEfficiency": 2.5
+            "quality": 55.9,
+            "costPerTask": 4.9733,
+            "responseTimeSeconds": 53.2,
+            "intelligenceIndex": 50.4,
+            "engineeringIndex": 57.3,
+            "financeAndAccountingIndex": 55.9,
+            "strategyAndOpsIndex": 57.2
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.4
+          "priceBlendedPer1M": 8
         },
         {
           "provider": "opencode-go",
-          "model": "MiMo-V2.6-Flash",
-          "aaSlug": "mimo-v2-6-flash",
-          "score": 0.133,
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 47,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 26.7,
-            "speed": 38.45,
-            "costEfficiency": 4.082
+            "quality": 51.4,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 175.1,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.245
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Qwen4 Max",
+          "effort": null,
+          "aaSlug": "qwen4-max",
+          "score": 46.1,
+          "breakdown": {
+            "quality": 50,
+            "costPerTask": 3.2681,
+            "responseTimeSeconds": 149,
+            "intelligenceIndex": 42.9,
+            "engineeringIndex": 50.1,
+            "financeAndAccountingIndex": 54.1,
+            "strategyAndOpsIndex": 56.9
+          },
+          "priceBlendedPer1M": 3.75
         }
       ],
       "opencode-zen": [
         {
           "provider": "opencode-zen",
-          "model": "Claude Haiku 5.5",
-          "aaSlug": "claude-haiku-5-5",
-          "score": 0.165,
+          "model": "Gemini 4 Carbon",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-carbon-medium",
+          "score": 59.2,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 36.5,
-            "speed": 235.09,
-            "costEfficiency": 2.5
+            "quality": 61.6,
+            "costPerTask": 4.6777,
+            "responseTimeSeconds": 29.9,
+            "intelligenceIndex": 58.3,
+            "engineeringIndex": 63.9,
+            "financeAndAccountingIndex": 59.6,
+            "strategyAndOpsIndex": 57.8
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "Claude Opus 5.5",
+          "effort": "Xhigh",
+          "aaSlug": "claude-opus-5-5-xhigh",
+          "score": 56.8,
+          "breakdown": {
+            "quality": 61,
+            "costPerTask": 6.0472,
+            "responseTimeSeconds": 77.3,
+            "intelligenceIndex": 57.4,
+            "engineeringIndex": 62.9,
+            "financeAndAccountingIndex": 55.7,
+            "strategyAndOpsIndex": 59
+          },
+          "priceBlendedPer1M": 16
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.1 Sol",
+          "effort": "Xhigh",
+          "aaSlug": "gpt-6-1-sol-xhigh",
+          "score": 56.7,
+          "breakdown": {
+            "quality": 56.4,
+            "costPerTask": 0.764,
+            "responseTimeSeconds": 76.7,
+            "intelligenceIndex": 52.5,
+            "engineeringIndex": 57.5,
+            "financeAndAccountingIndex": 55.2,
+            "strategyAndOpsIndex": 57.2
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "cursor": [
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Carbon",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-carbon-medium",
+          "score": 59.2,
+          "breakdown": {
+            "quality": 61.6,
+            "costPerTask": 4.6777,
+            "responseTimeSeconds": 29.9,
+            "intelligenceIndex": 58.3,
+            "engineeringIndex": 63.9,
+            "financeAndAccountingIndex": 59.6,
+            "strategyAndOpsIndex": 57.8
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "cursor",
+          "model": "Claude Opus 5.5",
+          "effort": "Xhigh",
+          "aaSlug": "claude-opus-5-5-xhigh",
+          "score": 56.8,
+          "breakdown": {
+            "quality": 61,
+            "costPerTask": 6.0472,
+            "responseTimeSeconds": 77.3,
+            "intelligenceIndex": 57.4,
+            "engineeringIndex": 62.9,
+            "financeAndAccountingIndex": 55.7,
+            "strategyAndOpsIndex": 59
+          },
+          "priceBlendedPer1M": 16
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "Xhigh",
+          "aaSlug": "gemini-4-hydrogen",
+          "score": 56.3,
+          "breakdown": {
+            "quality": 58.4,
+            "costPerTask": 3.1602,
+            "responseTimeSeconds": 45.9,
+            "intelligenceIndex": 53.9,
+            "engineeringIndex": 60.1,
+            "financeAndAccountingIndex": 58.1,
+            "strategyAndOpsIndex": 57.7
+          },
+          "priceBlendedPer1M": 6
+        }
+      ],
+      "copilot": [
+        {
+          "provider": "copilot",
+          "model": "Gemini 4 Carbon",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-carbon-medium",
+          "score": 59.2,
+          "breakdown": {
+            "quality": 61.6,
+            "costPerTask": 4.6777,
+            "responseTimeSeconds": 29.9,
+            "intelligenceIndex": 58.3,
+            "engineeringIndex": 63.9,
+            "financeAndAccountingIndex": 59.6,
+            "strategyAndOpsIndex": 57.8
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "copilot",
+          "model": "Claude Opus 5.5",
+          "effort": "Xhigh",
+          "aaSlug": "claude-opus-5-5-xhigh",
+          "score": 56.8,
+          "breakdown": {
+            "quality": 61,
+            "costPerTask": 6.0472,
+            "responseTimeSeconds": 77.3,
+            "intelligenceIndex": 57.4,
+            "engineeringIndex": 62.9,
+            "financeAndAccountingIndex": 55.7,
+            "strategyAndOpsIndex": 59
+          },
+          "priceBlendedPer1M": 16
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.1 Sol",
+          "effort": "Xhigh",
+          "aaSlug": "gpt-6-1-sol-xhigh",
+          "score": 56.7,
+          "breakdown": {
+            "quality": 56.4,
+            "costPerTask": 0.764,
+            "responseTimeSeconds": 76.7,
+            "intelligenceIndex": 52.5,
+            "engineeringIndex": 57.5,
+            "financeAndAccountingIndex": 55.2,
+            "strategyAndOpsIndex": 57.2
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "clinepass": [
+        {
+          "provider": "clinepass",
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 47,
+          "breakdown": {
+            "quality": 51.4,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 175.1,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "clinepass",
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "Max",
+          "aaSlug": "deepseek-v4-1-flash-1017",
+          "score": 42,
+          "breakdown": {
+            "quality": 38.9,
+            "costPerTask": 0.3011,
+            "responseTimeSeconds": 42.2,
+            "intelligenceIndex": 32.6,
+            "engineeringIndex": 37.6,
+            "financeAndAccountingIndex": 42.2,
+            "strategyAndOpsIndex": 49.2
+          },
+          "priceBlendedPer1M": 0.487
+        },
+        {
+          "provider": "clinepass",
+          "model": "MiMo V2.6 Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 39.2,
+          "breakdown": {
+            "quality": 35.9,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 49,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
+          },
+          "priceBlendedPer1M": 0.761
+        }
+      ],
+      "openrouter": [
+        {
+          "provider": "openrouter",
+          "model": "Tencent: Hy4",
+          "effort": null,
+          "aaSlug": "tencent-hy4",
+          "score": 41.8,
+          "breakdown": {
+            "quality": 41.3,
+            "costPerTask": 0.5155,
+            "responseTimeSeconds": 114.6,
+            "intelligenceIndex": 34.6,
+            "engineeringIndex": 41.1,
+            "financeAndAccountingIndex": 38,
+            "strategyAndOpsIndex": 48.7
+          },
+          "priceBlendedPer1M": 1.042
+        }
+      ]
+    },
+    "codingLight": {
+      "opencode-go": [
+        {
+          "provider": "opencode-go",
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "High",
+          "aaSlug": "deepseek-v4-1-flash-1017-high",
+          "score": 54.3,
+          "breakdown": {
+            "quality": 40,
+            "costPerTask": 0.2281,
+            "responseTimeSeconds": 22.3,
+            "intelligenceIndex": 28.6,
+            "engineeringIndex": 34.4,
+            "financeAndAccountingIndex": 39.5,
+            "strategyAndOpsIndex": 48.4
+          },
+          "priceBlendedPer1M": 0.487
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Claude Haiku 5.5",
+          "effort": "High",
+          "aaSlug": "claude-haiku-5-5-high",
+          "score": 51.5,
+          "breakdown": {
+            "quality": 36.7,
+            "costPerTask": 0.1586,
+            "responseTimeSeconds": 20,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 36.5,
+            "financeAndAccountingIndex": 37.8,
+            "strategyAndOpsIndex": 37.1
+          },
           "priceBlendedPer1M": 0.4
+        },
+        {
+          "provider": "opencode-go",
+          "model": "MiMo-V2.6-Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 50,
+          "breakdown": {
+            "quality": 39.3,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 49,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
+          },
+          "priceBlendedPer1M": 0.761
+        }
+      ],
+      "opencode-zen": [
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.1 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-1-sol-medium",
+          "score": 66,
+          "breakdown": {
+            "quality": 52.6,
+            "costPerTask": 0.3594,
+            "responseTimeSeconds": 14.5,
+            "intelligenceIndex": 46.3,
+            "engineeringIndex": 52.1,
+            "financeAndAccountingIndex": 50.6,
+            "strategyAndOpsIndex": 53.3
+          },
+          "priceBlendedPer1M": 8
         },
         {
           "provider": "opencode-zen",
           "model": "Gemini 4 Hydrogen",
-          "aaSlug": "gemini-4-hydrogen",
-          "score": 0.142,
+          "effort": "Medium",
+          "aaSlug": "gemini-4-hydrogen-medium",
+          "score": 57.8,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 53.9,
-            "speed": 229.02,
-            "costEfficiency": 0.167
+            "quality": 50.2,
+            "costPerTask": 0.798,
+            "responseTimeSeconds": 15,
+            "intelligenceIndex": 41.2,
+            "engineeringIndex": 49.1,
+            "financeAndAccountingIndex": 51.4,
+            "strategyAndOpsIndex": 51.8
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
+          "priceBlendedPer1M": 6
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6 Astra",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-astra-medium",
+          "score": 54.4,
+          "breakdown": {
+            "quality": 56.4,
+            "costPerTask": 2.7324,
+            "responseTimeSeconds": 17.6,
+            "intelligenceIndex": 51.6,
+            "engineeringIndex": 56.8,
+            "financeAndAccountingIndex": 53.7,
+            "strategyAndOpsIndex": 55.7
+          },
+          "priceBlendedPer1M": 40
+        }
+      ],
+      "cursor": [
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-hydrogen-medium",
+          "score": 57.8,
+          "breakdown": {
+            "quality": 50.2,
+            "costPerTask": 0.798,
+            "responseTimeSeconds": 15,
+            "intelligenceIndex": 41.2,
+            "engineeringIndex": 49.1,
+            "financeAndAccountingIndex": 51.4,
+            "strategyAndOpsIndex": 51.8
+          },
+          "priceBlendedPer1M": 6
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Carbon",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-carbon-medium",
+          "score": 53.3,
+          "breakdown": {
+            "quality": 61.5,
+            "costPerTask": 4.6777,
+            "responseTimeSeconds": 29.9,
+            "intelligenceIndex": 58.3,
+            "engineeringIndex": 63.9,
+            "financeAndAccountingIndex": 59.6,
+            "strategyAndOpsIndex": 57.8
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "cursor",
+          "model": "Claude Opus 5.5",
+          "effort": "Medium",
+          "aaSlug": "claude-opus-5-5-medium",
+          "score": 53.2,
+          "breakdown": {
+            "quality": 54.6,
+            "costPerTask": 2.4511,
+            "responseTimeSeconds": 18.8,
+            "intelligenceIndex": 48.2,
+            "engineeringIndex": 53.7,
+            "financeAndAccountingIndex": 50.7,
+            "strategyAndOpsIndex": 56
+          },
+          "priceBlendedPer1M": 16
+        }
+      ],
+      "copilot": [
+        {
+          "provider": "copilot",
+          "model": "GPT-6.1 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-1-sol-medium",
+          "score": 66,
+          "breakdown": {
+            "quality": 52.6,
+            "costPerTask": 0.3594,
+            "responseTimeSeconds": 14.5,
+            "intelligenceIndex": 46.3,
+            "engineeringIndex": 52.1,
+            "financeAndAccountingIndex": 50.6,
+            "strategyAndOpsIndex": 53.3
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.1 Terra",
+          "effort": "High",
+          "aaSlug": "gpt-6-1-terra-high",
+          "score": 61.8,
+          "breakdown": {
+            "quality": 46.8,
+            "costPerTask": 0.2593,
+            "responseTimeSeconds": 17.6,
+            "intelligenceIndex": 42.4,
+            "engineeringIndex": 46.4,
+            "financeAndAccountingIndex": 44.2,
+            "strategyAndOpsIndex": 47.4
+          },
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "copilot",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-hydrogen-medium",
+          "score": 57.8,
+          "breakdown": {
+            "quality": 50.2,
+            "costPerTask": 0.798,
+            "responseTimeSeconds": 15,
+            "intelligenceIndex": 41.2,
+            "engineeringIndex": 49.1,
+            "financeAndAccountingIndex": 51.4,
+            "strategyAndOpsIndex": 51.8
+          },
           "priceBlendedPer1M": 6
         }
       ],
       "clinepass": [
         {
           "provider": "clinepass",
-          "model": "MiMo V2.6 Flash",
-          "aaSlug": "mimo-v2-6-flash",
-          "score": 0.133,
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "High",
+          "aaSlug": "deepseek-v4-1-flash-1017-high",
+          "score": 54.3,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 26.7,
-            "speed": 38.45,
-            "costEfficiency": 4.082
+            "quality": 40,
+            "costPerTask": 0.2281,
+            "responseTimeSeconds": 22.3,
+            "intelligenceIndex": 28.6,
+            "engineeringIndex": 34.4,
+            "financeAndAccountingIndex": 39.5,
+            "strategyAndOpsIndex": 48.4
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.245
+          "priceBlendedPer1M": 0.487
         },
         {
           "provider": "clinepass",
-          "model": "DeepSeek V4.1 Flash 1017",
-          "aaSlug": "deepseek-v4-1-flash-1017",
-          "score": 0.13,
+          "model": "MiMo V2.6 Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 50,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 32.6,
-            "speed": 171.81,
-            "costEfficiency": 2.051
+            "quality": 39.3,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 49,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.487
+          "priceBlendedPer1M": 0.761
+        },
+        {
+          "provider": "clinepass",
+          "model": "MiMo V2.6 Flash",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-flash",
+          "score": 48.3,
+          "breakdown": {
+            "quality": 36.9,
+            "costPerTask": 0.1285,
+            "responseTimeSeconds": 42.8,
+            "intelligenceIndex": 26.7,
+            "engineeringIndex": 31,
+            "financeAndAccountingIndex": 36.9,
+            "strategyAndOpsIndex": 45.7
+          },
+          "priceBlendedPer1M": 0.245
+        }
+      ],
+      "openrouter": [
+        {
+          "provider": "openrouter",
+          "model": "Tencent: Hy4",
+          "effort": null,
+          "aaSlug": "tencent-hy4",
+          "score": 46.1,
+          "breakdown": {
+            "quality": 44.1,
+            "costPerTask": 0.5155,
+            "responseTimeSeconds": 114.6,
+            "intelligenceIndex": 34.6,
+            "engineeringIndex": 41.1,
+            "financeAndAccountingIndex": 38,
+            "strategyAndOpsIndex": 48.7
+          },
+          "priceBlendedPer1M": 1.042
         }
       ]
     },
     "codeReview": {
-      "copilot": [
-        {
-          "provider": "copilot",
-          "model": "Gemini 4 Carbon",
-          "aaSlug": "gemini-4-carbon",
-          "score": 0.41,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 60,
-            "speed": 89.84,
-            "costEfficiency": 0.125
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 8
-        },
-        {
-          "provider": "copilot",
-          "model": "Claude Opus 5.5",
-          "aaSlug": "claude-opus-5-5",
-          "score": 0.402,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 59.1,
-            "speed": 96.36,
-            "costEfficiency": 0.063
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 16
-        }
-      ],
       "opencode-go": [
         {
           "provider": "opencode-go",
           "model": "Gemini 4 Argon",
+          "effort": "High",
           "aaSlug": "gemini-4-argon",
-          "score": 0.329,
+          "score": 53,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
+            "quality": 55.2,
+            "costPerTask": 4.9733,
+            "responseTimeSeconds": 53.2,
             "intelligenceIndex": 50.4,
-            "speed": 87.72,
-            "costEfficiency": 0.063
+            "engineeringIndex": 57.3,
+            "financeAndAccountingIndex": 55.9,
+            "strategyAndOpsIndex": 57.2
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 16
+          "priceBlendedPer1M": 8
         },
         {
           "provider": "opencode-go",
-          "model": "Claude Haiku 5.5",
-          "aaSlug": "claude-haiku-5-5",
-          "score": 0.293,
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 46.9,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 36.5,
-            "speed": 235.09,
-            "costEfficiency": 2.5
+            "quality": 49.6,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 175.1,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.4
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Qwen4 Max",
+          "effort": null,
+          "aaSlug": "qwen4-max",
+          "score": 45.6,
+          "breakdown": {
+            "quality": 47.9,
+            "costPerTask": 3.2681,
+            "responseTimeSeconds": 149,
+            "intelligenceIndex": 42.9,
+            "engineeringIndex": 50.1,
+            "financeAndAccountingIndex": 54.1,
+            "strategyAndOpsIndex": 56.9
+          },
+          "priceBlendedPer1M": 3.75
         }
       ],
       "opencode-zen": [
         {
           "provider": "opencode-zen",
           "model": "Gemini 4 Carbon",
+          "effort": "High",
           "aaSlug": "gemini-4-carbon",
-          "score": 0.41,
+          "score": 61,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
+            "quality": 63.7,
+            "costPerTask": 5.4848,
+            "responseTimeSeconds": 80.7,
             "intelligenceIndex": 60,
-            "speed": 89.84,
-            "costEfficiency": 0.125
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
           "priceBlendedPer1M": 8
         },
         {
           "provider": "opencode-zen",
           "model": "Claude Opus 5.5",
+          "effort": "Max",
           "aaSlug": "claude-opus-5-5",
-          "score": 0.402,
+          "score": 58.8,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
+            "quality": 63.4,
+            "costPerTask": 10.0364,
+            "responseTimeSeconds": 373.2,
             "intelligenceIndex": 59.1,
-            "speed": 96.36,
-            "costEfficiency": 0.063
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 59.4,
+            "strategyAndOpsIndex": 61.4
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
           "priceBlendedPer1M": 16
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.1 Sol",
+          "effort": "Max",
+          "aaSlug": "gpt-6-1-sol",
+          "score": 56.9,
+          "breakdown": {
+            "quality": 58,
+            "costPerTask": 1.2721,
+            "responseTimeSeconds": 171.3,
+            "intelligenceIndex": 54.6,
+            "engineeringIndex": 59.4,
+            "financeAndAccountingIndex": 56.2,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "cursor": [
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 61,
+          "breakdown": {
+            "quality": 63.7,
+            "costPerTask": 5.4848,
+            "responseTimeSeconds": 80.7,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "cursor",
+          "model": "Claude Opus 5.5",
+          "effort": "Max",
+          "aaSlug": "claude-opus-5-5",
+          "score": 58.8,
+          "breakdown": {
+            "quality": 63.4,
+            "costPerTask": 10.0364,
+            "responseTimeSeconds": 373.2,
+            "intelligenceIndex": 59.1,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 59.4,
+            "strategyAndOpsIndex": 61.4
+          },
+          "priceBlendedPer1M": 16
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "Xhigh",
+          "aaSlug": "gemini-4-hydrogen",
+          "score": 56.8,
+          "breakdown": {
+            "quality": 58.2,
+            "costPerTask": 3.1602,
+            "responseTimeSeconds": 45.9,
+            "intelligenceIndex": 53.9,
+            "engineeringIndex": 60.1,
+            "financeAndAccountingIndex": 58.1,
+            "strategyAndOpsIndex": 57.7
+          },
+          "priceBlendedPer1M": 6
+        }
+      ],
+      "copilot": [
+        {
+          "provider": "copilot",
+          "model": "Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 61,
+          "breakdown": {
+            "quality": 63.7,
+            "costPerTask": 5.4848,
+            "responseTimeSeconds": 80.7,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "copilot",
+          "model": "Claude Opus 5.5",
+          "effort": "Max",
+          "aaSlug": "claude-opus-5-5",
+          "score": 58.8,
+          "breakdown": {
+            "quality": 63.4,
+            "costPerTask": 10.0364,
+            "responseTimeSeconds": 373.2,
+            "intelligenceIndex": 59.1,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 59.4,
+            "strategyAndOpsIndex": 61.4
+          },
+          "priceBlendedPer1M": 16
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.1 Sol",
+          "effort": "Max",
+          "aaSlug": "gpt-6-1-sol",
+          "score": 56.9,
+          "breakdown": {
+            "quality": 58,
+            "costPerTask": 1.2721,
+            "responseTimeSeconds": 171.3,
+            "intelligenceIndex": 54.6,
+            "engineeringIndex": 59.4,
+            "financeAndAccountingIndex": 56.2,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
         }
       ],
       "clinepass": [
         {
           "provider": "clinepass",
           "model": "Kimi K3.1 Pro",
+          "effort": null,
           "aaSlug": "kimi-k3-1-pro",
-          "score": 0.291,
+          "score": 46.9,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
+            "quality": 49.6,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 175.1,
             "intelligenceIndex": 46.5,
-            "speed": 29.08,
-            "costEfficiency": 0.125
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
           "priceBlendedPer1M": 8
         },
         {
           "provider": "clinepass",
           "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "Max",
           "aaSlug": "deepseek-v4-1-flash-1017",
-          "score": 0.241,
+          "score": 38.1,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
+            "quality": 36.1,
+            "costPerTask": 0.3011,
+            "responseTimeSeconds": 42.2,
             "intelligenceIndex": 32.6,
-            "speed": 171.81,
-            "costEfficiency": 2.051
+            "engineeringIndex": 37.6,
+            "financeAndAccountingIndex": 42.2,
+            "strategyAndOpsIndex": 49.2
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
           "priceBlendedPer1M": 0.487
-        }
-      ]
-    },
-    "softwareFactory": {
-      "copilot": [
-        {
-          "provider": "copilot",
-          "model": "Claude Haiku 5.5",
-          "aaSlug": "claude-haiku-5-5",
-          "score": 0.284,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 36.5,
-            "speed": 235.09,
-            "costEfficiency": 2.5
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.4
-        },
-        {
-          "provider": "copilot",
-          "model": "GPT-6 Luna",
-          "aaSlug": "gpt-6-luna",
-          "score": 0.216,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 27.9,
-            "speed": 120.3,
-            "costEfficiency": 2.5
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.4
-        }
-      ],
-      "opencode-go": [
-        {
-          "provider": "opencode-go",
-          "model": "Claude Haiku 5.5",
-          "aaSlug": "claude-haiku-5-5",
-          "score": 0.284,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 36.5,
-            "speed": 235.09,
-            "costEfficiency": 2.5
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.4
-        },
-        {
-          "provider": "opencode-go",
-          "model": "MiMo-V2.6-Flash",
-          "aaSlug": "mimo-v2-6-flash",
-          "score": 0.27,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 26.7,
-            "speed": 38.45,
-            "costEfficiency": 4.082
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.245
-        }
-      ],
-      "opencode-zen": [
-        {
-          "provider": "opencode-zen",
-          "model": "Claude Haiku 5.5",
-          "aaSlug": "claude-haiku-5-5",
-          "score": 0.284,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 36.5,
-            "speed": 235.09,
-            "costEfficiency": 2.5
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.4
-        },
-        {
-          "provider": "opencode-zen",
-          "model": "GPT 5 Nano",
-          "aaSlug": "gpt-5-nano",
-          "score": 0.279,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": null,
-            "speed": 192.74,
-            "costEfficiency": 3.2
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex",
-            "intelligenceIndex"
-          ],
-          "priceBlendedPer1M": 0.313
-        }
-      ],
-      "clinepass": [
-        {
-          "provider": "clinepass",
-          "model": "MiMo V2.6 Flash",
-          "aaSlug": "mimo-v2-6-flash",
-          "score": 0.27,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 26.7,
-            "speed": 38.45,
-            "costEfficiency": 4.082
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.245
         },
         {
           "provider": "clinepass",
-          "model": "DeepSeek V4.1 Flash",
-          "aaSlug": "deepseek-v4-1-flash",
-          "score": 0.23,
+          "model": "MiMo V2.6 Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 35.1,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": null,
-            "speed": 234.6,
-            "costEfficiency": 2.051
+            "quality": 33,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 49,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex",
-            "intelligenceIndex"
-          ],
-          "priceBlendedPer1M": 0.487
+          "priceBlendedPer1M": 0.761
+        }
+      ],
+      "openrouter": [
+        {
+          "provider": "openrouter",
+          "model": "Tencent: Hy4",
+          "effort": null,
+          "aaSlug": "tencent-hy4",
+          "score": 39.6,
+          "breakdown": {
+            "quality": 39.2,
+            "costPerTask": 0.5155,
+            "responseTimeSeconds": 114.6,
+            "intelligenceIndex": 34.6,
+            "engineeringIndex": 41.1,
+            "financeAndAccountingIndex": 38,
+            "strategyAndOpsIndex": 48.7
+          },
+          "priceBlendedPer1M": 1.042
         }
       ]
     },
     "llmWiki": {
-      "copilot": [
-        {
-          "provider": "copilot",
-          "model": "Gemini 4 Carbon",
-          "aaSlug": "gemini-4-carbon",
-          "score": 0.421,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 60,
-            "speed": 89.84,
-            "costEfficiency": 0.3
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 3.333
-        },
-        {
-          "provider": "copilot",
-          "model": "Claude Opus 5.5",
-          "aaSlug": "claude-opus-5-5",
-          "score": 0.412,
-          "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 59.1,
-            "speed": 96.36,
-            "costEfficiency": 0.15
-          },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 6.667
-        }
-      ],
       "opencode-go": [
         {
           "provider": "opencode-go",
-          "model": "Claude Haiku 5.5",
-          "aaSlug": "claude-haiku-5-5",
-          "score": 0.388,
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "Max",
+          "aaSlug": "deepseek-v4-1-flash-1017",
+          "score": 46.6,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 36.5,
-            "speed": 235.09,
-            "costEfficiency": 6
+            "quality": 39.2,
+            "costPerTask": 0.3011,
+            "responseTimeSeconds": 42.2,
+            "intelligenceIndex": 32.6,
+            "engineeringIndex": 37.6,
+            "financeAndAccountingIndex": 42.2,
+            "strategyAndOpsIndex": 49.2
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.167
+          "priceBlendedPer1M": 0.487
         },
         {
           "provider": "opencode-go",
-          "model": "Gemini 4 Argon",
-          "aaSlug": "gemini-4-argon",
-          "score": 0.337,
+          "model": "Claude Haiku 5.5",
+          "effort": "Xhigh",
+          "aaSlug": "claude-haiku-5-5-xhigh",
+          "score": 45.6,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 50.4,
-            "speed": 87.72,
-            "costEfficiency": 0.15
+            "quality": 37.4,
+            "costPerTask": 0.2484,
+            "responseTimeSeconds": 49.5,
+            "intelligenceIndex": 34.6,
+            "engineeringIndex": 40.6,
+            "financeAndAccountingIndex": 41.1,
+            "strategyAndOpsIndex": 39.1
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 6.667
+          "priceBlendedPer1M": 0.4
+        },
+        {
+          "provider": "opencode-go",
+          "model": "MiMo-V2.6-Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 44.5,
+          "breakdown": {
+            "quality": 36.4,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 49,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
+          },
+          "priceBlendedPer1M": 0.761
         }
       ],
       "opencode-zen": [
         {
           "provider": "opencode-zen",
-          "model": "Gemini 4 Carbon",
-          "aaSlug": "gemini-4-carbon",
-          "score": 0.421,
+          "model": "GPT-6.1 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-1-sol-medium",
+          "score": 57,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 60,
-            "speed": 89.84,
-            "costEfficiency": 0.3
+            "quality": 49.1,
+            "costPerTask": 0.3594,
+            "responseTimeSeconds": 14.5,
+            "intelligenceIndex": 46.3,
+            "engineeringIndex": 52.1,
+            "financeAndAccountingIndex": 50.6,
+            "strategyAndOpsIndex": 53.3
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 3.333
+          "priceBlendedPer1M": 8
         },
         {
           "provider": "opencode-zen",
-          "model": "Claude Opus 5.5",
-          "aaSlug": "claude-opus-5-5",
-          "score": 0.412,
+          "model": "Gemini 4 Hydrogen",
+          "effort": "High",
+          "aaSlug": "gemini-4-hydrogen-high",
+          "score": 51.3,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 59.1,
-            "speed": 96.36,
-            "costEfficiency": 0.15
+            "quality": 53.3,
+            "costPerTask": 1.8733,
+            "responseTimeSeconds": 18.9,
+            "intelligenceIndex": 50.8,
+            "engineeringIndex": 57,
+            "financeAndAccountingIndex": 56.1,
+            "strategyAndOpsIndex": 55.4
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 6.667
+          "priceBlendedPer1M": 6
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "Gemini 4 Carbon",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-carbon-medium",
+          "score": 50.6,
+          "breakdown": {
+            "quality": 58.5,
+            "costPerTask": 4.6777,
+            "responseTimeSeconds": 29.9,
+            "intelligenceIndex": 58.3,
+            "engineeringIndex": 63.9,
+            "financeAndAccountingIndex": 59.6,
+            "strategyAndOpsIndex": 57.8
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "cursor": [
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "High",
+          "aaSlug": "gemini-4-hydrogen-high",
+          "score": 51.3,
+          "breakdown": {
+            "quality": 53.3,
+            "costPerTask": 1.8733,
+            "responseTimeSeconds": 18.9,
+            "intelligenceIndex": 50.8,
+            "engineeringIndex": 57,
+            "financeAndAccountingIndex": 56.1,
+            "strategyAndOpsIndex": 55.4
+          },
+          "priceBlendedPer1M": 6
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Carbon",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-carbon-medium",
+          "score": 50.6,
+          "breakdown": {
+            "quality": 58.5,
+            "costPerTask": 4.6777,
+            "responseTimeSeconds": 29.9,
+            "intelligenceIndex": 58.3,
+            "engineeringIndex": 63.9,
+            "financeAndAccountingIndex": 59.6,
+            "strategyAndOpsIndex": 57.8
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "cursor",
+          "model": "Claude Opus 5.5",
+          "effort": "High",
+          "aaSlug": "claude-opus-5-5-high",
+          "score": 47.5,
+          "breakdown": {
+            "quality": 53.6,
+            "costPerTask": 3.4647,
+            "responseTimeSeconds": 28.5,
+            "intelligenceIndex": 51.8,
+            "engineeringIndex": 57.8,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 16
+        }
+      ],
+      "copilot": [
+        {
+          "provider": "copilot",
+          "model": "GPT-6.1 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-1-sol-medium",
+          "score": 57,
+          "breakdown": {
+            "quality": 49.1,
+            "costPerTask": 0.3594,
+            "responseTimeSeconds": 14.5,
+            "intelligenceIndex": 46.3,
+            "engineeringIndex": 52.1,
+            "financeAndAccountingIndex": 50.6,
+            "strategyAndOpsIndex": 53.3
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.1 Terra",
+          "effort": "High",
+          "aaSlug": "gpt-6-1-terra-high",
+          "score": 53.7,
+          "breakdown": {
+            "quality": 44.1,
+            "costPerTask": 0.2593,
+            "responseTimeSeconds": 17.6,
+            "intelligenceIndex": 42.4,
+            "engineeringIndex": 46.4,
+            "financeAndAccountingIndex": 44.2,
+            "strategyAndOpsIndex": 47.4
+          },
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "copilot",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "High",
+          "aaSlug": "gemini-4-hydrogen-high",
+          "score": 51.3,
+          "breakdown": {
+            "quality": 53.3,
+            "costPerTask": 1.8733,
+            "responseTimeSeconds": 18.9,
+            "intelligenceIndex": 50.8,
+            "engineeringIndex": 57,
+            "financeAndAccountingIndex": 56.1,
+            "strategyAndOpsIndex": 55.4
+          },
+          "priceBlendedPer1M": 6
         }
       ],
       "clinepass": [
         {
           "provider": "clinepass",
           "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "Max",
           "aaSlug": "deepseek-v4-1-flash-1017",
-          "score": 0.305,
+          "score": 46.6,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
+            "quality": 39.2,
+            "costPerTask": 0.3011,
+            "responseTimeSeconds": 42.2,
             "intelligenceIndex": 32.6,
-            "speed": 171.81,
-            "costEfficiency": 4.444
+            "engineeringIndex": 37.6,
+            "financeAndAccountingIndex": 42.2,
+            "strategyAndOpsIndex": 49.2
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 0.225
+          "priceBlendedPer1M": 0.487
         },
         {
           "provider": "clinepass",
-          "model": "Kimi K3.1 Pro",
-          "aaSlug": "kimi-k3-1-pro",
-          "score": 0.293,
+          "model": "MiMo V2.6 Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 44.5,
           "breakdown": {
-            "agenticIndex": null,
-            "codingIndex": null,
-            "intelligenceIndex": 46.5,
-            "speed": 29.08,
-            "costEfficiency": 0.3
+            "quality": 36.4,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 49,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
           },
-          "missingMetrics": [
-            "agenticIndex",
-            "codingIndex"
-          ],
-          "priceBlendedPer1M": 3.333
+          "priceBlendedPer1M": 0.761
+        },
+        {
+          "provider": "clinepass",
+          "model": "MiMo V2.6 Flash",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-flash",
+          "score": 42.5,
+          "breakdown": {
+            "quality": 34,
+            "costPerTask": 0.1285,
+            "responseTimeSeconds": 42.8,
+            "intelligenceIndex": 26.7,
+            "engineeringIndex": 31,
+            "financeAndAccountingIndex": 36.9,
+            "strategyAndOpsIndex": 45.7
+          },
+          "priceBlendedPer1M": 0.245
+        }
+      ],
+      "openrouter": [
+        {
+          "provider": "openrouter",
+          "model": "Tencent: Hy4",
+          "effort": null,
+          "aaSlug": "tencent-hy4",
+          "score": 41.9,
+          "breakdown": {
+            "quality": 39,
+            "costPerTask": 0.5155,
+            "responseTimeSeconds": 114.6,
+            "intelligenceIndex": 34.6,
+            "engineeringIndex": 41.1,
+            "financeAndAccountingIndex": 38,
+            "strategyAndOpsIndex": 48.7
+          },
+          "priceBlendedPer1M": 1.042
+        }
+      ]
+    },
+    "financeWork": {
+      "opencode-go": [
+        {
+          "provider": "opencode-go",
+          "model": "Gemini 4 Argon",
+          "effort": "High",
+          "aaSlug": "gemini-4-argon",
+          "score": 51.7,
+          "breakdown": {
+            "quality": 56.3,
+            "costPerTask": 4.9733,
+            "responseTimeSeconds": 53.2,
+            "intelligenceIndex": 50.4,
+            "engineeringIndex": 57.3,
+            "financeAndAccountingIndex": 55.9,
+            "strategyAndOpsIndex": 57.2
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Qwen4 Max",
+          "effort": null,
+          "aaSlug": "qwen4-max",
+          "score": 50.9,
+          "breakdown": {
+            "quality": 54.9,
+            "costPerTask": 3.2681,
+            "responseTimeSeconds": 149,
+            "intelligenceIndex": 42.9,
+            "engineeringIndex": 50.1,
+            "financeAndAccountingIndex": 54.1,
+            "strategyAndOpsIndex": 56.9
+          },
+          "priceBlendedPer1M": 3.75
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 50.1,
+          "breakdown": {
+            "quality": 54.6,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 175.1,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "opencode-zen": [
+        {
+          "provider": "opencode-zen",
+          "model": "Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 57,
+          "breakdown": {
+            "quality": 62.1,
+            "costPerTask": 5.4848,
+            "responseTimeSeconds": 80.7,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.1 Sol",
+          "effort": "Xhigh",
+          "aaSlug": "gpt-6-1-sol-xhigh",
+          "score": 56.4,
+          "breakdown": {
+            "quality": 55.8,
+            "costPerTask": 0.764,
+            "responseTimeSeconds": 76.7,
+            "intelligenceIndex": 52.5,
+            "engineeringIndex": 57.5,
+            "financeAndAccountingIndex": 55.2,
+            "strategyAndOpsIndex": 57.2
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "High",
+          "aaSlug": "gemini-4-hydrogen-high",
+          "score": 54.9,
+          "breakdown": {
+            "quality": 55.9,
+            "costPerTask": 1.8733,
+            "responseTimeSeconds": 18.9,
+            "intelligenceIndex": 50.8,
+            "engineeringIndex": 57,
+            "financeAndAccountingIndex": 56.1,
+            "strategyAndOpsIndex": 55.4
+          },
+          "priceBlendedPer1M": 6
+        }
+      ],
+      "cursor": [
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 57,
+          "breakdown": {
+            "quality": 62.1,
+            "costPerTask": 5.4848,
+            "responseTimeSeconds": 80.7,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "High",
+          "aaSlug": "gemini-4-hydrogen-high",
+          "score": 54.9,
+          "breakdown": {
+            "quality": 55.9,
+            "costPerTask": 1.8733,
+            "responseTimeSeconds": 18.9,
+            "intelligenceIndex": 50.8,
+            "engineeringIndex": 57,
+            "financeAndAccountingIndex": 56.1,
+            "strategyAndOpsIndex": 55.4
+          },
+          "priceBlendedPer1M": 6
+        },
+        {
+          "provider": "cursor",
+          "model": "Claude Opus 5.5",
+          "effort": "Max",
+          "aaSlug": "claude-opus-5-5",
+          "score": 52,
+          "breakdown": {
+            "quality": 60,
+            "costPerTask": 10.0364,
+            "responseTimeSeconds": 373.2,
+            "intelligenceIndex": 59.1,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 59.4,
+            "strategyAndOpsIndex": 61.4
+          },
+          "priceBlendedPer1M": 16
+        }
+      ],
+      "copilot": [
+        {
+          "provider": "copilot",
+          "model": "Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 57,
+          "breakdown": {
+            "quality": 62.1,
+            "costPerTask": 5.4848,
+            "responseTimeSeconds": 80.7,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.1 Sol",
+          "effort": "Xhigh",
+          "aaSlug": "gpt-6-1-sol-xhigh",
+          "score": 56.4,
+          "breakdown": {
+            "quality": 55.8,
+            "costPerTask": 0.764,
+            "responseTimeSeconds": 76.7,
+            "intelligenceIndex": 52.5,
+            "engineeringIndex": 57.5,
+            "financeAndAccountingIndex": 55.2,
+            "strategyAndOpsIndex": 57.2
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "copilot",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "High",
+          "aaSlug": "gemini-4-hydrogen-high",
+          "score": 54.9,
+          "breakdown": {
+            "quality": 55.9,
+            "costPerTask": 1.8733,
+            "responseTimeSeconds": 18.9,
+            "intelligenceIndex": 50.8,
+            "engineeringIndex": 57,
+            "financeAndAccountingIndex": 56.1,
+            "strategyAndOpsIndex": 55.4
+          },
+          "priceBlendedPer1M": 6
+        }
+      ],
+      "clinepass": [
+        {
+          "provider": "clinepass",
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 50.1,
+          "breakdown": {
+            "quality": 54.6,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 175.1,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "clinepass",
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "Max",
+          "aaSlug": "deepseek-v4-1-flash-1017",
+          "score": 48,
+          "breakdown": {
+            "quality": 44.3,
+            "costPerTask": 0.3011,
+            "responseTimeSeconds": 42.2,
+            "intelligenceIndex": 32.6,
+            "engineeringIndex": 37.6,
+            "financeAndAccountingIndex": 42.2,
+            "strategyAndOpsIndex": 49.2
+          },
+          "priceBlendedPer1M": 0.487
+        },
+        {
+          "provider": "clinepass",
+          "model": "MiMo V2.6 Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 45.4,
+          "breakdown": {
+            "quality": 41.3,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 49,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
+          },
+          "priceBlendedPer1M": 0.761
+        }
+      ],
+      "openrouter": [
+        {
+          "provider": "openrouter",
+          "model": "Tencent: Hy4",
+          "effort": null,
+          "aaSlug": "tencent-hy4",
+          "score": 42.7,
+          "breakdown": {
+            "quality": 41.2,
+            "costPerTask": 0.5155,
+            "responseTimeSeconds": 114.6,
+            "intelligenceIndex": 34.6,
+            "engineeringIndex": 41.1,
+            "financeAndAccountingIndex": 38,
+            "strategyAndOpsIndex": 48.7
+          },
+          "priceBlendedPer1M": 1.042
         }
       ]
     }
