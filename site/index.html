@@ -67,16 +67,55 @@
         content: "🧅 ";
       }
       .lede {
-        color: var(--muted);
-        margin: 0 0 12px;
+        color: var(--text);
+        margin: 0 0 10px;
         font-style: italic;
       }
-      .meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px 20px;
-        font-size: 0.85rem;
+      .how {
         color: var(--muted);
+        margin: 0;
+        font-size: 0.88rem;
+      }
+      .how strong {
+        color: var(--text);
+      }
+      .updated {
+        margin: 0 0 10px;
+      }
+      .sources {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 190px), 1fr));
+        gap: 8px;
+        max-width: 860px;
+        margin: 0 auto 16px;
+        padding: 0;
+        list-style: none;
+        text-align: left;
+      }
+      .sources li {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+      }
+      .sources a {
+        font-weight: 600;
+      }
+      .sources li.lead {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0 12px;
+      }
+      .sources .note {
+        font-size: 0.72rem;
+      }
+      .sources time {
+        font-variant-numeric: tabular-nums;
+        color: var(--text);
       }
       a {
         color: var(--accent);
@@ -105,9 +144,6 @@
         font-size: 1.35rem;
         margin: 0 0 4px;
         color: var(--text);
-      }
-      h2::before {
-        content: "🥖 ";
       }
       .desc {
         color: var(--muted);
@@ -140,6 +176,15 @@
         color: var(--accent);
         text-transform: uppercase;
         letter-spacing: 0.04em;
+      }
+      h3 .chez {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        text-transform: none;
+        letter-spacing: 0;
+        color: var(--muted);
+        margin-right: 2px;
       }
       .table-wrap {
         overflow-x: auto;
@@ -181,6 +226,21 @@
         font-weight: 700;
         color: var(--accent);
       }
+      tr.top td {
+        background: var(--accent-soft);
+      }
+      tr.top td:first-child {
+        box-shadow: inset 3px 0 0 var(--accent);
+      }
+      .pick {
+        margin-left: 6px;
+        font-family: "Playfair Display", serif;
+        font-size: 0.72rem;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--accent);
+        white-space: nowrap;
+      }
       .empty,
       .error {
         color: var(--muted);
@@ -192,48 +252,78 @@
         padding-bottom: 40px;
         text-align: center;
       }
+      footer h2 {
+        font-size: 1rem;
+        color: var(--muted);
+        margin: 0 0 6px;
+      }
+      footer h2::before {
+        content: "📜 ";
+      }
+      .signoff {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 0.9rem;
+      }
     </style>
   </head>
   <body>
     <header>
       <h1>Agentic Onion Sellers</h1>
       <p class="lede">
-        "Ze finest recommendations, smuggled past ze checkpoint in a string of onions." Which models
-        to use on GitHub Copilot, OpenCode Go, OpenCode Zen and ClinePass, per kind of task —
-        recomputed daily from provider pricing and Artificial Analysis benchmarks.
+        Listen very carefully, I shall say zis only once. Ze Resistance has asked us, ze humble
+        onion sellers, to pass you ze finest model recommendations, hidden in a string of onions so
+        ze Colonel suspects nothing. For each kind of task, we tell you which models to order from
+        each provider — and we change ze menu every morning, before ze Colonel has finished his
+        croissant.
       </p>
-      <div class="meta" id="meta"></div>
+      <p class="how">
+        <strong>How ze dish is scored:</strong> quality is each category's mix of Artificial
+        Analysis indexes, in index points. Score is that quality minus a penalty for each doubling of
+        cost above $1 per task and of response time above 60 s; the rates are shown under each
+        category. Each model is listed at its best-scoring reasoning effort, shown after its name.
+        $/task is what one Intelligence Index task would cost at the provider's prices, so it counts
+        how many tokens a model spends; Time is seconds until a 500-token answer is complete,
+        thinking included; $/1M is the blended per-token price (3 output tokens per input token).
+      </p>
     </header>
 
     <main id="app"><p class="empty">Setting ze tables…</p></main>
 
     <footer>
+      <h2>Ze fine print</h2>
+      <p class="updated" id="updated"></p>
+      <ul class="sources" id="sources"></ul>
       <p>
-        Score is quality minus a penalty for each doubling of cost above $1 per task and of
-        response time above 60 s, all in index points. Quality is the category's mix of
-        Artificial Analysis indexes. Each model is listed at its best-scoring reasoning effort,
-        shown after its name. $/task is what one Artificial Analysis Intelligence Index task
-        would cost at the provider's prices, so it accounts for how many tokens a model spends;
-        Time is seconds until a 500-token answer is complete, thinking included; $/1M is the
-        blended per-token price (3 output tokens per input token). Pricing:
-        <a href="https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing"
-          >GitHub Copilot docs</a
-        >, <a href="https://opencode.ai/docs/go/">OpenCode Go docs</a>,
-        <a href="https://opencode.ai/docs/zen/">OpenCode Zen docs</a>,
-        <a href="https://docs.cline.bot/getting-started/clinepass">ClinePass docs</a>. Benchmarks:
-        <a href="https://artificialanalysis.ai/">Artificial Analysis</a>. Source:
-        <a href="https://github.com/KuzniAI/onion-sellers">KuzniAI/onion-sellers</a>. Inspired by
-        René's onion-selling disguise in 'Allo 'Allo!.
+        Inspired by René's onion-selling disguise in 'Allo 'Allo!. Built by
+        <a href="https://github.com/KuzniAI/onion-sellers">KuźnAI</a>.
       </p>
+      <p class="signoff">Good moaning.</p>
     </footer>
 
     <script>
       const PROVIDERS = [
-        { id: "copilot", name: "GitHub Copilot" },
-        { id: "opencode-go", name: "OpenCode Go" },
-        { id: "opencode-zen", name: "OpenCode Zen" },
-        { id: "clinepass", name: "ClinePass" },
+        {
+          id: "copilot",
+          name: "GitHub Copilot",
+          docs: "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing",
+        },
+        { id: "opencode-go", name: "OpenCode Go", docs: "https://opencode.ai/docs/go/" },
+        { id: "opencode-zen", name: "OpenCode Zen", docs: "https://opencode.ai/docs/zen/" },
+        {
+          id: "clinepass",
+          name: "ClinePass",
+          docs: "https://docs.cline.bot/getting-started/clinepass",
+        },
       ];
+      // One dish per category; anything new falls back to ze baguette.
+      const CATEGORY_EMOJI = {
+        codingHeavy: "🍷",
+        codingLight: "🥐",
+        codeReview: "🧀",
+        llmWiki: "🥖",
+        financeWork: "💶",
+      };
       const QUALITY_LABELS = {
         intelligenceIndex: "Intelligence",
         engineeringIndex: "Engineering",
@@ -261,45 +351,43 @@
 
       function renderMeta(recs, aaData, pricing) {
         const generatedAt = new Date(recs.generatedAt);
+        const staleBadge = (fetchedAt) =>
+          generatedAt - new Date(fetchedAt) > STALE_MS ? '<span class="badge">stale</span>' : "";
+        const source = (name, url, fetchedAt, note = "", lead = false) =>
+          `<li${lead ? ' class="lead"' : ""}><span><a href="${esc(url)}">${esc(name)}</a>${note}</span>` +
+          (fetchedAt
+            ? `<span><time datetime="${esc(fetchedAt)}">${esc(fmtDate(fetchedAt))}</time>${staleBadge(fetchedAt)}</span>`
+            : "<span>unavailable</span>") +
+          "</li>";
+        const aaVersion =
+          aaData?.intelligenceIndexVersion != null
+            ? ` <span class="note">Intelligence Index v${esc(aaData.intelligenceIndexVersion)}</span>`
+            : "";
         const items = [
-          `Updated <time datetime="${esc(recs.generatedAt)}">${esc(fmtDate(recs.generatedAt))}</time>`,
-          `${num(recs.candidatesConsidered, 0)} models scored`,
+          source(
+            "Artificial Analysis",
+            "https://artificialanalysis.ai/",
+            aaData?.fetchedAt,
+            aaVersion,
+            true,
+          ),
+          ...PROVIDERS.map((p, i) => source(p.name, p.docs, pricing[i]?.fetchedAt)),
         ];
-        if (aaData?.fetchedAt) {
-          const stale = generatedAt - new Date(aaData.fetchedAt) > STALE_MS;
-          items.push(
-            `<a href="${esc(aaData.sourceUrl)}">Artificial Analysis data</a>` +
-              (aaData.intelligenceIndexVersion != null
-                ? ` (Intelligence Index v${esc(aaData.intelligenceIndexVersion)})`
-                : "") +
-              `: ${esc(fmtDate(aaData.fetchedAt))}` +
-              (stale ? '<span class="badge">stale</span>' : ""),
-          );
-        } else {
-          items.push("Artificial Analysis data: unavailable");
-        }
-        PROVIDERS.forEach((provider, i) => {
-          const source = pricing[i];
-          if (!source) {
-            items.push(`${provider.name} pricing: unavailable`);
-            return;
-          }
-          const stale = generatedAt - new Date(source.fetchedAt) > STALE_MS;
-          items.push(
-            `<a href="${esc(source.sourceUrl)}">${provider.name} pricing</a>: ${esc(fmtDate(source.fetchedAt))}` +
-              (stale ? '<span class="badge">stale</span>' : ""),
-          );
-        });
-        document.getElementById("meta").innerHTML = items.map((i) => `<span>${i}</span>`).join("");
+        document.getElementById("updated").innerHTML =
+          `Menu updated <time datetime="${esc(recs.generatedAt)}">${esc(fmtDate(recs.generatedAt))}</time>` +
+          ` · ${num(recs.candidatesConsidered, 0)} models scored · data as of:`;
+        document.getElementById("sources").innerHTML = items.join("");
       }
 
       function renderTable(rows) {
-        if (!rows?.length) return '<p class="empty">No scored models.</p>';
+        if (!rows?.length) return '<p class="empty">Ze cupboard is bare: no scored models.</p>';
         const body = rows
           .map(
-            (r, i) => `<tr>
+            (r, i) => `<tr${i === 0 ? ' class="top"' : ""}>
               <td>${i + 1}</td>
-              <td class="model">${esc(r.model)}${r.effort ? ` (${esc(r.effort)})` : ""}</td>
+              <td class="model">${esc(r.model)}${r.effort ? ` (${esc(r.effort)})` : ""}${
+                i === 0 ? '<span class="pick">chef’s pick</span>' : ""
+              }</td>
               <td class="score">${num(r.score)}</td>
               <td>${num(r.breakdown.quality)}</td>
               <td>$${num(r.breakdown.costPerTask, 3)}</td>
@@ -333,10 +421,11 @@
           .map(([key, label]) => `<li>−${num(config[key])} per doubling of ${label}</li>`);
         const weights = [...mix, ...rates].join("");
         const providers = PROVIDERS.map(
-          (p) => `<div><h3>${p.name}</h3>${renderTable(byProvider[p.id])}</div>`,
+          (p) =>
+            `<div><h3><span class="chez">chez</span> ${p.name}</h3>${renderTable(byProvider[p.id])}</div>`,
         ).join("");
         return `<section class="category">
-          <h2>${esc(titleCase(name))}</h2>
+          <h2><span aria-hidden="true">${CATEGORY_EMOJI[name] ?? "🥖"}</span> ${esc(titleCase(name))}</h2>
           ${config?.description ? `<p class="desc">${esc(config.description)}</p>` : ""}
           <ul class="weights">${weights}</ul>
           <div class="providers">${providers}</div>
@@ -357,7 +446,7 @@
             .map(([name, byProvider]) => renderCategory(name, byProvider, config.categories[name]))
             .join("");
         } catch (err) {
-          app.innerHTML = `<p class="error">Could not load recommendations (${esc(err.message)}).</p>`;
+          app.innerHTML = `<p class="error">Sacré bleu! Could not load recommendations (${esc(err.message)}).</p>`;
         }
       }
 
