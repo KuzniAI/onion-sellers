@@ -1,0 +1,1 @@
+Update pi agent to newest version in @package.json Review the usage in code and update if necessary. Do not run it yet. Create a PR once you are done
