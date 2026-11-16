@@ -1,0 +1,65 @@
+[opencode-go] parser failed for https://opencode.ai/inference/go/v1/models: parseOpenCodeGoPricingHtml: pricing table not found -- page structure may have changed
+  Parser: /Users/damian/Code/onion-sellers/src/opencode-go/parser.ts
+
+---
+
+<pasted_content id="0894">
+The saved models file is the old HTML shape. I'll map the JSON fields next so the new parser matches the row contract.
+[opencode-go] pi -> bash
+
+[opencode-go] pi -> grep
+
+[opencode-go] pi -> bash
+
+[opencode-go] pi -> read
+
+[opencode-go] pi -> grep
+
+[opencode-go] pi -> read
+
+[opencode-go] pi -> grep
+
+[opencode-go] pi -> read
+
+[opencode-go] pi -> read
+
+[opencode-go] pi -> read
+
+[opencode-go] pi -> read
+
+[opencode-go] pi -> grep
+
+[opencode-go] pi -> grep
+
+[opencode-go] pi -> read
+
+[opencode-go] pi -> read
+
+[opencode-go] pi -> grep
+
+[opencode-go] pi -> read
+
+[opencode-go] pi -> grep
+
+[opencode-go] pi -> bash
+</pasted_content id="0894">
+
+Looks like it's hanging? Maybe cannot run bash?
+
+---
+
+ok, they are done.  Can we improve on those logs - enhance them or drop them? Looks like something we can configure for Pi
+
+<pasted_content id="0894">
+[openrouter] pi -> bash
+
+[openrouter] pi -> bash
+
+[openrouter] pi -> bash
+
+[openrouter] pi -> read
+</pasted_content id="0894">
+
+---
+
+commit this and move it to main
