@@ -24,6 +24,14 @@ function nameKey(name: string): string {
     .join(" ");
 }
 
+// OpenRouter prefixes names with the vendor ("Google: Gemini 4 Carbon"), which AA omits.
+// Tencent is the exception AA names with the vendor ("Tencent Hy4"), so the full name is
+// still tried as a fallback.
+function nameKeys(name: string): string[] {
+  const withoutVendor = name.replace(/^[^:]+:\s+/, "");
+  return withoutVendor === name ? [nameKey(name)] : [nameKey(withoutVendor), nameKey(name)];
+}
+
 // Maps name key -> slug of AA's base variant (the unsuffixed slug, e.g. "gpt-5-6-luna" rather
 // than "gpt-5-6-luna-low"), or null when the variants can't be told apart.
 function buildAaIndex(models: AaModel[]): Map<string, string | null> {
@@ -77,7 +85,8 @@ export async function updateModelMapping(): Promise<void> {
     if (entry?.aaSlug && aaSlugs.has(entry.aaSlug)) continue;
 
     // undefined: no AA model with this name; null: several variants, none clearly the base.
-    const match = aaIndex.get(nameKey(candidate.model));
+    const key = nameKeys(candidate.model).find((k) => aaIndex.has(k));
+    const match = key === undefined ? undefined : aaIndex.get(key);
 
     if (match) {
       if (entry) {
