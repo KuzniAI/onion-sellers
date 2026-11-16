@@ -209,8 +209,10 @@
 
     <footer>
       <p>
-        Score is a weighted sum of min-max normalized metrics across all scored models. Blended
-        price assumes 3 output tokens per input token. Pricing:
+        Score is a weighted sum of min-max normalized metrics across all scored models. $/task is
+        what one Artificial Analysis Intelligence Index task would cost at the provider's prices,
+        so it accounts for how many tokens a model spends; $/1M is the blended per-token price
+        (3 output tokens per input token unless the category says otherwise). Pricing:
         <a href="https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing"
           >GitHub Copilot docs</a
         >, <a href="https://opencode.ai/docs/go/">OpenCode Go docs</a>,
@@ -230,8 +232,6 @@
         { id: "clinepass", name: "ClinePass" },
       ];
       const WEIGHT_LABELS = {
-        agenticIndex: "Agentic",
-        codingIndex: "Coding",
         intelligenceIndex: "Intelligence",
         costEfficiency: "Cost efficiency",
         speed: "Speed",
@@ -264,7 +264,11 @@
         if (aaData?.fetchedAt) {
           const stale = generatedAt - new Date(aaData.fetchedAt) > STALE_MS;
           items.push(
-            `<a href="${esc(aaData.sourceUrl)}">Artificial Analysis data</a>: ${esc(fmtDate(aaData.fetchedAt))}` +
+            `<a href="${esc(aaData.sourceUrl)}">Artificial Analysis data</a>` +
+              (aaData.intelligenceIndexVersion != null
+                ? ` (Intelligence Index v${esc(aaData.intelligenceIndexVersion)})`
+                : "") +
+              `: ${esc(fmtDate(aaData.fetchedAt))}` +
               (stale ? '<span class="badge">stale</span>' : ""),
           );
         } else {
@@ -293,9 +297,8 @@
               <td>${i + 1}</td>
               <td class="model">${esc(r.model)}</td>
               <td class="score">${num(r.score, 3)}</td>
-              <td>${num(r.breakdown.agenticIndex)}</td>
-              <td>${num(r.breakdown.codingIndex)}</td>
               <td>${num(r.breakdown.intelligenceIndex)}</td>
+              <td>$${num(r.breakdown.costPerTask, 3)}</td>
               <td>${num(r.breakdown.speed, 0)}</td>
               <td>$${num(r.priceBlendedPer1M, 3)}</td>
             </tr>`,
@@ -303,8 +306,9 @@
           .join("");
         return `<div class="table-wrap"><table>
           <thead><tr>
-            <th>#</th><th>Model</th><th>Score</th><th>Agentic</th><th>Coding</th>
-            <th>Intel.</th><th>Tok/s</th><th>$/1M</th>
+            <th>#</th><th>Model</th><th>Score</th><th>Intel.</th>
+            <th title="Estimated cost of one Intelligence Index task at this provider's prices">$/task</th>
+            <th>Tok/s</th><th>$/1M</th>
           </tr></thead>
           <tbody>${body}</tbody>
         </table></div>`;
