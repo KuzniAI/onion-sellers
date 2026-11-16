@@ -342,7 +342,8 @@
       };
 
       async function getJson(url) {
-        const res = await fetch(url);
+        // Pages serves JSON with max-age=600; revalidate so a fresh deploy shows up immediately.
+        const res = await fetch(url, { cache: "no-cache" });
         if (!res.ok) throw new Error(`${res.status} on ${url}`);
         return res.json();
       }
