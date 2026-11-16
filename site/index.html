@@ -79,9 +79,6 @@
       .how strong {
         color: var(--text);
       }
-      .updated {
-        margin: 0 0 10px;
-      }
       .sources {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 190px), 1fr));
@@ -292,7 +289,6 @@
 
     <footer>
       <h2>Ze fine print</h2>
-      <p class="updated" id="updated"></p>
       <ul class="sources" id="sources"></ul>
       <p>
         Inspired by René's onion-selling disguise in 'Allo 'Allo!. Built by
@@ -362,9 +358,10 @@
             : "<span>unavailable</span>") +
           "</li>";
         const aaVersion =
-          aaData?.intelligenceIndexVersion != null
+          (aaData?.intelligenceIndexVersion != null
             ? ` <span class="note">Intelligence Index v${esc(aaData.intelligenceIndexVersion)}</span>`
-            : "";
+            : "") +
+          ` <span class="note">${num(recs.candidatesConsidered, 0)} models scored</span>`;
         const items = [
           source(
             "Artificial Analysis",
@@ -375,9 +372,6 @@
           ),
           ...PROVIDERS.map((p, i) => source(p.name, p.docs, pricing[i]?.fetchedAt)),
         ];
-        document.getElementById("updated").innerHTML =
-          `Menu updated <time datetime="${esc(recs.generatedAt)}">${esc(fmtDate(recs.generatedAt))}</time>` +
-          ` · ${num(recs.candidatesConsidered, 0)} models scored · data as of:`;
         document.getElementById("sources").innerHTML = items.join("");
       }
 
