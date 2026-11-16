@@ -1,0 +1,81 @@
+{
+  "cli_version": "0.13.4",
+  "checkpoint_id": "01M7JNKPBB3R7J32CWX5PX91W0",
+  "session_id": "a3dfbe6c-013c-49f6-958c-e7189add4c68",
+  "strategy": "manual-commit",
+  "created_at": "2026-11-16T17:13:55.983067Z",
+  "branch": "aa-intelligence-index-v5",
+  "checkpoints_count": 3,
+  "files_touched": [
+    "config/categories.json"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-5-5",
+  "turn_id": "78947aa0f777",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 64,
+    "cache_creation_tokens": 81661,
+    "cache_read_tokens": 2820267,
+    "output_tokens": 25448,
+    "api_call_count": 28
+  },
+  "session_token_usage": {
+    "input_tokens": 64,
+    "cache_creation_tokens": 81661,
+    "cache_read_tokens": 2820267,
+    "output_tokens": 25448,
+    "api_call_count": 28
+  },
+  "redaction": {
+    "replacements": 4,
+    "layers": {
+      "betterleaks": 0,
+      "connection_string": 0,
+      "credential_key": 0,
+      "credential_value": 0,
+      "credentialed_uri": 0,
+      "entropy": 0,
+      "key_context": 4,
+      "provider_token": 0,
+      "shell_stdin": 0
+    }
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "claude-skill-toolu_014EQeZGmNrf9ikovy9CfQdC",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "mattpocock-skills:grilling"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "78947aa0f777",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 120,
+        "end": 121,
+        "entry_ids": [
+          "91424d86-c873-47b2-b593-0331e5d825e1"
+        ],
+        "tool_use_id": "toolu_014EQeZGmNrf9ikovy9CfQdC"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_014EQeZGmNrf9ikovy9CfQdC"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: mattpocock-skills:grilling",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 3
+  }
+}

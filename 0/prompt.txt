@@ -1,0 +1,13 @@
+Current summary has missing values which means Artificial Analysis API might have changed. Check the shape of API and /mattpocock-skills:grill-me on how should we change formulas to match our needs
+
+---
+
+Yes, all
+
+---
+
+Q5: exclude them, rest as recommended
+
+---
+
+Yes, build it
