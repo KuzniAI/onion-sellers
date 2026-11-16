@@ -1,0 +1,22 @@
+Let's update model providers. We will update existing sources or add new providers. So a run will dispatch pi agents. Maintain this order of providers.
+
+1. OpenCode Go - https://opencode.ai/inference/go/v1/models 
+2. OpenCode Zen - https://opencode.ai/inference/zen/v1/models
+3. Cursor - https://cursor.com/docs/models-and-pricing.md
+4. Github Copilot - https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml
+5. ClinePass - https://docs.cline.bot/getting-started/clinepass.md
+
+
+Give me options when you need npm package installed
+
+---
+
+Add OpenRouter at the end: https://openrouter.ai/api/v1/models
+
+---
+
+go ahead with parsers
+
+---
+
+move the changes from worktree on main
