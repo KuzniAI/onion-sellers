@@ -1,5 +1,3 @@
-import * as cheerio from "cheerio";
-
 export type OpenCodeZenModelRow = {
   model: string;
   priceInput: number;
@@ -9,119 +7,289 @@ export type OpenCodeZenModelRow = {
   notes?: string;
 };
 
-const PRICING_HEADERS = ["Model", "Input", "Output", "Cached Read", "Cached Write"];
+const FN = "parseOpenCodeZenPricingHtml";
 
-export function parseOpenCodeZenPricingHtml(html: string): OpenCodeZenModelRow[] {
-  const $ = cheerio.load(html);
-  const tables = $("table").toArray();
+type CachePrices = {
+  read: number | null;
+  write: number | null;
+  notes: string[];
+};
 
-  const pricingTable = tables.find((table) => {
-    const headers = $(table)
-      .find("thead th")
-      .toArray()
-      .map((th) => cellText($(th)));
-    return PRICING_HEADERS.every((name) => headers.includes(name));
-  });
+type Tier = {
+  suffix: string;
+  priceInput: number;
+  priceOutput: number;
+  cache: CachePrices;
+};
 
-  if (!pricingTable) {
+export function parseOpenCodeZenPricingHtml(text: string): OpenCodeZenModelRow[] {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(text);
+  } catch (err) {
+    const detail = err instanceof Error ? err.message : String(err);
+    throw new Error(`${FN}: invalid JSON (${detail})`);
+  }
+
+  if (!isRecord(parsed) || parsed.object !== "list" || !Array.isArray(parsed.data)) {
     throw new Error(
-      "parseOpenCodeZenPricingHtml: pricing table not found (expected headers: " +
-        PRICING_HEADERS.join(", ") +
-        ") -- page structure may have changed",
+      `${FN}: pricing table not found (expected JSON {object:'list', data:[...]} with name and cost.text input/output prices) -- page structure may have changed`,
     );
   }
-
-  // Footnote paragraphs directly after the pricing table are keyed by model name
-  // in a <strong> tag, e.g. "<p><strong>GPT 5.6 Sol:</strong> Prices shown ...</p>".
-  const footnotes = new Map<string, string>();
-  for (const p of $(pricingTable).nextAll("p").toArray()) {
-    const strong = $(p).find("strong").first();
-    if (strong.length === 0) continue;
-    const key = cellText(strong).replace(/:$/, "").trim();
-    const rest = $(p).text().trim().slice(cellText(strong).length).trim();
-    if (key && rest) footnotes.set(key, rest.replace(/^:\s*/, ""));
+  if (parsed.data.length === 0) {
+    throw new Error(`${FN}: no model rows found -- page structure may have changed`);
   }
 
-  const rows: OpenCodeZenModelRow[] = [];
-  for (const tr of $(pricingTable).find("tbody tr").toArray()) {
-    const cells = $(tr).find("td").toArray();
-    if (cells.length < PRICING_HEADERS.length) {
-      throw new Error(
-        `parseOpenCodeZenPricingHtml: pricing row has ${cells.length} cells, expected ${PRICING_HEADERS.length}`,
-      );
-    }
-
-    // Promotional rows look like "Mistral Large 4 (50% off)"; strip the suffix so
-    // the model name stays stable for mapping and keep the discount as a note.
-    const rawModel = cellText($(cells[0]));
-    const discount = rawModel.match(/\s*\((\d+(?:\.\d+)?% off)\)\s*$/i);
-    const model = discount ? rawModel.slice(0, discount.index).trim() : rawModel;
-    if (!model) continue;
-
-    const priceInput = parseRequiredPrice(cellText($(cells[1])), model, "Input");
-    const priceOutput = parseRequiredPrice(cellText($(cells[2])), model, "Output");
-
-    // Footnote paragraphs key models by base name ("GPT 5.6 Sol"), while the table
-    // splits context-threshold variants ("GPT 5.6 Sol (≤ 272K tokens)").
-    const footnote = footnotes.get(model) ?? footnotes.get(stripVariantSuffix(model));
-    const discountNote = discount ? `Promotional pricing (${discount[1]}).` : undefined;
-    const notes = [discountNote, footnote].filter(Boolean).join(" ");
-
-    rows.push({
-      model,
-      priceInput,
-      priceOutput,
-      priceCachedRead: parseOptionalPrice(cellText($(cells[3]))),
-      priceCachedWrite: parseOptionalPrice(cellText($(cells[4]))),
-      ...(notes ? { notes } : {}),
-    });
-  }
-
+  const rows = parsed.data.flatMap((entry, index) => parseEntry(entry, index));
   if (rows.length === 0) {
-    throw new Error(
-      "parseOpenCodeZenPricingHtml: no model rows found in pricing table -- page structure may have changed",
-    );
+    throw new Error(`${FN}: no model rows found -- page structure may have changed`);
   }
   return rows;
 }
 
-// Required cell: a USD-per-1M-tokens price, or "Free" (0). Anything else is fatal
-// so we never silently emit partial or wrong pricing data.
-function parseRequiredPrice(text: string, model: string, column: string): number {
-  const price = parsePriceOrFree(text);
-  if (price === undefined) {
+function parseEntry(entry: unknown, index: number): OpenCodeZenModelRow[] {
+  if (!isRecord(entry)) {
+    throw new Error(`${FN}: data[${index}] is not an object`);
+  }
+  const name = expectString(entry, "name", `data[${index}].name`);
+  const where = `"${name}"`;
+
+  if (!isRecord(entry.cost)) {
+    throw new Error(`${FN}: ${where} is missing cost -- pricing table may have changed`);
+  }
+  assertOnlyKeys(entry.cost, ["text", "audio", "multipliers"], `${where} cost`);
+  if (!isRecord(entry.cost.text)) {
+    throw new Error(`${FN}: ${where} is missing cost.text -- pricing table may have changed`);
+  }
+  assertOnlyKeys(entry.cost.text, ["input", "output"], `${where} cost.text`);
+
+  const tiers = parseTiers(entry.cost.text, where);
+  const extraNotes = [
+    ...parseMultiplierNotes(entry.cost.multipliers, where),
+    ...parseAudioNotes(entry.cost.audio, where),
+  ];
+
+  return tiers.map((tier) => {
+    const notes = [...tier.cache.notes, ...extraNotes];
+    const row: OpenCodeZenModelRow = {
+      model: `${name}${tier.suffix}`,
+      priceInput: tier.priceInput,
+      priceOutput: tier.priceOutput,
+      priceCachedRead: tier.cache.read,
+      priceCachedWrite: tier.cache.write,
+    };
+    if (notes.length > 0) row.notes = notes.join("; ");
+    return row;
+  });
+}
+
+function parseTiers(text: Record<string, unknown>, where: string): Tier[] {
+  if (!isRecord(text.input)) {
+    throw new Error(`${FN}: ${where} cost.text.input is missing`);
+  }
+  if (!isRecord(text.output)) {
+    throw new Error(`${FN}: ${where} cost.text.output is missing`);
+  }
+  assertOnlyKeys(text.input, ["price", "cache", "overrides"], `${where} cost.text.input`);
+  assertOnlyKeys(text.output, ["price", "overrides"], `${where} cost.text.output`);
+
+  const baseInput = expectPrice(text.input.price, `${where} cost.text.input.price`);
+  const baseOutput = expectPrice(text.output.price, `${where} cost.text.output.price`);
+  const baseCache = parseCache(text.input.cache, `${where} cost.text.input.cache`);
+
+  const inputOverrides = parseOverrides(text.input.overrides, `${where} input`, true);
+  const outputOverrides = parseOverrides(text.output.overrides, `${where} output`, false);
+  if (inputOverrides.length === 0 && outputOverrides.length === 0) {
+    return [{ suffix: "", priceInput: baseInput, priceOutput: baseOutput, cache: baseCache }];
+  }
+
+  const thresholds = inputOverrides.map((override) => override.threshold);
+  const outputThresholds = outputOverrides.map((override) => override.threshold);
+  if (
+    thresholds.length !== outputThresholds.length ||
+    thresholds.some((threshold) => !outputThresholds.includes(threshold))
+  ) {
     throw new Error(
-      `parseOpenCodeZenPricingHtml: unexpected ${column} price for "${model}": "${text}"`,
+      `${FN}: ${where} input and output context tiers do not match -- page structure may have changed`,
     );
   }
-  return price;
+  if (new Set(thresholds).size !== thresholds.length) {
+    throw new Error(`${FN}: ${where} has duplicate context tiers`);
+  }
+
+  const sorted = [...thresholds].sort((a, b) => a - b);
+  const tiers: Tier[] = [
+    {
+      suffix: ` (≤ ${formatTokens(sorted[0]!)} tokens)`,
+      priceInput: baseInput,
+      priceOutput: baseOutput,
+      cache: baseCache,
+    },
+  ];
+  for (let i = 0; i < sorted.length; i++) {
+    const threshold = sorted[i]!;
+    const input = inputOverrides.find((override) => override.threshold === threshold);
+    const output = outputOverrides.find((override) => override.threshold === threshold);
+    if (!input || !output) {
+      throw new Error(`${FN}: ${where} context tier ${threshold} is missing a price`);
+    }
+    const next = sorted[i + 1];
+    const above = `> ${formatTokens(threshold)}`;
+    const suffix =
+      next === undefined ? ` (${above} tokens)` : ` (${above} and ≤ ${formatTokens(next)} tokens)`;
+    tiers.push({
+      suffix,
+      priceInput: input.price,
+      priceOutput: output.price,
+      cache: input.cache ?? { read: null, write: null, notes: [] },
+    });
+  }
+  return tiers;
 }
 
-// Optional cell: like a required price, but "-", "--", em dash or an empty cell
-// means "not applicable" and maps to null.
-function parseOptionalPrice(text: string): number | null {
-  const price = parsePriceOrFree(text);
-  return price === undefined ? null : price;
+type Override = {
+  threshold: number;
+  price: number;
+  cache: CachePrices | null;
+};
+
+function parseOverrides(value: unknown, where: string, withCache: boolean): Override[] {
+  if (value === undefined) return [];
+  if (!Array.isArray(value)) {
+    throw new Error(`${FN}: ${where} overrides is not an array`);
+  }
+  return value.map((item, index) => {
+    const at = `${where} overrides[${index}]`;
+    if (!isRecord(item)) throw new Error(`${FN}: ${at} is not an object`);
+    assertOnlyKeys(item, withCache ? ["when", "price", "cache"] : ["when", "price"], at);
+    return {
+      threshold: readContextGt(item.when, at),
+      price: expectPrice(item.price, `${at}.price`),
+      cache: withCache ? parseCache(item.cache, `${at}.cache`) : null,
+    };
+  });
 }
 
-function parsePriceOrFree(text: string): number | undefined {
-  const cleaned = text.trim();
-  if (cleaned === "") return undefined;
-  if (/^free$/i.test(cleaned)) return 0;
-  if (/^(--?|—|–)$/.test(cleaned)) return undefined;
-  if (!/^\$\d+(\.\d+)?$/.test(cleaned)) return undefined;
-  return parseFloat(cleaned.replace("$", ""));
+function readContextGt(when: unknown, where: string): number {
+  if (!isRecord(when)) throw new Error(`${FN}: ${where}.when is not an object`);
+  assertOnlyKeys(when, ["context"], `${where}.when`);
+  if (!isRecord(when.context)) throw new Error(`${FN}: ${where}.when.context is not an object`);
+  assertOnlyKeys(when.context, ["gt"], `${where}.when.context`);
+  const threshold = when.context.gt;
+  if (typeof threshold !== "number" || !Number.isInteger(threshold) || threshold < 0) {
+    throw new Error(`${FN}: ${where}.when.context.gt is not a non-negative integer`);
+  }
+  return threshold;
 }
 
-// Strips a trailing variant qualifier like " (≤ 272K tokens)".
-function stripVariantSuffix(model: string): string {
-  return model.replace(/\s*\([^)]*\)\s*$/, "").trim();
+function parseCache(value: unknown, where: string): CachePrices {
+  if (value === undefined) return { read: null, write: null, notes: [] };
+  if (!isRecord(value)) throw new Error(`${FN}: ${where} is not an object`);
+  assertOnlyKeys(value, ["read", "write"], where);
+  const read = value.read === undefined ? null : expectPrice(value.read, `${where}.read`);
+  const write = parseCacheWrite(value.write, where);
+  return { read, write: write.price, notes: write.notes };
 }
 
-// Drops footnote markers and struck-through prices, so a discounted cell like
-// "<del>$1.36</del> $0.68" reads as the current price "$0.68".
-function cellText($cell: cheerio.Cheerio<any>): string {
-  const clone = $cell.clone();
-  clone.find("sup, del, s").remove();
-  return clone.text().trim().replace(/\s+/g, " ");
+function parseCacheWrite(value: unknown, where: string): { price: number | null; notes: string[] } {
+  if (value === undefined) return { price: null, notes: [] };
+  if (typeof value === "number") {
+    return { price: expectPrice(value, `${where}.write`), notes: [] };
+  }
+  if (!isRecord(value)) {
+    throw new Error(`${FN}: ${where}.write is not a number or duration map`);
+  }
+  const entries = Object.entries(value).map(([label, price]) => {
+    const minutes = parseDuration(label);
+    if (minutes === null) {
+      throw new Error(`${FN}: ${where}.write duration "${label}" is not understood`);
+    }
+    return { label, minutes, price: expectPrice(price, `${where}.write.${label}`) };
+  });
+  if (entries.length === 0) {
+    throw new Error(`${FN}: ${where}.write has no durations`);
+  }
+  entries.sort((a, b) => a.minutes - b.minutes);
+  const listed = entries.map((entry) => `${entry.label} $${formatUsd(entry.price)}`).join(", ");
+  return {
+    price: entries[0]!.price,
+    notes: [`Cache write by TTL: ${listed} (priceCachedWrite is the shortest TTL)`],
+  };
+}
+
+function parseDuration(label: string): number | null {
+  const match = /^(\d+)(m|h)$/.exec(label);
+  if (!match) return null;
+  const amount = Number(match[1]);
+  if (!Number.isFinite(amount)) return null;
+  return match[2] === "h" ? amount * 60 : amount;
+}
+
+function parseMultiplierNotes(value: unknown, where: string): string[] {
+  if (value === undefined) return [];
+  if (!Array.isArray(value)) {
+    throw new Error(`${FN}: ${where} cost.multipliers is not an array`);
+  }
+  return value.map((item, index) => {
+    const at = `${where} cost.multipliers[${index}]`;
+    if (!isRecord(item)) throw new Error(`${FN}: ${at} is not an object`);
+    assertOnlyKeys(item, ["when", "factor"], at);
+    const factor = expectPrice(item.factor, `${at}.factor`);
+    if (factor <= 0) throw new Error(`${FN}: ${at}.factor must be positive`);
+    if (!isRecord(item.when)) throw new Error(`${FN}: ${at}.when is not an object`);
+    assertOnlyKeys(item.when, ["date"], `${at}.when`);
+    if (!isRecord(item.when.date)) throw new Error(`${FN}: ${at}.when.date is not an object`);
+    assertOnlyKeys(item.when.date, ["gte"], `${at}.when.date`);
+    const date = item.when.date.gte;
+    if (typeof date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+      throw new Error(`${FN}: ${at}.when.date.gte is not a YYYY-MM-DD date`);
+    }
+    return `Prices are ${formatUsd(factor)}x from ${date}`;
+  });
+}
+
+function parseAudioNotes(value: unknown, where: string): string[] {
+  if (value === undefined) return [];
+  if (!isRecord(value)) throw new Error(`${FN}: ${where} cost.audio is not an object`);
+  assertOnlyKeys(value, ["input"], `${where} cost.audio`);
+  if (!isRecord(value.input)) throw new Error(`${FN}: ${where} cost.audio.input is not an object`);
+  assertOnlyKeys(value.input, ["price"], `${where} cost.audio.input`);
+  const price = expectPrice(value.input.price, `${where} cost.audio.input.price`);
+  return [`Audio input $${formatUsd(price)} per 1M tokens`];
+}
+
+function formatTokens(tokens: number): string {
+  if (tokens >= 1_000_000 && tokens % 1_000_000 === 0) return `${tokens / 1_000_000}M`;
+  if (tokens >= 1_000 && tokens % 1_000 === 0) return `${tokens / 1_000}K`;
+  return String(tokens);
+}
+
+function formatUsd(price: number): string {
+  return String(price);
+}
+
+function expectString(record: Record<string, unknown>, key: string, where: string): string {
+  const value = record[key];
+  if (typeof value !== "string" || value.trim() === "") {
+    throw new Error(`${FN}: ${where} is missing or not a non-empty string`);
+  }
+  return value;
+}
+
+function expectPrice(value: unknown, where: string): number {
+  if (typeof value !== "number" || !Number.isFinite(value) || value < 0) {
+    throw new Error(`${FN}: ${where} is missing or not a non-negative finite number`);
+  }
+  return value;
+}
+
+function assertOnlyKeys(record: Record<string, unknown>, allowed: string[], where: string): void {
+  const extra = Object.keys(record).filter((key) => !allowed.includes(key));
+  if (extra.length > 0) {
+    throw new Error(`${FN}: ${where} has unexpected fields: ${extra.join(", ")}`);
+  }
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
 }
