@@ -1,0 +1,9 @@
+Why is only Tencent Hy4 on https://kuzniai.github.io/onion-sellers/ Has the call failed somehow on CI or the parser is incorrect?
+
+---
+
+Yes, fix it
+
+---
+
+Commit the working tree changes with a sensible message.
