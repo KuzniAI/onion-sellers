@@ -30,6 +30,7 @@ Pricing parsers (`src/<provider>/parser.ts`) are written and repaired by a [Pi](
 Repair is off by default and never runs in CI:
 
 - `PARSER_REPAIR=1` in `.env` turns it on. It is ignored whenever `CI` or `GITHUB_ACTIONS` is set, so in the daily workflow a broken parser just fails the run.
+- Repair output is one line per Pi tool call plus a trimmed line per assistant message; set `PARSER_REPAIR_VERBOSE=1` to stream Pi's full text instead.
 - `PI_REPAIR_PROVIDER` and `PI_REPAIR_MODEL` pick the Pi model (`opencode-go` / `glm-5.3-flash` in `.env.example`).
 - Credentials come from Pi, not this project: run `npx pi` and `/login`, or set the provider's API key env var (`OPENCODE_API_KEY` for `opencode-go`).
 

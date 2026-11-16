@@ -15,6 +15,17 @@ export type ParserFailure<Row> = {
 
 const MAX_ATTEMPTS = 3;
 
+function truncate(text: string, max: number): string {
+  return text.length > max ? `${text.slice(0, max - 1)}…` : text;
+}
+
+// One-line summary of a tool call's arguments: the path, pattern or command it acts on.
+function describeToolArgs(args: unknown): string {
+  const a = (args ?? {}) as Record<string, unknown>;
+  const target = a.path ?? a.file_path ?? a.pattern ?? a.command ?? "";
+  return truncate(String(target).replace(/\s+/g, " ").trim(), 120);
+}
+
 function errorMessage(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
 }
@@ -115,11 +126,23 @@ async function runPiRepair<Row>(
     sessionManager: SessionManager.inMemory(),
   });
 
+  const verbose = process.env.PARSER_REPAIR_VERBOSE === "1";
   const unsubscribe = session.subscribe((event) => {
-    if (event.type === "message_update" && event.assistantMessageEvent.type === "text_delta") {
-      process.stdout.write(event.assistantMessageEvent.delta);
-    } else if (event.type === "tool_execution_start") {
-      console.log(`\n[${source.id}] pi -> ${event.toolName}`);
+    if (event.type === "tool_execution_start") {
+      console.log(`[${source.id}] pi ${event.toolName} ${describeToolArgs(event.args)}`);
+    } else if (event.type === "tool_execution_end" && event.isError) {
+      console.log(`[${source.id}] pi ${event.toolName} failed`);
+    } else if (verbose && event.type === "message_update") {
+      if (event.assistantMessageEvent.type === "text_delta") {
+        process.stdout.write(event.assistantMessageEvent.delta);
+      }
+    } else if (event.type === "message_end" && event.message.role === "assistant" && !verbose) {
+      const text = event.message.content
+        .map((part) => (part.type === "text" ? part.text : ""))
+        .join(" ")
+        .replace(/\s+/g, " ")
+        .trim();
+      if (text) console.log(`[${source.id}] pi: ${truncate(text, 200)}`);
     }
   });
 
