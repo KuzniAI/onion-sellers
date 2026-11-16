@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/docs/go/",
-  "fetchedAt": "2026-11-15T12:45:41.238Z",
+  "fetchedAt": "2026-11-16T13:41:02.974Z",
   "notes": "Auto-generated from the OpenCode Go docs page. OpenCode Go is a flat $10/mo subscription; monthlyLimitUsd is each model's per-month usage cap under that subscription, not a separate charge. Reference a model in config as \"opencode-go/<modelId>\". Peak/off-peak and context-threshold variants of the same model share one modelId and appear as separate rows, matching the source page. Live model list: https://opencode.ai/zen/go/v1/models (id/owner metadata only, no pricing).",
   "models": [
     {
@@ -183,6 +183,23 @@
       "notes": "limited time"
     },
     {
+      "model": "Hy4 flash Free",
+      "modelId": "hy4-flash-free",
+      "priceInput": null,
+      "priceOutput": null,
+      "priceCachedRead": null,
+      "priceCachedWrite": null,
+      "monthlyLimitUsd": null,
+      "requestsPer5h": null,
+      "requestsPerWeek": null,
+      "requestsPerMonth": null,
+      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "modelTraining": "Not used",
+      "dataRetentionDays": 0,
+      "notes": "limited time"
+    },
+    {
       "model": "MiMo-V2.6-Flash",
       "modelId": "mimo-v2.6-flash",
       "priceInput": 0.14,
@@ -327,6 +344,22 @@
       "modelTraining": "Yes",
       "dataRetentionDays": null,
       "notes": "Not ZDR"
+    },
+    {
+      "model": "Qwen4 Max",
+      "modelId": "qwen4-max",
+      "priceInput": 1.5,
+      "priceOutput": 4.5,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": 1.875,
+      "monthlyLimitUsd": 15,
+      "requestsPer5h": null,
+      "requestsPerWeek": null,
+      "requestsPerMonth": null,
+      "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
+      "aiSdkPackage": "@ai-sdk/anthropic",
+      "modelTraining": "Not used",
+      "dataRetentionDays": 0
     },
     {
       "model": "Qwen3.8 Max",
