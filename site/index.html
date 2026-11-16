@@ -209,10 +209,13 @@
 
     <footer>
       <p>
-        Score is a weighted sum of min-max normalized metrics across all scored models. $/task is
-        what one Artificial Analysis Intelligence Index task would cost at the provider's prices,
-        so it accounts for how many tokens a model spends; $/1M is the blended per-token price
-        (3 output tokens per input token unless the category says otherwise). Pricing:
+        Score is quality minus a penalty for each doubling of cost above $1 per task and of
+        response time above 60 s, all in index points. Quality is the category's mix of
+        Artificial Analysis indexes. Each model is listed at its best-scoring reasoning effort,
+        shown after its name. $/task is what one Artificial Analysis Intelligence Index task
+        would cost at the provider's prices, so it accounts for how many tokens a model spends;
+        Time is seconds until a 500-token answer is complete, thinking included; $/1M is the
+        blended per-token price (3 output tokens per input token). Pricing:
         <a href="https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing"
           >GitHub Copilot docs</a
         >, <a href="https://opencode.ai/docs/go/">OpenCode Go docs</a>,
@@ -231,10 +234,11 @@
         { id: "opencode-zen", name: "OpenCode Zen" },
         { id: "clinepass", name: "ClinePass" },
       ];
-      const WEIGHT_LABELS = {
+      const QUALITY_LABELS = {
         intelligenceIndex: "Intelligence",
-        costEfficiency: "Cost efficiency",
-        speed: "Speed",
+        engineeringIndex: "Engineering",
+        financeAndAccountingIndex: "Finance & accounting",
+        strategyAndOpsIndex: "Strategy & ops",
       };
       const STALE_MS = 36 * 60 * 60 * 1000;
 
@@ -295,31 +299,39 @@
           .map(
             (r, i) => `<tr>
               <td>${i + 1}</td>
-              <td class="model">${esc(r.model)}</td>
-              <td class="score">${num(r.score, 3)}</td>
-              <td>${num(r.breakdown.intelligenceIndex)}</td>
+              <td class="model">${esc(r.model)}${r.effort ? ` (${esc(r.effort)})` : ""}</td>
+              <td class="score">${num(r.score)}</td>
+              <td>${num(r.breakdown.quality)}</td>
               <td>$${num(r.breakdown.costPerTask, 3)}</td>
-              <td>${num(r.breakdown.speed, 0)}</td>
+              <td>${num(r.breakdown.responseTimeSeconds, 0)} s</td>
               <td>$${num(r.priceBlendedPer1M, 3)}</td>
             </tr>`,
           )
           .join("");
         return `<div class="table-wrap"><table>
           <thead><tr>
-            <th>#</th><th>Model</th><th>Score</th><th>Intel.</th>
+            <th>#</th><th>Model</th><th>Score</th>
+            <th title="This category's mix of Artificial Analysis indexes, in index points">Quality</th>
             <th title="Estimated cost of one Intelligence Index task at this provider's prices">$/task</th>
-            <th>Tok/s</th><th>$/1M</th>
+            <th title="Seconds until a 500-token answer is complete, thinking included">Time</th>
+            <th>$/1M</th>
           </tr></thead>
           <tbody>${body}</tbody>
         </table></div>`;
       }
 
       function renderCategory(name, byProvider, config) {
-        const weights = Object.entries(config?.weights ?? {})
+        const mix = Object.entries(config?.quality ?? {})
           .filter(([, w]) => w > 0)
           .sort((a, b) => b[1] - a[1])
-          .map(([k, w]) => `<li>${esc(WEIGHT_LABELS[k] ?? k)} ${Math.round(w * 100)}%</li>`)
-          .join("");
+          .map(([k, w]) => `<li>${esc(QUALITY_LABELS[k] ?? k)} ${Math.round(w * 100)}%</li>`);
+        const rates = [
+          ["pointsPerCostDoubling", "cost"],
+          ["pointsPerTimeDoubling", "time"],
+        ]
+          .filter(([key]) => config?.[key] != null)
+          .map(([key, label]) => `<li>−${num(config[key])} per doubling of ${label}</li>`);
+        const weights = [...mix, ...rates].join("");
         const providers = PROVIDERS.map(
           (p) => `<div><h3>${p.name}</h3>${renderTable(byProvider[p.id])}</div>`,
         ).join("");
