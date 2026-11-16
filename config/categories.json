@@ -1,5 +1,5 @@
 {
-  "topNPerProvider": 2,
+  "topNPerProvider": 3,
   "expectedIntelligenceIndexVersion": 5,
   "costFloorPerTask": 0.25,
   "responseTimeFloorSeconds": 15,
