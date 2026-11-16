@@ -1,0 +1,56 @@
+# Publishes site/index.html + config/categories.json + the latest data snapshot to
+# GitHub Pages. Runs when the layout changes (push to main), when the daily pipeline
+# stores new data (workflow_call; pushes made with GITHUB_TOKEN don't trigger
+# workflows, so the daily workflow calls this one explicitly), or manually.
+
+name: Deploy page
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - site/**
+      - config/categories.json
+      - .github/workflows/pages.yml
+  workflow_call:
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - uses: actions/checkout@v7
+        with:
+          ref: data
+          path: data-branch
+
+      - name: Build site
+        run: |
+          mkdir -p _site
+          cp site/index.html config/categories.json _site/
+          cp -r data-branch/latest _site/data
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v5
