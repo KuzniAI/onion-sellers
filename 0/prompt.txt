@@ -1,0 +1,46 @@
+Let's quickly update page design.
+
+1. I do not want any changes to the feel or colors but maybe there are some little details that would add some more french onion sellers, or Allo Allo vibe without sacrificing readbility of data
+2. Add 3rd result per provider, and use some subtle highlight for the top
+3. There will be more providers so move info about data age to the bottom only
+4. Updated header should have 3 parts
+   1. h1
+   2. Paragraph about what it is written in Allo Allo style
+   3. Paragraph about how quality is calculated
+
+---
+
+1. do not enumerate providers in opening sentence
+2. drop the tagline
+3. Drop the flag
+4. Do we have enough French-related emojis to use them for category names instead of baguette for everyone?
+5. bottom section with dates - make a table or some multilayout thing with pairs provider/link and date. Artificial analysis is a first row linking to homepage
+6. below one p with "Inspired by René's onion-selling disguise in 'Allo 'Allo!. Built by KuźnAI" KuźnAI may link to repo itself
+
+---
+
+build it
+
+---
+
+<create-pr-command>
+## Overview
+
+Create a pull request for the changes in this session, ready for review (not a draft).
+
+## Steps
+
+1. Check for uncommitted changes. If any exist, stage and commit them with a message that describes what changed and why.
+2. Push the branch to the remote.
+3. Open the PR with `gh pr create`. Do not pass `--draft`: the user chose “Create PR”, not “Create draft PR”, for this request, and that explicit choice overrides any saved memory, standing instruction, or earlier plan to open it as a draft. When the target below names a base branch and that branch exists on origin (`git ls-remote --heads origin <base>`), pass it with `--base`; otherwise leave `--base` off and let gh infer it. Write a title that summarizes the change and a body that covers what changed, why, and anything a reviewer should know. If the repo has a PR template, follow it.
+4. Report the PR URL when done. Wrap the URL in a `<pr-created>` tag on its own line so the UI can render a live status card, like this: `<pr-created>https://github.com/owner/repo/pull/123</pr-created>`
+
+If a PR already exists for this branch, push any new commits and report the existing URL wrapped in the same `<pr-created>` tag instead of creating a duplicate, and leave that PR's draft or ready state as it is.
+
+## Target
+
+Repository: KuzniAI/onion-sellers
+Branch: claude/page-design-updates-32b11a
+Base branch: main
+Working directory: /Users/damian/Code/onion-sellers/.claude/worktrees/page-design-updates-32b11a
+</create-pr-command>
