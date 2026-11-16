@@ -1,23 +1,20 @@
 {
   "topNPerProvider": 2,
-  "notes": "Weights operate on min-max normalized metrics (0-1) across the candidate set actually available for a category. costEfficiency = 1 / blendedPrice1m, where blendedPrice1m assumes a 3:1 output:input token ratio (typical agentic coding workload) unless the category sets outputToInputRatio -- a documented simplification since Copilot (plan + credits) and OpenCode Go (flat $10/mo with per-model monthly caps) aren't priced the same way; per-token blended price is the common denominator we have. speed = performance.median_output_tokens_per_second from Artificial Analysis. topNPerProvider is the shortlist size within each individual provider -- there is no cross-provider ranking, since the choice is which provider's own lineup to use, not a mixed list.",
+  "expectedIntelligenceIndexVersion": 5,
+  "notes": "Weights operate on min-max normalized metrics (0-1) across all scored candidates. Three metrics exist: intelligenceIndex (Artificial Analysis Intelligence Index), speed (performance.median_output_tokens_per_second, falling back to performance_v3.mean_output_tokens_per_second) and costEfficiency (1 / estimated cost per task). Cost per task = AA's measured cost to run one Intelligence Index task x (provider blended price / AA blended price), both blended at the category's outputToInputRatio (default 3 output tokens per input token). This prices in how many tokens a model actually spends, not just its per-token price. Because the ratio appears on both sides of that fraction, it only matters where a provider's input/output prices differ from AA's list prices (see llmWiki notes). Per-token pricing is a documented simplification since Copilot (plan + credits) and OpenCode Go (flat monthly plan with per-model caps) aren't priced per token. A model is scored only if it has all of intelligence, speed, cost per task and AA pricing; nothing is estimated or zero-filled. Since Intelligence Index v5 (2026-10-28) Artificial Analysis no longer publishes a Coding or Agentic Index, and its v5 Capability Indexes correlate with intelligence at r>0.99, so intelligence is the only quality signal. expectedIntelligenceIndexVersion pins the index version these weights were chosen for; the pipeline fails when AA reports a different one, so a human re-checks the API before rankings change. topNPerProvider is the shortlist size within each individual provider -- there is no cross-provider ranking, since the choice is which provider's own lineup to use, not a mixed list.",
   "categories": {
     "agenticCoding": {
       "description": "Left running for hours in a loop to solve a problem autonomously with minimal supervision (e.g. an OpenSpec/plan executor, a long-running coding agent).",
       "weights": {
-        "agenticIndex": 0.5,
-        "codingIndex": 0.2,
-        "intelligenceIndex": 0.1,
-        "costEfficiency": 0.1,
-        "speed": 0.1
+        "intelligenceIndex": 0.7,
+        "costEfficiency": 0.15,
+        "speed": 0.15
       }
     },
     "codeReview": {
       "description": "Reviewing code written by a different model, reasoning about correctness/design in context rather than driving tools itself.",
       "weights": {
-        "codingIndex": 0.4,
-        "intelligenceIndex": 0.4,
-        "agenticIndex": 0.05,
+        "intelligenceIndex": 0.85,
         "costEfficiency": 0.1,
         "speed": 0.05
       }
@@ -25,21 +22,18 @@
     "softwareFactory": {
       "description": "Executing well-scoped, already-planned coding tasks (e.g. from an OpenSpec change or a larger model's plan) -- throughput and cost matter more than raw intelligence.",
       "weights": {
-        "codingIndex": 0.45,
-        "costEfficiency": 0.25,
-        "speed": 0.2,
-        "agenticIndex": 0.05,
-        "intelligenceIndex": 0.05
+        "intelligenceIndex": 0.45,
+        "costEfficiency": 0.3,
+        "speed": 0.25
       }
     },
     "llmWiki": {
       "description": "Maintaining an LLM-curated markdown knowledge base (Karpathy's LLM Wiki pattern): ingesting sources into many cross-linked pages, answering from the wiki with citations, and periodically linting it for contradictions, stale claims and orphan pages. Read-heavy and run repeatedly; faithfulness and synthesis matter more than coding skill.",
       "outputToInputRatio": 0.2,
-      "notes": "outputToInputRatio 0.2 (1 output token per 5 input tokens): each operation reads a source plus many existing pages and writes comparatively small edits. intelligenceIndex stands in for the signals that matter most here -- long-context reasoning, hallucination rate and instruction following -- which the free Artificial Analysis endpoint does not expose as separate scores. Context window size is not scored because no data source provides it.",
+      "notes": "outputToInputRatio 0.2 (1 output token per 5 input tokens): each operation reads a source plus many existing pages and writes comparatively small edits. Known limitation: cost per task scales AA's measured cost by provider price / AA price at this ratio, so the ratio only moves the result where a provider's input/output prices differ from AA's list prices; where they match it cancels out and the cost reflects AA's own task mix, not this read-heavy one. Fixing it needs AA's per-task input/output token split, which is Pro-tier only. intelligenceIndex stands in for the signals that matter most here -- long-context reasoning, hallucination rate and instruction following -- which the free Artificial Analysis endpoint does not expose as separate scores. Context window size is not scored because no data source provides it.",
       "weights": {
-        "intelligenceIndex": 0.4,
-        "agenticIndex": 0.3,
-        "costEfficiency": 0.2,
+        "intelligenceIndex": 0.6,
+        "costEfficiency": 0.3,
         "speed": 0.1
       }
     }
