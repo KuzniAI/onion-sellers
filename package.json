@@ -19,12 +19,12 @@
   },
   "devDependencies": {
     "@earendil-works/pi-coding-agent": "^0.85.1",
-    "@types/node": "^24.13.4",
-    "oxfmt": "^0.68.0",
-    "oxlint": "^1.83.0",
+    "@types/node": "^26.6.6",
+    "oxfmt": "^0.79.0",
+    "oxlint": "^1.94.0",
     "typescript": "^7.0.2"
   },
   "engines": {
-    "node": ">=24.20.0"
+    "node": ">=26"
   }
 }
