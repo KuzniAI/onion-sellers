@@ -1,0 +1,28 @@
+Take a look at data available in Artificial Analysis and let's take a critical look at @config/categories.json This scores are meant to guide full stack software developers to choose right model at best price. Maybe pricing formula needs to be changed? (no variables from form though - it should be static). /mattpocock-skills:grill-me on what's possible and worth doing
+
+---
+
+Q5: ignore them for now, rest as recommended
+
+---
+
+Q11: can you somehow capture with scores things like copywriting style, design, data ingest and aggregation? Just looking for opportunities here
+
+rest as recommended
+
+---
+
+Q14: include those 3 scores in formula for each model and try defining "finance work"
+rest as recommended
+
+---
+
+Q19: Wait with that. I'll redesign later. Rest recommended, additionally I think we can agenticCoding /softwareFactory names into something like coding heavy / coding light. I'm open to proposals.
+
+---
+
+all as recommended, update desctiptions of categories with short explanation what components of score are important
+
+---
+
+Commit the working tree changes with a sensible message.

@@ -1,0 +1,84 @@
+{
+  "cli_version": "0.13.4",
+  "checkpoint_id": "01M7JSDVSX20X9TG2NV8RQ903S",
+  "session_id": "fa6cbc2a-f90b-401d-9cef-3538fd605fc4",
+  "strategy": "manual-commit",
+  "created_at": "2026-11-16T18:20:37.573548Z",
+  "branch": "claude/model-scoring-pricing-e8f668",
+  "checkpoints_count": 6,
+  "save_step_count": 1,
+  "files_touched": [
+    "config/categories.json",
+    "site/index.html",
+    "src/scoring/compute-scores.ts"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-fable-5-2",
+  "turn_id": "4d82d334aca0",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 86,
+    "cache_creation_tokens": 150874,
+    "cache_read_tokens": 5619967,
+    "output_tokens": 60648,
+    "api_call_count": 38
+  },
+  "session_token_usage": {
+    "input_tokens": 86,
+    "cache_creation_tokens": 150874,
+    "cache_read_tokens": 5619967,
+    "output_tokens": 60648,
+    "api_call_count": 38
+  },
+  "redaction": {
+    "replacements": 8,
+    "layers": {
+      "betterleaks": 0,
+      "connection_string": 0,
+      "credential_key": 0,
+      "credential_value": 0,
+      "credentialed_uri": 0,
+      "entropy": 2,
+      "key_context": 6,
+      "provider_token": 0,
+      "shell_stdin": 0
+    }
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "claude-skill-toolu_01U6bGSChubzwi7D2FGBNM6S",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "mattpocock-skills:grilling"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "4d82d334aca0",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 41,
+        "end": 42,
+        "entry_ids": [
+          "aa6bd22c-7d54-40b1-8b1a-a4b7715e1c72"
+        ],
+        "tool_use_id": "toolu_01U6bGSChubzwi7D2FGBNM6S"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_01U6bGSChubzwi7D2FGBNM6S"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: mattpocock-skills:grilling",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 6
+  }
+}
