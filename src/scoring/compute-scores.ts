@@ -1,5 +1,5 @@
 // Combines local provider pricing + Artificial Analysis benchmark data into
-// per-category recommendations.
+// per-category recommendations. The formula is documented in config/categories.json.
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
@@ -29,8 +29,12 @@ export interface AaModel {
   id: string;
   name: string;
   slug: string;
+  model_creator?: { id?: string } | null;
   evaluations: {
     artificial_analysis_intelligence_index?: number | null;
+    artificial_analysis_engineering_index?: number | null;
+    artificial_analysis_finance_and_accounting_index?: number | null;
+    artificial_analysis_strategy_and_ops_index?: number | null;
   };
   // What one Intelligence Index task cost to run at AA's prices; it reflects how many
   // tokens the model actually spends, not just its per-token price.
@@ -41,29 +45,40 @@ export interface AaModel {
     price_1m_input_tokens?: number | null;
     price_1m_output_tokens?: number | null;
   } | null;
-  performance?: {
-    median_output_tokens_per_second?: number | null;
-  } | null;
+  // The older `performance` block returns null from 2026-12-10, so only v3 is read.
   performance_v3?: {
     mean_output_tokens_per_second?: number | null;
+    mean_time_to_first_answer_token_seconds?: number | null;
   } | null;
 }
 
-type Metric = "intelligenceIndex" | "costEfficiency" | "speed";
+// Quality metrics a category can mix, and the AA evaluation field each one reads.
+const QUALITY_FIELDS = {
+  intelligenceIndex: "artificial_analysis_intelligence_index",
+  engineeringIndex: "artificial_analysis_engineering_index",
+  financeAndAccountingIndex: "artificial_analysis_finance_and_accounting_index",
+  strategyAndOpsIndex: "artificial_analysis_strategy_and_ops_index",
+} as const satisfies Record<string, keyof AaModel["evaluations"]>;
 
-const METRICS: Metric[] = ["intelligenceIndex", "costEfficiency", "speed"];
+type QualityMetric = keyof typeof QUALITY_FIELDS;
 
-type CategoryWeights = Partial<Record<Metric, number>>;
+const QUALITY_METRICS = Object.keys(QUALITY_FIELDS) as QualityMetric[];
 
 interface CategoryConfig {
   description?: string;
-  outputToInputRatio?: number;
-  weights: CategoryWeights;
+  // Mix of quality metrics in raw index points; weights sum to 1.
+  quality: Partial<Record<QualityMetric, number>>;
+  // Quality points a model may give up to be half the price / twice as fast.
+  pointsPerCostDoubling: number;
+  pointsPerTimeDoubling: number;
 }
 
 interface CategoriesConfig {
   topNPerProvider: number;
   expectedIntelligenceIndexVersion: number;
+  // "Cheap enough" and "fast enough": below these, no further credit is earned.
+  costFloorPerTask: number;
+  responseTimeFloorSeconds: number;
   categories: Record<string, CategoryConfig>;
 }
 
@@ -75,28 +90,59 @@ interface BlacklistEntry {
 interface ScoredCandidate {
   provider: Provider;
   model: string;
+  // Reasoning effort of the Artificial Analysis variant this row was scored at, e.g.
+  // "High"; null when AA lists the model without an effort label.
+  effort: string | null;
   aaSlug: string;
   score: number;
-  breakdown: {
-    intelligenceIndex: number;
-    speed: number;
+  breakdown: Record<QualityMetric, number> & {
+    // This category's quality mix, in index points.
+    quality: number;
     // Estimated USD for one Intelligence Index task at this provider's prices.
     costPerTask: number;
+    // Seconds until a 500-token answer is complete, thinking time included.
+    responseTimeSeconds: number;
   };
   priceBlendedPer1M: number;
 }
 
-// Default output tokens per 1 input token (typical agentic coding workload). A category can
-// override it with outputToInputRatio in config/categories.json.
-const DEFAULT_OUTPUT_TO_INPUT_RATIO = 3;
+// One Artificial Analysis effort variant of a provider model, with every scoring input.
+interface Variant {
+  provider: Provider;
+  model: string;
+  effort: string | null;
+  aaSlug: string;
+  quality: Record<QualityMetric, number>;
+  costPerTask: number;
+  responseTimeSeconds: number;
+  priceBlendedPer1M: number;
+}
 
-function blendedPrice(
-  priceInput: number,
-  priceOutput: number,
-  outputToInputRatio: number = DEFAULT_OUTPUT_TO_INPUT_RATIO,
-): number {
-  const totalParts = 1 + outputToInputRatio;
-  return (priceInput * 1 + priceOutput * outputToInputRatio) / totalParts;
+// Output tokens per 1 input token used to blend prices (typical agentic coding workload).
+const OUTPUT_TO_INPUT_RATIO = 3;
+
+// A model at this cost per task and response time scores exactly its quality.
+const REFERENCE_COST_PER_TASK = 1;
+const REFERENCE_RESPONSE_TIME_SECONDS = 60;
+
+// Length of the answer that response time is measured for, matching how Artificial
+// Analysis defined its end-to-end response time.
+const RESPONSE_TOKENS = 500;
+
+// Parenthesized qualifiers AA uses for reasoning-effort variants of one model. Anything
+// else in parentheses (e.g. a release date) marks a different model, not a variant.
+const EFFORT_LABELS = new Set([
+  "low",
+  "medium",
+  "high",
+  "xhigh",
+  "max",
+  "reasoning",
+  "non-reasoning",
+]);
+
+function blendedPrice(priceInput: number, priceOutput: number): number {
+  return (priceInput + priceOutput * OUTPUT_TO_INPUT_RATIO) / (1 + OUTPUT_TO_INPUT_RATIO);
 }
 
 // Strips variant qualifiers like " (<= 256K tokens)", " (Off-Peak)", " (Peak)" so
@@ -107,6 +153,16 @@ export function baseModelName(model: string): string {
     stripped = stripped.replace(/\s*\([^)]*\)\s*$/, "").trim();
   }
   return stripped;
+}
+
+// "Claude Opus 5.5 (Max, Default Fallback)" -> "Max"; null when the name has no
+// trailing effort qualifier.
+function effortLabel(aaName: string): string | null {
+  const qualifier = aaName
+    .match(/\(([^)]*)\)\s*$/)?.[1]
+    .split(",")[0]
+    .trim();
+  return qualifier && EFFORT_LABELS.has(qualifier.toLowerCase()) ? qualifier : null;
 }
 
 function dedupeCheapest(
@@ -155,14 +211,9 @@ export async function loadCandidates(): Promise<Candidate[]> {
   return candidates;
 }
 
-function normalize(value: number, min: number, max: number): number {
-  if (max === min) return 1;
-  return (value - min) / (max - min);
-}
-
-// Fails loudly on config that no longer matches the data, instead of publishing
-// rankings where a weighted metric silently scores nothing (which happened when AA
-// dropped the Coding and Agentic indexes).
+// Fails loudly on config that no longer matches the data or the formula, instead of
+// publishing rankings where a configured metric silently scores nothing (which happened
+// when AA dropped the Coding and Agentic indexes).
 function validateConfig(config: CategoriesConfig, aaVersion: unknown): void {
   if (aaVersion !== config.expectedIntelligenceIndexVersion) {
     throw new Error(
@@ -170,14 +221,121 @@ function validateConfig(config: CategoriesConfig, aaVersion: unknown): void {
         "Check the API docs for changed or removed fields, adjust scoring, then update expectedIntelligenceIndexVersion.",
     );
   }
-  for (const [name, category] of Object.entries(config.categories)) {
-    const unknown = Object.keys(category.weights).filter((k) => !METRICS.includes(k as Metric));
-    if (unknown.length > 0) {
-      throw new Error(
-        `Category "${name}" weights unknown metrics: ${unknown.join(", ")}. Known metrics: ${METRICS.join(", ")}.`,
-      );
+  for (const key of ["costFloorPerTask", "responseTimeFloorSeconds"] as const) {
+    if (!(config[key] > 0)) {
+      throw new Error(`config/categories.json: ${key} must be a positive number.`);
     }
   }
+  for (const [name, category] of Object.entries(config.categories)) {
+    const metrics = Object.keys(category.quality ?? {});
+    const unknown = metrics.filter((k) => !QUALITY_METRICS.includes(k as QualityMetric));
+    if (unknown.length > 0) {
+      throw new Error(
+        `Category "${name}" mixes unknown quality metrics: ${unknown.join(", ")}. Known metrics: ${QUALITY_METRICS.join(", ")}.`,
+      );
+    }
+    const total = Object.values(category.quality ?? {}).reduce((sum, w) => sum + w, 0);
+    if (metrics.length === 0 || Math.abs(total - 1) > 1e-6) {
+      throw new Error(
+        `Category "${name}" quality weights must sum to 1 (got ${total}), so quality stays in index points.`,
+      );
+    }
+    for (const key of ["pointsPerCostDoubling", "pointsPerTimeDoubling"] as const) {
+      if (!(category[key] >= 0)) {
+        throw new Error(`Category "${name}": ${key} must be a number >= 0.`);
+      }
+    }
+  }
+}
+
+// The mapped AA model plus its reasoning-effort siblings: same creator, same name once
+// qualifiers are stripped, and a recognized effort label.
+function effortVariants(mapped: AaModel, aaModels: AaModel[]): AaModel[] {
+  const base = baseModelName(mapped.name);
+  return aaModels.filter(
+    (m) =>
+      m === mapped ||
+      (m.model_creator?.id === mapped.model_creator?.id &&
+        baseModelName(m.name) === base &&
+        effortLabel(m.name) !== null),
+  );
+}
+
+// Builds a scorable variant, or returns the names of the inputs it lacks. Every scored
+// variant needs all inputs; nothing is estimated or zero-filled.
+function buildVariant(candidate: Candidate, aa: AaModel): Variant | string[] {
+  const quality = Object.fromEntries(
+    QUALITY_METRICS.map((m) => [m, aa.evaluations[QUALITY_FIELDS[m]] ?? null]),
+  ) as Record<QualityMetric, number | null>;
+  const aaCostPerTask =
+    aa.artificial_analysis_intelligence_index_cost?.cost_per_task?.total_cost ?? null;
+  const aaPriceInput = aa.pricing?.price_1m_input_tokens ?? null;
+  const aaPriceOutput = aa.pricing?.price_1m_output_tokens ?? null;
+  const aaBlended =
+    aaPriceInput != null && aaPriceOutput != null ? blendedPrice(aaPriceInput, aaPriceOutput) : 0;
+  const tokensPerSecond = aa.performance_v3?.mean_output_tokens_per_second ?? null;
+  const timeToAnswer = aa.performance_v3?.mean_time_to_first_answer_token_seconds ?? null;
+
+  const missing = [
+    ...QUALITY_METRICS.filter((m) => quality[m] == null),
+    !(aaCostPerTask != null && aaCostPerTask > 0) && "cost per task",
+    !(aaBlended > 0) && "AA pricing",
+    (!(tokensPerSecond != null && tokensPerSecond > 0) || timeToAnswer == null) && "performance_v3",
+  ].filter((m): m is string => typeof m === "string");
+  if (missing.length > 0) return missing;
+
+  const providerBlended = blendedPrice(candidate.priceInput, candidate.priceOutput);
+  return {
+    provider: candidate.provider,
+    model: candidate.model,
+    effort: effortLabel(aa.name),
+    aaSlug: aa.slug,
+    quality: quality as Record<QualityMetric, number>,
+    // Scale AA's measured cost per task by how this provider's price compares to AA's,
+    // so a model that's cheap per token but verbose isn't mistaken for a cheap one.
+    costPerTask: (aaCostPerTask! * providerBlended) / aaBlended,
+    responseTimeSeconds: timeToAnswer! + RESPONSE_TOKENS / tokensPerSecond!,
+    priceBlendedPer1M: providerBlended,
+  };
+}
+
+const round = (value: number, digits: number) => Math.round(value * 10 ** digits) / 10 ** digits;
+
+function scoreVariant(
+  variant: Variant,
+  category: CategoryConfig,
+  config: CategoriesConfig,
+): ScoredCandidate {
+  const quality = QUALITY_METRICS.reduce(
+    (sum, m) => sum + (category.quality[m] ?? 0) * variant.quality[m],
+    0,
+  );
+  const costDoublings = Math.log2(
+    Math.max(variant.costPerTask, config.costFloorPerTask) / REFERENCE_COST_PER_TASK,
+  );
+  const timeDoublings = Math.log2(
+    Math.max(variant.responseTimeSeconds, config.responseTimeFloorSeconds) /
+      REFERENCE_RESPONSE_TIME_SECONDS,
+  );
+  const score =
+    quality -
+    category.pointsPerCostDoubling * costDoublings -
+    category.pointsPerTimeDoubling * timeDoublings;
+
+  return {
+    provider: variant.provider,
+    model: variant.model,
+    effort: variant.effort,
+    aaSlug: variant.aaSlug,
+    score: round(score, 1),
+    breakdown: {
+      quality: round(quality, 1),
+      costPerTask: round(variant.costPerTask, 4),
+      responseTimeSeconds: round(variant.responseTimeSeconds, 1),
+      ...variant.quality,
+    },
+    priceBlendedPer1M: round(variant.priceBlendedPer1M, 3),
+  };
 }
 
 export async function computeScores(): Promise<void> {
@@ -206,25 +364,16 @@ export async function computeScores(): Promise<void> {
   const mapping: MappingEntry[] = JSON.parse(
     await readFile(path.join("config", "model-mapping.json"), "utf8"),
   );
-  const aaBySlug = new Map<string, AaModel>((aaData.models as AaModel[]).map((m) => [m.slug, m]));
+  const aaModels = aaData.models as AaModel[];
+  const aaBySlug = new Map<string, AaModel>(aaModels.map((m) => [m.slug, m]));
 
-  const enriched: {
-    provider: Provider;
-    model: string;
-    aaSlug: string;
-    intelligenceIndex: number;
-    speed: number;
-    aaCostPerTask: number;
-    aaPriceInput: number;
-    aaPriceOutput: number;
-    priceInput: number;
-    priceOutput: number;
-  }[] = [];
+  const variants: Variant[] = [];
+  let modelsScored = 0;
 
   for (const candidate of candidates) {
     const label = `${candidate.provider}/${candidate.model}`;
     if (blendedPrice(candidate.priceInput, candidate.priceOutput) <= 0) {
-      // Cost efficiency is 1 / cost, so free models would be infinitely efficient.
+      // A free model has no cost per task to trade off against quality.
       console.warn(`Skipping ${label}: free model, not scored.`);
       continue;
     }
@@ -236,51 +385,27 @@ export async function computeScores(): Promise<void> {
       console.warn(`Skipping ${label}: no Artificial Analysis mapping.`);
       continue;
     }
-    const aa = aaBySlug.get(map.aaSlug);
-    if (!aa) {
+    const mapped = aaBySlug.get(map.aaSlug);
+    if (!mapped) {
       console.warn(`Skipping ${label}: aaSlug "${map.aaSlug}" not found in fetched data.`);
       continue;
     }
 
-    // Every scored model needs all inputs; nothing is estimated or zero-filled.
-    const intelligenceIndex = aa.evaluations.artificial_analysis_intelligence_index ?? null;
-    const speed =
-      aa.performance?.median_output_tokens_per_second ??
-      aa.performance_v3?.mean_output_tokens_per_second ??
-      null;
-    const aaCostPerTask =
-      aa.artificial_analysis_intelligence_index_cost?.cost_per_task?.total_cost ?? null;
-    const aaPriceInput = aa.pricing?.price_1m_input_tokens ?? null;
-    const aaPriceOutput = aa.pricing?.price_1m_output_tokens ?? null;
-    const missing = [
-      intelligenceIndex == null && "intelligence index",
-      speed == null && "speed",
-      aaCostPerTask == null && "cost per task",
-      (aaPriceInput == null ||
-        aaPriceOutput == null ||
-        blendedPrice(aaPriceInput, aaPriceOutput) <= 0) &&
-        "AA pricing",
-    ].filter((m): m is string => typeof m === "string");
-    if (missing.length > 0) {
+    const built = effortVariants(mapped, aaModels).map((aa) => ({
+      aa,
+      result: buildVariant(candidate, aa),
+    }));
+    const scorable = built.flatMap((b) => (Array.isArray(b.result) ? [] : [b.result]));
+    if (scorable.length === 0) {
+      const missing = built.find((b) => b.aa === mapped)?.result as string[];
       console.warn(`Skipping ${label} ("${map.aaSlug}"): no ${missing.join(", ")}.`);
       continue;
     }
-
-    enriched.push({
-      provider: candidate.provider,
-      model: candidate.model,
-      aaSlug: map.aaSlug,
-      intelligenceIndex: intelligenceIndex!,
-      speed: speed!,
-      aaCostPerTask: aaCostPerTask!,
-      aaPriceInput: aaPriceInput!,
-      aaPriceOutput: aaPriceOutput!,
-      priceInput: candidate.priceInput,
-      priceOutput: candidate.priceOutput,
-    });
+    variants.push(...scorable);
+    modelsScored += 1;
   }
 
-  if (enriched.length === 0) {
+  if (variants.length === 0) {
     throw new Error(
       "No candidates have complete benchmark data; refusing to publish empty rankings.",
     );
@@ -289,52 +414,22 @@ export async function computeScores(): Promise<void> {
   const categories: Record<string, Record<Provider, ScoredCandidate[]>> = {};
 
   for (const [categoryName, categoryConfig] of Object.entries(config.categories)) {
-    const weights = categoryConfig.weights;
-    const ratio = categoryConfig.outputToInputRatio ?? DEFAULT_OUTPUT_TO_INPUT_RATIO;
-
-    const blendedPrices = enriched.map((e) => blendedPrice(e.priceInput, e.priceOutput, ratio));
-    // Scale AA's measured cost per task by how this provider's price compares to AA's,
-    // so a model that's cheap per token but verbose isn't mistaken for a cheap one.
-    const costsPerTask = enriched.map(
-      (e, i) =>
-        (e.aaCostPerTask * blendedPrices[i]) / blendedPrice(e.aaPriceInput, e.aaPriceOutput, ratio),
-    );
-    const values: Record<Metric, number[]> = {
-      intelligenceIndex: enriched.map((e) => e.intelligenceIndex),
-      speed: enriched.map((e) => e.speed),
-      costEfficiency: costsPerTask.map((c) => 1 / c),
-    };
-    const normalized = Object.fromEntries(
-      METRICS.map((m) => {
-        const min = Math.min(...values[m]);
-        const max = Math.max(...values[m]);
-        return [m, values[m].map((v) => normalize(v, min, max))];
-      }),
-    ) as Record<Metric, number[]>;
-
-    const scored: ScoredCandidate[] = enriched.map((e, i) => {
-      const score = METRICS.reduce((sum, m) => sum + (weights[m] ?? 0) * normalized[m][i], 0);
-      return {
-        provider: e.provider,
-        model: e.model,
-        aaSlug: e.aaSlug,
-        score: Math.round(score * 1000) / 1000,
-        breakdown: {
-          intelligenceIndex: e.intelligenceIndex,
-          speed: e.speed,
-          costPerTask: Math.round(costsPerTask[i] * 10000) / 10000,
-        },
-        priceBlendedPer1M: Math.round(blendedPrices[i] * 1000) / 1000,
-      };
-    });
-
-    scored.sort((a, b) => b.score - a.score);
+    // Ties on the published (rounded) score go to the cheaper variant.
+    const scored = variants
+      .map((v) => scoreVariant(v, categoryConfig, config))
+      .sort((a, b) => b.score - a.score || a.breakdown.costPerTask - b.breakdown.costPerTask);
 
     categories[categoryName] = Object.fromEntries(
-      pricingSources.map((source) => [
-        source.id,
-        scored.filter((s) => s.provider === source.id).slice(0, config.topNPerProvider),
-      ]),
+      pricingSources.map((source) => {
+        // Sorted best-first, so the first row seen for a model is its best effort.
+        const bestPerModel = new Map<string, ScoredCandidate>();
+        for (const row of scored) {
+          if (row.provider === source.id && !bestPerModel.has(row.model)) {
+            bestPerModel.set(row.model, row);
+          }
+        }
+        return [source.id, [...bestPerModel.values()].slice(0, config.topNPerProvider)];
+      }),
     );
   }
 
@@ -346,7 +441,8 @@ export async function computeScores(): Promise<void> {
       {
         generatedAt: new Date().toISOString(),
         topNPerProvider: config.topNPerProvider,
-        candidatesConsidered: enriched.length,
+        candidatesConsidered: modelsScored,
+        variantsConsidered: variants.length,
         intelligenceIndexVersion: aaData.intelligenceIndexVersion,
         categories,
       },
@@ -356,6 +452,6 @@ export async function computeScores(): Promise<void> {
   );
 
   console.log(
-    `Wrote recommendations for ${Object.keys(categories).length} categories (${enriched.length} scored candidates) to ${outFile}`,
+    `Wrote recommendations for ${Object.keys(categories).length} categories (${modelsScored} scored models, ${variants.length} effort variants) to ${outFile}`,
   );
 }

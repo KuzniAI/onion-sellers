@@ -1,41 +1,56 @@
 {
   "topNPerProvider": 2,
   "expectedIntelligenceIndexVersion": 5,
-  "notes": "Weights operate on min-max normalized metrics (0-1) across all scored candidates. Three metrics exist: intelligenceIndex (Artificial Analysis Intelligence Index), speed (performance.median_output_tokens_per_second, falling back to performance_v3.mean_output_tokens_per_second) and costEfficiency (1 / estimated cost per task). Cost per task = AA's measured cost to run one Intelligence Index task x (provider blended price / AA blended price), both blended at the category's outputToInputRatio (default 3 output tokens per input token). This prices in how many tokens a model actually spends, not just its per-token price. Because the ratio appears on both sides of that fraction, it only matters where a provider's input/output prices differ from AA's list prices (see llmWiki notes). Per-token pricing is a documented simplification since Copilot (plan + credits) and OpenCode Go (flat monthly plan with per-model caps) aren't priced per token. A model is scored only if it has all of intelligence, speed, cost per task and AA pricing; nothing is estimated or zero-filled. Since Intelligence Index v5 (2026-10-28) Artificial Analysis no longer publishes a Coding or Agentic Index, and its v5 Capability Indexes correlate with intelligence at r>0.99, so intelligence is the only quality signal. expectedIntelligenceIndexVersion pins the index version these weights were chosen for; the pipeline fails when AA reports a different one, so a human re-checks the API before rankings change. topNPerProvider is the shortlist size within each individual provider -- there is no cross-provider ranking, since the choice is which provider's own lineup to use, not a mixed list.",
+  "costFloorPerTask": 0.25,
+  "responseTimeFloorSeconds": 15,
+  "notes": "score = quality - pointsPerCostDoubling x log2(cost per task / $1) - pointsPerTimeDoubling x log2(response time / 60 s). A model at $1 per task and 60 s scores exactly its quality, and every number is in index points, so the two rates read as exchange rates: how many quality points a model may give up to be half the price or twice as fast. Nothing is normalized against the other candidates, so one provider's lineup never moves another model's score. quality is a per-category mix (weights sum to 1) of four Artificial Analysis indexes in raw points: intelligenceIndex, engineeringIndex, financeAndAccountingIndex and strategyAndOpsIndex. The indexes are not on a common scale -- strategyAndOpsIndex runs high for cheap models -- so keep its weight at 0.4 or lower. engineeringIndex tracks intelligenceIndex almost exactly (r=0.995), so mixing those two states intent more than it changes rankings. Cost per task = AA's measured cost to run one Intelligence Index task x (provider blended price / AA blended price), blended at 3 output tokens per input token; it prices in how many tokens a model actually spends, not just its per-token price. Per-token pricing is a documented simplification, since Copilot (plan + credits), OpenCode Go and ClinePass (flat plans with caps) aren't billed per token; plan caps are not scored. Response time = mean time to first answer token + 500 / mean output tokens per second, from performance_v3 (the older performance block returns null from 2026-12-10); it includes thinking time, which tokens per second alone hides. costFloorPerTask and responseTimeFloorSeconds mean 'cheap enough' and 'fast enough': anything below them earns no further credit, otherwise a near-useless model that costs almost nothing would win on a log scale. Every Artificial Analysis reasoning-effort variant of a mapped model (Low ... Max) is scored as its own candidate at the provider's price, and each model is listed once per category at its best-scoring effort. This assumes the provider lets you pick that effort, which is not verified per provider. A variant is scored only if it has all four indexes, cost per task, AA pricing and performance_v3; nothing is estimated or zero-filled. expectedIntelligenceIndexVersion pins the index version these numbers were chosen for; the pipeline fails when AA reports a different one, so a human re-checks the API before rankings change. topNPerProvider is the shortlist size within each individual provider -- there is no cross-provider ranking, since the choice is which provider's own lineup to use, not a mixed list. Not scored, because Artificial Analysis has no signal for them: copywriting and visual design.",
   "categories": {
-    "agenticCoding": {
-      "description": "Left running for hours in a loop to solve a problem autonomously with minimal supervision (e.g. an OpenSpec/plan executor, a long-running coding agent).",
-      "weights": {
-        "intelligenceIndex": 0.7,
-        "costEfficiency": 0.15,
-        "speed": 0.15
-      }
+    "codingHeavy": {
+      "description": "Open-ended coding left running for hours with little supervision, where a wrong turn is expensive: planning, debugging, large refactors. Quality decides almost everything here, mostly engineering skill with some general reasoning and tool use; cost and response time only separate models that are close.",
+      "quality": {
+        "engineeringIndex": 0.6,
+        "intelligenceIndex": 0.2,
+        "strategyAndOpsIndex": 0.2
+      },
+      "pointsPerCostDoubling": 1.5,
+      "pointsPerTimeDoubling": 1
+    },
+    "codingLight": {
+      "description": "Well-scoped, already-planned coding tasks done in volume (e.g. from an OpenSpec change or a larger model's plan). Cost and response time weigh most: a model at half the price may be 5 quality points weaker and still tie. Quality is engineering skill plus tool use.",
+      "quality": {
+        "engineeringIndex": 0.6,
+        "strategyAndOpsIndex": 0.4
+      },
+      "pointsPerCostDoubling": 5,
+      "pointsPerTimeDoubling": 3
     },
     "codeReview": {
-      "description": "Reviewing code written by a different model, reasoning about correctness/design in context rather than driving tools itself.",
-      "weights": {
-        "intelligenceIndex": 0.85,
-        "costEfficiency": 0.1,
-        "speed": 0.05
-      }
-    },
-    "softwareFactory": {
-      "description": "Executing well-scoped, already-planned coding tasks (e.g. from an OpenSpec change or a larger model's plan) -- throughput and cost matter more than raw intelligence.",
-      "weights": {
-        "intelligenceIndex": 0.45,
-        "costEfficiency": 0.3,
-        "speed": 0.25
-      }
+      "description": "Reviewing code written by a different model, reasoning about correctness and design in context rather than driving tools itself. Almost purely quality, from engineering skill and general reasoning; cost counts a little and waiting longer for a review barely counts.",
+      "quality": {
+        "engineeringIndex": 0.7,
+        "intelligenceIndex": 0.3
+      },
+      "pointsPerCostDoubling": 1,
+      "pointsPerTimeDoubling": 0.5
     },
     "llmWiki": {
-      "description": "Maintaining an LLM-curated markdown knowledge base (Karpathy's LLM Wiki pattern): ingesting sources into many cross-linked pages, answering from the wiki with citations, and periodically linting it for contradictions, stale claims and orphan pages. Read-heavy and run repeatedly; faithfulness and synthesis matter more than coding skill.",
-      "outputToInputRatio": 0.2,
-      "notes": "outputToInputRatio 0.2 (1 output token per 5 input tokens): each operation reads a source plus many existing pages and writes comparatively small edits. Known limitation: cost per task scales AA's measured cost by provider price / AA price at this ratio, so the ratio only moves the result where a provider's input/output prices differ from AA's list prices; where they match it cancels out and the cost reflects AA's own task mix, not this read-heavy one. Fixing it needs AA's per-task input/output token split, which is Pro-tier only. intelligenceIndex stands in for the signals that matter most here -- long-context reasoning, hallucination rate and instruction following -- which the free Artificial Analysis endpoint does not expose as separate scores. Context window size is not scored because no data source provides it.",
-      "weights": {
-        "intelligenceIndex": 0.6,
-        "costEfficiency": 0.3,
-        "speed": 0.1
-      }
+      "description": "Maintaining an LLM-curated markdown knowledge base (Karpathy's LLM Wiki pattern): ingesting sources into cross-linked pages, answering from the wiki with citations, and linting it for contradictions and stale claims. Run repeatedly over a lot of text, so cost weighs heavily and response time little. Quality is half general reasoning, half the analysis, non-hallucination and tool-use skills measured by the finance and operations indexes.",
+      "quality": {
+        "intelligenceIndex": 0.5,
+        "financeAndAccountingIndex": 0.25,
+        "strategyAndOpsIndex": 0.25
+      },
+      "pointsPerCostDoubling": 4,
+      "pointsPerTimeDoubling": 1
+    },
+    "financeWork": {
+      "description": "Finance and accounting tasks a developer does or automates alongside coding: building and auditing spreadsheets, reconciling and aggregating figures from exports, invoices and reports, budget and valuation models, and multi-step workflows across business apps. A wrong number costs more than a slow answer, so quality leads, mostly the finance index with some operations tool use; cost matters moderately and response time barely.",
+      "quality": {
+        "financeAndAccountingIndex": 0.7,
+        "strategyAndOpsIndex": 0.3
+      },
+      "pointsPerCostDoubling": 2,
+      "pointsPerTimeDoubling": 0.5
     }
   }
 }
