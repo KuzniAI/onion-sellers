@@ -1,0 +1,595 @@
+{
+  "sourceUrl": "https://cursor.com/docs/models-and-pricing.md",
+  "fetchedAt": "2026-11-17T14:27:32.817Z",
+  "notes": "Auto-generated from the Cursor models-and-pricing docs page (markdown). Cursor is a subscription; prices are API list rates in USD per 1M tokens that usage is drawn against. Rows come from the per-provider model tables (Cursor, Anthropic, OpenAI, ...). Fast and long-context variants appear as separate rows, matching the source page.",
+  "models": [
+    {
+      "model": "Grok 4.7",
+      "provider": "Cursor",
+      "priceInput": 2,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.5,
+      "priceOutput": 6,
+      "notes": "Jointly trained by Cursor and SpaceXAI; Long context (>256k input tokens) is billed at 2x standard rates, up to 500k; Fast mode is available at 2x pricing; Fast mode for long context (>256k) is billed at 3x standard rates"
+    },
+    {
+      "model": "Grok 4.7 (Fast)",
+      "provider": "Cursor",
+      "priceInput": 4,
+      "priceCacheWrite": null,
+      "priceCacheRead": 1,
+      "priceOutput": 12,
+      "notes": "Jointly trained by Cursor and SpaceXAI; Long context (>256k input tokens) is billed at 2x standard rates, up to 500k; Fast mode is available at 2x pricing; Fast mode for long context (>256k) is billed at 3x standard rates"
+    },
+    {
+      "model": "Grok 4.7 500k",
+      "provider": "Cursor",
+      "priceInput": 4,
+      "priceCacheWrite": null,
+      "priceCacheRead": 1,
+      "priceOutput": 12,
+      "notes": "Jointly trained by Cursor and SpaceXAI; Long context (>256k input tokens) is billed at 2x standard rates, up to 500k; Fast mode is available at 2x pricing; Fast mode for long context (>256k) is billed at 3x standard rates"
+    },
+    {
+      "model": "Grok 4.7 500k (Fast)",
+      "provider": "Cursor",
+      "priceInput": 6,
+      "priceCacheWrite": null,
+      "priceCacheRead": 1.5,
+      "priceOutput": 18,
+      "notes": "Jointly trained by Cursor and SpaceXAI; Long context (>256k input tokens) is billed at 2x standard rates, up to 500k; Fast mode is available at 2x pricing; Fast mode for long context (>256k) is billed at 3x standard rates"
+    },
+    {
+      "model": "Grok 4.6",
+      "provider": "Cursor",
+      "priceInput": 2,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.5,
+      "priceOutput": 6,
+      "notes": "Jointly trained by Cursor and SpaceXAI"
+    },
+    {
+      "model": "Grok 4.6 (Fast)",
+      "provider": "Cursor",
+      "priceInput": 4,
+      "priceCacheWrite": null,
+      "priceCacheRead": 1,
+      "priceOutput": 12,
+      "notes": "Jointly trained by Cursor and SpaceXAI"
+    },
+    {
+      "model": "Grok 4.5",
+      "provider": "Cursor",
+      "priceInput": 2,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.5,
+      "priceOutput": 6,
+      "notes": "Jointly trained by Cursor and SpaceXAI"
+    },
+    {
+      "model": "Grok 4.5 (Fast)",
+      "provider": "Cursor",
+      "priceInput": 4,
+      "priceCacheWrite": null,
+      "priceCacheRead": 1,
+      "priceOutput": 18,
+      "notes": "Jointly trained by Cursor and SpaceXAI"
+    },
+    {
+      "model": "Composer 2.5",
+      "provider": "Cursor",
+      "priceInput": 0.5,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.2,
+      "priceOutput": 2.5
+    },
+    {
+      "model": "Composer 2.5 (Fast)",
+      "provider": "Cursor",
+      "priceInput": 3,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.5,
+      "priceOutput": 15
+    },
+    {
+      "model": "Claude 4 Sonnet",
+      "provider": "Anthropic",
+      "priceInput": 3,
+      "priceCacheWrite": 3.75,
+      "priceCacheRead": 0.3,
+      "priceOutput": 15,
+      "notes": "Hidden by default; Thinking variant counts as 2 requests in legacy pricing"
+    },
+    {
+      "model": "Claude 4 Sonnet 1M",
+      "provider": "Anthropic",
+      "priceInput": 6,
+      "priceCacheWrite": 7.5,
+      "priceCacheRead": 0.6,
+      "priceOutput": 22.5,
+      "notes": "Hidden by default; Thinking variant counts as 2 requests in legacy pricing; This model can be very expensive due to the large context window; The cost is 2x when the input exceeds 200k tokens"
+    },
+    {
+      "model": "Claude 4.5 Haiku",
+      "provider": "Anthropic",
+      "priceInput": 1,
+      "priceCacheWrite": 1.25,
+      "priceCacheRead": 0.1,
+      "priceOutput": 5,
+      "notes": "Hidden by default; Bedrock/Vertex: regional endpoints +10% surcharge; Cache: writes 1.25x, reads 0.1x"
+    },
+    {
+      "model": "Claude 4.5 Opus",
+      "provider": "Anthropic",
+      "priceInput": 5,
+      "priceCacheWrite": 6.25,
+      "priceCacheRead": 0.5,
+      "priceOutput": 25,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans"
+    },
+    {
+      "model": "Claude 4.5 Sonnet",
+      "provider": "Anthropic",
+      "priceInput": 3,
+      "priceCacheWrite": 3.75,
+      "priceCacheRead": 0.3,
+      "priceOutput": 15,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Up to 1M tokens with extended context at the same per-token rates (no long-context surcharge)"
+    },
+    {
+      "model": "Claude 4.6 Opus",
+      "provider": "Anthropic",
+      "priceInput": 5,
+      "priceCacheWrite": 6.25,
+      "priceCacheRead": 0.5,
+      "priceOutput": 25,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Up to 1M tokens with extended context at the same per-token rates (no long-context surcharge)"
+    },
+    {
+      "model": "Claude 4.6 Sonnet",
+      "provider": "Anthropic",
+      "priceInput": 3,
+      "priceCacheWrite": 3.75,
+      "priceCacheRead": 0.3,
+      "priceOutput": 15,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Up to 1M tokens with extended context at the same per-token rates (no long-context surcharge)"
+    },
+    {
+      "model": "Claude 4.7 Opus",
+      "provider": "Anthropic",
+      "priceInput": 5,
+      "priceCacheWrite": 6.25,
+      "priceCacheRead": 0.5,
+      "priceOutput": 25,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Up to 1M tokens with extended context at the same per-token rates (no long-context surcharge)"
+    },
+    {
+      "model": "Claude Fable 5",
+      "provider": "Anthropic",
+      "priceInput": 10,
+      "priceCacheWrite": 12.5,
+      "priceCacheRead": 1,
+      "priceOutput": 50,
+      "notes": "Hidden by default; Requires data retention approval for Enterprise customers, Teams and individual customers with Privacy Mode enabled; Anthropic stores agent input and output data for harm-prevention processes; this data is not used to train or improve Anthropic models or products; Requests that trip a security guardrail are automatically routed to Claude Opus; About 2x the cost of Claude Opus 5; Requires Max Mode on legacy request-based plans"
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "provider": "Anthropic",
+      "priceInput": 10,
+      "priceCacheWrite": 12.5,
+      "priceCacheRead": 0.25,
+      "priceOutput": 50,
+      "notes": "Hidden by default; Requires data retention approval for Enterprise customers, Teams and individual customers with Privacy Mode enabled; Anthropic stores agent input and output data for harm-prevention processes; this data is not used to train or improve Anthropic models or products; Requests that trip a security guardrail are automatically routed to Claude Opus; Prompt-cache reads are $0.25/M, 75% below the standard cache-read rate; About 2.5x the cost of Claude Opus 5.5 on input and output; Requires Max Mode on legacy request-based plans"
+    },
+    {
+      "model": "Claude Fable 5.2",
+      "provider": "Anthropic",
+      "priceInput": 8,
+      "priceCacheWrite": 10,
+      "priceCacheRead": 0.2,
+      "priceOutput": 40,
+      "notes": "Requires data retention approval for Enterprise customers, Teams and individual customers with Privacy Mode enabled; Anthropic stores agent input and output data for harm-prevention processes; this data is not used to train or improve Anthropic models or products; Requests that trip a security guardrail are automatically routed to Claude Opus; 20% cheaper than Claude Fable 5.1 on input and output; About 2x the cost of Claude Opus 5.5 on input and output; Requires Max Mode on legacy request-based plans"
+    },
+    {
+      "model": "Claude Haiku 5.5",
+      "provider": "Anthropic",
+      "priceInput": 0.1,
+      "priceCacheWrite": 0.125,
+      "priceCacheRead": 0.01,
+      "priceOutput": 0.5,
+      "notes": "Requires Max Mode on legacy request-based plans; Requests above 100k input tokens bill at 5x the standard rates ($0.50/M input, $0.625/M cache write, $0.05/M cache read, $2.50/M output); 90% cheaper than Claude 4.5 Haiku on input and output for requests up to 100k input tokens"
+    },
+    {
+      "model": "Claude Opus 4.7 (fast mode)",
+      "provider": "Anthropic",
+      "priceInput": 30,
+      "priceCacheWrite": 37.5,
+      "priceCacheRead": 3,
+      "priceOutput": 150,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Limited research preview; Up to 1M tokens with extended context at the same per-token rates as shorter context"
+    },
+    {
+      "model": "Claude Opus 4.8",
+      "provider": "Anthropic",
+      "priceInput": 5,
+      "priceCacheWrite": 6.25,
+      "priceCacheRead": 0.5,
+      "priceOutput": 25,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Fast mode (`claude-opus-4-8-fast`) requires Max Mode on legacy request-based plans; Fast mode is 3x lower per-token pricing than Opus 4.7 fast mode; Up to 1M tokens with extended context at the same per-token rates (no long-context surcharge)"
+    },
+    {
+      "model": "Claude Opus 5",
+      "provider": "Anthropic",
+      "priceInput": 5,
+      "priceCacheWrite": 6.25,
+      "priceCacheRead": 0.5,
+      "priceOutput": 25,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Fast mode (`claude-opus-5-fast`) requires Max Mode on legacy request-based plans; Up to 1M tokens with extended context at the same per-token rates (no long-context surcharge)"
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "provider": "Anthropic",
+      "priceInput": 4,
+      "priceCacheWrite": 5,
+      "priceCacheRead": 0.2,
+      "priceOutput": 20,
+      "notes": "Requires Max Mode on legacy request-based plans; Fast mode (`claude-opus-5-5-fast`) requires Max Mode on legacy request-based plans; 20% cheaper than Claude Opus 5 on input and output; Prompt-cache reads are $0.20/M (0.05x input), down from 0.10x input on Claude Opus 5; Regional and US-only endpoints are priced 10% higher ($4.40/M input, $22/M output); Up to 1M tokens with extended context at the same per-token rates (no long-context surcharge)"
+    },
+    {
+      "model": "Claude Sonnet 5",
+      "provider": "Anthropic",
+      "priceInput": 2,
+      "priceCacheWrite": 2.5,
+      "priceCacheRead": 0.2,
+      "priceOutput": 10,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Up to 1M tokens with extended context at the same per-token rates (no long-context surcharge); Uses an updated tokenizer, so the same input can map to more tokens"
+    },
+    {
+      "model": "Claude Sonnet 5.5",
+      "provider": "Anthropic",
+      "priceInput": 2,
+      "priceCacheWrite": 2.5,
+      "priceCacheRead": 0.1,
+      "priceOutput": 10,
+      "notes": "Requires Max Mode on legacy request-based plans; Same input and output rates as Claude Sonnet 5, with cache reads at $0.10/M instead of $0.20/M; US-only endpoints are priced 10% higher ($2.20/M input, $11/M output); Up to 1M tokens with extended context at the same per-token rates (no long-context surcharge)"
+    },
+    {
+      "model": "DeepSeek V4.1 Flash 1017",
+      "provider": "DeepSeek",
+      "priceInput": 0.3,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.006,
+      "priceOutput": 1.2,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "Gemini 2.5 Flash",
+      "provider": "Google",
+      "priceInput": 0.3,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.03,
+      "priceOutput": 2.5,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "Gemini 3 Flash",
+      "provider": "Google",
+      "priceInput": 0.5,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.05,
+      "priceOutput": 3,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "Gemini 3 Pro",
+      "provider": "Google",
+      "priceInput": 2,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.2,
+      "priceOutput": 12,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "Gemini 3 Pro Image Preview",
+      "provider": "Google",
+      "priceInput": 2,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.2,
+      "priceOutput": 12,
+      "notes": "Hidden by default; Native image generation model optimized for speed, flexibility, and contextual understanding; Text input and output priced the same as Gemini 3 Pro; Image output: $120/1M tokens (~$0.134 per 1K/2K image, ~$0.24 per 4K image); Preview models may change before becoming stable and have more restrictive rate limits"
+    },
+    {
+      "model": "Gemini 3.1 Pro",
+      "provider": "Google",
+      "priceInput": 2,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.2,
+      "priceOutput": 12
+    },
+    {
+      "model": "Gemini 3.5 Flash",
+      "provider": "Google",
+      "priceInput": 1.5,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.15,
+      "priceOutput": 9,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "Gemini 3.5 Flash Lite",
+      "provider": "Google",
+      "priceInput": 0.3,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.03,
+      "priceOutput": 2.5,
+      "notes": "Hidden by default; Used only for the Auto-review classifier. It is not selectable as a chat or agent model"
+    },
+    {
+      "model": "Gemini 3.6 Flash",
+      "provider": "Google",
+      "priceInput": 1.5,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.15,
+      "priceOutput": 7.5,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "Gemini 3.7 Flash",
+      "provider": "Google",
+      "priceInput": 0.75,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.075,
+      "priceOutput": 3.75,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "provider": "Google",
+      "priceInput": 0.75,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.075,
+      "priceOutput": 3.75
+    },
+    {
+      "model": "Gemini 4 Argon",
+      "provider": "Google",
+      "priceInput": 2,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.1,
+      "priceOutput": 10
+    },
+    {
+      "model": "Gemini 4 Carbon",
+      "provider": "Google",
+      "priceInput": 2,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.1,
+      "priceOutput": 10,
+      "notes": "Introductory pricing through November 30, 2026. From December 1, 2026: $4 input, $0.20 cache read, $20 output per 1M tokens"
+    },
+    {
+      "model": "Gemini 4 Hydrogen",
+      "provider": "Google",
+      "priceInput": 1.5,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.075,
+      "priceOutput": 7.5
+    },
+    {
+      "model": "GLM 5.2",
+      "provider": "Z.ai",
+      "priceInput": 1.4,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.26,
+      "priceOutput": 4.4,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "GLM 5.3",
+      "provider": "Z.ai",
+      "priceInput": 1.4,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.26,
+      "priceOutput": 4.4,
+      "notes": "Hidden by default; Same per-token rates as GLM 5.2"
+    },
+    {
+      "model": "GLM 5.3 Flash",
+      "provider": "Z.ai",
+      "priceInput": 0.15,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.029,
+      "priceOutput": 0.5,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "GPT-5",
+      "provider": "OpenAI",
+      "priceInput": 1.25,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.125,
+      "priceOutput": 10,
+      "notes": "Hidden by default; Agentic and reasoning capabilities; Available reasoning effort variant is gpt-5-high"
+    },
+    {
+      "model": "GPT-5 Fast",
+      "provider": "OpenAI",
+      "priceInput": 2.5,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.25,
+      "priceOutput": 20,
+      "notes": "Hidden by default; Faster speed but 2x price; Available reasoning effort variants are gpt-5-high-fast, gpt-5-low-fast"
+    },
+    {
+      "model": "GPT-5 Mini",
+      "provider": "OpenAI",
+      "priceInput": 0.25,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.025,
+      "priceOutput": 2,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "GPT-5-Codex",
+      "provider": "OpenAI",
+      "priceInput": 1.25,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.125,
+      "priceOutput": 10,
+      "notes": "Hidden by default; Agentic and reasoning capabilities"
+    },
+    {
+      "model": "GPT-5.1 Codex",
+      "provider": "OpenAI",
+      "priceInput": 1.25,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.125,
+      "priceOutput": 10,
+      "notes": "Hidden by default; Agentic and reasoning capabilities"
+    },
+    {
+      "model": "GPT-5.1 Codex Max",
+      "provider": "OpenAI",
+      "priceInput": 1.25,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.125,
+      "priceOutput": 10,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "GPT-5.1 Codex Mini",
+      "provider": "OpenAI",
+      "priceInput": 0.25,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.025,
+      "priceOutput": 2,
+      "notes": "Hidden by default; Agentic and reasoning capabilities; 4x rate limits compared to GPT-5.1 Codex"
+    },
+    {
+      "model": "GPT-5.2",
+      "provider": "OpenAI",
+      "priceInput": 1.75,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.175,
+      "priceOutput": 14,
+      "notes": "Hidden by default; Agentic and reasoning capabilities; Available reasoning effort variant is gpt-5.2-high"
+    },
+    {
+      "model": "GPT-5.2 Codex",
+      "provider": "OpenAI",
+      "priceInput": 1.75,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.175,
+      "priceOutput": 14,
+      "notes": "Hidden by default; Agentic and reasoning capabilities"
+    },
+    {
+      "model": "GPT-5.3 Codex",
+      "provider": "OpenAI",
+      "priceInput": 1.75,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.175,
+      "priceOutput": 14,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Agentic and reasoning capabilities; Available reasoning effort variant is gpt-5.3-codex-high"
+    },
+    {
+      "model": "GPT-5.4",
+      "provider": "OpenAI",
+      "priceInput": 2.5,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.25,
+      "priceOutput": 15,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Agentic and reasoning capabilities; 90% discount on cached input tokens; Fast mode is 15% faster with 2x pricing; Long context supports up to 1M tokens with 2x input pricing"
+    },
+    {
+      "model": "GPT-5.4 Mini",
+      "provider": "OpenAI",
+      "priceInput": 0.75,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.075,
+      "priceOutput": 4.5,
+      "notes": "Hidden by default; Smaller, faster variant of GPT-5.4; 90% discount on cached input tokens"
+    },
+    {
+      "model": "GPT-5.4 Nano",
+      "provider": "OpenAI",
+      "priceInput": 0.2,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.02,
+      "priceOutput": 1.25,
+      "notes": "Hidden by default; Smallest GPT-5.4 variant, optimized for cost; 90% discount on cached input tokens"
+    },
+    {
+      "model": "GPT-5.5",
+      "provider": "OpenAI",
+      "priceInput": 5,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.5,
+      "priceOutput": 30,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Agentic and reasoning capabilities; More token-efficient than GPT-5.4 on comparable tasks; Improved persistence on long-running tasks; Fast mode is available at higher rates; Long context supports up to 1M tokens with 2x input pricing"
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "provider": "OpenAI",
+      "priceInput": 0.2,
+      "priceCacheWrite": 0.25,
+      "priceCacheRead": 0.02,
+      "priceOutput": 1.2,
+      "notes": "Requires Max Mode on legacy request-based plans; Smallest GPT-5.6 variant, optimized for cost and speed; Agentic and reasoning capabilities; Fast mode is available at 2x pricing; Long context supports up to 1M tokens with 2x input pricing; Fast mode is available for long context (>272k) at 2x Fast input pricing; Cache writes are billed at 1.25x the uncached input rate"
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "provider": "OpenAI",
+      "priceInput": 4,
+      "priceCacheWrite": 5,
+      "priceCacheRead": 0.4,
+      "priceOutput": 20,
+      "notes": "Requires Max Mode on legacy request-based plans; Agentic and reasoning capabilities; Fast mode is available at 2x pricing; Long context supports up to 1M tokens with 2x input pricing; Fast mode is available for long context (>272k) at 2x Fast input pricing; Cache writes are billed at 1.25x the uncached input rate; Promotional pricing through November 21, 2026"
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "provider": "OpenAI",
+      "priceInput": 2,
+      "priceCacheWrite": 2.5,
+      "priceCacheRead": 0.2,
+      "priceOutput": 12,
+      "notes": "Requires Max Mode on legacy request-based plans; Mid-tier GPT-5.6 variant between Sol and Luna; Agentic and reasoning capabilities; Fast mode is available at 2x pricing; Long context supports up to 1M tokens with 2x input pricing; Fast mode is available for long context (>272k) at 2x Fast input pricing; Cache writes are billed at 1.25x the uncached input rate"
+    },
+    {
+      "model": "Kimi K2.7 Code",
+      "provider": "Moonshot",
+      "priceInput": 0.95,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.19,
+      "priceOutput": 4,
+      "notes": "Hidden by default"
+    },
+    {
+      "model": "Kimi K3",
+      "provider": "Moonshot",
+      "priceInput": 3,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.3,
+      "priceOutput": 15,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Up to 1M tokens with extended context at the same per-token rates (no long-context surcharge); No separate cache-write fee"
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "provider": "Meta",
+      "priceInput": 1.25,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.15,
+      "priceOutput": 4.25,
+      "notes": "Hidden by default; Requires Max Mode on legacy request-based plans; Up to 1M tokens in Max Mode at the same per-token rates (no long-context surcharge); Cached input is billed at $0.15 per million tokens with no separate cache-write charge"
+    },
+    {
+      "model": "Muse Wonder",
+      "provider": "Meta",
+      "priceInput": 4,
+      "priceCacheWrite": null,
+      "priceCacheRead": 0.2,
+      "priceOutput": 20,
+      "notes": "Up to 1M tokens in Max Mode at the same per-token rates (no long-context surcharge); Cached input is billed at $0.20 per million tokens with no separate cache-write charge"
+    }
+  ]
+}

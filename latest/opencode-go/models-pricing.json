@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/inference/go/v1/models",
-  "fetchedAt": "2026-11-16T20:23:51.457Z",
+  "fetchedAt": "2026-11-17T14:27:32.702Z",
   "notes": "Auto-generated from the OpenCode Go /v1/models JSON endpoint. OpenCode Go is a flat $10/mo subscription; monthlyLimitUsd is each model's per-month usage cap under that subscription, not a separate charge. Reference a model in config as \"opencode-go/<modelId>\". Peak/off-peak and context-threshold variants of the same model share one modelId and appear as separate rows, matching the source page. Prices are USD per 1M tokens.",
   "models": [
     {
@@ -14,11 +14,11 @@
       "monthlyLimitGoPlusUsd": 200,
       "monthlyLimitGoTeamsUsd": 105,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
       "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "notes": "Off-peak; peak is 2x weekdays 01:00-04:00 and 06:00-10:00 UTC"
+      "notes": "Off-peak; peak is 2x weekdays 01:00-04:00 and 06:00-10:00 UTC; Additional go fields: featured=false"
     },
     {
       "model": "DeepSeek V4.1 Flash 1017 (Peak)",
@@ -31,11 +31,11 @@
       "monthlyLimitGoPlusUsd": 200,
       "monthlyLimitGoTeamsUsd": 105,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
       "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "notes": "Peak 2x weekdays 01:00-04:00 and 06:00-10:00 UTC"
+      "notes": "Peak 2x weekdays 01:00-04:00 and 06:00-10:00 UTC; Additional go fields: featured=false"
     },
     {
       "model": "DeepSeek V4 Pro (Off-peak)",
@@ -48,11 +48,11 @@
       "monthlyLimitGoPlusUsd": 60,
       "monthlyLimitGoTeamsUsd": 20,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
       "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "notes": "Off-peak; peak is 2x weekdays 01:00-04:00 and 06:00-10:00 UTC"
+      "notes": "Off-peak; peak is 2x weekdays 01:00-04:00 and 06:00-10:00 UTC; Additional go fields: featured=false"
     },
     {
       "model": "DeepSeek V4 Pro (Peak)",
@@ -65,11 +65,11 @@
       "monthlyLimitGoPlusUsd": 60,
       "monthlyLimitGoTeamsUsd": 20,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
       "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "notes": "Peak 2x weekdays 01:00-04:00 and 06:00-10:00 UTC"
+      "notes": "Peak 2x weekdays 01:00-04:00 and 06:00-10:00 UTC; Additional go fields: featured=false"
     },
     {
       "model": "GLM-5.2",
@@ -82,10 +82,11 @@
       "monthlyLimitGoPlusUsd": 180,
       "monthlyLimitGoTeamsUsd": 65,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "GLM-5.3",
@@ -94,14 +95,15 @@
       "priceOutput": 4.4,
       "priceCachedRead": 0.26,
       "priceCachedWrite": null,
-      "monthlyLimitUsd": 15,
-      "monthlyLimitGoPlusUsd": 120,
-      "monthlyLimitGoTeamsUsd": 20,
+      "monthlyLimitUsd": 100,
+      "monthlyLimitGoPlusUsd": 200,
+      "monthlyLimitGoTeamsUsd": 105,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Grok 4.7 (≤ 200K tokens)",
@@ -117,7 +119,8 @@
       "zdr": false,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
-      "aiSdkPackage": "@ai-sdk/openai"
+      "aiSdkPackage": "@ai-sdk/openai",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Grok 4.7 (> 200K tokens)",
@@ -133,7 +136,8 @@
       "zdr": false,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
-      "aiSdkPackage": "@ai-sdk/openai"
+      "aiSdkPackage": "@ai-sdk/openai",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Muse Spark 1.2 Contributor",
@@ -149,7 +153,8 @@
       "zdr": false,
       "limitedRegions": true,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
-      "aiSdkPackage": "@ai-sdk/openai"
+      "aiSdkPackage": "@ai-sdk/openai",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Muse Spark 1.3 Contributor",
@@ -165,7 +170,8 @@
       "zdr": false,
       "limitedRegions": true,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
-      "aiSdkPackage": "@ai-sdk/openai"
+      "aiSdkPackage": "@ai-sdk/openai",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "GLM-5.3-Flash",
@@ -178,10 +184,11 @@
       "monthlyLimitGoPlusUsd": 180,
       "monthlyLimitGoTeamsUsd": 65,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "GPT-5.6 Luna (≤ 272K tokens)",
@@ -198,7 +205,7 @@
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
       "aiSdkPackage": "@ai-sdk/openai",
-      "notes": "Cache write by TTL: 30m $0.25, 12h $0.5 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $0.25, 12h $0.5 (priceCachedWrite is the shortest TTL); Additional go fields: featured=false"
     },
     {
       "model": "GPT-5.6 Luna (> 272K tokens)",
@@ -215,7 +222,7 @@
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
       "aiSdkPackage": "@ai-sdk/openai",
-      "notes": "Cache write by TTL: 30m $0.5, 12h $1 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $0.5, 12h $1 (priceCachedWrite is the shortest TTL); Additional go fields: featured=false"
     },
     {
       "model": "GPT-6 Luna (≤ 272K tokens)",
@@ -232,7 +239,7 @@
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
       "aiSdkPackage": "@ai-sdk/openai",
-      "notes": "Cache write by TTL: 30m $0.125, 12h $0.25 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $0.125, 12h $0.25 (priceCachedWrite is the shortest TTL); Additional go fields: featured=false"
     },
     {
       "model": "GPT-6 Luna (> 272K tokens)",
@@ -249,7 +256,7 @@
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/responses",
       "aiSdkPackage": "@ai-sdk/openai",
-      "notes": "Cache write by TTL: 30m $0.25, 12h $0.5 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $0.25, 12h $0.5 (priceCachedWrite is the shortest TTL); Additional go fields: featured=false"
     },
     {
       "model": "Claude Haiku 5.5 (≤ 100K tokens)",
@@ -265,7 +272,8 @@
       "zdr": false,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
-      "aiSdkPackage": "@ai-sdk/anthropic"
+      "aiSdkPackage": "@ai-sdk/anthropic",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Claude Haiku 5.5 (> 100K tokens)",
@@ -281,7 +289,8 @@
       "zdr": false,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
-      "aiSdkPackage": "@ai-sdk/anthropic"
+      "aiSdkPackage": "@ai-sdk/anthropic",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Hy3",
@@ -294,10 +303,11 @@
       "monthlyLimitGoPlusUsd": 240,
       "monthlyLimitGoTeamsUsd": 65,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Hy4 preview",
@@ -310,10 +320,11 @@
       "monthlyLimitGoPlusUsd": 120,
       "monthlyLimitGoTeamsUsd": 35,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Kimi K2.7 Code",
@@ -326,10 +337,11 @@
       "monthlyLimitGoPlusUsd": 180,
       "monthlyLimitGoTeamsUsd": 65,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Kimi K3",
@@ -342,10 +354,11 @@
       "monthlyLimitGoPlusUsd": 60,
       "monthlyLimitGoTeamsUsd": 20,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "MiMo-V2.6-Flash",
@@ -358,10 +371,11 @@
       "monthlyLimitGoPlusUsd": 120,
       "monthlyLimitGoTeamsUsd": 65,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "MiMo-V2.6-Pro",
@@ -374,10 +388,11 @@
       "monthlyLimitGoPlusUsd": 60,
       "monthlyLimitGoTeamsUsd": 20,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "MiniMax-M3 (≤ 512K tokens)",
@@ -390,10 +405,11 @@
       "monthlyLimitGoPlusUsd": 180,
       "monthlyLimitGoTeamsUsd": 65,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
-      "aiSdkPackage": "@ai-sdk/anthropic"
+      "aiSdkPackage": "@ai-sdk/anthropic",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "MiniMax-M3 (> 512K tokens)",
@@ -406,10 +422,11 @@
       "monthlyLimitGoPlusUsd": 180,
       "monthlyLimitGoTeamsUsd": 65,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
-      "aiSdkPackage": "@ai-sdk/anthropic"
+      "aiSdkPackage": "@ai-sdk/anthropic",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "MiniMax M3.1 Flash",
@@ -425,7 +442,8 @@
       "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "LongCat-2.0",
@@ -438,10 +456,11 @@
       "monthlyLimitGoPlusUsd": 240,
       "monthlyLimitGoTeamsUsd": 65,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Step 5 Preview",
@@ -454,10 +473,11 @@
       "monthlyLimitGoPlusUsd": 60,
       "monthlyLimitGoTeamsUsd": 20,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Beam Free",
@@ -473,7 +493,8 @@
       "zdr": false,
       "limitedRegions": true,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Qwen3.8 Max",
@@ -486,10 +507,11 @@
       "monthlyLimitGoPlusUsd": 60,
       "monthlyLimitGoTeamsUsd": 20,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
-      "aiSdkPackage": "@ai-sdk/anthropic"
+      "aiSdkPackage": "@ai-sdk/anthropic",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Qwen3.8 Flash",
@@ -502,10 +524,11 @@
       "monthlyLimitGoPlusUsd": 90,
       "monthlyLimitGoTeamsUsd": 35,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
-      "aiSdkPackage": "@ai-sdk/anthropic"
+      "aiSdkPackage": "@ai-sdk/anthropic",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Qwen3.7 Plus (≤ 256K tokens)",
@@ -518,10 +541,11 @@
       "monthlyLimitGoPlusUsd": 180,
       "monthlyLimitGoTeamsUsd": 65,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
-      "aiSdkPackage": "@ai-sdk/anthropic"
+      "aiSdkPackage": "@ai-sdk/anthropic",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Qwen3.7 Plus (> 256K tokens)",
@@ -534,10 +558,11 @@
       "monthlyLimitGoPlusUsd": 180,
       "monthlyLimitGoTeamsUsd": 65,
       "training": false,
-      "zdr": false,
+      "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
-      "aiSdkPackage": "@ai-sdk/anthropic"
+      "aiSdkPackage": "@ai-sdk/anthropic",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Kimi K3.1 Pro",
@@ -553,7 +578,8 @@
       "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Iceman Contributor Free",
@@ -569,7 +595,8 @@
       "zdr": false,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Gemini 4 Argon (Off-peak)",
@@ -586,7 +613,7 @@
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon",
       "aiSdkPackage": "@ai-sdk/google",
-      "notes": "Off-peak; peak is 2x from 2026-12-01; Audio input $2/1M tokens"
+      "notes": "Off-peak; peak is 2x from 2026-12-01; Audio input $2/1M tokens; Additional go fields: featured=false"
     },
     {
       "model": "Gemini 4 Argon (Peak)",
@@ -603,7 +630,7 @@
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon",
       "aiSdkPackage": "@ai-sdk/google",
-      "notes": "Peak 2x from 2026-12-01; Audio input $2/1M tokens"
+      "notes": "Peak 2x from 2026-12-01; Audio input $2/1M tokens; Additional go fields: featured=false"
     },
     {
       "model": "Hy4",
@@ -619,7 +646,8 @@
       "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "LongCat 2.5 Free",
@@ -635,7 +663,8 @@
       "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Hy4 flash Free",
@@ -651,7 +680,8 @@
       "zdr": true,
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible"
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "Qwen4 Max",
@@ -668,7 +698,7 @@
       "limitedRegions": false,
       "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
       "aiSdkPackage": "@ai-sdk/anthropic",
-      "notes": "Cache write by TTL: 5m $1.875, 1h $3 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 5m $1.875, 1h $3 (priceCachedWrite is the shortest TTL); Additional go fields: featured=false"
     }
   ]
 }

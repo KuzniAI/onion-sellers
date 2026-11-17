@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://openrouter.ai/api/v1/models",
-  "fetchedAt": "2026-11-16T20:23:52.321Z",
+  "fetchedAt": "2026-11-17T14:27:33.329Z",
   "notes": "Auto-generated from the OpenRouter /api/v1/models JSON endpoint. OpenRouter is pay-as-you-go; prices are converted from USD per token to USD per 1M tokens. Reference a model by its modelId (e.g. \"openrouter/<modelId>\"). Free models have 0 prices.",
   "models": [
     {
@@ -256,9 +256,9 @@
     {
       "modelId": "moonshotai/kimi-k3.1-pro:batch",
       "model": "MoonshotAI: Kimi K3.1 Pro (batch)",
-      "priceInput": 0.361,
-      "priceOutput": 5.407,
-      "priceCachedRead": 0.115,
+      "priceInput": 0.372,
+      "priceOutput": 5.583,
+      "priceCachedRead": 0.1,
       "priceCachedWrite": null
     },
     {
@@ -272,25 +272,25 @@
     {
       "modelId": "minimax/minimax-m3.1-flash",
       "model": "MiniMax: MiniMax M3.1 Flash",
-      "priceInput": 0.075,
-      "priceOutput": 0.3,
-      "priceCachedRead": 0.0075,
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.015,
       "priceCachedWrite": null
     },
     {
       "modelId": "deepseek/deepseek-v4.1-flash-1017",
       "model": "DeepSeek: DeepSeek V4.1 Flash 1017",
-      "priceInput": 0.15,
-      "priceOutput": 0.6,
-      "priceCachedRead": 0.003,
+      "priceInput": 0.036,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.01,
       "priceCachedWrite": null
     },
     {
       "modelId": "deepseek/deepseek-v4.1-flash-1017:batch",
       "model": "DeepSeek: DeepSeek V4.1 Flash 1017 (batch)",
-      "priceInput": 0.037,
-      "priceOutput": 0.329,
-      "priceCachedRead": 0.004,
+      "priceInput": 0.036,
+      "priceOutput": 0.15,
+      "priceCachedRead": 0.003,
       "priceCachedWrite": null
     },
     {
@@ -556,9 +556,9 @@
     {
       "modelId": "z-ai/glm-5.3-prime",
       "model": "Z.ai: GLM 5.3 Prime",
-      "priceInput": 2.8,
-      "priceOutput": 8.8,
-      "priceCachedRead": 0.56,
+      "priceInput": 1.68,
+      "priceOutput": 5.28,
+      "priceCachedRead": 0.336,
       "priceCachedWrite": null
     },
     {
@@ -838,9 +838,9 @@
     {
       "modelId": "deepseek/deepseek-v4.1-flash",
       "model": "DeepSeek: DeepSeek V4.1 Flash",
-      "priceInput": 0.14,
-      "priceOutput": 0.42,
-      "priceCachedRead": 0.0042,
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.006,
       "priceCachedWrite": null
     },
     {
@@ -976,9 +976,9 @@
     {
       "modelId": "tencent/hy4-preview",
       "model": "Tencent: Hy4 preview",
-      "priceInput": 0.7506,
-      "priceOutput": 2.2509,
-      "priceCachedRead": 0.0378,
+      "priceInput": 0.834,
+      "priceOutput": 2.501,
+      "priceCachedRead": 0.042,
       "priceCachedWrite": null
     },
     {
@@ -1000,16 +1000,16 @@
     {
       "modelId": "z-ai/glm-5.3-flash",
       "model": "Z.ai: GLM 5.3 Flash",
-      "priceInput": 0.0399,
-      "priceOutput": 0.0784,
+      "priceInput": 0.15,
+      "priceOutput": 0.5,
       "priceCachedRead": 0.03,
       "priceCachedWrite": null
     },
     {
       "modelId": "z-ai/glm-5.3-flash:batch",
       "model": "Z.ai: GLM 5.3 Flash (batch)",
-      "priceInput": 0.05,
-      "priceOutput": 0.18,
+      "priceInput": 0.024,
+      "priceOutput": 0.069,
       "priceCachedRead": 0.01,
       "priceCachedWrite": null
     },
@@ -1072,9 +1072,9 @@
     {
       "modelId": "z-ai/glm-5.3:batch",
       "model": "Z.ai: GLM 5.3 (batch)",
-      "priceInput": 0.45,
-      "priceOutput": 2,
-      "priceCachedRead": 0.1,
+      "priceInput": 0.281,
+      "priceOutput": 1.25,
+      "priceCachedRead": 0.062,
       "priceCachedWrite": null
     },
     {
@@ -1192,8 +1192,8 @@
     {
       "modelId": "meta/muse-glimmer-30b",
       "model": "Meta: Muse Glimmer 30B",
-      "priceInput": 0.3,
-      "priceOutput": 1.2,
+      "priceInput": 0.35,
+      "priceOutput": 1.5,
       "priceCachedRead": 0.04,
       "priceCachedWrite": null
     },
@@ -1498,9 +1498,9 @@
     {
       "modelId": "tencent/hy3",
       "model": "Tencent: Hy3",
-      "priceInput": 0.0825,
-      "priceOutput": 0.33,
-      "priceCachedRead": 0.020625,
+      "priceInput": 0.132,
+      "priceOutput": 0.528,
+      "priceCachedRead": 0.033,
       "priceCachedWrite": null
     },
     {
@@ -1570,10 +1570,18 @@
       "priceCachedWrite": null
     },
     {
+      "modelId": "z-ai/glm-5.2:batch",
+      "model": "Z.ai: GLM 5.2 (batch)",
+      "priceInput": 0.322,
+      "priceOutput": 0.989,
+      "priceCachedRead": 0.109,
+      "priceCachedWrite": null
+    },
+    {
       "modelId": "moonshotai/kimi-k2.7-code",
       "model": "MoonshotAI: Kimi K2.7 Code",
-      "priceInput": 0.6,
-      "priceOutput": 3.5,
+      "priceInput": 0.7,
+      "priceOutput": 3.75,
       "priceCachedRead": 0.16,
       "priceCachedWrite": null
     },
@@ -1615,9 +1623,9 @@
     {
       "modelId": "nvidia/nemotron-3-ultra-550b-a55b",
       "model": "NVIDIA: Nemotron 3 Ultra",
-      "priceInput": 0.6,
-      "priceOutput": 2.4,
-      "priceCachedRead": 0.12,
+      "priceInput": 0.5,
+      "priceOutput": 2.2,
+      "priceCachedRead": 0.1,
       "priceCachedWrite": null
     },
     {
@@ -1998,9 +2006,9 @@
     {
       "modelId": "google/gemma-4-26b-a4b-it",
       "model": "Google: Gemma 4 26B A4B ",
-      "priceInput": 0.0765,
-      "priceOutput": 0.255,
-      "priceCachedRead": 0.0425,
+      "priceInput": 0.09,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.05,
       "priceCachedWrite": null
     },
     {
@@ -2158,9 +2166,9 @@
     {
       "modelId": "qwen/qwen3.5-9b",
       "model": "Qwen: Qwen3.5-9B",
-      "priceInput": 0.169,
-      "priceOutput": 0.249,
-      "priceCachedRead": 0.152,
+      "priceInput": 0.17,
+      "priceOutput": 0.25,
+      "priceCachedRead": 0.153,
       "priceCachedWrite": null
     },
     {
@@ -2928,9 +2936,9 @@
     {
       "modelId": "openai/gpt-oss-20b",
       "model": "OpenAI: gpt-oss-20b",
-      "priceInput": 0.075,
-      "priceOutput": 0.3,
-      "priceCachedRead": 0.0375,
+      "priceInput": 0.018,
+      "priceOutput": 0.09,
+      "priceCachedRead": 0.009,
       "priceCachedWrite": null
     },
     {

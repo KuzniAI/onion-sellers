@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-  "fetchedAt": "2026-11-16T20:23:51.891Z",
+  "fetchedAt": "2026-11-17T14:27:32.905Z",
   "notes": "Auto-generated from GitHub docs' models-and-pricing.yml (a YAML list of models). All prices are per 1M tokens. Models with a \"Long context\" tier bill at a higher rate once input exceeds thresholdInputTokens; the same model may appear twice (Default and Long context rows) -- this is expected, not a duplicate.",
   "models": [
     {
@@ -74,30 +74,6 @@
       "price1mCachedInput": 0.8,
       "price1mCacheWrite": 10,
       "price1mOutput": 30
-    },
-    {
-      "creator": "OpenAI",
-      "model": "GPT-5.6 Terra",
-      "releaseStatus": "GA",
-      "category": "Versatile",
-      "tier": "Default",
-      "thresholdInputTokens": 272000,
-      "price1mInput": 2,
-      "price1mCachedInput": 0.2,
-      "price1mCacheWrite": 2.5,
-      "price1mOutput": 12
-    },
-    {
-      "creator": "OpenAI",
-      "model": "GPT-5.6 Terra",
-      "releaseStatus": "GA",
-      "category": "Versatile",
-      "tier": "Long context",
-      "thresholdInputTokens": 272000,
-      "price1mInput": 4,
-      "price1mCachedInput": 0.4,
-      "price1mCacheWrite": 5,
-      "price1mOutput": 18
     },
     {
       "creator": "OpenAI",
@@ -282,18 +258,6 @@
     {
       "creator": "Anthropic",
       "model": "Claude Opus 4.8",
-      "releaseStatus": "GA",
-      "category": "Powerful",
-      "tier": null,
-      "thresholdInputTokens": null,
-      "price1mInput": 5,
-      "price1mCachedInput": 0.5,
-      "price1mCacheWrite": 6.25,
-      "price1mOutput": 25
-    },
-    {
-      "creator": "Anthropic",
-      "model": "Claude Opus 5",
       "releaseStatus": "GA",
       "category": "Powerful",
       "tier": null,
