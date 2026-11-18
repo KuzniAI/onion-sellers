@@ -1,8 +1,72 @@
 {
   "sourceUrl": "https://openrouter.ai/api/v1/models",
-  "fetchedAt": "2026-11-17T14:27:33.329Z",
+  "fetchedAt": "2026-11-18T14:01:42.657Z",
   "notes": "Auto-generated from the OpenRouter /api/v1/models JSON endpoint. OpenRouter is pay-as-you-go; prices are converted from USD per token to USD per 1M tokens. Reference a model by its modelId (e.g. \"openrouter/<modelId>\"). Free models have 0 prices.",
   "models": [
+    {
+      "modelId": "openai/gpt-6.2-astra-pro",
+      "model": "OpenAI: GPT-6.2 Astra Pro",
+      "priceInput": 8,
+      "priceOutput": 40,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": 10
+    },
+    {
+      "modelId": "openai/gpt-6.2-astra-pro:batch",
+      "model": "OpenAI: GPT-6.2 Astra Pro (batch)",
+      "priceInput": 4,
+      "priceOutput": 20,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 5
+    },
+    {
+      "modelId": "openai/gpt-6.2-astra",
+      "model": "OpenAI: GPT-6.2 Astra",
+      "priceInput": 8,
+      "priceOutput": 40,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": 10
+    },
+    {
+      "modelId": "openai/gpt-6.2-astra:batch",
+      "model": "OpenAI: GPT-6.2 Astra (batch)",
+      "priceInput": 4,
+      "priceOutput": 20,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 5
+    },
+    {
+      "modelId": "openai/gpt-6.2-sol-pro",
+      "model": "OpenAI: GPT-6.2 Sol Pro",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "openai/gpt-6.2-sol-pro:batch",
+      "model": "OpenAI: GPT-6.2 Sol Pro (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 1.25
+    },
+    {
+      "modelId": "openai/gpt-6.2-sol",
+      "model": "OpenAI: GPT-6.2 Sol",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "openai/gpt-6.2-sol:batch",
+      "model": "OpenAI: GPT-6.2 Sol (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 1.25
+    },
     {
       "modelId": "tencent/hy4-flash",
       "model": "Tencent: Hy4 flash",
@@ -782,10 +846,10 @@
     {
       "modelId": "~openai/gpt-astra-latest",
       "model": "OpenAI: GPT Astra Latest",
-      "priceInput": 10,
-      "priceOutput": 50,
-      "priceCachedRead": 1,
-      "priceCachedWrite": 12.5
+      "priceInput": 8,
+      "priceOutput": 40,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": 10
     },
     {
       "modelId": "~openai/gpt-sol-latest",
@@ -838,9 +902,9 @@
     {
       "modelId": "deepseek/deepseek-v4.1-flash",
       "model": "DeepSeek: DeepSeek V4.1 Flash",
-      "priceInput": 0.3,
-      "priceOutput": 1.2,
-      "priceCachedRead": 0.006,
+      "priceInput": 0.0507,
+      "priceOutput": 0.2028,
+      "priceCachedRead": 0.001014,
       "priceCachedWrite": null
     },
     {
@@ -1080,9 +1144,9 @@
     {
       "modelId": "qwen/qwen3.8-27b",
       "model": "Qwen: Qwen3.8 27B",
-      "priceInput": 0.15,
-      "priceOutput": 1.875,
-      "priceCachedRead": 0.0375,
+      "priceInput": 0.06,
+      "priceOutput": 2.2,
+      "priceCachedRead": 0.059,
       "priceCachedWrite": null
     },
     {
@@ -1582,7 +1646,7 @@
       "model": "MoonshotAI: Kimi K2.7 Code",
       "priceInput": 0.7,
       "priceOutput": 3.75,
-      "priceCachedRead": 0.16,
+      "priceCachedRead": 0.17,
       "priceCachedWrite": null
     },
     {
@@ -1939,9 +2003,9 @@
     {
       "modelId": "xiaomi/mimo-v2.5-pro",
       "model": "Xiaomi: MiMo-V2.5-Pro",
-      "priceInput": 0.435,
-      "priceOutput": 0.87,
-      "priceCachedRead": 0.0036,
+      "priceInput": 0.48,
+      "priceOutput": 1.8,
+      "priceCachedRead": 0.096,
       "priceCachedWrite": null
     },
     {
@@ -2238,8 +2302,8 @@
     {
       "modelId": "qwen/qwen3.5-27b",
       "model": "Qwen: Qwen3.5-27B",
-      "priceInput": 0.26,
-      "priceOutput": 2.6,
+      "priceInput": 0.3,
+      "priceOutput": 2.4,
       "priceCachedRead": null,
       "priceCachedWrite": null
     },
@@ -2516,7 +2580,7 @@
       "model": "Z.ai: GLM 4.6V",
       "priceInput": 0.3,
       "priceOutput": 0.9,
-      "priceCachedRead": 0.055,
+      "priceCachedRead": 0.05,
       "priceCachedWrite": null
     },
     {
@@ -2824,9 +2888,9 @@
     {
       "modelId": "qwen/qwen3-next-80b-a3b-instruct",
       "model": "Qwen: Qwen3 Next 80B A3B Instruct",
-      "priceInput": 0.09,
+      "priceInput": 0.1,
       "priceOutput": 1.1,
-      "priceCachedRead": null,
+      "priceCachedRead": 0.07,
       "priceCachedWrite": null
     },
     {
@@ -2856,9 +2920,9 @@
     {
       "modelId": "mistralai/mistral-medium-3.1",
       "model": "Mistral: Mistral Medium 3.1",
-      "priceInput": 0.4,
-      "priceOutput": 2,
-      "priceCachedRead": 0.04,
+      "priceInput": 0.44,
+      "priceOutput": 2.2,
+      "priceCachedRead": 0.044,
       "priceCachedWrite": null
     },
     {
@@ -3098,9 +3162,9 @@
     {
       "modelId": "mistralai/mistral-small-3.2-24b-instruct",
       "model": "Mistral: Mistral Small 3.2 24B",
-      "priceInput": 0.1,
-      "priceOutput": 0.3,
-      "priceCachedRead": 0.01,
+      "priceInput": 0.075,
+      "priceOutput": 0.2,
+      "priceCachedRead": null,
       "priceCachedWrite": null
     },
     {
@@ -3138,17 +3202,17 @@
     {
       "modelId": "deepseek/deepseek-r1-0528",
       "model": "DeepSeek: R1 0528",
-      "priceInput": 0.5,
-      "priceOutput": 2.15,
-      "priceCachedRead": 0.35,
+      "priceInput": 0.571,
+      "priceOutput": 2.286,
+      "priceCachedRead": null,
       "priceCachedWrite": null
     },
     {
       "modelId": "mistralai/mistral-medium-3",
       "model": "Mistral: Mistral Medium 3",
-      "priceInput": 0.4,
-      "priceOutput": 2,
-      "priceCachedRead": 0.04,
+      "priceInput": 0.44,
+      "priceOutput": 2.2,
+      "priceCachedRead": 0.044,
       "priceCachedWrite": null
     },
     {
@@ -3323,7 +3387,7 @@
       "modelId": "google/gemma-3-27b-it",
       "model": "Google: Gemma 3 27B",
       "priceInput": 0.08,
-      "priceOutput": 0.35,
+      "priceOutput": 0.45,
       "priceCachedRead": 0.04,
       "priceCachedWrite": null
     },

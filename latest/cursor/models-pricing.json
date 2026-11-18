@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://cursor.com/docs/models-and-pricing.md",
-  "fetchedAt": "2026-11-17T14:27:32.817Z",
+  "fetchedAt": "2026-11-18T14:01:41.720Z",
   "notes": "Auto-generated from the Cursor models-and-pricing docs page (markdown). Cursor is a subscription; prices are API list rates in USD per 1M tokens that usage is drawn against. Rows come from the per-provider model tables (Cursor, Anthropic, OpenAI, ...). Fast and long-context variants appear as separate rows, matching the source page.",
   "models": [
     {

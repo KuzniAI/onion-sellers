@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/zen/v1/models",
-  "fetchedAt": "2026-11-17T14:27:32.729Z",
+  "fetchedAt": "2026-11-18T14:01:41.576Z",
   "notes": "Auto-generated from the OpenCode Zen /v1/models JSON endpoint. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
@@ -19,13 +19,6 @@
     },
     {
       "model": "DeepSeek V4.1 Flash Free",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCachedRead": 0,
-      "priceCachedWrite": null
-    },
-    {
-      "model": "GLM-5.3-Flash Free",
       "priceInput": 0,
       "priceOutput": 0,
       "priceCachedRead": 0,
@@ -730,6 +723,38 @@
       "priceOutput": 0,
       "priceCachedRead": 0,
       "priceCachedWrite": null
+    },
+    {
+      "model": "GPT-6.2 Sol (≤ 272K tokens)",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 2.5,
+      "notes": "Cache write by TTL: 30m $2.5, 12h $5 (priceCachedWrite is the shortest TTL)"
+    },
+    {
+      "model": "GPT-6.2 Sol (> 272K tokens)",
+      "priceInput": 4,
+      "priceOutput": 15,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 5,
+      "notes": "Cache write by TTL: 30m $5, 12h $10 (priceCachedWrite is the shortest TTL)"
+    },
+    {
+      "model": "GPT-6.2 Astra (≤ 272K tokens)",
+      "priceInput": 8,
+      "priceOutput": 40,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": 10,
+      "notes": "Cache write by TTL: 30m $10, 12h $20 (priceCachedWrite is the shortest TTL)"
+    },
+    {
+      "model": "GPT-6.2 Astra (> 272K tokens)",
+      "priceInput": 16,
+      "priceOutput": 60,
+      "priceCachedRead": 0.8,
+      "priceCachedWrite": 20,
+      "notes": "Cache write by TTL: 30m $20, 12h $40 (priceCachedWrite is the shortest TTL)"
     }
   ]
 }
