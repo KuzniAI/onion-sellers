@@ -39,6 +39,10 @@
   { "provider": "copilot", "providerModel": "Claude Fable 5.2", "aaSlug": "claude-fable-5-2" },
   { "provider": "copilot", "providerModel": "Gemini 4 Carbon", "aaSlug": "gemini-4-carbon" },
   { "provider": "copilot", "providerModel": "Gemini 4 Hydrogen", "aaSlug": "gemini-4-hydrogen" },
+  { "provider": "copilot", "providerModel": "GPT-6.2 Astra", "aaSlug": "gpt-6-2-astra" },
+  { "provider": "copilot", "providerModel": "GPT-6.2 Sol", "aaSlug": "gpt-6-2-sol" },
+  { "provider": "copilot", "providerModel": "MAI Code 2", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "copilot", "providerModel": "MAI Code 2 Flash", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
 
   { "provider": "opencode-go", "providerModel": "GLM-5.3-Flash", "aaSlug": "glm-5-3-flash" },
   { "provider": "opencode-go", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
@@ -245,6 +249,8 @@
   { "provider": "opencode-zen", "providerModel": "MiniMax-M2.7", "aaSlug": "minimax-m2-7" },
   { "provider": "opencode-zen", "providerModel": "MiniMax-M3", "aaSlug": "minimax-m3" },
   { "provider": "opencode-zen", "providerModel": "Muse Wonder", "aaSlug": "muse-wonder" },
+  { "provider": "opencode-zen", "providerModel": "GPT-6.2 Sol", "aaSlug": "gpt-6-2-sol" },
+  { "provider": "opencode-zen", "providerModel": "GPT-6.2 Astra", "aaSlug": "gpt-6-2-astra" },
 
   { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
   { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
@@ -343,7 +349,7 @@
   { "provider": "openrouter", "providerModel": "Thinking Machines: Inkling 2 Small", "aaSlug": "inkling-2-small" },
   { "provider": "openrouter", "providerModel": "Anthropic: Claude Fable 5.2", "aaSlug": "claude-fable-5-2" },
   { "provider": "openrouter", "providerModel": "Meta: Muse Ember", "aaSlug": "muse-ember" },
-  { "provider": "openrouter", "providerModel": "LiquidAI: LFM3-1.7B", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "openrouter", "providerModel": "LiquidAI: LFM3-1.7B", "aaSlug": "lfm3-1-7b" },
   { "provider": "openrouter", "providerModel": "Google: Gemini Omni 1.2 Flash", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "openrouter", "providerModel": "KT: Mi:dm K 3.0 Pro", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "openrouter", "providerModel": "Google: Gemini Omni 1.1 Flash", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
@@ -696,5 +702,9 @@
   { "provider": "openrouter", "providerModel": "ReMM SLERP 13B", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "openrouter", "providerModel": "MythoMax 13B", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "openrouter", "providerModel": "OpenAI: GPT-4", "aaSlug": "gpt-4" },
-  { "provider": "openrouter", "providerModel": "Free Models Router", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." }
+  { "provider": "openrouter", "providerModel": "Free Models Router", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "openrouter", "providerModel": "OpenAI: GPT-6.2 Astra Pro", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "openrouter", "providerModel": "OpenAI: GPT-6.2 Astra", "aaSlug": "gpt-6-2-astra" },
+  { "provider": "openrouter", "providerModel": "OpenAI: GPT-6.2 Sol Pro", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "openrouter", "providerModel": "OpenAI: GPT-6.2 Sol", "aaSlug": "gpt-6-2-sol" }
 ]
