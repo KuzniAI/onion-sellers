@@ -43,6 +43,7 @@
   { "provider": "copilot", "providerModel": "GPT-6.2 Sol", "aaSlug": "gpt-6-2-sol" },
   { "provider": "copilot", "providerModel": "MAI Code 2", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "copilot", "providerModel": "MAI Code 2 Flash", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "copilot", "providerModel": "Gemini 4 Neon", "aaSlug": "gemini-4-neon" },
 
   { "provider": "opencode-go", "providerModel": "GLM-5.3-Flash", "aaSlug": "glm-5-3-flash" },
   { "provider": "opencode-go", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
@@ -251,6 +252,8 @@
   { "provider": "opencode-zen", "providerModel": "Muse Wonder", "aaSlug": "muse-wonder" },
   { "provider": "opencode-zen", "providerModel": "GPT-6.2 Sol", "aaSlug": "gpt-6-2-sol" },
   { "provider": "opencode-zen", "providerModel": "GPT-6.2 Astra", "aaSlug": "gpt-6-2-astra" },
+  { "provider": "opencode-zen", "providerModel": "Tidepool Alpha Free", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "opencode-zen", "providerModel": "Gemini 4 Neon", "aaSlug": "gemini-4-neon" },
 
   { "provider": "clinepass", "providerModel": "GLM-5.3", "aaSlug": "glm-5-3" },
   { "provider": "clinepass", "providerModel": "GLM-5.2", "aaSlug": "glm-5-2" },
@@ -337,6 +340,7 @@
   { "provider": "cursor", "providerModel": "Kimi K3", "aaSlug": "kimi-k3" },
   { "provider": "cursor", "providerModel": "Muse Spark 1.3", "aaSlug": "muse-spark-1-3" },
   { "provider": "cursor", "providerModel": "Muse Wonder", "aaSlug": "muse-wonder" },
+  { "provider": "cursor", "providerModel": "Gemini 4 Neon", "aaSlug": "gemini-4-neon" },
 
   { "provider": "openrouter", "providerModel": "Tencent: Hy4 flash", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "openrouter", "providerModel": "Qwen: Qwen4 Max", "aaSlug": "qwen4-max" },
@@ -706,5 +710,13 @@
   { "provider": "openrouter", "providerModel": "OpenAI: GPT-6.2 Astra Pro", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
   { "provider": "openrouter", "providerModel": "OpenAI: GPT-6.2 Astra", "aaSlug": "gpt-6-2-astra" },
   { "provider": "openrouter", "providerModel": "OpenAI: GPT-6.2 Sol Pro", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
-  { "provider": "openrouter", "providerModel": "OpenAI: GPT-6.2 Sol", "aaSlug": "gpt-6-2-sol" }
+  { "provider": "openrouter", "providerModel": "OpenAI: GPT-6.2 Sol", "aaSlug": "gpt-6-2-sol" },
+  { "provider": "openrouter", "providerModel": "Mistral: Pixtral Large 2502", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "openrouter", "providerModel": "Google: Gemini 4 Neon", "aaSlug": "gemini-4-neon" },
+  { "provider": "openrouter", "providerModel": "SpaceXSI: Grok 4.7", "aaSlug": "grok-4-7" },
+  { "provider": "openrouter", "providerModel": "SpaceXSI: Grok 4.6", "aaSlug": "grok-4-6" },
+  { "provider": "openrouter", "providerModel": "SpaceXSI: Grok 4.5", "aaSlug": "grok-4-5" },
+  { "provider": "openrouter", "providerModel": "SpaceXSI: Grok 4.3", "aaSlug": "grok-4-3" },
+  { "provider": "openrouter", "providerModel": "SpaceXSI: Grok 4.20 Multi-Agent", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "openrouter", "providerModel": "SpaceXSI: Grok 4.20", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." }
 ]
