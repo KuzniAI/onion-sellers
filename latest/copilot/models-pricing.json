@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-  "fetchedAt": "2026-11-18T14:01:41.792Z",
+  "fetchedAt": "2026-11-20T16:40:07.420Z",
   "notes": "Auto-generated from GitHub docs' models-and-pricing.yml (a YAML list of models). All prices are per 1M tokens. Models with a \"Long context\" tier bill at a higher rate once input exceeds thresholdInputTokens; the same model may appear twice (Default and Long context rows) -- this is expected, not a duplicate.",
   "models": [
     {
@@ -446,6 +446,18 @@
       "price1mCachedInput": 0.075,
       "price1mCacheWrite": null,
       "price1mOutput": 7.5
+    },
+    {
+      "creator": "Google",
+      "model": "Gemini 4 Neon",
+      "releaseStatus": "GA",
+      "category": "Versatile",
+      "tier": "Default",
+      "thresholdInputTokens": null,
+      "price1mInput": 3,
+      "price1mCachedInput": 0.15,
+      "price1mCacheWrite": null,
+      "price1mOutput": 15
     },
     {
       "creator": "xAI",

@@ -1,8 +1,32 @@
 {
   "sourceUrl": "https://openrouter.ai/api/v1/models",
-  "fetchedAt": "2026-11-18T14:01:42.657Z",
+  "fetchedAt": "2026-11-20T16:40:07.779Z",
   "notes": "Auto-generated from the OpenRouter /api/v1/models JSON endpoint. OpenRouter is pay-as-you-go; prices are converted from USD per token to USD per 1M tokens. Reference a model by its modelId (e.g. \"openrouter/<modelId>\"). Free models have 0 prices.",
   "models": [
+    {
+      "modelId": "mistralai/pixtral-large-2502",
+      "model": "Mistral: Pixtral Large 2502",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-4-neon",
+      "model": "Google: Gemini 4 Neon",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "google/gemini-4-neon:batch",
+      "model": "Google: Gemini 4 Neon (batch)",
+      "priceInput": 1.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": 0.0833333333333333
+    },
     {
       "modelId": "openai/gpt-6.2-astra-pro",
       "model": "OpenAI: GPT-6.2 Astra Pro",
@@ -156,14 +180,6 @@
       "priceCachedWrite": null
     },
     {
-      "modelId": "thinkingmachines/inkling-2-small:free",
-      "model": "Thinking Machines: Inkling 2 Small (free)",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCachedRead": null,
-      "priceCachedWrite": null
-    },
-    {
       "modelId": "anthropic/claude-fable-5.2",
       "model": "Anthropic: Claude Fable 5.2",
       "priceInput": 8,
@@ -264,9 +280,9 @@
     {
       "modelId": "particle-ai/particle-1",
       "model": "Particle AI: Particle-1",
-      "priceInput": 0.06,
+      "priceInput": 0.07,
       "priceOutput": 0.5,
-      "priceCachedRead": 0.003,
+      "priceCachedRead": 0.006,
       "priceCachedWrite": null
     },
     {
@@ -312,9 +328,9 @@
     {
       "modelId": "moonshotai/kimi-k3.1-pro",
       "model": "MoonshotAI: Kimi K3.1 Pro",
-      "priceInput": 0.2403,
-      "priceOutput": 8.4023,
-      "priceCachedRead": 0.2,
+      "priceInput": 0.253,
+      "priceOutput": 8.8,
+      "priceCachedRead": 0.18,
       "priceCachedWrite": null
     },
     {
@@ -336,25 +352,25 @@
     {
       "modelId": "minimax/minimax-m3.1-flash",
       "model": "MiniMax: MiniMax M3.1 Flash",
-      "priceInput": 0.15,
-      "priceOutput": 0.6,
-      "priceCachedRead": 0.015,
+      "priceInput": 0.075,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.0075,
       "priceCachedWrite": null
     },
     {
       "modelId": "deepseek/deepseek-v4.1-flash-1017",
       "model": "DeepSeek: DeepSeek V4.1 Flash 1017",
-      "priceInput": 0.036,
-      "priceOutput": 0.5,
-      "priceCachedRead": 0.01,
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.003,
       "priceCachedWrite": null
     },
     {
       "modelId": "deepseek/deepseek-v4.1-flash-1017:batch",
       "model": "DeepSeek: DeepSeek V4.1 Flash 1017 (batch)",
-      "priceInput": 0.036,
-      "priceOutput": 0.15,
-      "priceCachedRead": 0.003,
+      "priceInput": 0.035,
+      "priceOutput": 0.149,
+      "priceCachedRead": 0.0029,
       "priceCachedWrite": null
     },
     {
@@ -368,9 +384,9 @@
     {
       "modelId": "reflection/beam-1.0-501b-a23b",
       "model": "Reflection: Beam 1.0 501B A23B",
-      "priceInput": 0.3,
+      "priceInput": 0.25,
       "priceOutput": 1,
-      "priceCachedRead": 0.04,
+      "priceCachedRead": 0.05,
       "priceCachedWrite": null
     },
     {
@@ -538,9 +554,9 @@
     {
       "modelId": "inclusionai/ling-3.1-flash",
       "model": "inclusionAI: Ling 3.1 Flash",
-      "priceInput": 0.045,
-      "priceOutput": 0.135,
-      "priceCachedRead": 0.009,
+      "priceInput": 0.06,
+      "priceOutput": 0.18,
+      "priceCachedRead": 0.012,
       "priceCachedWrite": null
     },
     {
@@ -773,7 +789,7 @@
     },
     {
       "modelId": "x-ai/grok-4.7",
-      "model": "SpaceXAI: Grok 4.7",
+      "model": "SpaceXSI: Grok 4.7",
       "priceInput": 2,
       "priceOutput": 6,
       "priceCachedRead": 0.5,
@@ -781,7 +797,7 @@
     },
     {
       "modelId": "x-ai/grok-4.7:batch",
-      "model": "SpaceXAI: Grok 4.7 (batch)",
+      "model": "SpaceXSI: Grok 4.7 (batch)",
       "priceInput": 1.6,
       "priceOutput": 4.8,
       "priceCachedRead": 0.4,
@@ -814,9 +830,9 @@
     {
       "modelId": "~deepseek/deepseek-pro-latest",
       "model": "DeepSeek: DeepSeek Pro Latest",
-      "priceInput": 0.0999,
+      "priceInput": 0.1188,
       "priceOutput": 8,
-      "priceCachedRead": 0.0999,
+      "priceCachedRead": 0.12,
       "priceCachedWrite": null
     },
     {
@@ -902,17 +918,17 @@
     {
       "modelId": "deepseek/deepseek-v4.1-flash",
       "model": "DeepSeek: DeepSeek V4.1 Flash",
-      "priceInput": 0.0507,
-      "priceOutput": 0.2028,
-      "priceCachedRead": 0.001014,
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.006,
       "priceCachedWrite": null
     },
     {
       "modelId": "deepseek/deepseek-v4.1-flash:batch",
       "model": "DeepSeek: DeepSeek V4.1 Flash (batch)",
-      "priceInput": 0.112,
-      "priceOutput": 0.336,
-      "priceCachedRead": 0.00336,
+      "priceInput": 0.05,
+      "priceOutput": 0.15,
+      "priceCachedRead": 0.004,
       "priceCachedWrite": null
     },
     {
@@ -1040,9 +1056,9 @@
     {
       "modelId": "tencent/hy4-preview",
       "model": "Tencent: Hy4 preview",
-      "priceInput": 0.834,
-      "priceOutput": 2.501,
-      "priceCachedRead": 0.042,
+      "priceInput": 0.7506,
+      "priceOutput": 2.2509,
+      "priceCachedRead": 0.0378,
       "priceCachedWrite": null
     },
     {
@@ -1064,17 +1080,17 @@
     {
       "modelId": "z-ai/glm-5.3-flash",
       "model": "Z.ai: GLM 5.3 Flash",
-      "priceInput": 0.15,
-      "priceOutput": 0.5,
+      "priceInput": 0.0399,
+      "priceOutput": 0.0784,
       "priceCachedRead": 0.03,
       "priceCachedWrite": null
     },
     {
       "modelId": "z-ai/glm-5.3-flash:batch",
       "model": "Z.ai: GLM 5.3 Flash (batch)",
-      "priceInput": 0.024,
-      "priceOutput": 0.069,
-      "priceCachedRead": 0.01,
+      "priceInput": 0.023,
+      "priceOutput": 0.068,
+      "priceCachedRead": 0.009,
       "priceCachedWrite": null
     },
     {
@@ -1136,16 +1152,16 @@
     {
       "modelId": "z-ai/glm-5.3:batch",
       "model": "Z.ai: GLM 5.3 (batch)",
-      "priceInput": 0.281,
-      "priceOutput": 1.25,
-      "priceCachedRead": 0.062,
+      "priceInput": 0.28,
+      "priceOutput": 1.249,
+      "priceCachedRead": 0.061,
       "priceCachedWrite": null
     },
     {
       "modelId": "qwen/qwen3.8-27b",
       "model": "Qwen: Qwen3.8 27B",
       "priceInput": 0.06,
-      "priceOutput": 2.2,
+      "priceOutput": 1.96,
       "priceCachedRead": 0.059,
       "priceCachedWrite": null
     },
@@ -1200,14 +1216,14 @@
     {
       "modelId": "deepseek/deepseek-v4-pro-0813",
       "model": "DeepSeek: DeepSeek V4 Pro 0813",
-      "priceInput": 0.111,
-      "priceOutput": 4.44,
-      "priceCachedRead": 0.097,
+      "priceInput": 1.32,
+      "priceOutput": 3.96,
+      "priceCachedRead": 0.044,
       "priceCachedWrite": null
     },
     {
       "modelId": "x-ai/grok-4.6",
-      "model": "SpaceXAI: Grok 4.6",
+      "model": "SpaceXSI: Grok 4.6",
       "priceInput": 2,
       "priceOutput": 6,
       "priceCachedRead": 0.5,
@@ -1215,7 +1231,7 @@
     },
     {
       "modelId": "x-ai/grok-4.6:batch",
-      "model": "SpaceXAI: Grok 4.6 (batch)",
+      "model": "SpaceXSI: Grok 4.6 (batch)",
       "priceInput": 1.6,
       "priceOutput": 4.8,
       "priceCachedRead": 0.4,
@@ -1288,17 +1304,17 @@
     {
       "modelId": "~deepseek/deepseek-v4-flash-latest",
       "model": "DeepSeek: DeepSeek V4 Flash Latest",
-      "priceInput": 0.0434,
-      "priceOutput": 0.3,
-      "priceCachedRead": 0.035,
+      "priceInput": 0.044,
+      "priceOutput": 0.132,
+      "priceCachedRead": 0.0014,
       "priceCachedWrite": null
     },
     {
       "modelId": "deepseek/deepseek-v4-flash-0731",
       "model": "DeepSeek: DeepSeek V4 Flash 0731",
-      "priceInput": 0.06,
-      "priceOutput": 0.18,
-      "priceCachedRead": 0.015,
+      "priceInput": 0.0443,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.035,
       "priceCachedWrite": null
     },
     {
@@ -1529,7 +1545,7 @@
     },
     {
       "modelId": "x-ai/grok-4.5",
-      "model": "SpaceXAI: Grok 4.5",
+      "model": "SpaceXSI: Grok 4.5",
       "priceInput": 2,
       "priceOutput": 6,
       "priceCachedRead": 0.3,
@@ -1562,9 +1578,9 @@
     {
       "modelId": "tencent/hy3",
       "model": "Tencent: Hy3",
-      "priceInput": 0.132,
-      "priceOutput": 0.528,
-      "priceCachedRead": 0.033,
+      "priceInput": 0.0825,
+      "priceOutput": 0.33,
+      "priceCachedRead": 0.020625,
       "priceCachedWrite": null
     },
     {
@@ -1618,19 +1634,11 @@
       "priceCachedWrite": 0.375
     },
     {
-      "modelId": "cohere/north-mini-code:free",
-      "model": "Cohere: North Mini Code (free)",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCachedRead": null,
-      "priceCachedWrite": null
-    },
-    {
       "modelId": "z-ai/glm-5.2",
       "model": "Z.ai: GLM 5.2",
-      "priceInput": 0.007,
-      "priceOutput": 6.8,
-      "priceCachedRead": 0.006,
+      "priceInput": 0.62,
+      "priceOutput": 2.42,
+      "priceCachedRead": 0.14,
       "priceCachedWrite": null
     },
     {
@@ -1644,9 +1652,9 @@
     {
       "modelId": "moonshotai/kimi-k2.7-code",
       "model": "MoonshotAI: Kimi K2.7 Code",
-      "priceInput": 0.7,
-      "priceOutput": 3.75,
-      "priceCachedRead": 0.17,
+      "priceInput": 0.6,
+      "priceOutput": 3,
+      "priceCachedRead": 0.12,
       "priceCachedWrite": null
     },
     {
@@ -1767,14 +1775,6 @@
       "priceCachedWrite": 1.84375
     },
     {
-      "modelId": "x-ai/grok-build-0.1",
-      "model": "SpaceXAI: Grok Build 0.1",
-      "priceInput": 1,
-      "priceOutput": 2,
-      "priceCachedRead": 0.2,
-      "priceCachedWrite": null
-    },
-    {
       "modelId": "google/gemini-3.5-flash",
       "model": "Google: Gemini 3.5 Flash",
       "priceInput": 1.5,
@@ -1824,7 +1824,7 @@
     },
     {
       "modelId": "x-ai/grok-4.3",
-      "model": "SpaceXAI: Grok 4.3",
+      "model": "SpaceXSI: Grok 4.3",
       "priceInput": 1.25,
       "priceOutput": 2.5,
       "priceCachedRead": 0.2,
@@ -1832,7 +1832,7 @@
     },
     {
       "modelId": "x-ai/grok-4.3:batch",
-      "model": "SpaceXAI: Grok 4.3 (batch)",
+      "model": "SpaceXSI: Grok 4.3 (batch)",
       "priceInput": 1,
       "priceOutput": 2,
       "priceCachedRead": 0.16,
@@ -1890,7 +1890,7 @@
     {
       "modelId": "~moonshotai/kimi-latest",
       "model": "MoonshotAI: Kimi Latest",
-      "priceInput": 0.1824,
+      "priceInput": 0.1805,
       "priceOutput": 11.0055,
       "priceCachedRead": 0.18,
       "priceCachedWrite": null
@@ -1981,7 +1981,7 @@
       "model": "DeepSeek: DeepSeek V4 Pro 0423",
       "priceInput": 0.9,
       "priceOutput": 1.5,
-      "priceCachedRead": 0.25,
+      "priceCachedRead": 0.2,
       "priceCachedWrite": null
     },
     {
@@ -2062,9 +2062,9 @@
     {
       "modelId": "z-ai/glm-5.1",
       "model": "Z.ai: GLM 5.1",
-      "priceInput": 1.4,
-      "priceOutput": 4.4,
-      "priceCachedRead": 0.26,
+      "priceInput": 1.19,
+      "priceOutput": 3.74,
+      "priceCachedRead": 0.6,
       "priceCachedWrite": null
     },
     {
@@ -2117,7 +2117,7 @@
     },
     {
       "modelId": "x-ai/grok-4.20-multi-agent",
-      "model": "SpaceXAI: Grok 4.20 Multi-Agent",
+      "model": "SpaceXSI: Grok 4.20 Multi-Agent",
       "priceInput": 1.25,
       "priceOutput": 2.5,
       "priceCachedRead": 0.2,
@@ -2125,7 +2125,7 @@
     },
     {
       "modelId": "x-ai/grok-4.20",
-      "model": "SpaceXAI: Grok 4.20",
+      "model": "SpaceXSI: Grok 4.20",
       "priceInput": 1.25,
       "priceOutput": 2.5,
       "priceCachedRead": 0.2,
@@ -2232,7 +2232,7 @@
       "model": "Qwen: Qwen3.5-9B",
       "priceInput": 0.17,
       "priceOutput": 0.25,
-      "priceCachedRead": 0.153,
+      "priceCachedRead": null,
       "priceCachedWrite": null
     },
     {
@@ -2302,8 +2302,8 @@
     {
       "modelId": "qwen/qwen3.5-27b",
       "model": "Qwen: Qwen3.5-27B",
-      "priceInput": 0.3,
-      "priceOutput": 2.4,
+      "priceInput": 0.195,
+      "priceOutput": 1.56,
       "priceCachedRead": null,
       "priceCachedWrite": null
     },
@@ -2984,9 +2984,9 @@
     {
       "modelId": "openai/gpt-oss-120b",
       "model": "OpenAI: gpt-oss-120b",
-      "priceInput": 0.15,
-      "priceOutput": 0.6,
-      "priceCachedRead": 0.075,
+      "priceInput": 0.09,
+      "priceOutput": 0.36,
+      "priceCachedRead": null,
       "priceCachedWrite": null
     },
     {
@@ -3387,8 +3387,8 @@
       "modelId": "google/gemma-3-27b-it",
       "model": "Google: Gemma 3 27B",
       "priceInput": 0.08,
-      "priceOutput": 0.45,
-      "priceCachedRead": 0.04,
+      "priceOutput": 0.16,
+      "priceCachedRead": null,
       "priceCachedWrite": null
     },
     {
@@ -3576,18 +3576,10 @@
       "priceCachedWrite": null
     },
     {
-      "modelId": "meta-llama/llama-3.2-1b-instruct",
-      "model": "Meta: Llama 3.2 1B Instruct",
-      "priceInput": 0.027,
-      "priceOutput": 0.201,
-      "priceCachedRead": null,
-      "priceCachedWrite": null
-    },
-    {
       "modelId": "meta-llama/llama-3.2-3b-instruct",
       "model": "Meta: Llama 3.2 3B Instruct",
-      "priceInput": 0.0509,
-      "priceOutput": 0.335,
+      "priceInput": 0.05,
+      "priceOutput": 0.33,
       "priceCachedRead": null,
       "priceCachedWrite": null
     },

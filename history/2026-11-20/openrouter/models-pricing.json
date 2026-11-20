@@ -1,0 +1,3795 @@
+{
+  "sourceUrl": "https://openrouter.ai/api/v1/models",
+  "fetchedAt": "2026-11-20T16:40:07.779Z",
+  "notes": "Auto-generated from the OpenRouter /api/v1/models JSON endpoint. OpenRouter is pay-as-you-go; prices are converted from USD per token to USD per 1M tokens. Reference a model by its modelId (e.g. \"openrouter/<modelId>\"). Free models have 0 prices.",
+  "models": [
+    {
+      "modelId": "mistralai/pixtral-large-2502",
+      "model": "Mistral: Pixtral Large 2502",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-4-neon",
+      "model": "Google: Gemini 4 Neon",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "google/gemini-4-neon:batch",
+      "model": "Google: Gemini 4 Neon (batch)",
+      "priceInput": 1.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "openai/gpt-6.2-astra-pro",
+      "model": "OpenAI: GPT-6.2 Astra Pro",
+      "priceInput": 8,
+      "priceOutput": 40,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": 10
+    },
+    {
+      "modelId": "openai/gpt-6.2-astra-pro:batch",
+      "model": "OpenAI: GPT-6.2 Astra Pro (batch)",
+      "priceInput": 4,
+      "priceOutput": 20,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 5
+    },
+    {
+      "modelId": "openai/gpt-6.2-astra",
+      "model": "OpenAI: GPT-6.2 Astra",
+      "priceInput": 8,
+      "priceOutput": 40,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": 10
+    },
+    {
+      "modelId": "openai/gpt-6.2-astra:batch",
+      "model": "OpenAI: GPT-6.2 Astra (batch)",
+      "priceInput": 4,
+      "priceOutput": 20,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 5
+    },
+    {
+      "modelId": "openai/gpt-6.2-sol-pro",
+      "model": "OpenAI: GPT-6.2 Sol Pro",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "openai/gpt-6.2-sol-pro:batch",
+      "model": "OpenAI: GPT-6.2 Sol Pro (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 1.25
+    },
+    {
+      "modelId": "openai/gpt-6.2-sol",
+      "model": "OpenAI: GPT-6.2 Sol",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "openai/gpt-6.2-sol:batch",
+      "model": "OpenAI: GPT-6.2 Sol (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 1.25
+    },
+    {
+      "modelId": "tencent/hy4-flash",
+      "model": "Tencent: Hy4 flash",
+      "priceInput": 0.035,
+      "priceOutput": 0.1405,
+      "priceCachedRead": 0.0015,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen4-max",
+      "model": "Qwen: Qwen4 Max",
+      "priceInput": 1.425,
+      "priceOutput": 4.275,
+      "priceCachedRead": 0.07125,
+      "priceCachedWrite": 1.78125
+    },
+    {
+      "modelId": "inclusionai/ling-3.2-flash:free",
+      "model": "inclusionAI: Ling 3.2 Flash (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-4-hydrogen",
+      "model": "Google: Gemini 4 Hydrogen",
+      "priceInput": 1.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "google/gemini-4-hydrogen:batch",
+      "model": "Google: Gemini 4 Hydrogen (batch)",
+      "priceInput": 0.75,
+      "priceOutput": 3.75,
+      "priceCachedRead": 0.0375,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "baidu/ernie-5.5-flash-preview:free",
+      "model": "Baidu: ERNIE-5.5-Flash-Preview (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "baidu/ernie-light-dt-1.0-intl",
+      "model": "Baidu: ERNIE-Light-DT-1.0",
+      "priceInput": 1.13,
+      "priceOutput": 3.94,
+      "priceCachedRead": 0.113,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-4-carbon",
+      "model": "Google: Gemini 4 Carbon",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 0.1875
+    },
+    {
+      "modelId": "google/gemini-4-carbon:batch",
+      "model": "Google: Gemini 4 Carbon (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 0.1875
+    },
+    {
+      "modelId": "nex-agi/nex-n2.6",
+      "model": "Nex AGI: Nex-N2.6",
+      "priceInput": 0.12,
+      "priceOutput": 0.4,
+      "priceCachedRead": 0.024,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "thinkingmachines/inkling-2-small",
+      "model": "Thinking Machines: Inkling 2 Small",
+      "priceInput": 0.3,
+      "priceOutput": 1,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthropic/claude-fable-5.2",
+      "model": "Anthropic: Claude Fable 5.2",
+      "priceInput": 8,
+      "priceOutput": 40,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 10,
+      "notes": "1h cache write $16 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-fable-5.2:batch",
+      "model": "Anthropic: Claude Fable 5.2 (batch)",
+      "priceInput": 4,
+      "priceOutput": 20,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 5,
+      "notes": "1h cache write $8 per 1M tokens"
+    },
+    {
+      "modelId": "meta/muse-ember",
+      "model": "Meta: Muse Ember",
+      "priceInput": 0.1,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.004,
+      "priceCachedWrite": 0.125
+    },
+    {
+      "modelId": "liquid/lfm-3-1.7b",
+      "model": "LiquidAI: LFM3-1.7B",
+      "priceInput": 0.08,
+      "priceOutput": 0.2,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "liquid/lfm-3-1.7b:free",
+      "model": "LiquidAI: LFM3-1.7B (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-omni-1.2-flash",
+      "model": "Google: Gemini Omni 1.2 Flash",
+      "priceInput": 1.5,
+      "priceOutput": 9,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "kt/midm-k-3.0-pro",
+      "model": "KT: Mi:dm K 3.0 Pro",
+      "priceInput": 0.2,
+      "priceOutput": 0.8,
+      "priceCachedRead": 0.04,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-omni-1.1-flash",
+      "model": "Google: Gemini Omni 1.1 Flash",
+      "priceInput": 1.5,
+      "priceOutput": 9,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "ricursiveai/ripple-65b-preview",
+      "model": "Ricursive: Ripple 65B Preview",
+      "priceInput": 0.1,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.025,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "tencent/hy4",
+      "model": "Tencent: Hy4",
+      "priceInput": 0.417,
+      "priceOutput": 1.2505,
+      "priceCachedRead": 0.021,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "motif-technologies/motif-3",
+      "model": "Motif Technologies: Motif 3",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.06,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-5.3-flashx-legal",
+      "model": "Z.ai: GLM 5.3 FlashX Legal",
+      "priceInput": 0.37,
+      "priceOutput": 1.25,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "particle-ai/particle-1",
+      "model": "Particle AI: Particle-1",
+      "priceInput": 0.07,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.006,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "particle-ai/particle-1:free",
+      "model": "Particle AI: Particle-1 (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-6.1-terra-pro",
+      "model": "OpenAI: GPT-6.1 Terra Pro",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 1.25
+    },
+    {
+      "modelId": "openai/gpt-6.1-terra-pro:batch",
+      "model": "OpenAI: GPT-6.1 Terra Pro (batch)",
+      "priceInput": 0.5,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.025,
+      "priceCachedWrite": 0.625
+    },
+    {
+      "modelId": "openai/gpt-6.1-terra",
+      "model": "OpenAI: GPT-6.1 Terra",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 1.25
+    },
+    {
+      "modelId": "openai/gpt-6.1-terra:batch",
+      "model": "OpenAI: GPT-6.1 Terra (batch)",
+      "priceInput": 0.5,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.025,
+      "priceCachedWrite": 0.625
+    },
+    {
+      "modelId": "moonshotai/kimi-k3.1-pro",
+      "model": "MoonshotAI: Kimi K3.1 Pro",
+      "priceInput": 0.253,
+      "priceOutput": 8.8,
+      "priceCachedRead": 0.18,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "moonshotai/kimi-k3.1-pro:batch",
+      "model": "MoonshotAI: Kimi K3.1 Pro (batch)",
+      "priceInput": 0.372,
+      "priceOutput": 5.583,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "recursive/flint-v1.0:free",
+      "model": "Recursive: Flint (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "minimax/minimax-m3.1-flash",
+      "model": "MiniMax: MiniMax M3.1 Flash",
+      "priceInput": 0.075,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.0075,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v4.1-flash-1017",
+      "model": "DeepSeek: DeepSeek V4.1 Flash 1017",
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.003,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v4.1-flash-1017:batch",
+      "model": "DeepSeek: DeepSeek V4.1 Flash 1017 (batch)",
+      "priceInput": 0.035,
+      "priceOutput": 0.149,
+      "priceCachedRead": 0.0029,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "elorian/glimpse",
+      "model": "Elorian: Glimpse",
+      "priceInput": 0.6,
+      "priceOutput": 3,
+      "priceCachedRead": 0.06,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "reflection/beam-1.0-501b-a23b",
+      "model": "Reflection: Beam 1.0 501B A23B",
+      "priceInput": 0.25,
+      "priceOutput": 1,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "prism-ml/ternary-bonsai-2-9b",
+      "model": "PrismML: Ternary Bonsai 2 9B",
+      "priceInput": 0.08,
+      "priceOutput": 0.13,
+      "priceCachedRead": 0.04,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "moondream/moondream3-preview",
+      "model": "Moondream: Moondream 3 Preview",
+      "priceInput": 0.3,
+      "priceOutput": 2.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "moondream/moondream3.1-9b-a2b",
+      "model": "Moondream: Moondream 3.1",
+      "priceInput": 0.3,
+      "priceOutput": 2.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta/muse-spark-open",
+      "model": "Meta: Muse Spark Open",
+      "priceInput": 1.25,
+      "priceOutput": 4.25,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nvidia/nemotron-3.5-super-vl",
+      "model": "NVIDIA: Nemotron 3.5 Super VL",
+      "priceInput": 0.15,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nvidia/nemotron-3.5-super-vl:free",
+      "model": "NVIDIA: Nemotron 3.5 Super VL (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "unbiased/pareto-26.10",
+      "model": "Pareto 26.10",
+      "priceInput": 0.8,
+      "priceOutput": 3.2,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~unbiased/pareto-latest",
+      "model": "Pareto Latest",
+      "priceInput": 0.8,
+      "priceOutput": 3.2,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "unbiased/pareto-26.9",
+      "model": "Pareto 26.9",
+      "priceInput": 2.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "liquid/lfm-2.5-24b-a2b",
+      "model": "LiquidAI: LFM2.5-24B-A2B",
+      "priceInput": 0.05,
+      "priceOutput": 0.7,
+      "priceCachedRead": 0.025,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-4-argon",
+      "model": "Google: Gemini 4 Argon",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 0.1875
+    },
+    {
+      "modelId": "google/gemini-4-argon:batch",
+      "model": "Google: Gemini 4 Argon (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 0.1875
+    },
+    {
+      "modelId": "scaledown/summarize",
+      "model": "ScaleDown: Summarize",
+      "priceInput": 0.04,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "scaledown/extract",
+      "model": "ScaleDown: Extract",
+      "priceInput": 0.04,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta/muse-wonder",
+      "model": "Meta: Muse Wonder",
+      "priceInput": 4,
+      "priceOutput": 20,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "stepfun/step-5-preview",
+      "model": "StepFun: Step 5 Preview",
+      "priceInput": 1,
+      "priceOutput": 2.7,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthropic/claude-haiku-5.5",
+      "model": "Anthropic: Claude Haiku 5.5",
+      "priceInput": 0.1,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": 0.125,
+      "notes": "1h cache write $0.2 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-haiku-5.5:batch",
+      "model": "Anthropic: Claude Haiku 5.5 (batch)",
+      "priceInput": 0.05,
+      "priceOutput": 0.25,
+      "priceCachedRead": 0.005,
+      "priceCachedWrite": 0.0625,
+      "notes": "1h cache write $0.1 per 1M tokens"
+    },
+    {
+      "modelId": "google/gemini-nano-banana-2.1",
+      "model": "Google: Nano Banana 2.1",
+      "priceInput": 1.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-large-4-0",
+      "model": "Mistral: Mistral Large 4",
+      "priceInput": 0.7,
+      "priceOutput": 2.1,
+      "priceCachedRead": 0.07,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "inclusionai/ling-3.1-flash",
+      "model": "inclusionAI: Ling 3.1 Flash",
+      "priceInput": 0.06,
+      "priceOutput": 0.18,
+      "priceCachedRead": 0.012,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "unbiased/pareto-26.10-preview",
+      "model": "Pareto 26.10 Preview",
+      "priceInput": 0.8,
+      "priceOutput": 3.2,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-6.1-sol-pro",
+      "model": "OpenAI: GPT-6.1 Sol Pro",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "openai/gpt-6.1-sol-pro:batch",
+      "model": "OpenAI: GPT-6.1 Sol Pro (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 1.25
+    },
+    {
+      "modelId": "openai/gpt-6.1-sol",
+      "model": "OpenAI: GPT-6.1 Sol",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "openai/gpt-6.1-sol:batch",
+      "model": "OpenAI: GPT-6.1 Sol (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 1.25
+    },
+    {
+      "modelId": "anthropic/claude-sonnet-5.5",
+      "model": "Anthropic: Claude Sonnet 5.5",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 2.5,
+      "notes": "1h cache write $4 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-sonnet-5.5:batch",
+      "model": "Anthropic: Claude Sonnet 5.5 (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 1.25,
+      "notes": "1h cache write $2 per 1M tokens"
+    },
+    {
+      "modelId": "perceptron/perceptron-mk1.5",
+      "model": "Perceptron: Perceptron Mk1.5",
+      "priceInput": 0.15,
+      "priceOutput": 1.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "fireworks/ember-1",
+      "model": "Fireworks: Ember-1",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": 0.3,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-5.3-prime",
+      "model": "Z.ai: GLM 5.3 Prime",
+      "priceInput": 1.68,
+      "priceOutput": 5.28,
+      "priceCachedRead": 0.336,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.8-max-prime",
+      "model": "Qwen: Qwen3.8 Max Prime",
+      "priceInput": 4,
+      "priceOutput": 12,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "aion-labs/aion-3.5-mini",
+      "model": "AionLabs: Aion 3.5 Mini",
+      "priceInput": 0.7,
+      "priceOutput": 1.4,
+      "priceCachedRead": 0.18,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "aion-labs/aion-3.5",
+      "model": "AionLabs: Aion 3.5",
+      "priceInput": 3,
+      "priceOutput": 6,
+      "priceCachedRead": 0.75,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "upstage/solar-mini4",
+      "model": "Upstage: Solar Mini 4",
+      "priceInput": 0.05,
+      "priceOutput": 0.2,
+      "priceCachedRead": 0.005,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "cohere/command-a-plus",
+      "model": "Cohere: Command A+",
+      "priceInput": 0.3,
+      "priceOutput": 1.5,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-6-luna-pro",
+      "model": "OpenAI: GPT-6 Luna Pro",
+      "priceInput": 0.1,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": 0.125
+    },
+    {
+      "modelId": "openai/gpt-6-luna-pro:batch",
+      "model": "OpenAI: GPT-6 Luna Pro (batch)",
+      "priceInput": 0.05,
+      "priceOutput": 0.25,
+      "priceCachedRead": 0.005,
+      "priceCachedWrite": 0.0625
+    },
+    {
+      "modelId": "openai/gpt-6-luna",
+      "model": "OpenAI: GPT-6 Luna",
+      "priceInput": 0.1,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": 0.125
+    },
+    {
+      "modelId": "openai/gpt-6-luna:batch",
+      "model": "OpenAI: GPT-6 Luna (batch)",
+      "priceInput": 0.05,
+      "priceOutput": 0.25,
+      "priceCachedRead": 0.005,
+      "priceCachedWrite": 0.0625
+    },
+    {
+      "modelId": "openai/gpt-6-sol-pro",
+      "model": "OpenAI: GPT-6 Sol Pro",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "openai/gpt-6-sol-pro:batch",
+      "model": "OpenAI: GPT-6 Sol Pro (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 1.25
+    },
+    {
+      "modelId": "openai/gpt-6-sol",
+      "model": "OpenAI: GPT-6 Sol",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "openai/gpt-6-sol:batch",
+      "model": "OpenAI: GPT-6 Sol (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 1.25
+    },
+    {
+      "modelId": "anthropic/claude-opus-5.5",
+      "model": "Anthropic: Claude Opus 5.5",
+      "priceInput": 4,
+      "priceOutput": 20,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 5,
+      "notes": "1h cache write $8 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-opus-5.5:batch",
+      "model": "Anthropic: Claude Opus 5.5 (batch)",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 2.5,
+      "notes": "1h cache write $4 per 1M tokens"
+    },
+    {
+      "modelId": "xiaomi/mimo-v2.6-pro-ultraspeed",
+      "model": "Xiaomi: MiMo-V2.6-Pro-UltraSpeed",
+      "priceInput": 4.35,
+      "priceOutput": 8.7,
+      "priceCachedRead": 0.036,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "xiaomi/mimo-v2.6-flash",
+      "model": "Xiaomi: MiMo-V2.6-Flash",
+      "priceInput": 0.14,
+      "priceOutput": 0.28,
+      "priceCachedRead": 0.0028,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "xiaomi/mimo-v2.6-pro",
+      "model": "Xiaomi: MiMo-V2.6-Pro",
+      "priceInput": 0.435,
+      "priceOutput": 0.87,
+      "priceCachedRead": 0.0036,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "x-ai/grok-4.7",
+      "model": "SpaceXSI: Grok 4.7",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "x-ai/grok-4.7:batch",
+      "model": "SpaceXSI: Grok 4.7 (batch)",
+      "priceInput": 1.6,
+      "priceOutput": 4.8,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.8-omni-flash",
+      "model": "Qwen: Qwen3.8 Omni Flash",
+      "priceInput": 0.15,
+      "priceOutput": 0.47,
+      "priceCachedRead": 0.016,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "prism-ml/ternary-bonsai-2-27b",
+      "model": "PrismML: Ternary Bonsai 2 27B",
+      "priceInput": 0.075,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.0375,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-5.3-flashx",
+      "model": "Z.ai: GLM 5.3 FlashX",
+      "priceInput": 0.37,
+      "priceOutput": 1.25,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~deepseek/deepseek-pro-latest",
+      "model": "DeepSeek: DeepSeek Pro Latest",
+      "priceInput": 0.1188,
+      "priceOutput": 8,
+      "priceCachedRead": 0.12,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~deepseek/deepseek-flash-latest",
+      "model": "DeepSeek: DeepSeek Flash Latest",
+      "priceInput": 0.036,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "inference-net/schematron-v2-turbo",
+      "model": "Inference.net: Schematron V2 Turbo",
+      "priceInput": 0.03,
+      "priceOutput": 0.15,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "inference-net/schematron-v2-small",
+      "model": "Inference.net: Schematron V2 Small",
+      "priceInput": 0.05,
+      "priceOutput": 0.23,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~openai/gpt-astra-latest",
+      "model": "OpenAI: GPT Astra Latest",
+      "priceInput": 8,
+      "priceOutput": 40,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": 10
+    },
+    {
+      "modelId": "~openai/gpt-sol-latest",
+      "model": "OpenAI: GPT Sol Latest",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "~openai/gpt-terra-latest",
+      "model": "OpenAI: GPT Terra Latest",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 1.25
+    },
+    {
+      "modelId": "~openai/gpt-luna-latest",
+      "model": "OpenAI: GPT Luna Latest",
+      "priceInput": 0.1,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": 0.125
+    },
+    {
+      "modelId": "sakana/fugu-ultra-v2",
+      "model": "Sakana: Fugu Ultra v2",
+      "priceInput": 5,
+      "priceOutput": 30,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "sakana/fugu-max",
+      "model": "Sakana: Fugu Max",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "inclusionai/ling-3.0-flash-vl",
+      "model": "inclusionAI: Ling 3.0 Flash VL",
+      "priceInput": 0.06,
+      "priceOutput": 0.18,
+      "priceCachedRead": 0.012,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v4.1-flash",
+      "model": "DeepSeek: DeepSeek V4.1 Flash",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.006,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v4.1-flash:batch",
+      "model": "DeepSeek: DeepSeek V4.1 Flash (batch)",
+      "priceInput": 0.05,
+      "priceOutput": 0.15,
+      "priceCachedRead": 0.004,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nex-agi/nex-n2.5-mini",
+      "model": "Nex AGI: Nex-N2.5-Mini",
+      "priceInput": 0.025,
+      "priceOutput": 0.1,
+      "priceCachedRead": 0.0025,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nex-agi/nex-n2.5-pro",
+      "model": "Nex AGI: Nex-N2.5-Pro",
+      "priceInput": 0.075,
+      "priceOutput": 0.25,
+      "priceCachedRead": 0.015,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-6-astra",
+      "model": "OpenAI: GPT-6 Astra",
+      "priceInput": 10,
+      "priceOutput": 50,
+      "priceCachedRead": 1,
+      "priceCachedWrite": 12.5
+    },
+    {
+      "modelId": "openai/gpt-6-astra:batch",
+      "model": "OpenAI: GPT-6 Astra (batch)",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25
+    },
+    {
+      "modelId": "openai/gpt-6-astra-pro",
+      "model": "OpenAI: GPT-6 Astra Pro",
+      "priceInput": 10,
+      "priceOutput": 50,
+      "priceCachedRead": 1,
+      "priceCachedWrite": 12.5
+    },
+    {
+      "modelId": "openai/gpt-6-astra-pro:batch",
+      "model": "OpenAI: GPT-6 Astra Pro (batch)",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25
+    },
+    {
+      "modelId": "qwen/qwen3.8-max-0902",
+      "model": "Qwen: Qwen3.8 Max (0902)",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.8-max-0902:batch",
+      "model": "Qwen: Qwen3.8 Max (0902) (batch)",
+      "priceInput": 1.15,
+      "priceOutput": 3.45,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta/muse-spark-1.3-contributor",
+      "model": "Meta: Muse Spark 1.3 Contributor",
+      "priceInput": 0.1,
+      "priceOutput": 0.2,
+      "priceCachedRead": 0.002,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta/muse-spark-1.3",
+      "model": "Meta: Muse Spark 1.3",
+      "priceInput": 1.25,
+      "priceOutput": 4.25,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-3.8-flash",
+      "model": "Google: Gemini 3.8 Flash",
+      "priceInput": 0.825,
+      "priceOutput": 4.125,
+      "priceCachedRead": 0.0825,
+      "priceCachedWrite": 0.0416666666666667
+    },
+    {
+      "modelId": "google/gemini-3.8-flash:batch",
+      "model": "Google: Gemini 3.8 Flash (batch)",
+      "priceInput": 0.375,
+      "priceOutput": 1.875,
+      "priceCachedRead": 0.0375,
+      "priceCachedWrite": 0.0416666666666667
+    },
+    {
+      "modelId": "anthropic/claude-fable-5.1",
+      "model": "Anthropic: Claude Fable 5.1",
+      "priceInput": 10,
+      "priceOutput": 50,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": 12.5,
+      "notes": "1h cache write $20 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-fable-5.1:batch",
+      "model": "Anthropic: Claude Fable 5.1 (batch)",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.125,
+      "priceCachedWrite": 6.25,
+      "notes": "1h cache write $10 per 1M tokens"
+    },
+    {
+      "modelId": "ibm-granite/granite-4.2-8b",
+      "model": "IBM: Granite 4.2 8B",
+      "priceInput": 0.06,
+      "priceOutput": 0.15,
+      "priceCachedRead": 0.015,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "tencent/hy4-preview",
+      "model": "Tencent: Hy4 preview",
+      "priceInput": 0.7506,
+      "priceOutput": 2.2509,
+      "priceCachedRead": 0.0378,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~z-ai/glm-flash-latest",
+      "model": "Z.ai: GLM Flash Latest",
+      "priceInput": 0.0399,
+      "priceOutput": 0.0784,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.8-flash",
+      "model": "Qwen: Qwen3.8 Flash",
+      "priceInput": 0.15,
+      "priceOutput": 0.47,
+      "priceCachedRead": 0.016,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-5.3-flash",
+      "model": "Z.ai: GLM 5.3 Flash",
+      "priceInput": 0.0399,
+      "priceOutput": 0.0784,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-5.3-flash:batch",
+      "model": "Z.ai: GLM 5.3 Flash (batch)",
+      "priceInput": 0.023,
+      "priceOutput": 0.068,
+      "priceCachedRead": 0.009,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta/muse-spark-1.2-contributor",
+      "model": "Meta: Muse Spark 1.2 Contributor",
+      "priceInput": 0.1,
+      "priceOutput": 0.2,
+      "priceCachedRead": 0.002,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v4-flash-vision-exp",
+      "model": "DeepSeek: DeepSeek V4 Flash Vision Exp",
+      "priceInput": 0.44,
+      "priceOutput": 1.32,
+      "priceCachedRead": 0.014,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "tencent/hy-mt2-1.8b",
+      "model": "Tencent: Hy-MT2-1.8B",
+      "priceInput": 0.044,
+      "priceOutput": 0.177,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "tencent/hy-mt2-30b-a3b",
+      "model": "Tencent: Hy-MT2-30B-A3B",
+      "priceInput": 0.074,
+      "priceOutput": 0.295,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~z-ai/glm-latest",
+      "model": "Z.ai: GLM Latest",
+      "priceInput": 0.0699,
+      "priceOutput": 1.4,
+      "priceCachedRead": 0.0689,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "tencent/hy-mt2-7b",
+      "model": "Tencent: Hy-MT2-7B",
+      "priceInput": 0.074,
+      "priceOutput": 0.295,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-5.3",
+      "model": "Z.ai: GLM 5.3",
+      "priceInput": 0.0699,
+      "priceOutput": 1.4,
+      "priceCachedRead": 0.0689,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-5.3:batch",
+      "model": "Z.ai: GLM 5.3 (batch)",
+      "priceInput": 0.28,
+      "priceOutput": 1.249,
+      "priceCachedRead": 0.061,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.8-27b",
+      "model": "Qwen: Qwen3.8 27B",
+      "priceInput": 0.06,
+      "priceOutput": 1.96,
+      "priceCachedRead": 0.059,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.8-27b:batch",
+      "model": "Qwen: Qwen3.8 27B (batch)",
+      "priceInput": 0.16,
+      "priceOutput": 2,
+      "priceCachedRead": 0.04,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "dots-studio/dots-3-note-preview:free",
+      "model": "Dots Studio: Dots3-Note Preview (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-3.7-flash",
+      "model": "Google: Gemini 3.7 Flash",
+      "priceInput": 0.75,
+      "priceOutput": 3.75,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": 0.0416666666666667
+    },
+    {
+      "modelId": "google/gemini-3.7-flash:batch",
+      "model": "Google: Gemini 3.7 Flash (batch)",
+      "priceInput": 0.375,
+      "priceOutput": 1.875,
+      "priceCachedRead": 0.0375,
+      "priceCachedWrite": 0.0416666666666667
+    },
+    {
+      "modelId": "bytedance-seed/seed-2-1-turbo",
+      "model": "ByteDance Seed: Seed 2.1 Turbo",
+      "priceInput": 0.5,
+      "priceOutput": 2.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.8-2.4t-a95b",
+      "model": "Qwen: Qwen3.8 2.4T A95B",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v4-pro-0813",
+      "model": "DeepSeek: DeepSeek V4 Pro 0813",
+      "priceInput": 1.32,
+      "priceOutput": 3.96,
+      "priceCachedRead": 0.044,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "x-ai/grok-4.6",
+      "model": "SpaceXSI: Grok 4.6",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "x-ai/grok-4.6:batch",
+      "model": "SpaceXSI: Grok 4.6 (batch)",
+      "priceInput": 1.6,
+      "priceOutput": 4.8,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nvidia/nemotron-3.5-lightning",
+      "model": "NVIDIA: Nemotron 3.5 Lightning",
+      "priceInput": 0.07,
+      "priceOutput": 0.2,
+      "priceCachedRead": 0.04,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nvidia/nemotron-3.5-lightning:free",
+      "model": "NVIDIA: Nemotron 3.5 Lightning (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "sakana/sakana-namazu",
+      "model": "Sakana: Sakana Namazu",
+      "priceInput": 0.95,
+      "priceOutput": 4,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "upstage/solar-pro4",
+      "model": "Upstage: Solar Pro 4",
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta/muse-glimmer-30b",
+      "model": "Meta: Muse Glimmer 30B",
+      "priceInput": 0.35,
+      "priceOutput": 1.5,
+      "priceCachedRead": 0.04,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta/muse-glimmer-30b:batch",
+      "model": "Meta: Muse Glimmer 30B (batch)",
+      "priceInput": 0.24,
+      "priceOutput": 0.96,
+      "priceCachedRead": 0.032,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "inclusionai/ling-3.0-tiny",
+      "model": "inclusionAI: Ling 3.0 Tiny",
+      "priceInput": 0.015,
+      "priceOutput": 0.045,
+      "priceCachedRead": 0.003,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta/muse-spark-1.2",
+      "model": "Meta: Muse Spark 1.2",
+      "priceInput": 1.25,
+      "priceOutput": 4.25,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~deepseek/deepseek-v4-flash-latest",
+      "model": "DeepSeek: DeepSeek V4 Flash Latest",
+      "priceInput": 0.044,
+      "priceOutput": 0.132,
+      "priceCachedRead": 0.0014,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v4-flash-0731",
+      "model": "DeepSeek: DeepSeek V4 Flash 0731",
+      "priceInput": 0.0443,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.035,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v4-flash-0731:batch",
+      "model": "DeepSeek: DeepSeek V4 Flash 0731 (batch)",
+      "priceInput": 0.048,
+      "priceOutput": 0.144,
+      "priceCachedRead": 0.012,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "thinkingmachines/inkling-small",
+      "model": "Thinking Machines: Inkling Small",
+      "priceInput": 0.45,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "thinkingmachines/inkling-small:batch",
+      "model": "Thinking Machines: Inkling Small (batch)",
+      "priceInput": 0.36,
+      "priceOutput": 0.96,
+      "priceCachedRead": 0.08,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.7-flash",
+      "model": "Qwen: Qwen3.7 Flash",
+      "priceInput": 0.03,
+      "priceOutput": 0.13,
+      "priceCachedRead": 0.006,
+      "priceCachedWrite": 0.038
+    },
+    {
+      "modelId": "anthropic/claude-opus-5",
+      "model": "Anthropic: Claude Opus 5",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25,
+      "notes": "1h cache write $10 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-opus-5:batch",
+      "model": "Anthropic: Claude Opus 5 (batch)",
+      "priceInput": 2.5,
+      "priceOutput": 12.5,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": 3.125,
+      "notes": "1h cache write $5 per 1M tokens"
+    },
+    {
+      "modelId": "inclusionai/ling-3.0-flash",
+      "model": "inclusionAI: Ling 3.0 Flash",
+      "priceInput": 0.021,
+      "priceOutput": 0.063,
+      "priceCachedRead": 0.0042,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-3.6-flash",
+      "model": "Google: Gemini 3.6 Flash",
+      "priceInput": 0.75,
+      "priceOutput": 3.75,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": 0.0416666666666667
+    },
+    {
+      "modelId": "google/gemini-3.6-flash:batch",
+      "model": "Google: Gemini 3.6 Flash (batch)",
+      "priceInput": 0.375,
+      "priceOutput": 1.875,
+      "priceCachedRead": 0.0375,
+      "priceCachedWrite": 0.0416666666666667
+    },
+    {
+      "modelId": "google/gemini-3.5-flash-lite",
+      "model": "Google: Gemini 3.5 Flash Lite",
+      "priceInput": 0.3,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "google/gemini-3.5-flash-lite:batch",
+      "model": "Google: Gemini 3.5 Flash Lite (batch)",
+      "priceInput": 0.15,
+      "priceOutput": 1.25,
+      "priceCachedRead": 0.015,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meituan/longcat-2.0",
+      "model": "Meituan: LongCat 2.0",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.006,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "thinkingmachines/inkling",
+      "model": "Thinking Machines: Inkling",
+      "priceInput": 1,
+      "priceOutput": 4.05,
+      "priceCachedRead": 0.17,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "model": "MoonshotAI: Kimi K3",
+      "priceInput": 0.192,
+      "priceOutput": 16,
+      "priceCachedRead": 0.182,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "moonshotai/kimi-k3:batch",
+      "model": "MoonshotAI: Kimi K3 (batch)",
+      "priceInput": 2.28,
+      "priceOutput": 11.4,
+      "priceCachedRead": 0.228,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta/muse-spark-1.1",
+      "model": "Meta: Muse Spark 1.1",
+      "priceInput": 1.25,
+      "priceOutput": 4.25,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.6-luna-pro",
+      "model": "OpenAI: GPT-5.6 Luna Pro",
+      "priceInput": 0.2,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": 0.25
+    },
+    {
+      "modelId": "openai/gpt-5.6-luna-pro:batch",
+      "model": "OpenAI: GPT-5.6 Luna Pro (batch)",
+      "priceInput": 0.1,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.6-luna",
+      "model": "OpenAI: GPT-5.6 Luna",
+      "priceInput": 0.2,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": 0.25
+    },
+    {
+      "modelId": "openai/gpt-5.6-luna:batch",
+      "model": "OpenAI: GPT-5.6 Luna (batch)",
+      "priceInput": 0.1,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.6-terra-pro",
+      "model": "OpenAI: GPT-5.6 Terra Pro",
+      "priceInput": 2,
+      "priceOutput": 12,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "openai/gpt-5.6-terra-pro:batch",
+      "model": "OpenAI: GPT-5.6 Terra Pro (batch)",
+      "priceInput": 1,
+      "priceOutput": 6,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.6-terra",
+      "model": "OpenAI: GPT-5.6 Terra",
+      "priceInput": 2,
+      "priceOutput": 12,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "openai/gpt-5.6-terra:batch",
+      "model": "OpenAI: GPT-5.6 Terra (batch)",
+      "priceInput": 1,
+      "priceOutput": 6,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.6-sol-pro",
+      "model": "OpenAI: GPT-5.6 Sol Pro",
+      "priceInput": 4,
+      "priceOutput": 20,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": 5
+    },
+    {
+      "modelId": "openai/gpt-5.6-sol-pro:batch",
+      "model": "OpenAI: GPT-5.6 Sol Pro (batch)",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "openai/gpt-5.6-sol",
+      "model": "OpenAI: GPT-5.6 Sol",
+      "priceInput": 4,
+      "priceOutput": 20,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": 5
+    },
+    {
+      "modelId": "openai/gpt-5.6-sol:batch",
+      "model": "OpenAI: GPT-5.6 Sol (batch)",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 2.5
+    },
+    {
+      "modelId": "x-ai/grok-4.5",
+      "model": "SpaceXSI: Grok 4.5",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.3,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~x-ai/grok-latest",
+      "model": "xAI: Grok Latest",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 0
+    },
+    {
+      "modelId": "aion-labs/aion-3.0-mini",
+      "model": "AionLabs: Aion-3.0-Mini",
+      "priceInput": 0.7,
+      "priceOutput": 1.4,
+      "priceCachedRead": 0.18,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "aion-labs/aion-3.0",
+      "model": "AionLabs: Aion-3.0",
+      "priceInput": 3,
+      "priceOutput": 6,
+      "priceCachedRead": 0.75,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "tencent/hy3",
+      "model": "Tencent: Hy3",
+      "priceInput": 0.0825,
+      "priceOutput": 0.33,
+      "priceCachedRead": 0.020625,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthropic/claude-sonnet-5",
+      "model": "Anthropic: Claude Sonnet 5",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 2.5,
+      "notes": "1h cache write $4 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-sonnet-5:batch",
+      "model": "Anthropic: Claude Sonnet 5 (batch)",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 1.25,
+      "notes": "1h cache write $2 per 1M tokens"
+    },
+    {
+      "modelId": "google/gemini-3.1-flash-lite-image",
+      "model": "Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
+      "priceInput": 0.25,
+      "priceOutput": 1.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "sakana/fugu-ultra",
+      "model": "Sakana: Fugu Ultra",
+      "priceInput": 5,
+      "priceOutput": 30,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-3.1-flash-image",
+      "model": "Google: Nano Banana 2 (Gemini 3.1 Flash Image)",
+      "priceInput": 0.5,
+      "priceOutput": 3,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-3-pro-image",
+      "model": "Google: Nano Banana Pro (Gemini 3 Pro Image)",
+      "priceInput": 2,
+      "priceOutput": 12,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 0.375
+    },
+    {
+      "modelId": "z-ai/glm-5.2",
+      "model": "Z.ai: GLM 5.2",
+      "priceInput": 0.62,
+      "priceOutput": 2.42,
+      "priceCachedRead": 0.14,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-5.2:batch",
+      "model": "Z.ai: GLM 5.2 (batch)",
+      "priceInput": 0.322,
+      "priceOutput": 0.989,
+      "priceCachedRead": 0.109,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "moonshotai/kimi-k2.7-code",
+      "model": "MoonshotAI: Kimi K2.7 Code",
+      "priceInput": 0.6,
+      "priceOutput": 3,
+      "priceCachedRead": 0.12,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~anthropic/claude-fable-latest",
+      "model": "Anthropic: Claude Fable Latest",
+      "priceInput": 8,
+      "priceOutput": 40,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 10,
+      "notes": "1h cache write $16 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-fable-5",
+      "model": "Anthropic: Claude Fable 5",
+      "priceInput": 10,
+      "priceOutput": 50,
+      "priceCachedRead": 1,
+      "priceCachedWrite": 12.5,
+      "notes": "1h cache write $20 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-fable-5:batch",
+      "model": "Anthropic: Claude Fable 5 (batch)",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25,
+      "notes": "1h cache write $10 per 1M tokens"
+    },
+    {
+      "modelId": "nvidia/nemotron-3.5-content-safety",
+      "model": "NVIDIA: Nemotron 3.5 Content Safety",
+      "priceInput": 0.2,
+      "priceOutput": 0.2,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nvidia/nemotron-3-ultra-550b-a55b",
+      "model": "NVIDIA: Nemotron 3 Ultra",
+      "priceInput": 0.5,
+      "priceOutput": 2.2,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "model": "NVIDIA: Nemotron 3 Ultra (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.7-plus",
+      "model": "Qwen: Qwen3.7 Plus",
+      "priceInput": 0.32,
+      "priceOutput": 1.28,
+      "priceCachedRead": 0.064,
+      "priceCachedWrite": 0.4
+    },
+    {
+      "modelId": "qwen/qwen3.7-plus:batch",
+      "model": "Qwen: Qwen3.7 Plus (batch)",
+      "priceInput": 0.23,
+      "priceOutput": 0.92,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "minimax/minimax-m3",
+      "model": "MiniMax: MiniMax M3",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.06,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "minimax/minimax-m3:batch",
+      "model": "MiniMax: MiniMax M3 (batch)",
+      "priceInput": 0.224,
+      "priceOutput": 0.88,
+      "priceCachedRead": 0.0448,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "stepfun/step-3.7-flash",
+      "model": "StepFun: Step 3.7 Flash",
+      "priceInput": 0.2,
+      "priceOutput": 1.15,
+      "priceCachedRead": 0.04,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthropic/claude-opus-4.8",
+      "model": "Anthropic: Claude Opus 4.8",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25,
+      "notes": "1h cache write $10 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-opus-4.8:batch",
+      "model": "Anthropic: Claude Opus 4.8 (batch)",
+      "priceInput": 2.5,
+      "priceOutput": 12.5,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": 3.125,
+      "notes": "1h cache write $5 per 1M tokens"
+    },
+    {
+      "modelId": "qwen/qwen3.7-max",
+      "model": "Qwen: Qwen3.7 Max",
+      "priceInput": 1.475,
+      "priceOutput": 4.425,
+      "priceCachedRead": 0.295,
+      "priceCachedWrite": 1.84375
+    },
+    {
+      "modelId": "google/gemini-3.5-flash",
+      "model": "Google: Gemini 3.5 Flash",
+      "priceInput": 1.5,
+      "priceOutput": 9,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "google/gemini-3.5-flash:batch",
+      "model": "Google: Gemini 3.5 Flash (batch)",
+      "priceInput": 0.75,
+      "priceOutput": 4.5,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "perceptron/perceptron-mk1",
+      "model": "Perceptron: Perceptron Mk1",
+      "priceInput": 0.15,
+      "priceOutput": 1.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-3.1-flash-lite",
+      "model": "Google: Gemini 3.1 Flash Lite",
+      "priceInput": 0.25,
+      "priceOutput": 1.5,
+      "priceCachedRead": 0.025,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "google/gemini-3.1-flash-lite:batch",
+      "model": "Google: Gemini 3.1 Flash Lite (batch)",
+      "priceInput": 0.125,
+      "priceOutput": 0.75,
+      "priceCachedRead": 0.0125,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-chat-latest",
+      "model": "OpenAI: GPT Chat Latest",
+      "priceInput": 5,
+      "priceOutput": 30,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "x-ai/grok-4.3",
+      "model": "SpaceXSI: Grok 4.3",
+      "priceInput": 1.25,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "x-ai/grok-4.3:batch",
+      "model": "SpaceXSI: Grok 4.3 (batch)",
+      "priceInput": 1,
+      "priceOutput": 2,
+      "priceCachedRead": 0.16,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-medium-3-5",
+      "model": "Mistral: Mistral Medium 3.5",
+      "priceInput": 1.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-medium-3-5:batch",
+      "model": "Mistral: Mistral Medium 3.5 (batch)",
+      "priceInput": 0.75,
+      "priceOutput": 3.75,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "model": "NVIDIA: Nemotron 3 Nano Omni (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~anthropic/claude-haiku-latest",
+      "model": "Anthropic: Claude Haiku Latest",
+      "priceInput": 0.1,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": 0.125,
+      "notes": "1h cache write $0.2 per 1M tokens"
+    },
+    {
+      "modelId": "~openai/gpt-mini-latest",
+      "model": "OpenAI: GPT Mini Latest",
+      "priceInput": 0.75,
+      "priceOutput": 4.5,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~google/gemini-pro-latest",
+      "model": "Google: Gemini Pro Latest",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 0.1875
+    },
+    {
+      "modelId": "~moonshotai/kimi-latest",
+      "model": "MoonshotAI: Kimi Latest",
+      "priceInput": 0.1805,
+      "priceOutput": 11.0055,
+      "priceCachedRead": 0.18,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~google/gemini-flash-latest",
+      "model": "Google: Gemini Flash Latest",
+      "priceInput": 1.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "~anthropic/claude-sonnet-latest",
+      "model": "Anthropic: Claude Sonnet Latest",
+      "priceInput": 2,
+      "priceOutput": 10,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 2.5,
+      "notes": "1h cache write $4 per 1M tokens"
+    },
+    {
+      "modelId": "qwen/qwen3.5-plus-20260420",
+      "model": "Qwen: Qwen3.5 Plus 2026-04-20",
+      "priceInput": 0.3,
+      "priceOutput": 1.8,
+      "priceCachedRead": null,
+      "priceCachedWrite": 0.375
+    },
+    {
+      "modelId": "qwen/qwen3.6-flash",
+      "model": "Qwen: Qwen3.6 Flash",
+      "priceInput": 0.1875,
+      "priceOutput": 1.125,
+      "priceCachedRead": null,
+      "priceCachedWrite": 0.234375
+    },
+    {
+      "modelId": "qwen/qwen3.6-35b-a3b",
+      "model": "Qwen: Qwen3.6 35B A3B",
+      "priceInput": 0.1,
+      "priceOutput": 0.9,
+      "priceCachedRead": 0.025,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.6-27b",
+      "model": "Qwen: Qwen3.6 27B",
+      "priceInput": 0.32,
+      "priceOutput": 3.2,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.5-pro",
+      "model": "OpenAI: GPT-5.5 Pro",
+      "priceInput": 30,
+      "priceOutput": 180,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.5-pro:batch",
+      "model": "OpenAI: GPT-5.5 Pro (batch)",
+      "priceInput": 15,
+      "priceOutput": 90,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.5",
+      "model": "OpenAI: GPT-5.5",
+      "priceInput": 5,
+      "priceOutput": 30,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.5:batch",
+      "model": "OpenAI: GPT-5.5 (batch)",
+      "priceInput": 2.5,
+      "priceOutput": 15,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v4-pro",
+      "model": "DeepSeek: DeepSeek V4 Pro 0423",
+      "priceInput": 0.9,
+      "priceOutput": 1.5,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v4-flash",
+      "model": "DeepSeek: DeepSeek V4 Flash 0423",
+      "priceInput": 0.09,
+      "priceOutput": 0.18,
+      "priceCachedRead": 0.018,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "tencent/hy3-preview",
+      "model": "Tencent: Hy3 preview",
+      "priceInput": 0.18,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.06,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "xiaomi/mimo-v2.5-pro",
+      "model": "Xiaomi: MiMo-V2.5-Pro",
+      "priceInput": 0.48,
+      "priceOutput": 1.8,
+      "priceCachedRead": 0.096,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "xiaomi/mimo-v2.5",
+      "model": "Xiaomi: MiMo-V2.5",
+      "priceInput": 0.4,
+      "priceOutput": 2,
+      "priceCachedRead": 0.08,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.4-image-2",
+      "model": "OpenAI: GPT-5.4 Image 2",
+      "priceInput": 8,
+      "priceOutput": 15,
+      "priceCachedRead": 2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "~anthropic/claude-opus-latest",
+      "model": "Anthropic: Claude Opus Latest",
+      "priceInput": 4,
+      "priceOutput": 20,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 5,
+      "notes": "1h cache write $8 per 1M tokens"
+    },
+    {
+      "modelId": "moonshotai/kimi-k2.6",
+      "model": "MoonshotAI: Kimi K2.6",
+      "priceInput": 0.65,
+      "priceOutput": 3.41,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthropic/claude-opus-4.7",
+      "model": "Anthropic: Claude Opus 4.7",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25,
+      "notes": "1h cache write $10 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-opus-4.7:batch",
+      "model": "Anthropic: Claude Opus 4.7 (batch)",
+      "priceInput": 2.5,
+      "priceOutput": 12.5,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": 3.125,
+      "notes": "1h cache write $5 per 1M tokens"
+    },
+    {
+      "modelId": "z-ai/glm-5.1",
+      "model": "Z.ai: GLM 5.1",
+      "priceInput": 1.19,
+      "priceOutput": 3.74,
+      "priceCachedRead": 0.6,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemma-4-26b-a4b-it",
+      "model": "Google: Gemma 4 26B A4B ",
+      "priceInput": 0.09,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemma-4-26b-a4b-it:free",
+      "model": "Google: Gemma 4 26B A4B  (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemma-4-31b-it",
+      "model": "Google: Gemma 4 31B",
+      "priceInput": 0.2,
+      "priceOutput": 0.4,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemma-4-31b-it:free",
+      "model": "Google: Gemma 4 31B (free)",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.6-plus",
+      "model": "Qwen: Qwen3.6 Plus",
+      "priceInput": 0.325,
+      "priceOutput": 1.95,
+      "priceCachedRead": null,
+      "priceCachedWrite": 0.40625
+    },
+    {
+      "modelId": "z-ai/glm-5v-turbo",
+      "model": "Z.ai: GLM 5V Turbo",
+      "priceInput": 1.2,
+      "priceOutput": 4,
+      "priceCachedRead": 0.24,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "x-ai/grok-4.20-multi-agent",
+      "model": "SpaceXSI: Grok 4.20 Multi-Agent",
+      "priceInput": 1.25,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "x-ai/grok-4.20",
+      "model": "SpaceXSI: Grok 4.20",
+      "priceInput": 1.25,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/lyria-3-pro-preview",
+      "model": "Google: Lyria 3 Pro Preview",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/lyria-3-clip-preview",
+      "model": "Google: Lyria 3 Clip Preview",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "rekaai/reka-edge",
+      "model": "Reka Edge",
+      "priceInput": 0.1,
+      "priceOutput": 0.1,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "minimax/minimax-m2.7",
+      "model": "MiniMax: MiniMax M2.7",
+      "priceInput": 0.21,
+      "priceOutput": 0.84,
+      "priceCachedRead": 0.042,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.4-nano",
+      "model": "OpenAI: GPT-5.4 Nano",
+      "priceInput": 0.2,
+      "priceOutput": 1.25,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.4-nano:batch",
+      "model": "OpenAI: GPT-5.4 Nano (batch)",
+      "priceInput": 0.1,
+      "priceOutput": 0.625,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.4-mini",
+      "model": "OpenAI: GPT-5.4 Mini",
+      "priceInput": 0.75,
+      "priceOutput": 4.5,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.4-mini:batch",
+      "model": "OpenAI: GPT-5.4 Mini (batch)",
+      "priceInput": 0.375,
+      "priceOutput": 2.25,
+      "priceCachedRead": 0.0375,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-small-2603",
+      "model": "Mistral: Mistral Small 4",
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.015,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-5-turbo",
+      "model": "Z.ai: GLM 5 Turbo",
+      "priceInput": 1.2,
+      "priceOutput": 4,
+      "priceCachedRead": 0.24,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nvidia/nemotron-3-super-120b-a12b",
+      "model": "NVIDIA: Nemotron 3 Super",
+      "priceInput": 0.075,
+      "priceOutput": 0.4,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "bytedance-seed/seed-2.0-lite",
+      "model": "ByteDance Seed: Seed-2.0-Lite",
+      "priceInput": 0.25,
+      "priceOutput": 2,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.5-9b",
+      "model": "Qwen: Qwen3.5-9B",
+      "priceInput": 0.17,
+      "priceOutput": 0.25,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.4-pro",
+      "model": "OpenAI: GPT-5.4 Pro",
+      "priceInput": 30,
+      "priceOutput": 180,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.4-pro:batch",
+      "model": "OpenAI: GPT-5.4 Pro (batch)",
+      "priceInput": 15,
+      "priceOutput": 90,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.4",
+      "model": "OpenAI: GPT-5.4",
+      "priceInput": 2.5,
+      "priceOutput": 15,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.4:batch",
+      "model": "OpenAI: GPT-5.4 (batch)",
+      "priceInput": 1.25,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.125,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-3.1-flash-lite-preview",
+      "model": "Google: Gemini 3.1 Flash Lite Preview",
+      "priceInput": 0.25,
+      "priceOutput": 1.5,
+      "priceCachedRead": 0.025,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "bytedance-seed/seed-2.0-mini",
+      "model": "ByteDance Seed: Seed-2.0-Mini",
+      "priceInput": 0.1,
+      "priceOutput": 0.4,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-3.1-flash-image-preview",
+      "model": "Google: Nano Banana 2 (Gemini 3.1 Flash Image Preview)",
+      "priceInput": 0.5,
+      "priceOutput": 3,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.5-35b-a3b",
+      "model": "Qwen: Qwen3.5-35B-A3B",
+      "priceInput": 0.14,
+      "priceOutput": 1,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.5-27b",
+      "model": "Qwen: Qwen3.5-27B",
+      "priceInput": 0.195,
+      "priceOutput": 1.56,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.5-122b-a10b",
+      "model": "Qwen: Qwen3.5-122B-A10B",
+      "priceInput": 0.26,
+      "priceOutput": 2.08,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.5-flash-02-23",
+      "model": "Qwen: Qwen3.5-Flash",
+      "priceInput": 0.065,
+      "priceOutput": 0.26,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-3.1-pro-preview-customtools",
+      "model": "Google: Gemini 3.1 Pro Preview Custom Tools",
+      "priceInput": 2,
+      "priceOutput": 12,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 0.375
+    },
+    {
+      "modelId": "openai/gpt-5.3-codex",
+      "model": "OpenAI: GPT-5.3-Codex",
+      "priceInput": 1.75,
+      "priceOutput": 14,
+      "priceCachedRead": 0.175,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "aion-labs/aion-2.0",
+      "model": "AionLabs: Aion-2.0",
+      "priceInput": 0.8,
+      "priceOutput": 1.6,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-3.1-pro-preview",
+      "model": "Google: Gemini 3.1 Pro Preview",
+      "priceInput": 2,
+      "priceOutput": 12,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 0.375
+    },
+    {
+      "modelId": "google/gemini-3.1-pro-preview:batch",
+      "model": "Google: Gemini 3.1 Pro Preview (batch)",
+      "priceInput": 1,
+      "priceOutput": 6,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthropic/claude-sonnet-4.6",
+      "model": "Anthropic: Claude Sonnet 4.6",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": 0.3,
+      "priceCachedWrite": 3.75,
+      "notes": "1h cache write $6 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-sonnet-4.6:batch",
+      "model": "Anthropic: Claude Sonnet 4.6 (batch)",
+      "priceInput": 1.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": 1.875,
+      "notes": "1h cache write $3 per 1M tokens"
+    },
+    {
+      "modelId": "qwen/qwen3.5-plus-02-15",
+      "model": "Qwen: Qwen3.5 Plus 2026-02-15",
+      "priceInput": 0.26,
+      "priceOutput": 1.56,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3.5-397b-a17b",
+      "model": "Qwen: Qwen3.5 397B A17B",
+      "priceInput": 0.45,
+      "priceOutput": 3,
+      "priceCachedRead": 0.22,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "minimax/minimax-m2.5",
+      "model": "MiniMax: MiniMax M2.5",
+      "priceInput": 0.295,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.06,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-5",
+      "model": "Z.ai: GLM 5",
+      "priceInput": 1,
+      "priceOutput": 3.2,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthropic/claude-opus-4.6",
+      "model": "Anthropic: Claude Opus 4.6",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25,
+      "notes": "1h cache write $10 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-opus-4.6:batch",
+      "model": "Anthropic: Claude Opus 4.6 (batch)",
+      "priceInput": 2.5,
+      "priceOutput": 12.5,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": 3.125,
+      "notes": "1h cache write $5 per 1M tokens"
+    },
+    {
+      "modelId": "qwen/qwen3-coder-next",
+      "model": "Qwen: Qwen3 Coder Next",
+      "priceInput": 0.12,
+      "priceOutput": 0.8,
+      "priceCachedRead": 0.07,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "moonshotai/kimi-k2.5",
+      "model": "MoonshotAI: Kimi K2.5",
+      "priceInput": 0.5,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "writer/palmyra-x5",
+      "model": "Writer: Palmyra X5",
+      "priceInput": 0.6,
+      "priceOutput": 6,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-audio",
+      "model": "OpenAI: GPT Audio",
+      "priceInput": 2.5,
+      "priceOutput": 10,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-audio-mini",
+      "model": "OpenAI: GPT Audio Mini",
+      "priceInput": 0.6,
+      "priceOutput": 2.4,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-4.7-flash",
+      "model": "Z.ai: GLM 4.7 Flash",
+      "priceInput": 0.0605,
+      "priceOutput": 0.4,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.2-codex",
+      "model": "OpenAI: GPT-5.2-Codex",
+      "priceInput": 1.75,
+      "priceOutput": 14,
+      "priceCachedRead": 0.175,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-4.7",
+      "model": "Z.ai: GLM 4.7",
+      "priceInput": 0.4,
+      "priceOutput": 1.75,
+      "priceCachedRead": 0.08,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-3-flash-preview",
+      "model": "Google: Gemini 3 Flash Preview",
+      "priceInput": 0.5,
+      "priceOutput": 3,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "google/gemini-3-flash-preview:batch",
+      "model": "Google: Gemini 3 Flash Preview (batch)",
+      "priceInput": 0.25,
+      "priceOutput": 1.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nvidia/nemotron-3-nano-30b-a3b",
+      "model": "NVIDIA: Nemotron 3 Nano 30B A3B",
+      "priceInput": 0.06,
+      "priceOutput": 0.24,
+      "priceCachedRead": 0.012,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.2-chat",
+      "model": "OpenAI: GPT-5.2 Chat",
+      "priceInput": 1.75,
+      "priceOutput": 14,
+      "priceCachedRead": 0.175,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.2-pro",
+      "model": "OpenAI: GPT-5.2 Pro",
+      "priceInput": 21,
+      "priceOutput": 168,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.2-pro:batch",
+      "model": "OpenAI: GPT-5.2 Pro (batch)",
+      "priceInput": 10.5,
+      "priceOutput": 84,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.2",
+      "model": "OpenAI: GPT-5.2",
+      "priceInput": 1.75,
+      "priceOutput": 14,
+      "priceCachedRead": 0.175,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.2:batch",
+      "model": "OpenAI: GPT-5.2 (batch)",
+      "priceInput": 0.875,
+      "priceOutput": 7,
+      "priceCachedRead": 0.0875,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/devstral-2512",
+      "model": "Mistral: Devstral 2 2512",
+      "priceInput": 0.4,
+      "priceOutput": 2,
+      "priceCachedRead": 0.04,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "relace/relace-search",
+      "model": "Relace: Relace Search",
+      "priceInput": 1,
+      "priceOutput": 3,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-4.6v",
+      "model": "Z.ai: GLM 4.6V",
+      "priceInput": 0.3,
+      "priceOutput": 0.9,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.1-codex-max",
+      "model": "OpenAI: GPT-5.1-Codex-Max",
+      "priceInput": 1.25,
+      "priceOutput": 10,
+      "priceCachedRead": 0.125,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "amazon/nova-2-lite-v1",
+      "model": "Amazon: Nova 2 Lite",
+      "priceInput": 0.3,
+      "priceOutput": 2.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/ministral-14b-2512",
+      "model": "Mistral: Ministral 3 14B 2512",
+      "priceInput": 0.2,
+      "priceOutput": 0.2,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/ministral-8b-2512",
+      "model": "Mistral: Ministral 3 8B 2512",
+      "priceInput": 0.15,
+      "priceOutput": 0.15,
+      "priceCachedRead": 0.015,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/ministral-3b-2512",
+      "model": "Mistral: Ministral 3 3B 2512",
+      "priceInput": 0.1,
+      "priceOutput": 0.1,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-large-2512",
+      "model": "Mistral: Mistral Large 3 2512",
+      "priceInput": 0.5,
+      "priceOutput": 1.5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v3.2",
+      "model": "DeepSeek: DeepSeek V3.2",
+      "priceInput": 0.26,
+      "priceOutput": 0.38,
+      "priceCachedRead": 0.13,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthropic/claude-opus-4.5",
+      "model": "Anthropic: Claude Opus 4.5",
+      "priceInput": 5,
+      "priceOutput": 25,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": 6.25,
+      "notes": "1h cache write $10 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-opus-4.5:batch",
+      "model": "Anthropic: Claude Opus 4.5 (batch)",
+      "priceInput": 2.5,
+      "priceOutput": 12.5,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": 3.125,
+      "notes": "1h cache write $5 per 1M tokens"
+    },
+    {
+      "modelId": "google/gemini-3-pro-image-preview",
+      "model": "Google: Nano Banana Pro (Gemini 3 Pro Image Preview)",
+      "priceInput": 2,
+      "priceOutput": 12,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": 0.375
+    },
+    {
+      "modelId": "openai/gpt-5.1",
+      "model": "OpenAI: GPT-5.1",
+      "priceInput": 1.25,
+      "priceOutput": 10,
+      "priceCachedRead": 0.125,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.1:batch",
+      "model": "OpenAI: GPT-5.1 (batch)",
+      "priceInput": 0.625,
+      "priceOutput": 5,
+      "priceCachedRead": 0.0625,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.1-codex",
+      "model": "OpenAI: GPT-5.1-Codex",
+      "priceInput": 1.25,
+      "priceOutput": 10,
+      "priceCachedRead": 0.13,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5.1-codex-mini",
+      "model": "OpenAI: GPT-5.1-Codex-Mini",
+      "priceInput": 0.25,
+      "priceOutput": 2,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "moonshotai/kimi-k2-thinking",
+      "model": "MoonshotAI: Kimi K2 Thinking",
+      "priceInput": 0.6,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "amazon/nova-premier-v1",
+      "model": "Amazon: Nova Premier 1.0",
+      "priceInput": 2.5,
+      "priceOutput": 12.5,
+      "priceCachedRead": 0.625,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "perplexity/sonar-pro-search",
+      "model": "Perplexity: Sonar Pro Search",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/voxtral-small-24b-2507",
+      "model": "Mistral: Voxtral Small 24B 2507",
+      "priceInput": 0.1,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-oss-safeguard-20b",
+      "model": "OpenAI: gpt-oss-safeguard-20b",
+      "priceInput": 0.075,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.0375,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5-image-mini",
+      "model": "OpenAI: GPT-5 Image Mini",
+      "priceInput": 2.5,
+      "priceOutput": 2,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthropic/claude-haiku-4.5",
+      "model": "Anthropic: Claude Haiku 4.5",
+      "priceInput": 1,
+      "priceOutput": 5,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": 1.25,
+      "notes": "1h cache write $2 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-haiku-4.5:batch",
+      "model": "Anthropic: Claude Haiku 4.5 (batch)",
+      "priceInput": 0.5,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": 0.625,
+      "notes": "1h cache write $1 per 1M tokens"
+    },
+    {
+      "modelId": "qwen/qwen3-vl-8b-instruct",
+      "model": "Qwen: Qwen3 VL 8B Instruct",
+      "priceInput": 0.25,
+      "priceOutput": 0.75,
+      "priceCachedRead": 0.12,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5-image",
+      "model": "OpenAI: GPT-5 Image",
+      "priceInput": 10,
+      "priceOutput": 10,
+      "priceCachedRead": 1.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-2.5-flash-image",
+      "model": "Google: Nano Banana (Gemini 2.5 Flash Image)",
+      "priceInput": 0.3,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "qwen/qwen3-vl-30b-a3b-instruct",
+      "model": "Qwen: Qwen3 VL 30B A3B Instruct",
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5-pro",
+      "model": "OpenAI: GPT-5 Pro",
+      "priceInput": 15,
+      "priceOutput": 120,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5-pro:batch",
+      "model": "OpenAI: GPT-5 Pro (batch)",
+      "priceInput": 7.5,
+      "priceOutput": 60,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-4.6",
+      "model": "Z.ai: GLM 4.6",
+      "priceInput": 0.5,
+      "priceOutput": 2,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthropic/claude-sonnet-4.5",
+      "model": "Anthropic: Claude Sonnet 4.5",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": 0.3,
+      "priceCachedWrite": 3.75,
+      "notes": "1h cache write $6 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-sonnet-4.5:batch",
+      "model": "Anthropic: Claude Sonnet 4.5 (batch)",
+      "priceInput": 1.5,
+      "priceOutput": 7.5,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": 1.875,
+      "notes": "1h cache write $3 per 1M tokens"
+    },
+    {
+      "modelId": "deepseek/deepseek-v3.2-exp",
+      "model": "DeepSeek: DeepSeek V3.2 Exp",
+      "priceInput": 0.27,
+      "priceOutput": 0.41,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "thedrummer/cydonia-24b-v4.1",
+      "model": "TheDrummer: Cydonia 24B V4.1",
+      "priceInput": 0.3,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "relace/relace-apply-3",
+      "model": "Relace: Relace Apply 3",
+      "priceInput": 0.85,
+      "priceOutput": 1.25,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3-vl-235b-a22b-instruct",
+      "model": "Qwen: Qwen3 VL 235B A22B Instruct",
+      "priceInput": 0.21,
+      "priceOutput": 1.9,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-v3.1-terminus",
+      "model": "DeepSeek: DeepSeek V3.1 Terminus",
+      "priceInput": 0.27,
+      "priceOutput": 1,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3-coder-flash",
+      "model": "Qwen: Qwen3 Coder Flash",
+      "priceInput": 0.195,
+      "priceOutput": 0.975,
+      "priceCachedRead": 0.039,
+      "priceCachedWrite": 0.24375
+    },
+    {
+      "modelId": "qwen/qwen3-next-80b-a3b-instruct",
+      "model": "Qwen: Qwen3 Next 80B A3B Instruct",
+      "priceInput": 0.1,
+      "priceOutput": 1.1,
+      "priceCachedRead": 0.07,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "moonshotai/kimi-k2-0905",
+      "model": "MoonshotAI: Kimi K2 0905",
+      "priceInput": 0.6,
+      "priceOutput": 2.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "nousresearch/hermes-4-405b",
+      "model": "Nous: Hermes 4 405B",
+      "priceInput": 1,
+      "priceOutput": 3,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-chat-v3.1",
+      "model": "DeepSeek: DeepSeek V3.1",
+      "priceInput": 0.25,
+      "priceOutput": 0.95,
+      "priceCachedRead": 0.13,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-medium-3.1",
+      "model": "Mistral: Mistral Medium 3.1",
+      "priceInput": 0.44,
+      "priceOutput": 2.2,
+      "priceCachedRead": 0.044,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-4.5v",
+      "model": "Z.ai: GLM 4.5V",
+      "priceInput": 0.6,
+      "priceOutput": 1.8,
+      "priceCachedRead": 0.11,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5",
+      "model": "OpenAI: GPT-5",
+      "priceInput": 1.25,
+      "priceOutput": 10,
+      "priceCachedRead": 0.125,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5:batch",
+      "model": "OpenAI: GPT-5 (batch)",
+      "priceInput": 0.625,
+      "priceOutput": 5,
+      "priceCachedRead": 0.0625,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5-mini",
+      "model": "OpenAI: GPT-5 Mini",
+      "priceInput": 0.25,
+      "priceOutput": 2,
+      "priceCachedRead": 0.025,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5-mini:batch",
+      "model": "OpenAI: GPT-5 Mini (batch)",
+      "priceInput": 0.125,
+      "priceOutput": 1,
+      "priceCachedRead": 0.0125,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5-nano",
+      "model": "OpenAI: GPT-5 Nano",
+      "priceInput": 0.05,
+      "priceOutput": 0.4,
+      "priceCachedRead": 0.005,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-5-nano:batch",
+      "model": "OpenAI: GPT-5 Nano (batch)",
+      "priceInput": 0.025,
+      "priceOutput": 0.2,
+      "priceCachedRead": 0.0025,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-oss-120b",
+      "model": "OpenAI: gpt-oss-120b",
+      "priceInput": 0.09,
+      "priceOutput": 0.36,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-oss-120b:batch",
+      "model": "OpenAI: gpt-oss-120b (batch)",
+      "priceInput": 0.0296,
+      "priceOutput": 0.136,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-oss-20b",
+      "model": "OpenAI: gpt-oss-20b",
+      "priceInput": 0.018,
+      "priceOutput": 0.09,
+      "priceCachedRead": 0.009,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-oss-20b:batch",
+      "model": "OpenAI: gpt-oss-20b (batch)",
+      "priceInput": 0.024,
+      "priceOutput": 0.112,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthropic/claude-opus-4.1",
+      "model": "Anthropic: Claude Opus 4.1",
+      "priceInput": 15,
+      "priceOutput": 75,
+      "priceCachedRead": 1.5,
+      "priceCachedWrite": 18.75,
+      "notes": "1h cache write $30 per 1M tokens"
+    },
+    {
+      "modelId": "anthropic/claude-opus-4.1:batch",
+      "model": "Anthropic: Claude Opus 4.1 (batch)",
+      "priceInput": 7.5,
+      "priceOutput": 37.5,
+      "priceCachedRead": 0.75,
+      "priceCachedWrite": 9.375,
+      "notes": "1h cache write $15 per 1M tokens"
+    },
+    {
+      "modelId": "mistralai/codestral-2508",
+      "model": "Mistral: Codestral 2508",
+      "priceInput": 0.3,
+      "priceOutput": 0.9,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3-coder-30b-a3b-instruct",
+      "model": "Qwen: Qwen3 Coder 30B A3B Instruct",
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3-30b-a3b-instruct-2507",
+      "model": "Qwen: Qwen3 30B A3B Instruct 2507",
+      "priceInput": 0.1,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-4.5",
+      "model": "Z.ai: GLM 4.5",
+      "priceInput": 0.6,
+      "priceOutput": 2.2,
+      "priceCachedRead": 0.11,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "z-ai/glm-4.5-air",
+      "model": "Z.ai: GLM 4.5 Air",
+      "priceInput": 0.13,
+      "priceOutput": 0.85,
+      "priceCachedRead": 0.025,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3-235b-a22b-thinking-2507",
+      "model": "Qwen: Qwen3 235B A22B Thinking 2507",
+      "priceInput": 0.45,
+      "priceOutput": 3.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3-coder",
+      "model": "Qwen: Qwen3 Coder 480B A35B",
+      "priceInput": 0.3,
+      "priceOutput": 1,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "bytedance/ui-tars-1.5-7b",
+      "model": "ByteDance: UI-TARS 7B ",
+      "priceInput": 0.1,
+      "priceOutput": 0.2,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-2.5-flash-lite",
+      "model": "Google: Gemini 2.5 Flash Lite",
+      "priceInput": 0.1,
+      "priceOutput": 0.4,
+      "priceCachedRead": 0.01,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "qwen/qwen3-235b-a22b-2507",
+      "model": "Qwen: Qwen3 235B A22B Instruct 2507",
+      "priceInput": 0.14,
+      "priceOutput": 0.8,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "moonshotai/kimi-k2",
+      "model": "MoonshotAI: Kimi K2 0711",
+      "priceInput": 0.57,
+      "priceOutput": 2.3,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "cognitivecomputations/dolphin-mistral-24b-venice-edition",
+      "model": "Venice: Uncensored",
+      "priceInput": 0.2,
+      "priceOutput": 0.9,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "morph/morph-v3-large",
+      "model": "Morph: Morph V3 Large",
+      "priceInput": 0.9,
+      "priceOutput": 1.9,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "morph/morph-v3-large:batch",
+      "model": "Morph: Morph V3 Large (batch)",
+      "priceInput": 0.45,
+      "priceOutput": 0.95,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "morph/morph-v3-fast",
+      "model": "Morph: Morph V3 Fast",
+      "priceInput": 0.8,
+      "priceOutput": 1.2,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "morph/morph-v3-fast:batch",
+      "model": "Morph: Morph V3 Fast (batch)",
+      "priceInput": 0.4,
+      "priceOutput": 0.6,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-small-3.2-24b-instruct",
+      "model": "Mistral: Mistral Small 3.2 24B",
+      "priceInput": 0.075,
+      "priceOutput": 0.2,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-2.5-flash",
+      "model": "Google: Gemini 2.5 Flash",
+      "priceInput": 0.3,
+      "priceOutput": 2.5,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": 0.0833333333333333
+    },
+    {
+      "modelId": "google/gemini-2.5-pro",
+      "model": "Google: Gemini 2.5 Pro",
+      "priceInput": 1.25,
+      "priceOutput": 10,
+      "priceCachedRead": 0.125,
+      "priceCachedWrite": 0.375
+    },
+    {
+      "modelId": "openai/o3-pro",
+      "model": "OpenAI: o3 Pro",
+      "priceInput": 20,
+      "priceOutput": 80,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemini-2.5-pro-preview",
+      "model": "Google: Gemini 2.5 Pro Preview 06-05",
+      "priceInput": 1.25,
+      "priceOutput": 10,
+      "priceCachedRead": 0.125,
+      "priceCachedWrite": 0.375
+    },
+    {
+      "modelId": "deepseek/deepseek-r1-0528",
+      "model": "DeepSeek: R1 0528",
+      "priceInput": 0.571,
+      "priceOutput": 2.286,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-medium-3",
+      "model": "Mistral: Mistral Medium 3",
+      "priceInput": 0.44,
+      "priceOutput": 2.2,
+      "priceCachedRead": 0.044,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta-llama/llama-guard-4-12b",
+      "model": "Meta: Llama Guard 4 12B",
+      "priceInput": 0.18,
+      "priceOutput": 0.18,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3-30b-a3b",
+      "model": "Qwen: Qwen3 30B A3B",
+      "priceInput": 0.12,
+      "priceOutput": 0.5,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3-14b",
+      "model": "Qwen: Qwen3 14B",
+      "priceInput": 0.12,
+      "priceOutput": 0.24,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen3-32b",
+      "model": "Qwen: Qwen3 32B",
+      "priceInput": 0.08,
+      "priceOutput": 0.28,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/o3",
+      "model": "OpenAI: o3",
+      "priceInput": 2,
+      "priceOutput": 8,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/o3:batch",
+      "model": "OpenAI: o3 (batch)",
+      "priceInput": 1,
+      "priceOutput": 4,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/o4-mini:batch",
+      "model": "OpenAI: o4 Mini (batch)",
+      "priceInput": 0.55,
+      "priceOutput": 2.2,
+      "priceCachedRead": 0.1375,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4.1",
+      "model": "OpenAI: GPT-4.1",
+      "priceInput": 2,
+      "priceOutput": 8,
+      "priceCachedRead": 0.5,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4.1:batch",
+      "model": "OpenAI: GPT-4.1 (batch)",
+      "priceInput": 1,
+      "priceOutput": 4,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4.1-mini",
+      "model": "OpenAI: GPT-4.1 Mini",
+      "priceInput": 0.4,
+      "priceOutput": 1.6,
+      "priceCachedRead": 0.1,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4.1-mini:batch",
+      "model": "OpenAI: GPT-4.1 Mini (batch)",
+      "priceInput": 0.2,
+      "priceOutput": 0.8,
+      "priceCachedRead": 0.05,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4.1-nano",
+      "model": "OpenAI: GPT-4.1 Nano",
+      "priceInput": 0.1,
+      "priceOutput": 0.4,
+      "priceCachedRead": 0.03,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4.1-nano:batch",
+      "model": "OpenAI: GPT-4.1 Nano (batch)",
+      "priceInput": 0.05,
+      "priceOutput": 0.2,
+      "priceCachedRead": 0.0125,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta-llama/llama-4-maverick",
+      "model": "Meta: Llama 4 Maverick",
+      "priceInput": 0.35,
+      "priceOutput": 1,
+      "priceCachedRead": 0.17,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta-llama/llama-4-scout",
+      "model": "Meta: Llama 4 Scout",
+      "priceInput": 0.1,
+      "priceOutput": 0.3,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-chat-v3-0324",
+      "model": "DeepSeek: DeepSeek V3 0324",
+      "priceInput": 0.29,
+      "priceOutput": 1.14,
+      "priceCachedRead": 0.11,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-small-3.1-24b-instruct",
+      "model": "Mistral: Mistral Small 3.1 24B",
+      "priceInput": 0.351,
+      "priceOutput": 0.555,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemma-3-4b-it",
+      "model": "Google: Gemma 3 4B",
+      "priceInput": 0.05,
+      "priceOutput": 0.1,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemma-3-12b-it",
+      "model": "Google: Gemma 3 12B",
+      "priceInput": 0.05,
+      "priceOutput": 0.15,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "cohere/command-a",
+      "model": "Cohere: Command A",
+      "priceInput": 2.5,
+      "priceOutput": 10,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "rekaai/reka-flash-3",
+      "model": "Reka Flash 3",
+      "priceInput": 0.1,
+      "priceOutput": 0.2,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemma-3-27b-it",
+      "model": "Google: Gemma 3 27B",
+      "priceInput": 0.08,
+      "priceOutput": 0.16,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "thedrummer/skyfall-36b-v2",
+      "model": "TheDrummer: Skyfall 36B V2",
+      "priceInput": 0.55,
+      "priceOutput": 0.8,
+      "priceCachedRead": 0.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "perplexity/sonar-reasoning-pro",
+      "model": "Perplexity: Sonar Reasoning Pro",
+      "priceInput": 2,
+      "priceOutput": 8,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "perplexity/sonar-pro",
+      "model": "Perplexity: Sonar Pro",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "perplexity/sonar-deep-research",
+      "model": "Perplexity: Sonar Deep Research",
+      "priceInput": 2,
+      "priceOutput": 8,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-saba",
+      "model": "Mistral: Saba",
+      "priceInput": 0.2,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "aion-labs/aion-rp-llama-3.1-8b",
+      "model": "AionLabs: Aion-RP 1.0 (8B)",
+      "priceInput": 0.8,
+      "priceOutput": 1.6,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen2.5-vl-72b-instruct",
+      "model": "Qwen: Qwen2.5 VL 72B Instruct",
+      "priceInput": 0.8,
+      "priceOutput": 1,
+      "priceCachedRead": 0.4,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen-plus",
+      "model": "Qwen: Qwen-Plus",
+      "priceInput": 0.26,
+      "priceOutput": 0.78,
+      "priceCachedRead": 0.052,
+      "priceCachedWrite": 0.325
+    },
+    {
+      "modelId": "openai/o3-mini:batch",
+      "model": "OpenAI: o3 Mini (batch)",
+      "priceInput": 0.55,
+      "priceOutput": 2.2,
+      "priceCachedRead": 0.275,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-small-24b-instruct-2501",
+      "model": "Mistral: Mistral Small 3",
+      "priceInput": 0.05,
+      "priceOutput": 0.08,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "perplexity/sonar",
+      "model": "Perplexity: Sonar",
+      "priceInput": 1,
+      "priceOutput": 1,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "microsoft/phi-4",
+      "model": "Microsoft: Phi 4",
+      "priceInput": 0.07,
+      "priceOutput": 0.14,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "deepseek/deepseek-chat",
+      "model": "DeepSeek: DeepSeek V3",
+      "priceInput": 0.2574,
+      "priceOutput": 1.0287,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "cohere/command-r7b-12-2024",
+      "model": "Cohere: Command R7B (12-2024)",
+      "priceInput": 0.0375,
+      "priceOutput": 0.15,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta-llama/llama-3.3-70b-instruct",
+      "model": "Meta: Llama 3.3 70B Instruct",
+      "priceInput": 0.71,
+      "priceOutput": 0.71,
+      "priceCachedRead": 0.71,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "amazon/nova-lite-v1",
+      "model": "Amazon: Nova Lite 1.0",
+      "priceInput": 0.06,
+      "priceOutput": 0.24,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "amazon/nova-micro-v1",
+      "model": "Amazon: Nova Micro 1.0",
+      "priceInput": 0.035,
+      "priceOutput": 0.14,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "amazon/nova-pro-v1",
+      "model": "Amazon: Nova Pro 1.0",
+      "priceInput": 0.8,
+      "priceOutput": 3.2,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "model": "OpenAI: GPT-4o (2024-11-20)",
+      "priceInput": 2.5,
+      "priceOutput": 10,
+      "priceCachedRead": 1.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-large-2407",
+      "model": "Mistral Large 2407",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen-2.5-coder-32b-instruct",
+      "model": "Qwen2.5 Coder 32B Instruct",
+      "priceInput": 0.66,
+      "priceOutput": 1,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "thedrummer/unslopnemo-12b",
+      "model": "TheDrummer: UnslopNemo 12B",
+      "priceInput": 0.4,
+      "priceOutput": 0.4,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "anthracite-org/magnum-v4-72b",
+      "model": "Magnum v4 72B",
+      "priceInput": 2.5,
+      "priceOutput": 5,
+      "priceCachedRead": 2.5,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta-llama/llama-3.2-3b-instruct",
+      "model": "Meta: Llama 3.2 3B Instruct",
+      "priceInput": 0.05,
+      "priceOutput": 0.33,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "qwen/qwen-2.5-72b-instruct",
+      "model": "Qwen2.5 72B Instruct",
+      "priceInput": 0.36,
+      "priceOutput": 0.4,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "cohere/command-r-08-2024",
+      "model": "Cohere: Command R (08-2024)",
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "cohere/command-r-plus-08-2024",
+      "model": "Cohere: Command R+ (08-2024)",
+      "priceInput": 2.5,
+      "priceOutput": 10,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "sao10k/l3.1-euryale-70b",
+      "model": "Sao10K: Llama 3.1 Euryale 70B v2.2",
+      "priceInput": 0.85,
+      "priceOutput": 0.85,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "sao10k/l3-lunaris-8b",
+      "model": "Sao10K: Llama 3 8B Lunaris",
+      "priceInput": 0.04,
+      "priceOutput": 0.05,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4o-2024-08-06",
+      "model": "OpenAI: GPT-4o (2024-08-06)",
+      "priceInput": 2.5,
+      "priceOutput": 10,
+      "priceCachedRead": 1.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta-llama/llama-3.1-70b-instruct",
+      "model": "Meta: Llama 3.1 70B Instruct",
+      "priceInput": 0.72,
+      "priceOutput": 0.72,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "meta-llama/llama-3.1-8b-instruct",
+      "model": "Meta: Llama 3.1 8B Instruct",
+      "priceInput": 0.02,
+      "priceOutput": 0.04,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-nemo",
+      "model": "Mistral: Mistral Nemo",
+      "priceInput": 0.029,
+      "priceOutput": 0.03,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4o-mini",
+      "model": "OpenAI: GPT-4o-mini",
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4o-mini-2024-07-18",
+      "model": "OpenAI: GPT-4o-mini (2024-07-18)",
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.075,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4o-mini:batch",
+      "model": "OpenAI: GPT-4o-mini (batch)",
+      "priceInput": 0.075,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.0375,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "google/gemma-2-27b-it",
+      "model": "Google: Gemma 2 27B",
+      "priceInput": 0.65,
+      "priceOutput": 0.65,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4o",
+      "model": "OpenAI: GPT-4o",
+      "priceInput": 2.5,
+      "priceOutput": 10,
+      "priceCachedRead": 1.25,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4o-2024-05-13",
+      "model": "OpenAI: GPT-4o (2024-05-13)",
+      "priceInput": 5,
+      "priceOutput": 15,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4o:batch",
+      "model": "OpenAI: GPT-4o (batch)",
+      "priceInput": 1.25,
+      "priceOutput": 5,
+      "priceCachedRead": 0.625,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mixtral-8x22b-instruct",
+      "model": "Mistral: Mixtral 8x22B Instruct",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4-turbo:batch",
+      "model": "OpenAI: GPT-4 Turbo (batch)",
+      "priceInput": 5,
+      "priceOutput": 15,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mistralai/mistral-large",
+      "model": "Mistral Large",
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-3.5-turbo-0613",
+      "model": "OpenAI: GPT-3.5 Turbo (older v0613)",
+      "priceInput": 1,
+      "priceOutput": 2,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-3.5-turbo-16k",
+      "model": "OpenAI: GPT-3.5 Turbo 16k",
+      "priceInput": 3,
+      "priceOutput": 4,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "mancer/weaver",
+      "model": "Mancer: Weaver (alpha)",
+      "priceInput": 0.3,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.3,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "undi95/remm-slerp-l2-13b",
+      "model": "ReMM SLERP 13B",
+      "priceInput": 0.3,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.2,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "gryphe/mythomax-l2-13b",
+      "model": "MythoMax 13B",
+      "priceInput": 0.08,
+      "priceOutput": 0.11,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openai/gpt-4",
+      "model": "OpenAI: GPT-4",
+      "priceInput": 30,
+      "priceOutput": 60,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "openrouter/free",
+      "model": "Free Models Router",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": null,
+      "priceCachedWrite": null
+    }
+  ]
+}

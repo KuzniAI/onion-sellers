@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/inference/go/v1/models",
-  "fetchedAt": "2026-11-18T14:01:41.459Z",
+  "fetchedAt": "2026-11-20T16:40:06.754Z",
   "notes": "Auto-generated from the OpenCode Go /v1/models JSON endpoint. OpenCode Go is a flat $10/mo subscription; monthlyLimitUsd is each model's per-month usage cap under that subscription, not a separate charge. Reference a model in config as \"opencode-go/<modelId>\". Peak/off-peak and context-threshold variants of the same model share one modelId and appear as separate rows, matching the source page. Prices are USD per 1M tokens.",
   "models": [
     {
@@ -70,23 +70,6 @@
       "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
       "aiSdkPackage": "@ai-sdk/openai-compatible",
       "notes": "Peak 2x weekdays 01:00-04:00 and 06:00-10:00 UTC; Additional go fields: featured=false"
-    },
-    {
-      "model": "GLM-5.2",
-      "modelId": "glm-5.2",
-      "priceInput": 1.4,
-      "priceOutput": 4.4,
-      "priceCachedRead": 0.26,
-      "priceCachedWrite": null,
-      "monthlyLimitUsd": 60,
-      "monthlyLimitGoPlusUsd": 180,
-      "monthlyLimitGoTeamsUsd": 65,
-      "training": false,
-      "zdr": true,
-      "limitedRegions": false,
-      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "notes": "Additional go fields: featured=false"
     },
     {
       "model": "GLM-5.3",
@@ -611,7 +594,7 @@
       "training": false,
       "zdr": false,
       "limitedRegions": false,
-      "endpoint": "https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon",
+      "endpoint": "https://opencode.ai/inference/go/google/v1beta/interactions",
       "aiSdkPackage": "@ai-sdk/google",
       "notes": "Off-peak; peak is 2x from 2026-12-01; Audio input $2/1M tokens; Additional go fields: featured=true"
     },
@@ -628,7 +611,7 @@
       "training": false,
       "zdr": false,
       "limitedRegions": false,
-      "endpoint": "https://opencode.ai/inference/go/google/v1beta/models/gemini-4-argon",
+      "endpoint": "https://opencode.ai/inference/go/google/v1beta/interactions",
       "aiSdkPackage": "@ai-sdk/google",
       "notes": "Peak 2x from 2026-12-01; Audio input $2/1M tokens; Additional go fields: featured=true"
     },

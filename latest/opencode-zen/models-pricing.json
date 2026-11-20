@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/zen/v1/models",
-  "fetchedAt": "2026-11-18T14:01:41.576Z",
+  "fetchedAt": "2026-11-20T16:40:06.907Z",
   "notes": "Auto-generated from the OpenCode Zen /v1/models JSON endpoint. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
@@ -85,21 +85,24 @@
       "priceInput": 5,
       "priceOutput": 25,
       "priceCachedRead": 0.5,
-      "priceCachedWrite": 6.25
+      "priceCachedWrite": 6.25,
+      "notes": "\"fast\" service tier: 2x text"
     },
     {
       "model": "Claude Opus 5",
       "priceInput": 5,
       "priceOutput": 25,
       "priceCachedRead": 0.5,
-      "priceCachedWrite": 6.25
+      "priceCachedWrite": 6.25,
+      "notes": "\"fast\" service tier: 2x text"
     },
     {
       "model": "Claude Opus 5.5",
       "priceInput": 4,
       "priceOutput": 20,
       "priceCachedRead": 0.2,
-      "priceCachedWrite": 5
+      "priceCachedWrite": 5,
+      "notes": "\"fast\" service tier: 2x text"
     },
     {
       "model": "Claude Sonnet 4.5 (≤ 200K tokens)",
@@ -171,7 +174,7 @@
       "priceOutput": 3.75,
       "priceCachedRead": 0.075,
       "priceCachedWrite": null,
-      "notes": "Prices are 2x from 2027-01-01; Audio input $0.75 per 1M tokens"
+      "notes": "Prices are 2x from from 2027-01-01; Audio input $0.75 per 1M tokens"
     },
     {
       "model": "Gemini 3.7 Flash",
@@ -179,7 +182,7 @@
       "priceOutput": 3.75,
       "priceCachedRead": 0.075,
       "priceCachedWrite": null,
-      "notes": "Prices are 2x from 2027-01-01; Audio input $0.75 per 1M tokens"
+      "notes": "Prices are 2x from from 2027-01-01; Audio input $0.75 per 1M tokens"
     },
     {
       "model": "Gemini 3.8 Flash",
@@ -187,7 +190,7 @@
       "priceOutput": 3.75,
       "priceCachedRead": 0.075,
       "priceCachedWrite": null,
-      "notes": "Prices are 2x from 2027-01-01; Audio input $0.75 per 1M tokens"
+      "notes": "Prices are 2x from from 2027-01-01; Audio input $0.75 per 1M tokens"
     },
     {
       "model": "Gemini 4 Argon",
@@ -195,28 +198,7 @@
       "priceOutput": 10,
       "priceCachedRead": 0.1,
       "priceCachedWrite": null,
-      "notes": "Prices are 2x from 2026-12-01; Audio input $2 per 1M tokens"
-    },
-    {
-      "model": "GLM-5",
-      "priceInput": 1,
-      "priceOutput": 3.2,
-      "priceCachedRead": 0.2,
-      "priceCachedWrite": null
-    },
-    {
-      "model": "GLM-5.1",
-      "priceInput": 1.4,
-      "priceOutput": 4.4,
-      "priceCachedRead": 0.26,
-      "priceCachedWrite": null
-    },
-    {
-      "model": "GLM-5.2",
-      "priceInput": 1.4,
-      "priceOutput": 4.4,
-      "priceCachedRead": 0.26,
-      "priceCachedWrite": null
+      "notes": "Prices are 2x from from 2026-12-01; Audio input $2 per 1M tokens"
     },
     {
       "model": "GLM-5.3",
@@ -237,7 +219,8 @@
       "priceInput": 1.07,
       "priceOutput": 8.5,
       "priceCachedRead": 0.107,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5 Codex",
@@ -251,14 +234,16 @@
       "priceInput": 0.05,
       "priceOutput": 0.4,
       "priceCachedRead": 0.005,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.1",
       "priceInput": 1.07,
       "priceOutput": 8.5,
       "priceCachedRead": 0.107,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.1 Codex",
@@ -286,7 +271,8 @@
       "priceInput": 1.75,
       "priceOutput": 14,
       "priceCachedRead": 0.175,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.2 Codex",
@@ -314,56 +300,64 @@
       "priceInput": 2.5,
       "priceOutput": 15,
       "priceCachedRead": 0.25,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.4 (> 272K tokens)",
       "priceInput": 5,
       "priceOutput": 22.5,
       "priceCachedRead": 0.5,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.4 Mini",
       "priceInput": 0.75,
       "priceOutput": 4.5,
       "priceCachedRead": 0.075,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.4 Nano",
       "priceInput": 0.2,
       "priceOutput": 1.25,
       "priceCachedRead": 0.02,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.4 Pro",
       "priceInput": 30,
       "priceOutput": 180,
       "priceCachedRead": 30,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.5 (≤ 272K tokens)",
       "priceInput": 5,
       "priceOutput": 30,
       "priceCachedRead": 0.5,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"priority\" service tier: 2.5x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.5 (> 272K tokens)",
       "priceInput": 10,
       "priceOutput": 45,
       "priceCachedRead": 1,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"priority\" service tier: 2.5x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.5 Pro",
       "priceInput": 30,
       "priceOutput": 180,
       "priceCachedRead": 30,
-      "priceCachedWrite": null
+      "priceCachedWrite": null,
+      "notes": "\"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.6 Luna (≤ 272K tokens)",
@@ -371,7 +365,7 @@
       "priceOutput": 1.2,
       "priceCachedRead": 0.02,
       "priceCachedWrite": 0.25,
-      "notes": "Cache write by TTL: 30m $0.25, 12h $0.5 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $0.25, 12h $0.5 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.6 Luna (> 272K tokens)",
@@ -379,7 +373,7 @@
       "priceOutput": 1.8,
       "priceCachedRead": 0.04,
       "priceCachedWrite": 0.5,
-      "notes": "Cache write by TTL: 30m $0.5, 12h $1 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $0.5, 12h $1 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.6 Sol (≤ 272K tokens)",
@@ -387,7 +381,7 @@
       "priceOutput": 20,
       "priceCachedRead": 0.4,
       "priceCachedWrite": 5,
-      "notes": "Cache write by TTL: 30m $5, 12h $10 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $5, 12h $10 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.6 Sol (> 272K tokens)",
@@ -395,7 +389,7 @@
       "priceOutput": 30,
       "priceCachedRead": 0.8,
       "priceCachedWrite": 10,
-      "notes": "Cache write by TTL: 30m $10, 12h $20 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $10, 12h $20 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-6 Astra (≤ 272K tokens)",
@@ -403,7 +397,7 @@
       "priceOutput": 50,
       "priceCachedRead": 1,
       "priceCachedWrite": 12.5,
-      "notes": "Cache write by TTL: 30m $12.5, 12h $25 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $12.5, 12h $25 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"ultrafast\" service tier: 6x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-6 Astra (> 272K tokens)",
@@ -411,7 +405,7 @@
       "priceOutput": 75,
       "priceCachedRead": 2,
       "priceCachedWrite": 25,
-      "notes": "Cache write by TTL: 30m $25, 12h $50 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $25, 12h $50 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"ultrafast\" service tier: 6x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-6 Sol (≤ 272K tokens)",
@@ -419,7 +413,7 @@
       "priceOutput": 10,
       "priceCachedRead": 0.2,
       "priceCachedWrite": 2.5,
-      "notes": "Cache write by TTL: 30m $2.5, 12h $5 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $2.5, 12h $5 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-6 Sol (> 272K tokens)",
@@ -427,7 +421,7 @@
       "priceOutput": 15,
       "priceCachedRead": 0.4,
       "priceCachedWrite": 5,
-      "notes": "Cache write by TTL: 30m $5, 12h $10 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $5, 12h $10 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-6.1 Sol (≤ 272K tokens)",
@@ -435,7 +429,7 @@
       "priceOutput": 10,
       "priceCachedRead": 0.1,
       "priceCachedWrite": 2.5,
-      "notes": "Cache write by TTL: 30m $2.5, 12h $5 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $2.5, 12h $5 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"ultrafast\" service tier: 6x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-6.1 Sol (> 272K tokens)",
@@ -443,7 +437,7 @@
       "priceOutput": 15,
       "priceCachedRead": 0.2,
       "priceCachedWrite": 5,
-      "notes": "Cache write by TTL: 30m $5, 12h $10 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $5, 12h $10 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"ultrafast\" service tier: 6x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-6 Luna (≤ 272K tokens)",
@@ -451,7 +445,7 @@
       "priceOutput": 0.5,
       "priceCachedRead": 0.01,
       "priceCachedWrite": 0.125,
-      "notes": "Cache write by TTL: 30m $0.125, 12h $0.25 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $0.125, 12h $0.25 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-6 Luna (> 272K tokens)",
@@ -459,7 +453,7 @@
       "priceOutput": 0.75,
       "priceCachedRead": 0.02,
       "priceCachedWrite": 0.25,
-      "notes": "Cache write by TTL: 30m $0.25, 12h $0.5 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $0.25, 12h $0.5 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.6 Terra (≤ 272K tokens)",
@@ -467,7 +461,7 @@
       "priceOutput": 12,
       "priceCachedRead": 0.2,
       "priceCachedWrite": 2.5,
-      "notes": "Cache write by TTL: 30m $2.5, 12h $5 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $2.5, 12h $5 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "GPT-5.6 Terra (> 272K tokens)",
@@ -475,7 +469,7 @@
       "priceOutput": 18,
       "priceCachedRead": 0.4,
       "priceCachedWrite": 5,
-      "notes": "Cache write by TTL: 30m $5, 12h $10 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $5, 12h $10 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"flex\" service tier: 0.5x text"
     },
     {
       "model": "Grok 4.5 (≤ 200K tokens)",
@@ -524,20 +518,6 @@
       "priceInput": 1,
       "priceOutput": 2,
       "priceCachedRead": 0.2,
-      "priceCachedWrite": null
-    },
-    {
-      "model": "Kimi K2.5",
-      "priceInput": 0.6,
-      "priceOutput": 3,
-      "priceCachedRead": 0.1,
-      "priceCachedWrite": null
-    },
-    {
-      "model": "Kimi K2.6",
-      "priceInput": 0.95,
-      "priceOutput": 4,
-      "priceCachedRead": 0.16,
       "priceCachedWrite": null
     },
     {
@@ -646,13 +626,6 @@
       "priceCachedWrite": null
     },
     {
-      "model": "Inkling 2 Small Free",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCachedRead": 0,
-      "priceCachedWrite": 0
-    },
-    {
       "model": "Beam Free",
       "priceInput": 0,
       "priceOutput": 0,
@@ -699,7 +672,8 @@
       "priceInput": 8,
       "priceOutput": 40,
       "priceCachedRead": 0.2,
-      "priceCachedWrite": 10
+      "priceCachedWrite": 10,
+      "notes": "\"fast\" service tier: 2x text"
     },
     {
       "model": "Gemini 4 Carbon",
@@ -707,7 +681,7 @@
       "priceOutput": 10,
       "priceCachedRead": 0.1,
       "priceCachedWrite": null,
-      "notes": "Prices are 2x from 2026-12-01; Audio input $2 per 1M tokens"
+      "notes": "Prices are 2x from from 2026-12-01; Audio input $2 per 1M tokens"
     },
     {
       "model": "Gemini 4 Hydrogen",
@@ -730,7 +704,7 @@
       "priceOutput": 10,
       "priceCachedRead": 0.1,
       "priceCachedWrite": 2.5,
-      "notes": "Cache write by TTL: 30m $2.5, 12h $5 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $2.5, 12h $5 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"ultrafast\" service tier: 3x text before 2027-03-01; \"ultrafast\" service tier: 6x text from 2027-03-01"
     },
     {
       "model": "GPT-6.2 Sol (> 272K tokens)",
@@ -738,7 +712,7 @@
       "priceOutput": 15,
       "priceCachedRead": 0.2,
       "priceCachedWrite": 5,
-      "notes": "Cache write by TTL: 30m $5, 12h $10 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $5, 12h $10 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"ultrafast\" service tier: 3x text before 2027-03-01; \"ultrafast\" service tier: 6x text from 2027-03-01"
     },
     {
       "model": "GPT-6.2 Astra (≤ 272K tokens)",
@@ -746,7 +720,7 @@
       "priceOutput": 40,
       "priceCachedRead": 0.4,
       "priceCachedWrite": 10,
-      "notes": "Cache write by TTL: 30m $10, 12h $20 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $10, 12h $20 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"ultrafast\" service tier: 3x text before 2027-03-01; \"ultrafast\" service tier: 6x text from 2027-03-01"
     },
     {
       "model": "GPT-6.2 Astra (> 272K tokens)",
@@ -754,7 +728,22 @@
       "priceOutput": 60,
       "priceCachedRead": 0.8,
       "priceCachedWrite": 20,
-      "notes": "Cache write by TTL: 30m $20, 12h $40 (priceCachedWrite is the shortest TTL)"
+      "notes": "Cache write by TTL: 30m $20, 12h $40 (priceCachedWrite is the shortest TTL); \"priority\" service tier: 2x text; \"ultrafast\" service tier: 3x text before 2027-03-01; \"ultrafast\" service tier: 6x text from 2027-03-01"
+    },
+    {
+      "model": "Tidepool Alpha Free",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": null
+    },
+    {
+      "model": "Gemini 4 Neon",
+      "priceInput": 3,
+      "priceOutput": 15,
+      "priceCachedRead": 0.15,
+      "priceCachedWrite": null,
+      "notes": "Audio input $3 per 1M tokens (cached read $0.15)"
     }
   ]
 }
