@@ -19,7 +19,13 @@ export type OpenCodeGoModelRow = {
 
 const FN = "parseOpenCodeGoPricingHtml";
 
-const API_KINDS = ["chat-completions", "responses", "messages", "generate-content"] as const;
+const API_KINDS = [
+  "chat-completions",
+  "responses",
+  "messages",
+  "generate-content",
+  "interactions",
+] as const;
 const WEEKDAYS = ["mon", "tue", "wed", "thu", "fri"];
 
 type CachePrices = {
@@ -86,7 +92,7 @@ function parseEntry(entry: unknown, index: number): OpenCodeGoModelRow[] {
   const multipliers = parseMultipliers(entry.cost.multipliers, where);
   const audioNote = parseAudioNote(entry.cost.audio, where);
   const go = parseGo(entry.go, where);
-  const api = parseApi(entry.api, modelId, where);
+  const api = parseApi(entry.api, entry.recommended_api, modelId, where);
 
   const slices = expandVariants(name, tiers, multipliers);
   return slices.map((slice) => {
@@ -488,6 +494,7 @@ function readOptionalBoolean(
 
 function parseApi(
   value: unknown,
+  recommended: unknown,
   modelId: string,
   where: string,
 ): { endpoint: string | null; aiSdkPackage: string | null } {
@@ -501,10 +508,7 @@ function parseApi(
     throw new Error(`${FN}: ${where} has unknown API blocks: ${unknown.join(", ")}`);
   }
   if (present.length === 0) return { endpoint: null, aiSdkPackage: null };
-  if (present.length > 1) {
-    throw new Error(`${FN}: ${where} has multiple API blocks: ${present.join(", ")}`);
-  }
-  const kind = present[0]!;
+  const kind = pickApiKind(present, recommended, where);
   const block = value[kind];
   if (!isRecord(block)) throw new Error(`${FN}: ${where} api.${kind} is not an object`);
   const baseUrl = expectString(block, "base_url", `${where} api.${kind}.base_url`).replace(
@@ -521,6 +525,24 @@ function parseApi(
   return { endpoint: endpointFor(kind, baseUrl, modelId), aiSdkPackage };
 }
 
+// Some models expose more than one API (e.g. Gemini's generate-content and
+// interactions). Use the upstream `recommended_api` to pick one, and refuse
+// to guess when it is missing or names a block that isn't there.
+function pickApiKind(
+  present: Array<(typeof API_KINDS)[number]>,
+  recommended: unknown,
+  where: string,
+): (typeof API_KINDS)[number] {
+  if (present.length === 1) return present[0]!;
+  const choice = present.find((kind) => kind === recommended);
+  if (choice === undefined) {
+    throw new Error(
+      `${FN}: ${where} has multiple API blocks (${present.join(", ")}) and recommended_api ${JSON.stringify(recommended)} does not pick one`,
+    );
+  }
+  return choice;
+}
+
 function endpointFor(kind: (typeof API_KINDS)[number], baseUrl: string, modelId: string): string {
   switch (kind) {
     case "chat-completions":
@@ -531,6 +553,8 @@ function endpointFor(kind: (typeof API_KINDS)[number], baseUrl: string, modelId:
       return `${baseUrl}/messages`;
     case "generate-content":
       return `${baseUrl}/models/${modelId}`;
+    case "interactions":
+      return `${baseUrl}/interactions`;
   }
 }
 
