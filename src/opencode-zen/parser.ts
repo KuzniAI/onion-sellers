@@ -54,6 +54,13 @@ function parseEntry(entry: unknown, index: number): OpenCodeZenModelRow[] {
   const name = expectString(entry, "name", `data[${index}].name`);
   const where = `"${name}"`;
 
+  // The endpoint also lists embedding, image, realtime and other non-chat
+  // models priced per image/minute. Only chat models are compared here.
+  if (entry.type !== undefined && entry.type !== "chat") {
+    if (typeof entry.type !== "string") throw new Error(`${FN}: ${where} type is not a string`);
+    return [];
+  }
+
   if (!isRecord(entry.cost)) {
     throw new Error(`${FN}: ${where} is missing cost -- pricing table may have changed`);
   }
@@ -234,18 +241,61 @@ function parseMultiplierNotes(value: unknown, where: string): string[] {
     const at = `${where} cost.multipliers[${index}]`;
     if (!isRecord(item)) throw new Error(`${FN}: ${at} is not an object`);
     assertOnlyKeys(item, ["when", "factor"], at);
-    const factor = expectPrice(item.factor, `${at}.factor`);
-    if (factor <= 0) throw new Error(`${FN}: ${at}.factor must be positive`);
+    const factor = describeFactor(item.factor, `${at}.factor`);
     if (!isRecord(item.when)) throw new Error(`${FN}: ${at}.when is not an object`);
-    assertOnlyKeys(item.when, ["date"], `${at}.when`);
-    if (!isRecord(item.when.date)) throw new Error(`${FN}: ${at}.when.date is not an object`);
-    assertOnlyKeys(item.when.date, ["gte"], `${at}.when.date`);
-    const date = item.when.date.gte;
-    if (typeof date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
-      throw new Error(`${FN}: ${at}.when.date.gte is not a YYYY-MM-DD date`);
+    assertOnlyKeys(item.when, ["date", "service_tier"], `${at}.when`);
+    if (item.when.date === undefined && item.when.service_tier === undefined) {
+      throw new Error(`${FN}: ${at}.when has no conditions`);
     }
-    return `Prices are ${formatUsd(factor)}x from ${date}`;
+    const date = item.when.date === undefined ? null : describeDate(item.when.date, `${at}.when`);
+    if (item.when.service_tier === undefined) {
+      return `Prices are ${factor} from ${date!}`;
+    }
+    const tier = readServiceTier(item.when.service_tier, `${at}.when`);
+    return `"${tier}" service tier: ${factor}${date === null ? "" : ` ${date}`}`;
   });
+}
+
+// A factor is either a plain multiplier for all prices, or a map from
+// modality (e.g. "text") to that modality's multiplier.
+function describeFactor(value: unknown, where: string): string {
+  if (typeof value === "number") return `${formatUsd(expectFactor(value, where))}x`;
+  if (!isRecord(value)) throw new Error(`${FN}: ${where} is not a number or modality map`);
+  assertOnlyKeys(value, ["text", "audio"], where);
+  const entries = Object.entries(value);
+  if (entries.length === 0) throw new Error(`${FN}: ${where} has no modalities`);
+  return entries
+    .map(([modality, f]) => `${formatUsd(expectFactor(f, `${where}.${modality}`))}x ${modality}`)
+    .join(", ");
+}
+
+function expectFactor(value: unknown, where: string): number {
+  const factor = expectPrice(value, where);
+  if (factor <= 0) throw new Error(`${FN}: ${where} must be positive`);
+  return factor;
+}
+
+function describeDate(value: unknown, where: string): string {
+  if (!isRecord(value)) throw new Error(`${FN}: ${where}.date is not an object`);
+  assertOnlyKeys(value, ["gte", "lt"], `${where}.date`);
+  const bounds: string[] = [];
+  if (value.gte !== undefined) bounds.push(`from ${readDate(value.gte, `${where}.date.gte`)}`);
+  if (value.lt !== undefined) bounds.push(`before ${readDate(value.lt, `${where}.date.lt`)}`);
+  if (bounds.length === 0) throw new Error(`${FN}: ${where}.date has no bounds`);
+  return bounds.join(" and ");
+}
+
+function readDate(value: unknown, where: string): string {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    throw new Error(`${FN}: ${where} is not a YYYY-MM-DD date`);
+  }
+  return value;
+}
+
+function readServiceTier(value: unknown, where: string): string {
+  if (!isRecord(value)) throw new Error(`${FN}: ${where}.service_tier is not an object`);
+  assertOnlyKeys(value, ["equals"], `${where}.service_tier`);
+  return expectString(value, "equals", `${where}.service_tier.equals`);
 }
 
 function parseAudioNotes(value: unknown, where: string): string[] {
@@ -253,9 +303,15 @@ function parseAudioNotes(value: unknown, where: string): string[] {
   if (!isRecord(value)) throw new Error(`${FN}: ${where} cost.audio is not an object`);
   assertOnlyKeys(value, ["input"], `${where} cost.audio`);
   if (!isRecord(value.input)) throw new Error(`${FN}: ${where} cost.audio.input is not an object`);
-  assertOnlyKeys(value.input, ["price"], `${where} cost.audio.input`);
+  assertOnlyKeys(value.input, ["price", "cache"], `${where} cost.audio.input`);
   const price = expectPrice(value.input.price, `${where} cost.audio.input.price`);
-  return [`Audio input $${formatUsd(price)} per 1M tokens`];
+  const cache = parseCache(value.input.cache, `${where} cost.audio.input.cache`);
+  const cached = [
+    ...(cache.read === null ? [] : [`cached read $${formatUsd(cache.read)}`]),
+    ...(cache.write === null ? [] : [`cached write $${formatUsd(cache.write)}`]),
+  ];
+  const suffix = cached.length > 0 ? ` (${cached.join(", ")})` : "";
+  return [`Audio input $${formatUsd(price)} per 1M tokens${suffix}`, ...cache.notes];
 }
 
 function formatTokens(tokens: number): string {
