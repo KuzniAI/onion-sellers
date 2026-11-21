@@ -718,5 +718,7 @@
   { "provider": "openrouter", "providerModel": "SpaceXSI: Grok 4.5", "aaSlug": "grok-4-5" },
   { "provider": "openrouter", "providerModel": "SpaceXSI: Grok 4.3", "aaSlug": "grok-4-3" },
   { "provider": "openrouter", "providerModel": "SpaceXSI: Grok 4.20 Multi-Agent", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
-  { "provider": "openrouter", "providerModel": "SpaceXSI: Grok 4.20", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." }
+  { "provider": "openrouter", "providerModel": "SpaceXSI: Grok 4.20", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." },
+  { "provider": "openrouter", "providerModel": "Thinking Machines: Inkling 2 Mini", "aaSlug": "inkling-2-mini" },
+  { "provider": "openrouter", "providerModel": "RadixArk: DaisyRose 27B", "aaSlug": null, "note": "Auto: no Artificial Analysis match found; set aaSlug by hand if one exists." }
 ]
