@@ -1,8 +1,24 @@
 {
   "sourceUrl": "https://openrouter.ai/api/v1/models",
-  "fetchedAt": "2026-11-20T16:40:07.779Z",
+  "fetchedAt": "2026-11-21T13:29:19.165Z",
   "notes": "Auto-generated from the OpenRouter /api/v1/models JSON endpoint. OpenRouter is pay-as-you-go; prices are converted from USD per token to USD per 1M tokens. Reference a model by its modelId (e.g. \"openrouter/<modelId>\"). Free models have 0 prices.",
   "models": [
+    {
+      "modelId": "thinkingmachines/inkling-2-mini",
+      "model": "Thinking Machines: Inkling 2 Mini",
+      "priceInput": 0.1,
+      "priceOutput": 0.4,
+      "priceCachedRead": 0.02,
+      "priceCachedWrite": null
+    },
+    {
+      "modelId": "radixark/daisyrose-27b",
+      "model": "RadixArk: DaisyRose 27B",
+      "priceInput": 0.15,
+      "priceOutput": 1.875,
+      "priceCachedRead": 0.0375,
+      "priceCachedWrite": null
+    },
     {
       "modelId": "mistralai/pixtral-large-2502",
       "model": "Mistral: Pixtral Large 2502",
@@ -352,9 +368,9 @@
     {
       "modelId": "minimax/minimax-m3.1-flash",
       "model": "MiniMax: MiniMax M3.1 Flash",
-      "priceInput": 0.075,
-      "priceOutput": 0.3,
-      "priceCachedRead": 0.0075,
+      "priceInput": 0.15,
+      "priceOutput": 0.6,
+      "priceCachedRead": 0.015,
       "priceCachedWrite": null
     },
     {
@@ -425,7 +441,7 @@
       "modelId": "nvidia/nemotron-3.5-super-vl",
       "model": "NVIDIA: Nemotron 3.5 Super VL",
       "priceInput": 0.15,
-      "priceOutput": 0.5,
+      "priceOutput": 0.47,
       "priceCachedRead": 0.02,
       "priceCachedWrite": null
     },
@@ -830,9 +846,9 @@
     {
       "modelId": "~deepseek/deepseek-pro-latest",
       "model": "DeepSeek: DeepSeek Pro Latest",
-      "priceInput": 0.1188,
+      "priceInput": 0.0999,
       "priceOutput": 8,
-      "priceCachedRead": 0.12,
+      "priceCachedRead": 0.0999,
       "priceCachedWrite": null
     },
     {
@@ -918,9 +934,9 @@
     {
       "modelId": "deepseek/deepseek-v4.1-flash",
       "model": "DeepSeek: DeepSeek V4.1 Flash",
-      "priceInput": 0.3,
-      "priceOutput": 1.2,
-      "priceCachedRead": 0.006,
+      "priceInput": 0.0498,
+      "priceOutput": 0.1992,
+      "priceCachedRead": 0.000996,
       "priceCachedWrite": null
     },
     {
@@ -1056,9 +1072,9 @@
     {
       "modelId": "tencent/hy4-preview",
       "model": "Tencent: Hy4 preview",
-      "priceInput": 0.7506,
-      "priceOutput": 2.2509,
-      "priceCachedRead": 0.0378,
+      "priceInput": 0.834,
+      "priceOutput": 2.501,
+      "priceCachedRead": 0.042,
       "priceCachedWrite": null
     },
     {
@@ -1104,9 +1120,9 @@
     {
       "modelId": "deepseek/deepseek-v4-flash-vision-exp",
       "model": "DeepSeek: DeepSeek V4 Flash Vision Exp",
-      "priceInput": 0.44,
-      "priceOutput": 1.32,
-      "priceCachedRead": 0.014,
+      "priceInput": 0.2156,
+      "priceOutput": 0.6468,
+      "priceCachedRead": 0.00686,
       "priceCachedWrite": null
     },
     {
@@ -1171,14 +1187,6 @@
       "priceInput": 0.16,
       "priceOutput": 2,
       "priceCachedRead": 0.04,
-      "priceCachedWrite": null
-    },
-    {
-      "modelId": "dots-studio/dots-3-note-preview:free",
-      "model": "Dots Studio: Dots3-Note Preview (free)",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCachedRead": null,
       "priceCachedWrite": null
     },
     {
@@ -1408,14 +1416,6 @@
       "priceCachedWrite": null
     },
     {
-      "modelId": "meituan/longcat-2.0",
-      "model": "Meituan: LongCat 2.0",
-      "priceInput": 0.3,
-      "priceOutput": 1.2,
-      "priceCachedRead": 0.006,
-      "priceCachedWrite": null
-    },
-    {
       "modelId": "thinkingmachines/inkling",
       "model": "Thinking Machines: Inkling",
       "priceInput": 1,
@@ -1578,9 +1578,9 @@
     {
       "modelId": "tencent/hy3",
       "model": "Tencent: Hy3",
-      "priceInput": 0.0825,
-      "priceOutput": 0.33,
-      "priceCachedRead": 0.020625,
+      "priceInput": 0.132,
+      "priceOutput": 0.528,
+      "priceCachedRead": 0.033,
       "priceCachedWrite": null
     },
     {
@@ -1993,14 +1993,6 @@
       "priceCachedWrite": null
     },
     {
-      "modelId": "tencent/hy3-preview",
-      "model": "Tencent: Hy3 preview",
-      "priceInput": 0.18,
-      "priceOutput": 0.6,
-      "priceCachedRead": 0.06,
-      "priceCachedWrite": null
-    },
-    {
       "modelId": "xiaomi/mimo-v2.5-pro",
       "model": "Xiaomi: MiMo-V2.5-Pro",
       "priceInput": 0.48,
@@ -2062,17 +2054,17 @@
     {
       "modelId": "z-ai/glm-5.1",
       "model": "Z.ai: GLM 5.1",
-      "priceInput": 1.19,
-      "priceOutput": 3.74,
-      "priceCachedRead": 0.6,
+      "priceInput": 1.4,
+      "priceOutput": 4.4,
+      "priceCachedRead": 0.26,
       "priceCachedWrite": null
     },
     {
       "modelId": "google/gemma-4-26b-a4b-it",
       "model": "Google: Gemma 4 26B A4B ",
-      "priceInput": 0.09,
-      "priceOutput": 0.3,
-      "priceCachedRead": 0.05,
+      "priceInput": 0.0675,
+      "priceOutput": 0.225,
+      "priceCachedRead": 0.0375,
       "priceCachedWrite": null
     },
     {
@@ -2158,9 +2150,9 @@
     {
       "modelId": "minimax/minimax-m2.7",
       "model": "MiniMax: MiniMax M2.7",
-      "priceInput": 0.21,
-      "priceOutput": 0.84,
-      "priceCachedRead": 0.042,
+      "priceInput": 0.6,
+      "priceOutput": 1.8,
+      "priceCachedRead": null,
       "priceCachedWrite": null
     },
     {
@@ -2400,9 +2392,9 @@
     {
       "modelId": "minimax/minimax-m2.5",
       "model": "MiniMax: MiniMax M2.5",
-      "priceInput": 0.295,
-      "priceOutput": 1.2,
-      "priceCachedRead": 0.06,
+      "priceInput": 0.27,
+      "priceOutput": 0.95,
+      "priceCachedRead": 0.03,
       "priceCachedWrite": null
     },
     {
@@ -2580,7 +2572,7 @@
       "model": "Z.ai: GLM 4.6V",
       "priceInput": 0.3,
       "priceOutput": 0.9,
-      "priceCachedRead": 0.05,
+      "priceCachedRead": 0.055,
       "priceCachedWrite": null
     },
     {
@@ -3000,9 +2992,9 @@
     {
       "modelId": "openai/gpt-oss-20b",
       "model": "OpenAI: gpt-oss-20b",
-      "priceInput": 0.018,
-      "priceOutput": 0.09,
-      "priceCachedRead": 0.009,
+      "priceInput": 0.017,
+      "priceOutput": 0.085,
+      "priceCachedRead": 0.0085,
       "priceCachedWrite": null
     },
     {
@@ -3042,8 +3034,8 @@
     {
       "modelId": "qwen/qwen3-coder-30b-a3b-instruct",
       "model": "Qwen: Qwen3 Coder 30B A3B Instruct",
-      "priceInput": 0.15,
-      "priceOutput": 0.6,
+      "priceInput": 0.07,
+      "priceOutput": 0.28,
       "priceCachedRead": null,
       "priceCachedWrite": null
     },
@@ -3338,9 +3330,9 @@
     {
       "modelId": "deepseek/deepseek-chat-v3-0324",
       "model": "DeepSeek: DeepSeek V3 0324",
-      "priceInput": 0.29,
-      "priceOutput": 1.14,
-      "priceCachedRead": 0.11,
+      "priceInput": 0.25,
+      "priceOutput": 1,
+      "priceCachedRead": null,
       "priceCachedWrite": null
     },
     {
@@ -3387,8 +3379,8 @@
       "modelId": "google/gemma-3-27b-it",
       "model": "Google: Gemma 3 27B",
       "priceInput": 0.08,
-      "priceOutput": 0.16,
-      "priceCachedRead": null,
+      "priceOutput": 0.45,
+      "priceCachedRead": 0.04,
       "priceCachedWrite": null
     },
     {
