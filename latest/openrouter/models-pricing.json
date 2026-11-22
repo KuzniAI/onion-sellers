@@ -1,14 +1,14 @@
 {
   "sourceUrl": "https://openrouter.ai/api/v1/models",
-  "fetchedAt": "2026-11-21T13:29:19.165Z",
+  "fetchedAt": "2026-11-22T13:23:06.447Z",
   "notes": "Auto-generated from the OpenRouter /api/v1/models JSON endpoint. OpenRouter is pay-as-you-go; prices are converted from USD per token to USD per 1M tokens. Reference a model by its modelId (e.g. \"openrouter/<modelId>\"). Free models have 0 prices.",
   "models": [
     {
       "modelId": "thinkingmachines/inkling-2-mini",
       "model": "Thinking Machines: Inkling 2 Mini",
-      "priceInput": 0.1,
-      "priceOutput": 0.4,
-      "priceCachedRead": 0.02,
+      "priceInput": 0.075,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.015,
       "priceCachedWrite": null
     },
     {
@@ -298,7 +298,7 @@
       "model": "Particle AI: Particle-1",
       "priceInput": 0.07,
       "priceOutput": 0.5,
-      "priceCachedRead": 0.006,
+      "priceCachedRead": 0.03,
       "priceCachedWrite": null
     },
     {
@@ -344,9 +344,9 @@
     {
       "modelId": "moonshotai/kimi-k3.1-pro",
       "model": "MoonshotAI: Kimi K3.1 Pro",
-      "priceInput": 0.253,
-      "priceOutput": 8.8,
-      "priceCachedRead": 0.18,
+      "priceInput": 0.2403,
+      "priceOutput": 8.4023,
+      "priceCachedRead": 0.2,
       "priceCachedWrite": null
     },
     {
@@ -1080,8 +1080,8 @@
     {
       "modelId": "~z-ai/glm-flash-latest",
       "model": "Z.ai: GLM Flash Latest",
-      "priceInput": 0.0399,
-      "priceOutput": 0.0784,
+      "priceInput": 0.0463,
+      "priceOutput": 0.0729,
       "priceCachedRead": 0.03,
       "priceCachedWrite": null
     },
@@ -1096,8 +1096,8 @@
     {
       "modelId": "z-ai/glm-5.3-flash",
       "model": "Z.ai: GLM 5.3 Flash",
-      "priceInput": 0.0399,
-      "priceOutput": 0.0784,
+      "priceInput": 0.15,
+      "priceOutput": 0.5,
       "priceCachedRead": 0.03,
       "priceCachedWrite": null
     },
@@ -1176,9 +1176,9 @@
     {
       "modelId": "qwen/qwen3.8-27b",
       "model": "Qwen: Qwen3.8 27B",
-      "priceInput": 0.06,
-      "priceOutput": 1.96,
-      "priceCachedRead": 0.059,
+      "priceInput": 0.035,
+      "priceOutput": 1.5,
+      "priceCachedRead": 0.0175,
       "priceCachedWrite": null
     },
     {
@@ -1578,9 +1578,9 @@
     {
       "modelId": "tencent/hy3",
       "model": "Tencent: Hy3",
-      "priceInput": 0.132,
-      "priceOutput": 0.528,
-      "priceCachedRead": 0.033,
+      "priceInput": 0.14,
+      "priceOutput": 0.58,
+      "priceCachedRead": 0.035,
       "priceCachedWrite": null
     },
     {
@@ -1890,7 +1890,7 @@
     {
       "modelId": "~moonshotai/kimi-latest",
       "model": "MoonshotAI: Kimi Latest",
-      "priceInput": 0.1805,
+      "priceInput": 0.1824,
       "priceOutput": 11.0055,
       "priceCachedRead": 0.18,
       "priceCachedWrite": null
@@ -2294,8 +2294,8 @@
     {
       "modelId": "qwen/qwen3.5-27b",
       "model": "Qwen: Qwen3.5-27B",
-      "priceInput": 0.195,
-      "priceOutput": 1.56,
+      "priceInput": 0.26,
+      "priceOutput": 2.6,
       "priceCachedRead": null,
       "priceCachedWrite": null
     },
@@ -2482,9 +2482,9 @@
     {
       "modelId": "z-ai/glm-4.7",
       "model": "Z.ai: GLM 4.7",
-      "priceInput": 0.4,
-      "priceOutput": 1.75,
-      "priceCachedRead": 0.08,
+      "priceInput": 0.6,
+      "priceOutput": 2.2,
+      "priceCachedRead": 0.11,
       "priceCachedWrite": null
     },
     {
@@ -2992,9 +2992,9 @@
     {
       "modelId": "openai/gpt-oss-20b",
       "model": "OpenAI: gpt-oss-20b",
-      "priceInput": 0.017,
-      "priceOutput": 0.085,
-      "priceCachedRead": 0.0085,
+      "priceInput": 0.075,
+      "priceOutput": 0.3,
+      "priceCachedRead": 0.0375,
       "priceCachedWrite": null
     },
     {
@@ -3346,9 +3346,9 @@
     {
       "modelId": "google/gemma-3-4b-it",
       "model": "Google: Gemma 3 4B",
-      "priceInput": 0.05,
-      "priceOutput": 0.1,
-      "priceCachedRead": null,
+      "priceInput": 0.04,
+      "priceOutput": 0.05,
+      "priceCachedRead": 0.02,
       "priceCachedWrite": null
     },
     {
@@ -3762,9 +3762,9 @@
     {
       "modelId": "gryphe/mythomax-l2-13b",
       "model": "MythoMax 13B",
-      "priceInput": 0.08,
-      "priceOutput": 0.11,
-      "priceCachedRead": null,
+      "priceInput": 0.3,
+      "priceOutput": 0.5,
+      "priceCachedRead": 0.2,
       "priceCachedWrite": null
     },
     {

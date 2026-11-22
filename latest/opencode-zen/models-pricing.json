@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/zen/v1/models",
-  "fetchedAt": "2026-11-21T13:29:18.726Z",
+  "fetchedAt": "2026-11-22T13:23:05.684Z",
   "notes": "Auto-generated from the OpenCode Zen /v1/models JSON endpoint. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
@@ -141,9 +141,9 @@
     },
     {
       "model": "DeepSeek V4.1 Flash 1017",
-      "priceInput": 0.3,
-      "priceOutput": 1.2,
-      "priceCachedRead": 0.006,
+      "priceInput": 0.12,
+      "priceOutput": 0.48,
+      "priceCachedRead": 0.0024,
       "priceCachedWrite": null
     },
     {
@@ -202,9 +202,9 @@
     },
     {
       "model": "GLM-5.3",
-      "priceInput": 1.4,
-      "priceOutput": 4.4,
-      "priceCachedRead": 0.26,
+      "priceInput": 0.56,
+      "priceOutput": 1.76,
+      "priceCachedRead": 0.104,
       "priceCachedWrite": null
     },
     {
