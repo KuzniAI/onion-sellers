@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/inference/go/v1/models",
-  "fetchedAt": "2026-11-22T13:23:05.567Z",
+  "fetchedAt": "2026-11-23T16:00:31.865Z",
   "notes": "Auto-generated from the OpenCode Go /v1/models JSON endpoint. OpenCode Go is a flat $10/mo subscription; monthlyLimitUsd is each model's per-month usage cap under that subscription, not a separate charge. Reference a model in config as \"opencode-go/<modelId>\". Peak/off-peak and context-threshold variants of the same model share one modelId and appear as separate rows, matching the source page. Prices are USD per 1M tokens.",
   "models": [
     {
@@ -78,9 +78,9 @@
       "priceOutput": 4.4,
       "priceCachedRead": 0.26,
       "priceCachedWrite": null,
-      "monthlyLimitUsd": 500,
-      "monthlyLimitGoPlusUsd": 1000,
-      "monthlyLimitGoTeamsUsd": 505,
+      "monthlyLimitUsd": 200,
+      "monthlyLimitGoPlusUsd": 400,
+      "monthlyLimitGoTeamsUsd": 205,
       "training": false,
       "zdr": true,
       "limitedRegions": false,
@@ -429,23 +429,6 @@
       "notes": "Additional go fields: featured=false"
     },
     {
-      "model": "LongCat-2.0",
-      "modelId": "longcat-2.0",
-      "priceInput": 0.3,
-      "priceOutput": 1.2,
-      "priceCachedRead": 0.006,
-      "priceCachedWrite": null,
-      "monthlyLimitUsd": 60,
-      "monthlyLimitGoPlusUsd": 240,
-      "monthlyLimitGoTeamsUsd": 65,
-      "training": false,
-      "zdr": true,
-      "limitedRegions": false,
-      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "notes": "Additional go fields: featured=false"
-    },
-    {
       "model": "Step 5 Preview",
       "modelId": "step-5-preview",
       "priceInput": 1,
@@ -633,23 +616,6 @@
       "notes": "Additional go fields: featured=false"
     },
     {
-      "model": "LongCat 2.5 Free",
-      "modelId": "longcat-2.5-free",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCachedRead": 0,
-      "priceCachedWrite": null,
-      "monthlyLimitUsd": null,
-      "monthlyLimitGoPlusUsd": null,
-      "monthlyLimitGoTeamsUsd": null,
-      "training": false,
-      "zdr": true,
-      "limitedRegions": false,
-      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
-      "aiSdkPackage": "@ai-sdk/openai-compatible",
-      "notes": "Additional go fields: featured=false"
-    },
-    {
       "model": "Hy4 flash Free",
       "modelId": "hy4-flash-free",
       "priceInput": 0,
@@ -682,6 +648,23 @@
       "endpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
       "aiSdkPackage": "@ai-sdk/anthropic",
       "notes": "Cache write by TTL: 5m $1.875, 1h $3 (priceCachedWrite is the shortest TTL); Additional go fields: featured=false"
+    },
+    {
+      "model": "LongCat-2.5",
+      "modelId": "longcat-2.5",
+      "priceInput": 0.3,
+      "priceOutput": 1.2,
+      "priceCachedRead": 0.006,
+      "priceCachedWrite": 0,
+      "monthlyLimitUsd": 60,
+      "monthlyLimitGoPlusUsd": 240,
+      "monthlyLimitGoTeamsUsd": 65,
+      "training": false,
+      "zdr": true,
+      "limitedRegions": false,
+      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "aiSdkPackage": "@ai-sdk/openai-compatible",
+      "notes": "Additional go fields: featured=false"
     }
   ]
 }

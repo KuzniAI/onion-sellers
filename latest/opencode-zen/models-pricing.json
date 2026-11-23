@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://opencode.ai/zen/v1/models",
-  "fetchedAt": "2026-11-22T13:23:05.684Z",
+  "fetchedAt": "2026-11-23T16:00:31.891Z",
   "notes": "Auto-generated from the OpenCode Zen /v1/models JSON endpoint. OpenCode Zen is pay-as-you-go; all prices are USD per 1M tokens. Free models have 0 prices and are not scored. Context-threshold variants of the same model (e.g. \"(≤ 272K tokens)\") appear as separate rows, matching the source page.",
   "models": [
     {
@@ -612,13 +612,6 @@
       "priceCachedWrite": 2.5
     },
     {
-      "model": "LongCat 2.5 Free",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCachedRead": 0,
-      "priceCachedWrite": null
-    },
-    {
       "model": "Iceman Free",
       "priceInput": 0,
       "priceOutput": 0,
@@ -744,6 +737,13 @@
       "priceCachedRead": 0.15,
       "priceCachedWrite": null,
       "notes": "Audio input $3 per 1M tokens (cached read $0.15)"
+    },
+    {
+      "model": "Qwen4 Max Free",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCachedRead": 0,
+      "priceCachedWrite": 0
     }
   ]
 }

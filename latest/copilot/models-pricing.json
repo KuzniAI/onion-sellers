@@ -1,6 +1,6 @@
 {
   "sourceUrl": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
-  "fetchedAt": "2026-11-22T13:23:05.949Z",
+  "fetchedAt": "2026-11-23T16:00:32.152Z",
   "notes": "Auto-generated from GitHub docs' models-and-pricing.yml (a YAML list of models). All prices are per 1M tokens. Models with a \"Long context\" tier bill at a higher rate once input exceeds thresholdInputTokens; the same model may appear twice (Default and Long context rows) -- this is expected, not a duplicate.",
   "models": [
     {

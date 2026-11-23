@@ -1,0 +1,1609 @@
+{
+  "generatedAt": "2026-11-23T16:00:33.438Z",
+  "topNPerProvider": 3,
+  "candidatesConsidered": 147,
+  "variantsConsidered": 358,
+  "intelligenceIndexVersion": 5,
+  "categories": {
+    "codingHeavy": {
+      "opencode-go": [
+        {
+          "provider": "opencode-go",
+          "model": "Gemini 4 Argon",
+          "effort": "High",
+          "aaSlug": "gemini-4-argon",
+          "score": 52.9,
+          "breakdown": {
+            "quality": 55.9,
+            "costPerTask": 4.9733,
+            "responseTimeSeconds": 42.1,
+            "intelligenceIndex": 50.4,
+            "engineeringIndex": 57.3,
+            "financeAndAccountingIndex": 55.9,
+            "strategyAndOpsIndex": 57.2
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 47.1,
+          "breakdown": {
+            "quality": 51.4,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 160.4,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Qwen4 Max",
+          "effort": null,
+          "aaSlug": "qwen4-max",
+          "score": 46.6,
+          "breakdown": {
+            "quality": 50,
+            "costPerTask": 3.2681,
+            "responseTimeSeconds": 106.7,
+            "intelligenceIndex": 42.9,
+            "engineeringIndex": 50.1,
+            "financeAndAccountingIndex": 54.1,
+            "strategyAndOpsIndex": 56.9
+          },
+          "priceBlendedPer1M": 3.75
+        }
+      ],
+      "opencode-zen": [
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.2 Astra",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-astra-high",
+          "score": 61.9,
+          "breakdown": {
+            "quality": 62.5,
+            "costPerTask": 2.0739,
+            "responseTimeSeconds": 31.2,
+            "intelligenceIndex": 60.1,
+            "engineeringIndex": 63.6,
+            "financeAndAccountingIndex": 59,
+            "strategyAndOpsIndex": 61.6
+          },
+          "priceBlendedPer1M": 32
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "Gemini 4 Neon",
+          "effort": "High",
+          "aaSlug": "gemini-4-neon-high",
+          "score": 61,
+          "breakdown": {
+            "quality": 63.3,
+            "costPerTask": 3.7427,
+            "responseTimeSeconds": 40.4,
+            "intelligenceIndex": 59.6,
+            "engineeringIndex": 64.9,
+            "financeAndAccountingIndex": 63.3,
+            "strategyAndOpsIndex": 62.2
+          },
+          "priceBlendedPer1M": 12
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.2 Sol",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-sol-high",
+          "score": 60.6,
+          "breakdown": {
+            "quality": 57.8,
+            "costPerTask": 0.5636,
+            "responseTimeSeconds": 20.3,
+            "intelligenceIndex": 54.9,
+            "engineeringIndex": 58.7,
+            "financeAndAccountingIndex": 54.8,
+            "strategyAndOpsIndex": 58
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "cursor": [
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Neon",
+          "effort": "High",
+          "aaSlug": "gemini-4-neon-high",
+          "score": 61,
+          "breakdown": {
+            "quality": 63.3,
+            "costPerTask": 3.7427,
+            "responseTimeSeconds": 40.4,
+            "intelligenceIndex": 59.6,
+            "engineeringIndex": 64.9,
+            "financeAndAccountingIndex": 63.3,
+            "strategyAndOpsIndex": 62.2
+          },
+          "priceBlendedPer1M": 12
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 60.1,
+          "breakdown": {
+            "quality": 63.4,
+            "costPerTask": 3.8778,
+            "responseTimeSeconds": 76.5,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "cursor",
+          "model": "Claude Opus 5.5",
+          "effort": "Xhigh",
+          "aaSlug": "claude-opus-5-5-xhigh",
+          "score": 56.8,
+          "breakdown": {
+            "quality": 61,
+            "costPerTask": 6.0472,
+            "responseTimeSeconds": 77.7,
+            "intelligenceIndex": 57.4,
+            "engineeringIndex": 62.9,
+            "financeAndAccountingIndex": 55.7,
+            "strategyAndOpsIndex": 59
+          },
+          "priceBlendedPer1M": 16
+        }
+      ],
+      "copilot": [
+        {
+          "provider": "copilot",
+          "model": "GPT-6.2 Astra",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-astra-high",
+          "score": 61.9,
+          "breakdown": {
+            "quality": 62.5,
+            "costPerTask": 2.0739,
+            "responseTimeSeconds": 31.2,
+            "intelligenceIndex": 60.1,
+            "engineeringIndex": 63.6,
+            "financeAndAccountingIndex": 59,
+            "strategyAndOpsIndex": 61.6
+          },
+          "priceBlendedPer1M": 32
+        },
+        {
+          "provider": "copilot",
+          "model": "Gemini 4 Neon",
+          "effort": "High",
+          "aaSlug": "gemini-4-neon-high",
+          "score": 61,
+          "breakdown": {
+            "quality": 63.3,
+            "costPerTask": 3.7427,
+            "responseTimeSeconds": 40.4,
+            "intelligenceIndex": 59.6,
+            "engineeringIndex": 64.9,
+            "financeAndAccountingIndex": 63.3,
+            "strategyAndOpsIndex": 62.2
+          },
+          "priceBlendedPer1M": 12
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.2 Sol",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-sol-high",
+          "score": 60.6,
+          "breakdown": {
+            "quality": 57.8,
+            "costPerTask": 0.5636,
+            "responseTimeSeconds": 20.3,
+            "intelligenceIndex": 54.9,
+            "engineeringIndex": 58.7,
+            "financeAndAccountingIndex": 54.8,
+            "strategyAndOpsIndex": 58
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "clinepass": [
+        {
+          "provider": "clinepass",
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 47.1,
+          "breakdown": {
+            "quality": 51.4,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 160.4,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "clinepass",
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "Max",
+          "aaSlug": "deepseek-v4-1-flash-1017",
+          "score": 41.9,
+          "breakdown": {
+            "quality": 38.9,
+            "costPerTask": 0.3011,
+            "responseTimeSeconds": 44.7,
+            "intelligenceIndex": 32.6,
+            "engineeringIndex": 37.6,
+            "financeAndAccountingIndex": 42.2,
+            "strategyAndOpsIndex": 49.2
+          },
+          "priceBlendedPer1M": 0.487
+        },
+        {
+          "provider": "clinepass",
+          "model": "MiMo V2.6 Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 39.2,
+          "breakdown": {
+            "quality": 35.9,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 47,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
+          },
+          "priceBlendedPer1M": 0.761
+        }
+      ],
+      "openrouter": [
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.2 Astra",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-astra-high",
+          "score": 63.4,
+          "breakdown": {
+            "quality": 62.5,
+            "costPerTask": 1.037,
+            "responseTimeSeconds": 31.2,
+            "intelligenceIndex": 60.1,
+            "engineeringIndex": 63.6,
+            "financeAndAccountingIndex": 59,
+            "strategyAndOpsIndex": 61.6
+          },
+          "priceBlendedPer1M": 16
+        },
+        {
+          "provider": "openrouter",
+          "model": "Google: Gemini 4 Neon",
+          "effort": "High",
+          "aaSlug": "gemini-4-neon-high",
+          "score": 62.5,
+          "breakdown": {
+            "quality": 63.3,
+            "costPerTask": 1.8714,
+            "responseTimeSeconds": 40.4,
+            "intelligenceIndex": 59.6,
+            "engineeringIndex": 64.9,
+            "financeAndAccountingIndex": 63.3,
+            "strategyAndOpsIndex": 62.2
+          },
+          "priceBlendedPer1M": 6
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.2 Sol",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-sol-high",
+          "score": 62.1,
+          "breakdown": {
+            "quality": 57.8,
+            "costPerTask": 0.2818,
+            "responseTimeSeconds": 20.3,
+            "intelligenceIndex": 54.9,
+            "engineeringIndex": 58.7,
+            "financeAndAccountingIndex": 54.8,
+            "strategyAndOpsIndex": 58
+          },
+          "priceBlendedPer1M": 4
+        }
+      ]
+    },
+    "codingLight": {
+      "opencode-go": [
+        {
+          "provider": "opencode-go",
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "High",
+          "aaSlug": "deepseek-v4-1-flash-1017-high",
+          "score": 54.1,
+          "breakdown": {
+            "quality": 40,
+            "costPerTask": 0.2281,
+            "responseTimeSeconds": 23.2,
+            "intelligenceIndex": 28.6,
+            "engineeringIndex": 34.4,
+            "financeAndAccountingIndex": 39.5,
+            "strategyAndOpsIndex": 48.4
+          },
+          "priceBlendedPer1M": 0.487
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Claude Haiku 5.5",
+          "effort": "High",
+          "aaSlug": "claude-haiku-5-5-high",
+          "score": 51.4,
+          "breakdown": {
+            "quality": 36.7,
+            "costPerTask": 0.1586,
+            "responseTimeSeconds": 20.6,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 36.5,
+            "financeAndAccountingIndex": 37.8,
+            "strategyAndOpsIndex": 37.1
+          },
+          "priceBlendedPer1M": 0.4
+        },
+        {
+          "provider": "opencode-go",
+          "model": "MiMo-V2.6-Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 50.2,
+          "breakdown": {
+            "quality": 39.3,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 47,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
+          },
+          "priceBlendedPer1M": 0.761
+        }
+      ],
+      "opencode-zen": [
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.2 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-2-sol-medium",
+          "score": 68.7,
+          "breakdown": {
+            "quality": 56.2,
+            "costPerTask": 0.4061,
+            "responseTimeSeconds": 11.8,
+            "intelligenceIndex": 52.7,
+            "engineeringIndex": 56.2,
+            "financeAndAccountingIndex": 51.6,
+            "strategyAndOpsIndex": 56.3
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.1 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-1-sol-medium",
+          "score": 66,
+          "breakdown": {
+            "quality": 52.6,
+            "costPerTask": 0.3594,
+            "responseTimeSeconds": 14.5,
+            "intelligenceIndex": 46.3,
+            "engineeringIndex": 52.1,
+            "financeAndAccountingIndex": 50.6,
+            "strategyAndOpsIndex": 53.3
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.2 Astra",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-2-astra-medium",
+          "score": 61.4,
+          "breakdown": {
+            "quality": 58.9,
+            "costPerTask": 1.6177,
+            "responseTimeSeconds": 14.6,
+            "intelligenceIndex": 57,
+            "engineeringIndex": 59.9,
+            "financeAndAccountingIndex": 54.5,
+            "strategyAndOpsIndex": 57.3
+          },
+          "priceBlendedPer1M": 32
+        }
+      ],
+      "cursor": [
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Neon",
+          "effort": "Low",
+          "aaSlug": "gemini-4-neon-low",
+          "score": 59.1,
+          "breakdown": {
+            "quality": 53.2,
+            "costPerTask": 0.7452,
+            "responseTimeSeconds": 25,
+            "intelligenceIndex": 44.1,
+            "engineeringIndex": 52,
+            "financeAndAccountingIndex": 54.6,
+            "strategyAndOpsIndex": 55
+          },
+          "priceBlendedPer1M": 12
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-hydrogen-medium",
+          "score": 57.8,
+          "breakdown": {
+            "quality": 50.2,
+            "costPerTask": 0.798,
+            "responseTimeSeconds": 15,
+            "intelligenceIndex": 41.2,
+            "engineeringIndex": 49.1,
+            "financeAndAccountingIndex": 51.4,
+            "strategyAndOpsIndex": 51.8
+          },
+          "priceBlendedPer1M": 6
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Carbon",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-carbon-medium",
+          "score": 54.9,
+          "breakdown": {
+            "quality": 61.5,
+            "costPerTask": 3.2929,
+            "responseTimeSeconds": 37.3,
+            "intelligenceIndex": 58.3,
+            "engineeringIndex": 63.9,
+            "financeAndAccountingIndex": 59.6,
+            "strategyAndOpsIndex": 57.8
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "copilot": [
+        {
+          "provider": "copilot",
+          "model": "GPT-6.2 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-2-sol-medium",
+          "score": 68.7,
+          "breakdown": {
+            "quality": 56.2,
+            "costPerTask": 0.4061,
+            "responseTimeSeconds": 11.8,
+            "intelligenceIndex": 52.7,
+            "engineeringIndex": 56.2,
+            "financeAndAccountingIndex": 51.6,
+            "strategyAndOpsIndex": 56.3
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.1 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-1-sol-medium",
+          "score": 66,
+          "breakdown": {
+            "quality": 52.6,
+            "costPerTask": 0.3594,
+            "responseTimeSeconds": 14.5,
+            "intelligenceIndex": 46.3,
+            "engineeringIndex": 52.1,
+            "financeAndAccountingIndex": 50.6,
+            "strategyAndOpsIndex": 53.3
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.1 Terra",
+          "effort": "High",
+          "aaSlug": "gpt-6-1-terra-high",
+          "score": 61.8,
+          "breakdown": {
+            "quality": 46.8,
+            "costPerTask": 0.2593,
+            "responseTimeSeconds": 17.7,
+            "intelligenceIndex": 42.4,
+            "engineeringIndex": 46.4,
+            "financeAndAccountingIndex": 44.2,
+            "strategyAndOpsIndex": 47.4
+          },
+          "priceBlendedPer1M": 4
+        }
+      ],
+      "clinepass": [
+        {
+          "provider": "clinepass",
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "High",
+          "aaSlug": "deepseek-v4-1-flash-1017-high",
+          "score": 54.1,
+          "breakdown": {
+            "quality": 40,
+            "costPerTask": 0.2281,
+            "responseTimeSeconds": 23.2,
+            "intelligenceIndex": 28.6,
+            "engineeringIndex": 34.4,
+            "financeAndAccountingIndex": 39.5,
+            "strategyAndOpsIndex": 48.4
+          },
+          "priceBlendedPer1M": 0.487
+        },
+        {
+          "provider": "clinepass",
+          "model": "MiMo V2.6 Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 50.2,
+          "breakdown": {
+            "quality": 39.3,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 47,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
+          },
+          "priceBlendedPer1M": 0.761
+        },
+        {
+          "provider": "clinepass",
+          "model": "MiMo V2.6 Flash",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-flash",
+          "score": 46.6,
+          "breakdown": {
+            "quality": 36.9,
+            "costPerTask": 0.1285,
+            "responseTimeSeconds": 64.4,
+            "intelligenceIndex": 26.7,
+            "engineeringIndex": 31,
+            "financeAndAccountingIndex": 36.9,
+            "strategyAndOpsIndex": 45.7
+          },
+          "priceBlendedPer1M": 0.245
+        }
+      ],
+      "openrouter": [
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.2 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-2-sol-medium",
+          "score": 72.2,
+          "breakdown": {
+            "quality": 56.2,
+            "costPerTask": 0.2031,
+            "responseTimeSeconds": 11.8,
+            "intelligenceIndex": 52.7,
+            "engineeringIndex": 56.2,
+            "financeAndAccountingIndex": 51.6,
+            "strategyAndOpsIndex": 56.3
+          },
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.1 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-1-sol-medium",
+          "score": 68.6,
+          "breakdown": {
+            "quality": 52.6,
+            "costPerTask": 0.1797,
+            "responseTimeSeconds": 14.5,
+            "intelligenceIndex": 46.3,
+            "engineeringIndex": 52.1,
+            "financeAndAccountingIndex": 50.6,
+            "strategyAndOpsIndex": 53.3
+          },
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.2 Astra",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-2-astra-medium",
+          "score": 66.4,
+          "breakdown": {
+            "quality": 58.9,
+            "costPerTask": 0.8089,
+            "responseTimeSeconds": 14.6,
+            "intelligenceIndex": 57,
+            "engineeringIndex": 59.9,
+            "financeAndAccountingIndex": 54.5,
+            "strategyAndOpsIndex": 57.3
+          },
+          "priceBlendedPer1M": 16
+        }
+      ]
+    },
+    "codeReview": {
+      "opencode-go": [
+        {
+          "provider": "opencode-go",
+          "model": "Gemini 4 Argon",
+          "effort": "High",
+          "aaSlug": "gemini-4-argon",
+          "score": 53.2,
+          "breakdown": {
+            "quality": 55.2,
+            "costPerTask": 4.9733,
+            "responseTimeSeconds": 42.1,
+            "intelligenceIndex": 50.4,
+            "engineeringIndex": 57.3,
+            "financeAndAccountingIndex": 55.9,
+            "strategyAndOpsIndex": 57.2
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 47,
+          "breakdown": {
+            "quality": 49.6,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 160.4,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Qwen4 Max",
+          "effort": null,
+          "aaSlug": "qwen4-max",
+          "score": 45.8,
+          "breakdown": {
+            "quality": 47.9,
+            "costPerTask": 3.2681,
+            "responseTimeSeconds": 106.7,
+            "intelligenceIndex": 42.9,
+            "engineeringIndex": 50.1,
+            "financeAndAccountingIndex": 54.1,
+            "strategyAndOpsIndex": 56.9
+          },
+          "priceBlendedPer1M": 3.75
+        }
+      ],
+      "opencode-zen": [
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.2 Astra",
+          "effort": "Xhigh",
+          "aaSlug": "gpt-6-2-astra-xhigh",
+          "score": 62.7,
+          "breakdown": {
+            "quality": 64.1,
+            "costPerTask": 2.5211,
+            "responseTimeSeconds": 57.8,
+            "intelligenceIndex": 61.6,
+            "engineeringIndex": 65.1,
+            "financeAndAccountingIndex": 60.2,
+            "strategyAndOpsIndex": 62
+          },
+          "priceBlendedPer1M": 32
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "Gemini 4 Neon",
+          "effort": "Xhigh",
+          "aaSlug": "gemini-4-neon",
+          "score": 62.5,
+          "breakdown": {
+            "quality": 65.2,
+            "costPerTask": 6.4448,
+            "responseTimeSeconds": 63,
+            "intelligenceIndex": 61.4,
+            "engineeringIndex": 66.8,
+            "financeAndAccountingIndex": 65.1,
+            "strategyAndOpsIndex": 63.8
+          },
+          "priceBlendedPer1M": 12
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 61.6,
+          "breakdown": {
+            "quality": 63.7,
+            "costPerTask": 3.8778,
+            "responseTimeSeconds": 76.5,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "cursor": [
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Neon",
+          "effort": "Xhigh",
+          "aaSlug": "gemini-4-neon",
+          "score": 62.5,
+          "breakdown": {
+            "quality": 65.2,
+            "costPerTask": 6.4448,
+            "responseTimeSeconds": 63,
+            "intelligenceIndex": 61.4,
+            "engineeringIndex": 66.8,
+            "financeAndAccountingIndex": 65.1,
+            "strategyAndOpsIndex": 63.8
+          },
+          "priceBlendedPer1M": 12
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 61.6,
+          "breakdown": {
+            "quality": 63.7,
+            "costPerTask": 3.8778,
+            "responseTimeSeconds": 76.5,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "cursor",
+          "model": "Claude Opus 5.5",
+          "effort": "Max",
+          "aaSlug": "claude-opus-5-5",
+          "score": 58.8,
+          "breakdown": {
+            "quality": 63.4,
+            "costPerTask": 10.0364,
+            "responseTimeSeconds": 356.2,
+            "intelligenceIndex": 59.1,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 59.4,
+            "strategyAndOpsIndex": 61.4
+          },
+          "priceBlendedPer1M": 16
+        }
+      ],
+      "copilot": [
+        {
+          "provider": "copilot",
+          "model": "GPT-6.2 Astra",
+          "effort": "Xhigh",
+          "aaSlug": "gpt-6-2-astra-xhigh",
+          "score": 62.7,
+          "breakdown": {
+            "quality": 64.1,
+            "costPerTask": 2.5211,
+            "responseTimeSeconds": 57.8,
+            "intelligenceIndex": 61.6,
+            "engineeringIndex": 65.1,
+            "financeAndAccountingIndex": 60.2,
+            "strategyAndOpsIndex": 62
+          },
+          "priceBlendedPer1M": 32
+        },
+        {
+          "provider": "copilot",
+          "model": "Gemini 4 Neon",
+          "effort": "Xhigh",
+          "aaSlug": "gemini-4-neon",
+          "score": 62.5,
+          "breakdown": {
+            "quality": 65.2,
+            "costPerTask": 6.4448,
+            "responseTimeSeconds": 63,
+            "intelligenceIndex": 61.4,
+            "engineeringIndex": 66.8,
+            "financeAndAccountingIndex": 65.1,
+            "strategyAndOpsIndex": 63.8
+          },
+          "priceBlendedPer1M": 12
+        },
+        {
+          "provider": "copilot",
+          "model": "Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 61.6,
+          "breakdown": {
+            "quality": 63.7,
+            "costPerTask": 3.8778,
+            "responseTimeSeconds": 76.5,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "clinepass": [
+        {
+          "provider": "clinepass",
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 47,
+          "breakdown": {
+            "quality": 49.6,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 160.4,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "clinepass",
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "Max",
+          "aaSlug": "deepseek-v4-1-flash-1017",
+          "score": 38,
+          "breakdown": {
+            "quality": 36.1,
+            "costPerTask": 0.3011,
+            "responseTimeSeconds": 44.7,
+            "intelligenceIndex": 32.6,
+            "engineeringIndex": 37.6,
+            "financeAndAccountingIndex": 42.2,
+            "strategyAndOpsIndex": 49.2
+          },
+          "priceBlendedPer1M": 0.487
+        },
+        {
+          "provider": "clinepass",
+          "model": "MiMo V2.6 Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 35.1,
+          "breakdown": {
+            "quality": 33,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 47,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
+          },
+          "priceBlendedPer1M": 0.761
+        }
+      ],
+      "openrouter": [
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.2 Astra",
+          "effort": "Xhigh",
+          "aaSlug": "gpt-6-2-astra-xhigh",
+          "score": 63.7,
+          "breakdown": {
+            "quality": 64.1,
+            "costPerTask": 1.2606,
+            "responseTimeSeconds": 57.8,
+            "intelligenceIndex": 61.6,
+            "engineeringIndex": 65.1,
+            "financeAndAccountingIndex": 60.2,
+            "strategyAndOpsIndex": 62
+          },
+          "priceBlendedPer1M": 16
+        },
+        {
+          "provider": "openrouter",
+          "model": "Google: Gemini 4 Neon",
+          "effort": "Xhigh",
+          "aaSlug": "gemini-4-neon",
+          "score": 63.5,
+          "breakdown": {
+            "quality": 65.2,
+            "costPerTask": 3.2224,
+            "responseTimeSeconds": 63,
+            "intelligenceIndex": 61.4,
+            "engineeringIndex": 66.8,
+            "financeAndAccountingIndex": 65.1,
+            "strategyAndOpsIndex": 63.8
+          },
+          "priceBlendedPer1M": 6
+        },
+        {
+          "provider": "openrouter",
+          "model": "Google: Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 62.6,
+          "breakdown": {
+            "quality": 63.7,
+            "costPerTask": 1.9389,
+            "responseTimeSeconds": 76.5,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 4
+        }
+      ]
+    },
+    "llmWiki": {
+      "opencode-go": [
+        {
+          "provider": "opencode-go",
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "Max",
+          "aaSlug": "deepseek-v4-1-flash-1017",
+          "score": 46.5,
+          "breakdown": {
+            "quality": 39.2,
+            "costPerTask": 0.3011,
+            "responseTimeSeconds": 44.7,
+            "intelligenceIndex": 32.6,
+            "engineeringIndex": 37.6,
+            "financeAndAccountingIndex": 42.2,
+            "strategyAndOpsIndex": 49.2
+          },
+          "priceBlendedPer1M": 0.487
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Claude Haiku 5.5",
+          "effort": "Xhigh",
+          "aaSlug": "claude-haiku-5-5-xhigh",
+          "score": 45.7,
+          "breakdown": {
+            "quality": 37.4,
+            "costPerTask": 0.2484,
+            "responseTimeSeconds": 47.1,
+            "intelligenceIndex": 34.6,
+            "engineeringIndex": 40.6,
+            "financeAndAccountingIndex": 41.1,
+            "strategyAndOpsIndex": 39.1
+          },
+          "priceBlendedPer1M": 0.4
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Gemini 4 Argon",
+          "effort": "High",
+          "aaSlug": "gemini-4-argon",
+          "score": 44.7,
+          "breakdown": {
+            "quality": 53.5,
+            "costPerTask": 4.9733,
+            "responseTimeSeconds": 42.1,
+            "intelligenceIndex": 50.4,
+            "engineeringIndex": 57.3,
+            "financeAndAccountingIndex": 55.9,
+            "strategyAndOpsIndex": 57.2
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "opencode-zen": [
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.2 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-2-sol-medium",
+          "score": 60.5,
+          "breakdown": {
+            "quality": 53.3,
+            "costPerTask": 0.4061,
+            "responseTimeSeconds": 11.8,
+            "intelligenceIndex": 52.7,
+            "engineeringIndex": 56.2,
+            "financeAndAccountingIndex": 51.6,
+            "strategyAndOpsIndex": 56.3
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.1 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-1-sol-medium",
+          "score": 57,
+          "breakdown": {
+            "quality": 49.1,
+            "costPerTask": 0.3594,
+            "responseTimeSeconds": 14.5,
+            "intelligenceIndex": 46.3,
+            "engineeringIndex": 52.1,
+            "financeAndAccountingIndex": 50.6,
+            "strategyAndOpsIndex": 53.3
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.2 Astra",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-astra-high",
+          "score": 56.9,
+          "breakdown": {
+            "quality": 60.2,
+            "costPerTask": 2.0739,
+            "responseTimeSeconds": 31.2,
+            "intelligenceIndex": 60.1,
+            "engineeringIndex": 63.6,
+            "financeAndAccountingIndex": 59,
+            "strategyAndOpsIndex": 61.6
+          },
+          "priceBlendedPer1M": 32
+        }
+      ],
+      "cursor": [
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Neon",
+          "effort": "Medium",
+          "aaSlug": "gemini-4-neon-medium",
+          "score": 54.7,
+          "breakdown": {
+            "quality": 57.4,
+            "costPerTask": 1.9046,
+            "responseTimeSeconds": 30.1,
+            "intelligenceIndex": 54.9,
+            "engineeringIndex": 60.9,
+            "financeAndAccountingIndex": 60.2,
+            "strategyAndOpsIndex": 59.5
+          },
+          "priceBlendedPer1M": 12
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 52.7,
+          "breakdown": {
+            "quality": 60.9,
+            "costPerTask": 3.8778,
+            "responseTimeSeconds": 76.5,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "High",
+          "aaSlug": "gemini-4-hydrogen-high",
+          "score": 51.1,
+          "breakdown": {
+            "quality": 53.3,
+            "costPerTask": 1.8733,
+            "responseTimeSeconds": 22,
+            "intelligenceIndex": 50.8,
+            "engineeringIndex": 57,
+            "financeAndAccountingIndex": 56.1,
+            "strategyAndOpsIndex": 55.4
+          },
+          "priceBlendedPer1M": 6
+        }
+      ],
+      "copilot": [
+        {
+          "provider": "copilot",
+          "model": "GPT-6.2 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-2-sol-medium",
+          "score": 60.5,
+          "breakdown": {
+            "quality": 53.3,
+            "costPerTask": 0.4061,
+            "responseTimeSeconds": 11.8,
+            "intelligenceIndex": 52.7,
+            "engineeringIndex": 56.2,
+            "financeAndAccountingIndex": 51.6,
+            "strategyAndOpsIndex": 56.3
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.1 Sol",
+          "effort": "Medium",
+          "aaSlug": "gpt-6-1-sol-medium",
+          "score": 57,
+          "breakdown": {
+            "quality": 49.1,
+            "costPerTask": 0.3594,
+            "responseTimeSeconds": 14.5,
+            "intelligenceIndex": 46.3,
+            "engineeringIndex": 52.1,
+            "financeAndAccountingIndex": 50.6,
+            "strategyAndOpsIndex": 53.3
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.2 Astra",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-astra-high",
+          "score": 56.9,
+          "breakdown": {
+            "quality": 60.2,
+            "costPerTask": 2.0739,
+            "responseTimeSeconds": 31.2,
+            "intelligenceIndex": 60.1,
+            "engineeringIndex": 63.6,
+            "financeAndAccountingIndex": 59,
+            "strategyAndOpsIndex": 61.6
+          },
+          "priceBlendedPer1M": 32
+        }
+      ],
+      "clinepass": [
+        {
+          "provider": "clinepass",
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "Max",
+          "aaSlug": "deepseek-v4-1-flash-1017",
+          "score": 46.5,
+          "breakdown": {
+            "quality": 39.2,
+            "costPerTask": 0.3011,
+            "responseTimeSeconds": 44.7,
+            "intelligenceIndex": 32.6,
+            "engineeringIndex": 37.6,
+            "financeAndAccountingIndex": 42.2,
+            "strategyAndOpsIndex": 49.2
+          },
+          "priceBlendedPer1M": 0.487
+        },
+        {
+          "provider": "clinepass",
+          "model": "MiMo V2.6 Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 44.6,
+          "breakdown": {
+            "quality": 36.4,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 47,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
+          },
+          "priceBlendedPer1M": 0.761
+        },
+        {
+          "provider": "clinepass",
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 42,
+          "breakdown": {
+            "quality": 51,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 160.4,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "openrouter": [
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.2 Sol",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-sol-high",
+          "score": 64.5,
+          "breakdown": {
+            "quality": 55.7,
+            "costPerTask": 0.2818,
+            "responseTimeSeconds": 20.3,
+            "intelligenceIndex": 54.9,
+            "engineeringIndex": 58.7,
+            "financeAndAccountingIndex": 54.8,
+            "strategyAndOpsIndex": 58
+          },
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.2 Astra",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-astra-high",
+          "score": 60.9,
+          "breakdown": {
+            "quality": 60.2,
+            "costPerTask": 1.037,
+            "responseTimeSeconds": 31.2,
+            "intelligenceIndex": 60.1,
+            "engineeringIndex": 63.6,
+            "financeAndAccountingIndex": 59,
+            "strategyAndOpsIndex": 61.6
+          },
+          "priceBlendedPer1M": 16
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.1 Sol",
+          "effort": "High",
+          "aaSlug": "gpt-6-1-sol-high",
+          "score": 59.8,
+          "breakdown": {
+            "quality": 52.3,
+            "costPerTask": 0.2955,
+            "responseTimeSeconds": 42.5,
+            "intelligenceIndex": 50.3,
+            "engineeringIndex": 55.4,
+            "financeAndAccountingIndex": 53.2,
+            "strategyAndOpsIndex": 55.4
+          },
+          "priceBlendedPer1M": 4
+        }
+      ]
+    },
+    "financeWork": {
+      "opencode-go": [
+        {
+          "provider": "opencode-go",
+          "model": "Gemini 4 Argon",
+          "effort": "High",
+          "aaSlug": "gemini-4-argon",
+          "score": 51.9,
+          "breakdown": {
+            "quality": 56.3,
+            "costPerTask": 4.9733,
+            "responseTimeSeconds": 42.1,
+            "intelligenceIndex": 50.4,
+            "engineeringIndex": 57.3,
+            "financeAndAccountingIndex": 55.9,
+            "strategyAndOpsIndex": 57.2
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Qwen4 Max",
+          "effort": null,
+          "aaSlug": "qwen4-max",
+          "score": 51.1,
+          "breakdown": {
+            "quality": 54.9,
+            "costPerTask": 3.2681,
+            "responseTimeSeconds": 106.7,
+            "intelligenceIndex": 42.9,
+            "engineeringIndex": 50.1,
+            "financeAndAccountingIndex": 54.1,
+            "strategyAndOpsIndex": 56.9
+          },
+          "priceBlendedPer1M": 3.75
+        },
+        {
+          "provider": "opencode-go",
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 50.1,
+          "breakdown": {
+            "quality": 54.6,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 160.4,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
+        }
+      ],
+      "opencode-zen": [
+        {
+          "provider": "opencode-zen",
+          "model": "Gemini 4 Neon",
+          "effort": "High",
+          "aaSlug": "gemini-4-neon-high",
+          "score": 59.4,
+          "breakdown": {
+            "quality": 63,
+            "costPerTask": 3.7427,
+            "responseTimeSeconds": 40.4,
+            "intelligenceIndex": 59.6,
+            "engineeringIndex": 64.9,
+            "financeAndAccountingIndex": 63.3,
+            "strategyAndOpsIndex": 62.2
+          },
+          "priceBlendedPer1M": 12
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.2 Sol",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-sol-high",
+          "score": 58.2,
+          "breakdown": {
+            "quality": 55.8,
+            "costPerTask": 0.5636,
+            "responseTimeSeconds": 20.3,
+            "intelligenceIndex": 54.9,
+            "engineeringIndex": 58.7,
+            "financeAndAccountingIndex": 54.8,
+            "strategyAndOpsIndex": 58
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "opencode-zen",
+          "model": "GPT-6.2 Astra",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-astra-high",
+          "score": 58.1,
+          "breakdown": {
+            "quality": 59.8,
+            "costPerTask": 2.0739,
+            "responseTimeSeconds": 31.2,
+            "intelligenceIndex": 60.1,
+            "engineeringIndex": 63.6,
+            "financeAndAccountingIndex": 59,
+            "strategyAndOpsIndex": 61.6
+          },
+          "priceBlendedPer1M": 32
+        }
+      ],
+      "cursor": [
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Neon",
+          "effort": "High",
+          "aaSlug": "gemini-4-neon-high",
+          "score": 59.4,
+          "breakdown": {
+            "quality": 63,
+            "costPerTask": 3.7427,
+            "responseTimeSeconds": 40.4,
+            "intelligenceIndex": 59.6,
+            "engineeringIndex": 64.9,
+            "financeAndAccountingIndex": 63.3,
+            "strategyAndOpsIndex": 62.2
+          },
+          "priceBlendedPer1M": 12
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Carbon",
+          "effort": "High",
+          "aaSlug": "gemini-4-carbon",
+          "score": 58,
+          "breakdown": {
+            "quality": 62.1,
+            "costPerTask": 3.8778,
+            "responseTimeSeconds": 76.5,
+            "intelligenceIndex": 60,
+            "engineeringIndex": 65.3,
+            "financeAndAccountingIndex": 62.6,
+            "strategyAndOpsIndex": 60.9
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "cursor",
+          "model": "Gemini 4 Hydrogen",
+          "effort": "High",
+          "aaSlug": "gemini-4-hydrogen-high",
+          "score": 54.8,
+          "breakdown": {
+            "quality": 55.9,
+            "costPerTask": 1.8733,
+            "responseTimeSeconds": 22,
+            "intelligenceIndex": 50.8,
+            "engineeringIndex": 57,
+            "financeAndAccountingIndex": 56.1,
+            "strategyAndOpsIndex": 55.4
+          },
+          "priceBlendedPer1M": 6
+        }
+      ],
+      "copilot": [
+        {
+          "provider": "copilot",
+          "model": "Gemini 4 Neon",
+          "effort": "High",
+          "aaSlug": "gemini-4-neon-high",
+          "score": 59.4,
+          "breakdown": {
+            "quality": 63,
+            "costPerTask": 3.7427,
+            "responseTimeSeconds": 40.4,
+            "intelligenceIndex": 59.6,
+            "engineeringIndex": 64.9,
+            "financeAndAccountingIndex": 63.3,
+            "strategyAndOpsIndex": 62.2
+          },
+          "priceBlendedPer1M": 12
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.2 Sol",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-sol-high",
+          "score": 58.2,
+          "breakdown": {
+            "quality": 55.8,
+            "costPerTask": 0.5636,
+            "responseTimeSeconds": 20.3,
+            "intelligenceIndex": 54.9,
+            "engineeringIndex": 58.7,
+            "financeAndAccountingIndex": 54.8,
+            "strategyAndOpsIndex": 58
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "copilot",
+          "model": "GPT-6.2 Astra",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-astra-high",
+          "score": 58.1,
+          "breakdown": {
+            "quality": 59.8,
+            "costPerTask": 2.0739,
+            "responseTimeSeconds": 31.2,
+            "intelligenceIndex": 60.1,
+            "engineeringIndex": 63.6,
+            "financeAndAccountingIndex": 59,
+            "strategyAndOpsIndex": 61.6
+          },
+          "priceBlendedPer1M": 32
+        }
+      ],
+      "clinepass": [
+        {
+          "provider": "clinepass",
+          "model": "Kimi K3.1 Pro",
+          "effort": null,
+          "aaSlug": "kimi-k3-1-pro",
+          "score": 50.1,
+          "breakdown": {
+            "quality": 54.6,
+            "costPerTask": 3.6812,
+            "responseTimeSeconds": 160.4,
+            "intelligenceIndex": 46.5,
+            "engineeringIndex": 50.9,
+            "financeAndAccountingIndex": 53.3,
+            "strategyAndOpsIndex": 57.6
+          },
+          "priceBlendedPer1M": 8
+        },
+        {
+          "provider": "clinepass",
+          "model": "DeepSeek V4.1 Flash 1017",
+          "effort": "Max",
+          "aaSlug": "deepseek-v4-1-flash-1017",
+          "score": 48,
+          "breakdown": {
+            "quality": 44.3,
+            "costPerTask": 0.3011,
+            "responseTimeSeconds": 44.7,
+            "intelligenceIndex": 32.6,
+            "engineeringIndex": 37.6,
+            "financeAndAccountingIndex": 42.2,
+            "strategyAndOpsIndex": 49.2
+          },
+          "priceBlendedPer1M": 0.487
+        },
+        {
+          "provider": "clinepass",
+          "model": "MiMo V2.6 Pro",
+          "effort": null,
+          "aaSlug": "mimo-v2-6-pro",
+          "score": 45.4,
+          "breakdown": {
+            "quality": 41.3,
+            "costPerTask": 0.2572,
+            "responseTimeSeconds": 47,
+            "intelligenceIndex": 29.9,
+            "engineeringIndex": 34.3,
+            "financeAndAccountingIndex": 38.9,
+            "strategyAndOpsIndex": 46.9
+          },
+          "priceBlendedPer1M": 0.761
+        }
+      ],
+      "openrouter": [
+        {
+          "provider": "openrouter",
+          "model": "Google: Gemini 4 Neon",
+          "effort": "High",
+          "aaSlug": "gemini-4-neon-high",
+          "score": 61.4,
+          "breakdown": {
+            "quality": 63,
+            "costPerTask": 1.8714,
+            "responseTimeSeconds": 40.4,
+            "intelligenceIndex": 59.6,
+            "engineeringIndex": 64.9,
+            "financeAndAccountingIndex": 63.3,
+            "strategyAndOpsIndex": 62.2
+          },
+          "priceBlendedPer1M": 6
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.2 Sol",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-sol-high",
+          "score": 60.2,
+          "breakdown": {
+            "quality": 55.8,
+            "costPerTask": 0.2818,
+            "responseTimeSeconds": 20.3,
+            "intelligenceIndex": 54.9,
+            "engineeringIndex": 58.7,
+            "financeAndAccountingIndex": 54.8,
+            "strategyAndOpsIndex": 58
+          },
+          "priceBlendedPer1M": 4
+        },
+        {
+          "provider": "openrouter",
+          "model": "OpenAI: GPT-6.2 Astra",
+          "effort": "High",
+          "aaSlug": "gpt-6-2-astra-high",
+          "score": 60.1,
+          "breakdown": {
+            "quality": 59.8,
+            "costPerTask": 1.037,
+            "responseTimeSeconds": 31.2,
+            "intelligenceIndex": 60.1,
+            "engineeringIndex": 63.6,
+            "financeAndAccountingIndex": 59,
+            "strategyAndOpsIndex": 61.6
+          },
+          "priceBlendedPer1M": 16
+        }
+      ]
+    }
+  }
+}
